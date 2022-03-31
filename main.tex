@@ -41,7 +41,7 @@
 	\usepackage[english]{babel} % Load characters and hyphenation
 \fi
 \usepackage[english=british]{csquotes}	% English quotes
-
+\DeclareMathAlphabet{\mathcal}{OMS}{cmsy}{m}{n}
 % Load packages for testing
 \usepackage{blindtext}
 %\usepackage{showframe} % Uncomment to show boxes around the text area, margin, header and footer
@@ -53,9 +53,10 @@
 
 % Load mathematical packages for theorems and related environments
 \usepackage[framed=true]{kaotheorems}
-
+\usepackage{physics}
 % Load the package for hyperreferences
 \usepackage{kaorefs}
+\usepackage{ dsfont }
 
 \graphicspath{{examples/documentation/images/}{images/}} % Paths in which to look for images
 
@@ -207,7 +208,7 @@
 \addpart{Theoretical and experimental setup}
 \pagelayout{margin} % Restore margins
 
-\input{chapters/TheoreticalIntroduction/SM.tex}
+\input{chapters/TheoreticalIntroduction/main.tex}
 \input{chapters/textnotes.tex}
 \input{chapters/figsntabs.tex}
 \input{chapters/references.tex}
