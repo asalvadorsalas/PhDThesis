@@ -1,15 +1,63 @@
-Introduction
+The study of particle physics is performed at the TeV scale, in the order of $10^{-15}$~m, which requires large and complex machines only possible within international collaborations. \acrshort{CERNlabel} is one of the biggest and most respected scientific collaborations and, since its origins in the 1950's, has hosted many groundbreaking experiments. The \acrlong{LHClabel}~(\acrshort{LHClabel}) is the world's largest particle accelerator, situated underground in the France-Swiss border and in operation since September 2008. The \acrlong{ATLASlabel}~(\acrshort{ATLASlabel}) detector is one of the experiments hosted within the \acrshort{LHClabel} and records the collisions for further data analysis. The work in this thesis is based on the recorded proton-proton collision data at a center-of-mass energy, $\sqrt{\text{s}}$, of 13~TeV between 2015 and 2018.
 
+\section{The \acrshort{LHClabel}}
 
-\section{CERN and the Large Hadron Collider}
+The \acrshort{LHClabel} is a circular particle accelerator with a circumference of 27 km, situated on an average of 100~m underground. The primarily activity is the collisions of protons, however proton-Pb and Pb-Pb collisions are also typically performed for one month a year. Particles are steered, collimated and boosted by different types of superconducting magnets and structures along the accelerator ring.
 
-The Large Hadron Collider (LHC) is a circular particle accelerator, consisting of 27 km of circumference tunnel built by the European Organisation for Nuclear Research (CERN), situated underground in the France-Swiss boarder. This tunnel contain two parallel pipes, with more than 1000 superconducting magnets and accelerating structures, where two beams of protons travel at the same time in opposite directions to collide in four different particle detectors built around the ring to record and study the interactions, as shown in the (nom de la figura).\\
+Proton beams circulate over different accelerators before reaching the \acrshort{LHClabel} and the optimal energy. \textcolor{red}{Figure} shows a schematic view of the \acrshort{CERNlabel} accelerator complex. First, protons are extracted from ionised hydrogen and accelerated up to 50~MeV with LINAC2, a linear accelerator. Then, protons are injected into the \acrlong{PSBlabel}~(\acrshort{PSBlabel}), an accelerator made of four synchrotron rings of 157~m in circumference, increasing the energy up to 1.4~GeV. Similarly, the protons are accelerated in sequence to 26~GeV and 450~GeV by the \acrlong{PSlabel}~(\acrshort{PSlabel}), a circular accelerator of 628~m in circumference, and the \acrlong{SPSlabel}~(\acrshort{SPSlabel}), of 6.9~km in circumference. Finally, the protons are injected to the two pipes of the \acrshort{LHClabel} and boosted up to 6.5~TeV before collision. For the Pb operations, the extraction and accelerators prior to the \acrshort{SPSlabel} are performed instead using LINAC3 and the \acrlong{LEIRlabel}~(\acrshort{LEIRlabel}).
 
-A Large Ion Collider Experiment (ALICE)  (explicacio d'alice)
+Inside the \acrshort{LHClabel}, two particle beams travel close to the speed of light before they are made to collide. The two separated particle beam pipes are designed to operate at 6.5~TeV in opposite directions and kept at ultrahigh vacuum, down below $10^{-13}$ atmospheres. Surrounding the pipes, superconducting magnets built from niobium-titanium alloy coils generate strong magnetic fields of the order of 8~T through an electric current of 11.8 kA. The magnet coils are surrounded by the magnet yoke, tones of solid steel sheets designed to keep the wiring firmly in place and stabilise the temperature of the magnets. The magnets are cooled down to 1.9~K with superfluid helium provided by a cryogenic system requiring 120 tonnes of helium. The rest of external layers are dedicated to shield the particle radiation, insulate the magnet or maintain the vacuum and the whole structure of up to 28 tonnes. Different varieties and sizes of magnets constitute the accelerator, mainly 1232 dipole magnets 15~m in length which bend the particle beams to follow the circular trajectory, and 392 quadrupole magnets, each 5-7~m long, which focus the beam. Other types of magnets are used to correct the beam shape or to align them for collision. \textcolor{red}{Figure} shows the cross-section of a dipole magnet of the LHC, with the different components.
 
-A Toroidal LHC ApparatuS (ATLAS)
+Particles in each beam pipe are accelerated by 8 superconducting \acrlong{RFlabel}~(\acrshort{RFlabel}) cavities, metallic chambers with alternating electric fields housed in cryogenic chambers, which also space the particles into compact groups named bunches. When protons are accelerated, the bunches contain more than $10^11$ protons spaced every 25~ns (around 7 meters).
 
-Compact Muon Solenoid (CMS)
+The \acrlong{LEPlabel}~(\acrshort{LEPlabel}) was the previous main experiment at \acrshort{CERNlabel} and its operations finished in 2000 to start the \acrshort{LHClabel} installation in the same tunnel, replacing the predecessor. \acrshort{LEPlabel} was designed to collide $e^+e^-$ beams and operated at a maximum of $\sqrt{\text{s}}=209$~GeV. \acrshort{LHClabel} was designed to accelerate protons or lead ions, which in comparison, are easier to accelerate to higher energies and provide more collision data, although harder to be detected and studied. \acrshort{LEPlabel} explored the \acrshort{EW} scale and provided precision measurements of the \acrshort{SMlabel} and set a lower bound for the mass of the Higgs boson, later discovered during \acrshort{LHClabel} operation in 2012. In September 2008, the first \acrshort{LHClabel} operations started and in November 2009 the first collision was produced. 
 
-LHC-beauty (LHCb)
+\subsection{Performance in Run 2}
 
+The number of events of a certain process is key for its study and can be written as
+
+\begin{equation}
+    N = \sigma\mathscr{L} = \sigma \int \mathcal{L} \text{dt}
+\end{equation}
+
+where $\sigma$ is the event cross-section for the given process, $\mathscr{L}$ the integrated luminosity and $\mathcal{L}$ the instantaneous luminosity. The cross-section highly depends on the center-of-mass energy, $\sqrt{s}$, one of the main characteristics of a particle collider. As a general rule, the higher the $\sqrt{s}$, the higher is the $\sigma$ for rare \acrshort{SMlabel} processes, interesting for precision measurements, or searches for new massive particles.
+
+The instantaneous luminosity is another of the main characteristics of a particle collider, which for the \acrshort{LHClabel} can be approximated to
+
+\begin{equation}
+    \mathcal{L} = f \frac{n_1n_2}{4\pi\sigma_x\sigma_y} F
+\end{equation}
+%https://cds.cern.ch/record/941318
+
+with $f$ the revolution frequency, $n_{1,2}$ the total number of protons in each beam and $F$ a reducing factor accounting for the beams are not colliding exactly head-on and other geometric and beam effects\todo{Talk more in detail about the effects?}. The first parameter can be approximated to $f=c/27\text{ km} = 11$~kHz and the total number of protons from the nominal number of bunches, 2808, which can contain up to $10^{11}$~protons. Finally, the denominator is the approximated transverse beam area with transverse beam size $\sigma_{x,y} = 16.6$~$\mu$m. With these assumptions, the instantaneous luminosity is of $\mathcal{O}(10^{34}$~cm$^{-2}$s$^{-1})$.
+
+During 2010 and 2011, the \acrshort{LHClabel} delivered proton collisions at $\sqrt{s}=7$~TeV, while in 2012 were at $\sqrt{s}=8$~TeV. The first proton physics run, namely Run~1, ended in February 2013, which enabled the discovery of the Higgs boson with $\mathscr{L}\sim30$~fb$^{-1}$. The evolution of the integrated luminosity delivered of the Run~2 to the \acrshort{ATLASlabel} experiment is shown in \textcolor{red}{Figure} for a total of $\mathscr{L}=139$~fb$^{-1}$, used in this thesis.
+
+Another parameter of interest is the \textit{pile-up}, which are the additional expected inelastic collisions that occur when crossing bunches of protons. The main source are the collisions that appear within a single bunch crossing, called in-time pile-up. In addition, out-of-time pile-up is referred to interactions from neighboring bunch crossings not resolved fast enough by the detectors. Pile-up effects are a challenge for physics analysis and is inherent to the increase of instantaneous luminosity. \todo{should I include the formula?}The mean interactions per crossing, $<\mu>$, is a measure to quantify the pile-up and changes throughout the data taking periods, as shown in \textcolor{red}{Figure}.
+
+The \acrshort{LHClabel} operation parameters have changed every year and some are even above the original designed. \textcolor{red}{Table} summarises some of the parameters of the \acrshort{LHClabel} original design and through different years. 
+
+% Parameter 2011 2012 2015 2016 2017 2018
+% center-of-mass energy [TeV] 7 8 13 13 13 13
+% Av. interactions/crossing 9.1 20.7 13.4 25.1 37.8 36.1
+% Bunch spacing [ns] 50 50 25 25 25 25
+% Peak luminosity [cm−2
+% s
+% −1
+% ] 3.65 7.73 5.03 13.8 20.9 21.0
+% Integrated luminosity 5.5 23.1 4.2 38.5 50.2 63.4
+
+% Parameters Design value 2010 2011 2012
+% Beam energy (TeV/c) 7 3.5 3.5 4
+% Beta function β
+% ∗
+% (m) 0.55 2.0/3.5 1.5/1.0 0.6
+% Bunch spacing (ns) 25 150 75/50 50
+% Max. # bunches/beam 2808 368 1380 1380
+% Max. # protons/bunch 1.15 × 1011 1.2 × 1011 1.45 × 1011 1.7 × 1011
+% Peak luminosity (cm−2
+% s
+% −1
+% ) 1.00 × 1034 2.1 × 1032 3.70 × 1033 7.7 × 1033
+% Emittance (µrad) 3.75 2.0 2.4 2.5
+% Max. hµi 19 4 17 37
