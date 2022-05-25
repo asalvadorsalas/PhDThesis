@@ -71,7 +71,7 @@ The \acrshort{LHClabel} operation parameters have changed every year and some ar
 
 \section{The \acrshort{ATLASlabel} experiment}
 
-The \acrshort{ATLASlabel} detector is a multi-purpose particle detector, used to study a wide range of physics topics. It is installed 100~m underground at IP-1 of the \acrshort{LHClabel}. Being 25~m in diameter, 44~m in length and 7000~tonnes in weight, it is the largest particle detector ever built at a collider. As illustrated in \textcolor{red}{Figure}, the detector has a cylindrical shape and is composed of several detector layers built around the collision point of the particles, with an almost full solid angle coverage.
+The \acrshort{ATLASlabel} detector is a multi-purpose particle detector, used to study a wide range of physics topics. It is installed 100~m underground at IP-1 of the \acrshort{LHClabel}. Being 25~m in diameter, 44~m in length and 7000~tonnes in weight, \acrshort{ATLASlabel} is the largest particle detector ever built at a collider. As illustrated in \textcolor{red}{Figure}, the detector has a cylindrical shape and is composed of several detector layers built around the collision point of the particles, with an almost full solid angle coverage.
 
 The data recorded by the detector is used by the collaboration in an extensive physics program. One of the main branches is the measurement of \acrshort{SMlabel} processes, as the large luminosity provided by the \acrshort{LHClabel} allows both precision measurements or to target uncovered phenomena. The data collected during Run~2 allows the study of the Higgs boson and its properties, heavily scrutinised since the first observation of the particle. In addition, measurements of the interactions and processes involving the top-quark are particularly interesting to probe the \acrshort{SMlabel} and \acrshort{BSMlabel} theories. A large portion is dedicated to a wide range of \acrshort{BSMlabel} theories that includes supersymmetry, dark matter or additional resonances among others. Finally, the physics program also includes the study of the physics involving $b-$/$c-$quarks and heavy ions.
 
@@ -79,13 +79,14 @@ All detector systems are designed such that they provide optimal performance to 
 
 \subsection{Coordinate System}
 
-The convention to describe the particles recorded with the \acrshort{ATLASlabel} detector is a right-handed coordinate system as illustrated in \textcolor{red}{Figure}, with the origin at the center of the detector. The $z$-axis is defined in the counterclockwise direction along the \acrshort{LHClabel} beamline, the $y$-axis points towards the surface and the $x$-axis towards the center of the accelerator. To describe the physics objects within the detector, spherical coordinates are use instead, with the polar angle, $\theta$, measured from the $z$-axis while the azimuthal angle, $\phi$, is measured from the $x$-axis in the $x-y$ plane. The pseudorapidity, $\eta$, is usually used instead of the polar angle, as it transforms easily under relativistic boosts along the $z$-axis. For particles with energy $E$ and forward momentmum $p_z$, $\eta$ is a high-energy approximation of the rapidity, $y$,
+The convention to describe the particles recorded with the \acrshort{ATLASlabel} detector is a right-handed coordinate system as illustrated in \textcolor{red}{Figure}, with the origin at the center of the detector which is also the interaction point. The $z$-axis is defined in the counterclockwise direction along the \acrshort{LHClabel} beamline, the $y$-axis points towards the surface and the $x$-axis towards the center of the ring defined by the accelerator. To describe the physics objects within the detector, spherical coordinates are use instead, with the polar angle, $\theta$, measured from the $z$-axis while the azimuthal angle, $\phi$, measured from the $x$-axis in the $x-y$ plane. The pseudorapidity, $\eta$, is usually used instead of the polar angle, as it transforms easily under relativistic boosts along the $z$-axis. For particles with energy $E$ and forward momentum $p_z$, the expression of $\eta$ can be found from the rapidity, $y$, in the high-energy approximation,
 
 \begin{equation}
-   y \equiv \frac{1}{2}\ln\left(\frac{E+p_z}{E-p_z}\right) \xrightarrow[E>>m]{} -\ln\left(\tan\frac{\theta}{2}\right)\equiv \eta
+   y \equiv \frac{1}{2}\ln\left(\frac{E+p_z}{E-p_z}\right) \xrightarrow[ \frac{m}{E} \to 0]{} -\ln\left(\tan\frac{\theta}{2}\right)\equiv \eta
 \end{equation}
 
-The difference in $\eta$ between two points, $\Delta\eta$, is invariant under Lorentz transformation, thus angular distances can be described in the $\eta-\phi$ plane as,
+\acrshort{ATLASlabel} covers the pseudorapidity region up to $|\eta|<4.9$, although physics analyses
+typically consider objects restricted to $|\eta|<2.5$. In addition, the difference in $\eta$ between two points, $\Delta\eta$, is invariant under Lorentz transformation, thus angular distances can be described in the $\eta-\phi$ plane as,
 
 \begin{equation}
     \Delta R = \sqrt{\left(\Delta\eta\right)^2+\left(\Delta\phi\right)^2}
@@ -97,11 +98,11 @@ Another useful expression is the momentum in the $x-y$ plane,
     \vec{p_\text{T}} = \begin{pmatrix} p_x \\ p_y \end{pmatrix}, p_\text{T} = \sqrt{\left(p_x\right)^2+\left(p_y\right)^2}
 \end{equation}
 
-The initial momentum of the transverse plane is known to be zero due to conservation of energy, as at the time of the collision the particles are made to collide along the $z$-axis.
+as at the time of the collision the particles are made to collide along the $z$-axis, the initial momentum of the transverse plane is known to be zero due to conservation of energy.
 
 \subsection{The Inner Detector}
 
-The innermost detector system is the Inner Detector (ID) [54, 55] enclosing the beam pipe shown in Figure 3.5. This detector system provides precise tracking information of charged particles. It is structured into three sub-detectors: the pixel detector, the semiconductor tracker (SCT) and the transition radiation tracker (TRT).
+The \acrlong{IDlabel}~(\acrshort{IDlabel}) [54, 55] is the innermost detector system, which encloses the beam pipe. This detector system provides precise tracking information of charged particles with momentum as low as 100~MeV with a $|\eta|<2.5$ coverage. \textcolor{red}{Figure} shows an overview of the system, which is structured into three sub-detectors: the pixel detector, the \acrlong{SCTlabel}~(\acrshort{SCTlabel}) and the \acrlong{TRTlabel}~(\acrshort{TRTlabel}).
 
 %: Overview of the inner detector of the ATLAS experiment divided into three sub-detectors (Pixels,SCT and TRT)
 
@@ -111,34 +112,25 @@ The innermost detector system is the Inner Detector (ID) [54, 55] enclosing the 
 
 \subsubsection*{Pixel Detector}
 
-The first part of the ID is the silicon pixel detector comprising 4 cylindrical layers and 2 end-caps with 3 disc layers each. The layers are located between 33.25 mm to 122.5 mm around the beam pipe with a coverage of $|\eta|$ < 2.5. The pixel detector is especially important for the track reconstruction, the primary vertex reconstruction as well as for secondary vertex finding. The insertable b-layer (IBL) [57] is the innermost layer, installed in-between RUN I and RUN II, having the highest granularity with a pixel size of 50 µm in R-$\phi$-direction and 250 µm in z-direction.
-In particular, the IBL plays a crucial role for b-tagging. Figure 3.6 compares the resolution of the transverse and longitudinal impact parameters, which are important variables for b-tagging, with and without the IBL installed in ATLAS. All flavour-tagging studies in Part III of this thesis are performed for RUN II and therefore include the IBL.
-Furthermore, the three remaining layers have a pixel size of 50 µm in the R-$\phi$-direction and 400 µm in the z-direction. This gives an expected hit resolution of 8 µm \& 10 µm in the direction of R-$\phi$ and 40 µm \& 115 µm in the z-direction for the IBL and the three remaining layers, respectively. In total, the pixel detector contains 86 M pixels providing a good spatial resolution which make up
-around 50\% of all ATLAS readout channels.
+The inner part of the \acrshort{IDlabel} is the silicon pixel detector comprising 4 cylindrical layers and 2 end-caps with 3 disc layers each. The layers are located between 33.25~mm to 122.5~mm around the beam pipe with a coverage of $|\eta|$ < 2.5. A single 3D pixel is a radiation-hard silicon detector that produces a small measurable current when a charged particles passes through. The detector is especially important for the reconstruction of tracks, path of charged particles; the primary vertex reconstruction, the position of the main energetic collision; as well as for secondary vertex finding. The \acrlong{IBLlabel}~(\acrshort{IBLlabel}) is the innermost layer, installed in-between Run~1 and Run~2, having the highest granularity with a pixel size of $50\times 250$~$\mu$m (50~$\mu$m in the $\phi$-direction and 250~$\mu$m in $z$-direction) for a total of 12~M pixels. In particular, the \acrshort{IBLlabel} is very efficient to reconstruct secondary vertices, which are key signatures of long-lived particles decays and crucial for the identification of $b$-hadrons. Furthermore, the three remaining layers have a pixel size of $50\times 400$~$\mu$m. Overall, the pixel detector contains 86~M pixels with an expected hit resolution of $8\times 40$~$\mu$m for the \acrshort{IBLlabel} and $10\times 115$~$\mu$m for the rest of pixel layers. In addition, the system makes up around 50\% of all \acrshort{ATLASlabel} readout channels. For the next upgrade, the \acrlong{HLLHClabel}~(\acrshort{HLLHClabel}), a new fully silicon-based \acrlong{ITklabel}~(\acrshort{ITklabel}) will replace the full \acrshort{IDlabel}.
 
 % https://cds.cern.ch/record/1291633
+% https://cds.cern.ch/record/2285585
 
 \subsubsection*{Semiconductor tracker}
 
-The semiconductor tracker (SCT) is a silicon strip detector comprising 4 double layers in the barrel region and nine planar end-cap discs on each side. The strips have a size of 80 µm x 12 cm and cover a region up to abs eta < 2.5. The two layers within one layer-module are rotated by a stereo angle of 40 mrad. In general, the semiconductor-based detectors in ATLAS operate at a temperature between -10 ºC and -5 ºC to suppress different types of electronic noise. Overall the SCT has a resolution of 17 µm in the R-$\phi$ direction and 580 µm in the z-direction with a total of 6.3 M readout channels
+The \acrlong{SCTlabel}~(\acrshort{SCTlabel}) is a silicon strip detector comprising 4 double layers in the barrel region and nine planar end-cap discs on each side, installed around the pixel detector. The planar strips technology is simpler compared to the silicon pixels, for lower resolution covering a larger area. The strips have a size of $80~\mu$m$\times 12$~cm and cover a region up to $|\eta|<2.5$. The two layers within one layer-module are tilted by 40~mrad. Overall, the \acrshort{SCTlabel} has a resolution of $17\times 580$~$\mu$m with a total of 6.3~M readout channels. In general, the semiconductor-based detectors in \acrshort{ATLASlabel} operate at a temperature between -10 ºC and -5 ºC to suppress different types of electronic noise.
 
 
 \subsubsection*{Transition Radiation Tracker}
 
-The outermost part of the ID is the transition radiation tracker (TRT). In contrast to the other ID detectors, the TRT is not based on silicon but is a gaseous detector system. It consists of around 300k straw tubes with a diameter of 4 mm filled with a gas mixtures3 of Xe (70 \%), CO2 (27 \%) and O2 (3 \%) In RUN II, a second gas mixture of Ar (70 \%), CO2 (27 \%) and O2 (3 \%) was used for straw tubes belonging to modules with large gas leaks [59].
- and a gold-plated tungsten wire in the tube centre with a potential different to the tube surface of 1.5 kV. The straws have a length of 144 cm in the barrel region and 37 cm in the end cap. The single hit resolution is 120 µm in the barrel and 130 µm in the end-cap. In fact, the TRT provides besides the tracking information also a particle ID. This is achieved with emitted transition radiation at the material boundaries since the straws are interleaved with polypropylene. Especially electrons can be distinguished from charged pions due to their larger transition radiation. However, the TRT will be replaced for the High Luminosity LHC (HL-LHC) by a new, fully silicon-based Inner Tracker (ITk) [60] which will in fact replace the full ID.
+The outermost part of the \acrshort{IDlabel} is the \acrlong{TRTlabel}~(\acrshort{TRTlabel}). In contrast to the others, the \acrshort{TRTlabel} is not based on silicon but is a gaseous detector system. It consists of around 300~k straw tubes with a diameter of 4~mm filled with a gas mixture~\footnote{In Run~2, a mixture of Ar (80\%) and CO$_2$ (20\%) was used instead in modules with gas leaks} of Xe (70\%), CO$_2$ (27 \%) and O$_2$ (3 \%) and with a gold-plated tungsten wire in the tube centre with a potential different to the tube surface of 1.5~kV. When a charged particle hits the tube, the ionisation of the gas is detected as the signal. The straws have a length of 144~cm in the barrel region and 37~cm in the end cap, while the single hit resolution is 120~$\mu$m and 130~$\mu$m, respectively. The \acrshort{TRTlabel} only provides tracking information in the $\phi$ direction, as the tubes are parallel to the beamline. Besides, the \acrshort{TRTlabel} provides particle identification from emitted transition radiation at the material boundaries, since the straws are interleaved with polypropylene. Especially, electrons can be distinguished from charged pions due to larger transition radiation.
 
 % https://arxiv.org/abs/1702.06473
-% https://cds.cern.ch/record/2285585
 
 \subsection{The Calorimeter System}
 
-The calorimeter system is responsible for the precise measurement of the particle energies by absorbing them as well as measuring the shower properties to allow for particle identification. Showers
-are cascades of secondary particles which are formed when a highly energetic particle interacts with
-dense material. ATLAS uses sampling calorimeters which consist of alternating layers of active material (liquid argon \& plastic scintillators) and passive detector material (copper, iron, tungsten and
-lead). While the active material measures the energy deposit of the particles, the passive material
-induces the shower creation. The calorimeter system is composed of two main sub-systems, the electromagnetic [61, 62] and the hadronic calorimeter [63, 64] as shown in Figure 3.7. The calorimeter
-covers an $\eta$ range up to a far forward region of $|\eta|$ < 4.9.
+The calorimeter system is responsible for the precise measurement of the energy carried by both charged and neutral particles as well as measuring shower properties to allow for particle identification. Showers are cascades of secondary particles which are formed when a highly energetic particle interacts with dense material. \acrshort{ATLASlabel} uses sampling calorimeters which consist of alternating layers of active material (liquid argon and plastic scintillators) and passive detector material (copper, iron, tungsten and lead). While the active material measures the energy deposit of the particles going through, the passive material is designed to interact and absorb particles, thus induces the showering. The calorimeter system covers the region $|\eta|$ < 4.9 and is places between the central solenoid and the muon spectrometers. \textcolor{red}{Figure} shown an overview of the system, which is composed of two sub-detectors: the electromagnetic [61, 62] and the hadronic calorimeter [63, 64]. 
 
 % https://cds.cern.ch/record/331061
 % http://cds.cern.ch/record/2285582
@@ -147,15 +139,24 @@ covers an $\eta$ range up to a far forward region of $|\eta|$ < 4.9.
 
 \subsubsection*{Electromagnetic Calorimeter}
 
-The EM calorimeter encloses the ID and is a high granularity sampling calorimeter based on liquid argon (LAr) technology with absorber plates made out of lead. To provide full coverage in $\phi$, the EM calorimeter has an accordion-shaped structure where the active material is placed in the gaps between the lead absorber plates and the Kapton electrodes. The detector operates at -183 ◦C with a total of 170k readout channels. The barrel region of the EM calorimeter, consisting of two parts with a 4 mm gap between them and a length of 3.2 m each, covers $|\eta|$ < 1.475 with its granularity of $\Delta\eta\times\Delta\phi= 0.025\times 0.025$ in the second layer (middle-layer) and the two end caps cover $|\eta|$ < 3.2 with a slightly coarser granularity. In general, the absorption power at high energies of a calorimeter can be quantified in a materialindependent way by using the radiation length X0 of its medium. It is defined as the distance over which the particle energy is reduced via radiation losses by a factor 1/e. The thickness of the barrel
+The \acrlong{EMlabel}~(\acrshort{EMlabel}) calorimeter encloses the \acrshort{IDlabel} and is a high granularity calorimeter based on \acrlong{LARlabel}~(\acrshort{LARlabel}) technology with absorber plates made out of lead. To provide full coverage in $\phi$, the \acrshort{EMlabel} calorimeter has an accordion-shaped structure where the active material is placed in the gaps between the lead absorber plates and the Kapton electrodes. The detector operates at -183 ºC with a total of 170~k readout channels. The barrel region of the \acrshort{EMlabel} calorimeter covers the region $|\eta|$ < 1.475 and consists of three layers with a 4~mm gap between them and a length of 3.2~m each, with decreasing granularity. The layer closes to the \acrshort{IDlabel} has a granularity of $\Delta\eta\times\Delta\phi= 0.0031\times 0.098$, while the second layer $\Delta\eta\times\Delta\phi= 0.025\times 0.025$ and the outermost $\Delta\eta\times\Delta\phi= 0.05\times 0.025$. In addition, the two end-caps cover the region $|\eta|$ < 3.2 with a slightly coarser granularity. In general, the absorption power at high energies of a calorimeter is quantified by means of the radiation length $X_0$ of its medium. It is defined as the distance over which the particle energy is reduced via radiation losses by a factor $1/e$. The thickness of the barrel region, given in terms of the radiation length, is 22 $X_0$ and 24 $X_0$ for the end-caps. Moreover, the intrinsic energy resolution of the \acrshort{EMlabel} calorimeter is,
+
+\begin{equation}
+    \frac{\sigma_E}{E} = \frac{10\%}{\sqrt{E}}\oplus\frac{17\%}{E}\oplus 0.7\%
+\end{equation}
 
 % https://hep.uchicago.edu/images/Calorimeters_labels.png
 
 \subsubsection*{Hadronic Calorimeter}
 
-The second calorimeter system is the hadronic calorimeter located around the EM calorimeter consisting of three components with two different detector technologies providing roughly 19,000 readout channels.
-Firstly, the tile calorimeter is made out of alternating layers of steel as absorber material and scintillator plastic tiles as active material being read out via hotomultiplier tubes. Out of its three layers, the first two have the highest granularity with $\Delta\eta\times\Delta\phi= 0.1\times 0.1$. The barrel part of the tile calorimeter covers a region with $|\eta|$ < 1.0 and the two extended barrels a range of 0.8 < $|\eta|$ < 1.7. The resolution of the tile calorimeter is $\sigma$E/E = 50\%/$\sqrt{E}\oplus$ 3\% [66, p. 3].
-Secondly, the end-cap calorimeters, which are directly outside the EM calorimeter, and the forward calorimeter are based on the LAr technology. The end-caps use copper as passive material and cover a region of 1.5 < $|\eta|$ < 3.2 with their highest granularity of $0.1\times 0.1$ ($\Delta\eta\times\Delta\phi$) within $|\eta|$ < 2.5. Also, the first layer of the forward calorimeter uses copper as absorber scoping for EM activities. The other two layers make use of tungsten as absorber which is better suitable for hadronic measurements. In total the forward calorimeter covers a region of 3.2 < $|\eta|$ < 4.9. The overall resolution of the LAr based hadronic calorimeters is $\sigma$E/E = 100\%/$\sqrt{E}\oplus$ 10\% [67, p. 2].
+The second calorimeter system is the hadronic calorimeter located around the \acrshort{EMlabel} calorimeter and consists of three components providing around 19000 readout channels. First, the tile calorimeter is made out of alternating layers of steel as absorber material and scintillator plastic tiles as active material, being read out via photomultiplier tubes. The first two layers have the highest granularity with $\Delta\eta\times\Delta\phi= 0.1\times 0.1$. The barrel part of the tile calorimeter covers a region with $|\eta|$ < 1.0 and the two extended barrels a range of 0.8 < $|\eta|$ < 1.7. The resolution of the tile calorimeter is $\sigma$E/E = 50\%/$\sqrt{E}\oplus$ 3\% \todo{check this numbers} [66, p. 3].
+Next, the end-cap calorimeters are directly outside the \acrshort{EMlabel} calorimeter and are based on the \acrshort{LARlabel} technology. The end-caps use copper as passive material and cover a region of 1.5 < $|\eta|$ < 3.2 with their highest granularity of also $0.1\times 0.1$ within $|\eta|$ < 2.5. Finally, the forward calorimeter is also \acrshort{LARlabel} based and its first layer uses copper as absorber, which provides information for both electromagnetic and hadronic particles. The other two layers make use of tungsten as absorber which is better suitable for hadronic measurements. In total the forward calorimeter covers a region of 3.2 < $|\eta|$ < 4.9. The overall resolution of the \acrshort{LARlabel} based hadronic calorimeters is,
+\begin{equation}
+    \frac{\sigma_E}{E} = \frac{50\%}{\sqrt{E}}\oplus\frac{1\%}{E}\oplus 3\%
+\end{equation}
+
+
+$\sigma$E/E = 100\%/$\sqrt{E}\oplus$ 10\% [67, p. 2].
 
 %https://doi.org/10.1140/epjc/s10052-018-6374-z
 
