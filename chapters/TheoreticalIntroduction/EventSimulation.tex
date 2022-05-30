@@ -1,0 +1,99 @@
+Proton collisions are complex processes and their understanding is essential to interpret the experimental data from the LHC. Normally, physics analyses rely on the ability to accurately simulate the various processes of proton-proton collisions and the interactions with the detector in order to perform comparisons with the recorded data and quantify its the level of agreement of the SM. The simulation is usually performed with Monte Carlo generators, which are stochastic tools that incorporate both theoretical predictions and empirical results to describe the statistical processes.
+Sections bla and bla 
+
+\section{Event simulation}
+
+The typical proton-proton collision at the LHC is depicted in \textcolor{red}{Figure}. The inelastic scattering is the main interesting process, where the energy of the system is large enough so a constituent of each proton (partons), interacts and allows the production of additional particles. The interaction that involves any of the other partons, normally at lower energies, is referred to as underlying event. A key phenomenon is the parton shower, a processes where due to the strong interaction, particles loose energy due the radiation of gluons which further generate quark-antiquark pairs, which in turn radiate gluons again in a chain reaction. These generated particles loose energy progressively down to the point where QCD leaves the perturbative regime ($\sim$1~GeV) and the hadronisation occurs, when quarks and gluons form hadrons, colorless bound states. To complete the simulation of the collision, the pile-up is included which adds the effects from the other proton collisions that originate from the same or previous bunch-crossing.  
+
+\subsection{Factorisation theorem}
+
+The cross-section of a hard scattering-event at hadron colliders σA,B→X can be factorised into two %needs context?
+components using the factorisation theorem [72]. The PDFs fAa and fBa describe the colliding partons a, b which are contained in the hadrons A, B while the cross-section of the hard scattering itself,
+σˆ a,b, can be usually calculated with perturbation theory. The cross-section can be written as
+
+where µF is the factorisation scale chosen such that it usually corresponds to a characteristic momentum transfer of the selected process and x1,2 the Bjorken x described in more detail below.
+
+
+\subsection{Parton density function}
+
+The PDFs are crucial for the description of proton-proton collisions since protons are not point-like
+particles but consist of so-called partons. The first type of partons are the valence quarks which
+determine the quantum numbers (charge, etc.) of the proton. In addition, gluons and virtual quarkantiquark pairs (sea-quarks) coming from vacuum fluctuations are also a part of the proton. A PDF
+f
+A
+a (x, Q2
+) describes the probability density of a parton a inside a hadron A to carry a certain momentum fraction x = pa/pA also betoken as Bjorken x evaluated at a specific momentum transfer
+
+Q2
+. In general, PDFs cannot be directly predicted1 %why not
+thus they are extracted from several measurements using a complex fit, performed at a specific scale. Several collaborations such as the CTEQ,
+MSTW and NNPDF collaborations [74–77] determine the PDFs and provide them for physics analyses. With the help of the Dokshitzer–Gribov–Lipatov–Altarelli–Parisi (DGLAP) Equations [78–
+80], the PDFs can be extrapolated to different scales Q2
+and do not have to be measured at each
+scale individually. Figure 4.1 shows the proton PDFs for two different factorisation scales.
+
+Processes involving b-quarks can be described in QCD in two different factorisation schemes
+arising from the b-quark mass ΛQCD < mb  v : the four-flavour scheme (4FS) and the fiveflavour scheme (5FS). The 4FS treats the b-quarks massive and since mb > mproton, they do not
+appear in the initial state. Consequently, the b-quarks do not have dedicated PDFs, so they decouple
+from the QCD perturbative evolution and therefore decouple from the αs running and the number
+of ’light’ flavour quarks is set to nf = 4 in Equation (2.15). Considering the b-quarks as massive
+is especially impacting calculations at lower scales, around the production threshold. On the other
+hand, at high scales the mass effects are negligible. This case is described by the 5FS in which the
+initial state b-quarks are considered massless and they are treated in the same manner as the other
+light quarks comprising a b-quark PDF and nf = 5
+
+\subsection{MC generators}
+
+Typically, the event generation is divided into two parts: first the matrix element (ME) generation
+describing the hard scattering and secondly the parton shower (PS) evolution and hadronisation modelling including initial state radiation (ISR) and final state radiation (FSR). While the ME and most
+parts of the PS can be calculated perturbatively, the other processes are non-perturbative. A simplified
+illustration of this full simulation process is shown in Figure 4.2. For the modelling of the hadronisation, there are different models, the most widely used models are: the Lund string model [81] and
+the cluster model [82]. In the Lund string model, the colour connection of a quark-antiquark pair is
+described as a string and the potential between them is assumed to be linearly increasing with their
+distance. The strings then split according to a fragmentation function forming new quark-antiquark
+pairs which continues until only hadrons with on-shell mass remain. The cluster model is based on
+QCD pre-confinement, where neighbouring partons build colour-singlet clusters, these clusters then
+decay into two hadrons and they then decay further until the final state hadrons are formed.
+
+The full process involving matrix element generation, parton shower, underlying event, hadronisation and fragmentation can be simulated by MC generators like PYTHIA8 [84], HERWIG7 [85, 86]
+or SHERPA [87]. However, PYTHIA8 provides mainly leading order calculations which are often not
+sufficient since the next-to-leading order (NLO) corrections can be fairly large. HERWIG7 provides
+many MEs also at NLO. Since the fraction of negative event weights can be quite large (up to
+∼ 40% for certain generator setups), the generator is only used as parton shower in this thesis. In fact,
+there are other generators like POWHEGBOX [88–92] or MADGRAPH5_aMC@NLO [93] providing
+higher-order calculations which can be interfaced with PYTHIA8 or HERWIG7 for the simulation of
+PS and hadronisation.
+Furthermore, the models used to describe the non-perturbative processes have parameters that can
+be tuned using collision data. The most common tunes used by the ATLAS experiment are the A14
+parameters [94] for PYTHIA8 or the H7UE set of tuned parameters [86] for HERWIG7
+
+Throughout this thesis the physics processes for proton-proton collisions at a centre-of-mass energy
+√
+s = 13 TeV are modelled using various combinations of MC generators and settings. The specific
+details are stated in the dedicated chapters. Nevertheless, all MC samples using PYTHIA8 or HERWIG7 to model the multi-parton interaction (MPI), hadronisation and PS use the same settings if not
+differently stated. The mass of the top quark is set to mt = 172.5 GeV, the Higgs boson mass to
+mH = 125 GeV and the mass of the b-quark to mb = 4.8 GeV for PYTHIA8, to mb = 4.5 GeV for
+HERWIG7 and to mb = 4.75 GeV for SHERPA. The simulation of b- and c-hadron decays is performed via the EVTGEN v1.6.0 program [95] with the exception of SHERPA. As mentioned above
+the two tunes A14 combined with the NNPDF2.3LO PDF set [96] and H7UE together with the set
+of MMHT2014LO PDFs [97] are used for PYTHIA8 and HERWIG7, respectivel
+
+
+\section{Detector simulation}
+
+The last step in the simulation chain is the detector simulation. The MC generators, as described
+in Section 4.1, provide information about stable particles in the final state, not taking into account
+the detector response. The full ATLAS detector simulation [98] is performed in two steps. The
+first step is based on GEANT4 [99] incorporating the geometry of the detector and providing highly
+precise modelling of the particle interactions with the detector matter. However, it comes with the
+shortcoming of using a large fraction of the available computing power of ATLAS. As an alternative,
+fast calorimeter simulation algorithms [100–102] are developed and already used in practice. They
+mimic the GEANT4 results, based on thousands of individual parametrisations of the calorimeter
+response, using significantly less computing resources with a trade-off in precision. A comparison
+of the necessary CPU time for the different detector simulations are shown in Figure 4.3. In practice,
+
+he fast simulation algorithms are widely used in ATLAS and are called AtlFast-II. In the second
+step, the readout electronics and digitisation is simulated which is adjusted for the different detector
+systems.
+Taking advantage of the latest machine learning developments in the last years, deep generative
+algorithms such as Generative Adversarial Networks (GANs) and Variational Auto-Encoders (VAEs)
+are studied to improve the fast calorimeter simulation [103] showing already promising results.
