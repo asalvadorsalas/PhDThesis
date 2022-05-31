@@ -7,44 +7,28 @@ The typical proton-proton collision at the LHC is depicted in \textcolor{red}{Fi
 
 \subsection{Factorisation theorem}
 
-The cross-section of a hard scattering-event at hadron colliders σA,B→X can be factorised into two %needs context?
-components using the factorisation theorem [72]. The PDFs fAa and fBa describe the colliding partons a, b which are contained in the hadrons A, B while the cross-section of the hard scattering itself,
-σˆ a,b, can be usually calculated with perturbation theory. The cross-section can be written as
+The cross-section of the hard scattering between partons inside of the proton producing a final stat $X$, $\sigma_{pp\to X}$ can be factorised into two components in perturbation theory, as the strong coupling constant, $\alpha_s$, is small at high energy kinematic regimes. Using the factorisation theorem \textcolor{red}{cite},
 
-where µF is the factorisation scale chosen such that it usually corresponds to a characteristic momentum transfer of the selected process and x1,2 the Bjorken x described in more detail below.
+\begin{equation}
+    \sigma_{pp\to X}=\sum_{a,b}\int \text{d}x_a\text{d}x_b f_a(x_a,\mu_F^2)f_b(x_b,\mu_F^2)\cdot\hat{\sigma}_{ab\to X}(x_a p_a,x_b p_b,\mu_F^2,\mu_R^2),
+\end{equation}
 
+where $f_i(x_i,\mu_F^2)$ are the \acrlong{PDFlabel}~(\acrshort{PDFlabel}) for partons $i=a,b\in\left\{g, u, \bar{u}, d, ...\right\}$ and encodes the probability of finding a parton of type $i$ within the proton carrying a fraction of the proton's momentum $x_i$, at the factorisation scale $\mu_F$. The dependance of the scale appears from performing only fixed-order calculations and the value is typically set comparable to the energy of the process, for example, to the total transverse mass of the final-state particles. The partonic cross-section, $\hat{\sigma}_{ab\to X}(x_a p_a,x_b p_b,\mu_F^2,\mu_R^2)$, is calculated at finite perturbative order, hence the additional dependance on the renormalisation scale, $\mu_R$, at which to evaluate $\alpha_s$.
 
 \subsection{Parton density function}
 
-The PDFs are crucial for the description of proton-proton collisions since protons are not point-like
-particles but consist of so-called partons. The first type of partons are the valence quarks which
-determine the quantum numbers (charge, etc.) of the proton. In addition, gluons and virtual quarkantiquark pairs (sea-quarks) coming from vacuum fluctuations are also a part of the proton. A PDF
-f
-A
-a (x, Q2
-) describes the probability density of a parton a inside a hadron A to carry a certain momentum fraction x = pa/pA also betoken as Bjorken x evaluated at a specific momentum transfer
+The \acrshort{PDFlabel}s are crucial for the accurate description of the partons that form the protons. The first type of partons are the valence quarks which determine the quantum numbers of the proton. In addition, gluons and virtual quark-antiquark pairs (sea-quarks) are also part of the proton and come from the vaccum fluctuations. A \acrshort{PDFlabel}, $f_i^A(x_i,Q^2)$ describres the probability density of a parton of a certain type, $i$, inside a given hadron, $A$ to carry a certain momentum fraction, $x=p_i/p_A$ evaluated at a specific momentun transfer $Q^2$. In general, \acrshort{PDFlabel} are excracted from empirical measurements performed at a specific scale. Then, the \acrlong{DGLAPlabel}~(\acrshort{DGLAPlabel}) equations are used to extrapolate the \acrshort{PDFlabel} to different scales. Other alternatives to extract the functions like latice \acrshort{QCD} are possible, but very computationally challenging. %https://arxiv.org/abs/2005.02102 
+There are dedicated collaborations such as the \textit{NNPDF}, \textit{CTEQ} and \textit{MSTW} that provide %https://arxiv.org/abs/1410.8849 https://arxiv.org/abs/hep-ph/0508110 https://arxiv.org/abs/0901.0002
+ \acrshort{PDFlabel}s for physics analyses. \textcolor{red}{Figure} shows the \textit{NNPDF3.0NLO} \acrshort{PDFlabel} set for the different proton partons and two different factorisation scales.
 
-Q2
-. In general, PDFs cannot be directly predicted1 %why not
-thus they are extracted from several measurements using a complex fit, performed at a specific scale. Several collaborations such as the CTEQ,
-MSTW and NNPDF collaborations [74–77] determine the PDFs and provide them for physics analyses. With the help of the Dokshitzer–Gribov–Lipatov–Altarelli–Parisi (DGLAP) Equations [78–
-80], the PDFs can be extrapolated to different scales Q2
-and do not have to be measured at each
-scale individually. Figure 4.1 shows the proton PDFs for two different factorisation scales.
+ There are two main factorisation schemes to describe processes involving $b$-quarks: the \acrlong{4FSlabel}~(\acrshort{4FSlabel}) and the \acrlong{5FSlabel}~(\acrshort{5FSlabel}). The \acrshort{4FSlabel} treats the $b$-quarks massive ($m_b>\mu_R$) and since $m_b>m_p$, they are not included in the sea of quarks and do not have an associated \acrshort{PDFlabel}. In the context of \acrshort{QCD} perturbative evolution, one of the consequences is that calculations at lower scales $\mu_R<m_b$ are especially impacted as the $\alpha_s$ running depends on the number of quark flavours in the initial state, $n_f=4$ \todo{reference euqation of the running}. On the other hand, at high scales the mass effects are negligible and usually described by the \acrshort{5FSlabel}, in which the $b$-quark is considered massless, included in the initial state and treated as the other quarks, $n_f=5$. 
 
-Processes involving b-quarks can be described in QCD in two different factorisation schemes
-arising from the b-quark mass ΛQCD < mb  v : the four-flavour scheme (4FS) and the fiveflavour scheme (5FS). The 4FS treats the b-quarks massive and since mb > mproton, they do not
-appear in the initial state. Consequently, the b-quarks do not have dedicated PDFs, so they decouple
-from the QCD perturbative evolution and therefore decouple from the αs running and the number
-of ’light’ flavour quarks is set to nf = 4 in Equation (2.15). Considering the b-quarks as massive
-is especially impacting calculations at lower scales, around the production threshold. On the other
-hand, at high scales the mass effects are negligible. This case is described by the 5FS in which the
-initial state b-quarks are considered massless and they are treated in the same manner as the other
-light quarks comprising a b-quark PDF and nf = 5
 
-\subsection{MC generators}
+\subsection{Monte Carlo simulation and generators}
 
-Typically, the event generation is divided into two parts: first the matrix element (ME) generation
+The simulation 
+
+Typically, the event generation is divided into two steps: the matrix element (ME) generation and the parton shower (PS) evolution and hadronisation modelling. 
 describing the hard scattering and secondly the parton shower (PS) evolution and hadronisation modelling including initial state radiation (ISR) and final state radiation (FSR). While the ME and most
 parts of the PS can be calculated perturbatively, the other processes are non-perturbative. A simplified
 illustration of this full simulation process is shown in Figure 4.2. For the modelling of the hadronisation, there are different models, the most widely used models are: the Lund string model [81] and
