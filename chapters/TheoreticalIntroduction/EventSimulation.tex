@@ -1,19 +1,19 @@
-Proton collisions are complex processes and their understanding is essential to interpret the experimental data from the LHC. Normally, physics analyses rely on the ability to accurately simulate the various processes of proton-proton collisions and the interactions with the detector in order to perform comparisons with the recorded data and quantify its the level of agreement of the SM. The simulation is usually performed with Monte Carlo generators, which are stochastic tools that incorporate both theoretical predictions and empirical results to describe the statistical processes.
+Proton collisions are complex processes and their understanding is essential to interpret the experimental data from the \acrshort{LHClabel}. Normally, physics analyses rely on the ability to accurately simulate the various processes of proton-proton collisions and the interactions with the detector in order to perform comparisons with the recorded data and quantify its the level of agreement of the SM. The simulation is usually performed with Monte Carlo \acrlong{MClabel}~(\acrshort{MClabel}) generators, which are stochastic tools that incorporate both theoretical predictions and empirical results to describe the statistical processes.
 Sections bla and bla 
 
 \section{Event simulation}
 
-The typical proton-proton collision at the LHC is depicted in \textcolor{red}{Figure}. The inelastic scattering is the main interesting process, where the energy of the system is large enough so a constituent of each proton (partons), interacts and allows the production of additional particles. The interaction that involves any of the other partons, normally at lower energies, is referred to as underlying event. A key phenomenon is the parton shower, a processes where due to the strong interaction, particles loose energy due the radiation of gluons which further generate quark-antiquark pairs, which in turn radiate gluons again in a chain reaction. These generated particles loose energy progressively down to the point where QCD leaves the perturbative regime ($\sim$1~GeV) and the hadronisation occurs, when quarks and gluons form hadrons, colorless bound states. To complete the simulation of the collision, the pile-up is included which adds the effects from the other proton collisions that originate from the same or previous bunch-crossing.  
+The typical proton-proton collision at the LHC is depicted in \textcolor{red}{Figure}. The inelastic scattering is the main interesting process, where the energy of the system is large enough so a constituent of each proton (partons) interact and allow the production of additional particles. The interaction that involves any of the other partons, normally at lower energies, is referred to as underlying event. A key phenomenon is the parton shower, a processes where due to the strong interaction, particles loose energy due the radiation of gluons which further generate quark-antiquark pairs, which in turn radiate gluons again in a chain reaction. These generated particles loose energy progressively down to the point where \acrshort{QCD} leaves the perturbative regime ($\sim$1~GeV) and the hadronisation occurs, when quarks and gluons form hadrons, colorless bound states. To complete the simulation of the collision, the pile-up is included which adds the effects from the other proton collisions that originate from the same or previous bunch-crossing.  
 
 \subsection{Factorisation theorem}
 
-The cross-section of the hard scattering between partons inside of the proton producing a final stat $X$, $\sigma_{pp\to X}$ can be factorised into two components in perturbation theory, as the strong coupling constant, $\alpha_s$, is small at high energy kinematic regimes. Using the factorisation theorem \textcolor{red}{cite},
+The cross-section to produce a final stat $X$ from the hard scattering of two protons, $\sigma_{pp\to X}$ can be factorised into two components in perturbation theory, as the strong coupling constant, $\alpha_s$, is small at high energy kinematic regimes. Using the factorisation theorem \textcolor{red}{cite},
 
 \begin{equation}
     \sigma_{pp\to X}=\sum_{a,b}\int \text{d}x_a\text{d}x_b f_a(x_a,\mu_F^2)f_b(x_b,\mu_F^2)\cdot\hat{\sigma}_{ab\to X}(x_a p_a,x_b p_b,\mu_F^2,\mu_R^2),
 \end{equation}
 
-where $f_i(x_i,\mu_F^2)$ are the \acrlong{PDFlabel}~(\acrshort{PDFlabel}) for partons $i=a,b\in\left\{g, u, \bar{u}, d, ...\right\}$ and encodes the probability of finding a parton of type $i$ within the proton carrying a fraction of the proton's momentum $x_i$, at the factorisation scale $\mu_F$. The dependance of the scale appears from performing only fixed-order calculations and the value is typically set comparable to the energy of the process, for example, to the total transverse mass of the final-state particles. The partonic cross-section, $\hat{\sigma}_{ab\to X}(x_a p_a,x_b p_b,\mu_F^2,\mu_R^2)$, is calculated at finite perturbative order, hence the additional dependance on the renormalisation scale, $\mu_R$, at which to evaluate $\alpha_s$.
+where $f_i(x_i,\mu_F^2)$ are the \acrlong{PDFlabel}~(\acrshort{PDFlabel}) for partons $i=a,b\in\left\{g, u, \bar{u}, d, ...\right\}$ and encodes the probability of finding a parton of type $i$ within the proton carrying a fraction of the proton's momentum $x_i$, at the factorisation scale $\mu_F$. The dependence of the scale appears from performing only fixed-order calculations and the value is typically set comparable to the energy of the process, for example, to the total transverse mass of the final-state particles. The partonic cross-section, $\hat{\sigma}_{ab\to X}(x_a p_a,x_b p_b,\mu_F^2,\mu_R^2)$, is calculated at finite perturbative order, hence the additional dependence on the renormalisation scale, $\mu_R$, at which to evaluate $\alpha_s$.
 
 \subsection{Parton density function}
 
@@ -23,13 +23,35 @@ There are dedicated collaborations such as the \textit{NNPDF}, \textit{CTEQ} and
 
  There are two main factorisation schemes to describe processes involving $b$-quarks: the \acrlong{4FSlabel}~(\acrshort{4FSlabel}) and the \acrlong{5FSlabel}~(\acrshort{5FSlabel}). The \acrshort{4FSlabel} treats the $b$-quarks massive ($m_b>\mu_R$) and since $m_b>m_p$, they are not included in the sea of quarks and do not have an associated \acrshort{PDFlabel}. In the context of \acrshort{QCD} perturbative evolution, one of the consequences is that calculations at lower scales $\mu_R<m_b$ are especially impacted as the $\alpha_s$ running depends on the number of quark flavours in the initial state, $n_f=4$ \todo{reference euqation of the running}. On the other hand, at high scales the mass effects are negligible and usually described by the \acrshort{5FSlabel}, in which the $b$-quark is considered massless, included in the initial state and treated as the other quarks, $n_f=5$. 
 
+\subsection{Matrix element}
+
+The computation of the partonic cross-section of partons $i,j$ into an arbritrary final state $X$, is related to the \acrshort{ME} amplitude as,
+
+\begin{equation}
+    \hat{\sigma}_{ij\to X} \sim \sum_{k=0}^\inf \int \text{d}\Phi_{X+k}\left|\sum_{l=0}^\inf M^l_{X+k}\right|^2(\Phi_F,\mu_F,\mu_R)
+\end{equation}
+
+were \acrshort{PDFlabel}s and other normalisation factors are removed for compactness. $M^l_{X+k}$ is the \acrshort{ME} amplitude for the production of $X$ in association with $k$ additional final-state partons, or legs, and with $l$ additional loop corrections. In a perturbative regime, the \acrshort{MElabel} amplitudes for increasingly complex processes (diagrams with additional legs and loops) tend to decrease. As a result, the cross-section is generally computed at a perturvative order, without the sum computed to infinity and for a choice of $\mu_F$ and $\mu_R$. The \acrlong{LOlabel}~(\acrshort{LOlabel}) is the lowest possible order for the calculation, with $k=l=0$. Next, $l=0,k=n$ provides the \acrshort{LO} computation for the production of $X+n$ jets. Finally, $k+l\leq n$ corresponds to a N$^n$LO prediction for the production of $X$, while also to a N$^{n-k}$LO prediction for the production of $X$ in association of $k$ jets.
+
+\subsection{Parton shower}
+
+One problem that arises in the fixed order computations of the differential cross-section is the appearance of logarithmic divergences from collinear splitting that originate from the integration of the phase space, $\Phi$, of the additional $k$ partons. For an inclusive cross-section computation, these divergencies cancel out with virtual corrections order by order, following the KLN theorem. %https://aip.scitation.org/doi/10.1063/1.1724268 %https://journals.aps.org/pr/abstract/10.1103/PhysRev.133.B1549
+In this case, the basic event is simulated at fixed order while the \acrshort{QCD} emission process (splitting) is computed with the \acrshort{PSlabel} algorithm, %https://www.sciencedirect.com/science/article/abs/pii/055032138090111X?via%3Dihub
+which generates a sequence of emissions with decreasing angle or energy. The algorithm recursively produces the typical splitting processes ($g\to q\bar{q}$, $g\to gg$ and $q\to qg$) for each parton until the energy of the shower reaches $\sim$1~GeV, the hadronisation scale. This showering process that is applied to the final products after the hard-scattering is refered to as \acrlong{FSRlabel}~(\acrshort{FSRlabel}), while the simulation of the \acrlong{ISRlabel}~(\acrshort{ISRlabel}) is performed to the incoming partons. In the case of \acrshort{ISRlabel}, the subsequent emissions grow on energy and are modelled instead with a backwards-evolution algorithm. % https://www.sciencedirect.com/science/article/abs/pii/0370269385906744?via%3Dihub
+
+There is an incompatibility with the full cross-section computation at order $n>1$ as there is a possible overlap in the phase space of the extra partons that are considered for the \acrshort{ME} computation at order $n$ with the ones considered in the \acrshort{PSlabel} at order $n-1$. There are different approaches to solve the double counting, known as ME-PS matching. The most common strategy is known as slicing, which defines a matching scale where the higher energy region is described by the \acrshort{MElabel} while any additional parton below the scale is vetoed and only allowed to be prompted by the \acrshort{PS} algorithm.
+
+\subsection{Hadronisation}
+
+
 
 \subsection{Monte Carlo simulation and generators}
 
-The simulation 
+The simulation of the hadron collisions is performed through dedicated software tools called
+\acrshort{MClabel} generators, which use pseudo-random numbers to generate the distributions predicted by the process. They are generally classified according to which of the steps of the simulation can perform, with general purpose generators being capable of simulating the whole event process, while dedicated generators target specific parts of the chain, such as the matrix element or the parton shower.
 
-Typically, the event generation is divided into two steps: the matrix element (ME) generation and the parton shower (PS) evolution and hadronisation modelling. 
-describing the hard scattering and secondly the parton shower (PS) evolution and hadronisation modelling including initial state radiation (ISR) and final state radiation (FSR). While the ME and most
+Typically, the event generation is divided into two steps: the \acrlong{MElabel}~(\acrshort{MElabel}) generation and the \acrlong{PSlabel}~(\acrshort{PSlabel}) evolution and hadronisation modelling. 
+The hard scattering describing the hard scattering and secondly the parton shower (PS) evolution and hadronisation modelling including initial state radiation (ISR) and final state radiation (FSR). While the ME and most
 parts of the PS can be calculated perturbatively, the other processes are non-perturbative. A simplified
 illustration of this full simulation process is shown in Figure 4.2. For the modelling of the hadronisation, there are different models, the most widely used models are: the Lund string model [81] and
 the cluster model [82]. In the Lund string model, the colour connection of a quark-antiquark pair is
