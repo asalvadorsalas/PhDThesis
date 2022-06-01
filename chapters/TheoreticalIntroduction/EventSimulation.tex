@@ -25,81 +25,60 @@ There are dedicated collaborations such as the \textit{NNPDF}, \textit{CTEQ} and
 
 \subsection{Matrix element}
 
-The computation of the partonic cross-section of partons $i,j$ into an arbritrary final state $X$, is related to the \acrshort{ME} amplitude as,
+The computation of the partonic cross-section of partons $i,j$ into an arbritrary final state $X$, is related to the \acrshort{MElabel} amplitude as,
 
 \begin{equation}
-    \hat{\sigma}_{ij\to X} \sim \sum_{k=0}^\inf \int \text{d}\Phi_{X+k}\left|\sum_{l=0}^\inf M^l_{X+k}\right|^2(\Phi_F,\mu_F,\mu_R)
+    \hat{\sigma}_{ij\to X} \sim \sum_{k=0}^{\infty} \int \text{d}\Phi_{X+k}\left|\sum_{l=0}^{\infty} M^l_{X+k}\right|^2(\Phi_F,\mu_F,\mu_R)
 \end{equation}
 
-were \acrshort{PDFlabel}s and other normalisation factors are removed for compactness. $M^l_{X+k}$ is the \acrshort{ME} amplitude for the production of $X$ in association with $k$ additional final-state partons, or legs, and with $l$ additional loop corrections. In a perturbative regime, the \acrshort{MElabel} amplitudes for increasingly complex processes (diagrams with additional legs and loops) tend to decrease. As a result, the cross-section is generally computed at a perturvative order, without the sum computed to infinity and for a choice of $\mu_F$ and $\mu_R$. The \acrlong{LOlabel}~(\acrshort{LOlabel}) is the lowest possible order for the calculation, with $k=l=0$. Next, $l=0,k=n$ provides the \acrshort{LO} computation for the production of $X+n$ jets. Finally, $k+l\leq n$ corresponds to a N$^n$LO prediction for the production of $X$, while also to a N$^{n-k}$LO prediction for the production of $X$ in association of $k$ jets.
+were \acrshort{PDFlabel}s and other normalisation factors are removed for compactness. $M^l_{X+k}$ is the \acrshort{MElabel} amplitude for the production of $X$ in association with $k$ additional final-state partons, or legs, and with $l$ additional loop corrections. In a perturbative regime, the \acrshort{MElabel} amplitudes for increasingly complex processes (diagrams with additional legs and loops) tend to decrease. As a result, the cross-section is generally computed at a perturbative order, without the sum computed to infinity and for a choice of $\mu_F$ and $\mu_R$. The \acrlong{LOlabel}~(\acrshort{LOlabel}) is the lowest possible order for the calculation, with $k=l=0$. Next, $l=0,k=n$ provides the \acrshort{LOlabel} computation for the production of $X+n$ jets. Finally, $k+l\leq n$ corresponds to a N$^n$LO prediction for the production of $X$, while also to a N$^{n-k}$LO prediction for the production of $X$ in association of $k$ jets.
 
 \subsection{Parton shower}
 
 One problem that arises in the fixed order computations of the differential cross-section is the appearance of logarithmic divergences from collinear splitting that originate from the integration of the phase space, $\Phi$, of the additional $k$ partons. For an inclusive cross-section computation, these divergencies cancel out with virtual corrections order by order, following the KLN theorem. %https://aip.scitation.org/doi/10.1063/1.1724268 %https://journals.aps.org/pr/abstract/10.1103/PhysRev.133.B1549
 In this case, the basic event is simulated at fixed order while the \acrshort{QCD} emission process (splitting) is computed with the \acrshort{PSlabel} algorithm, %https://www.sciencedirect.com/science/article/abs/pii/055032138090111X?via%3Dihub
-which generates a sequence of emissions with decreasing angle or energy. The algorithm recursively produces the typical splitting processes ($g\to q\bar{q}$, $g\to gg$ and $q\to qg$) for each parton until the energy of the shower reaches $\sim$1~GeV, the hadronisation scale. This showering process that is applied to the final products after the hard-scattering is refered to as \acrlong{FSRlabel}~(\acrshort{FSRlabel}), while the simulation of the \acrlong{ISRlabel}~(\acrshort{ISRlabel}) is performed to the incoming partons. In the case of \acrshort{ISRlabel}, the subsequent emissions grow on energy and are modelled instead with a backwards-evolution algorithm. % https://www.sciencedirect.com/science/article/abs/pii/0370269385906744?via%3Dihub
+which generates a sequence of emissions with decreasing angle or energy. The algorithm recursively produces the typical splitting processes ($g\to q\bar{q}$, $g\to gg$ and $q\to qg$) for each parton until the energy of the shower reaches $\sim$1~GeV, the hadronisation scale. This showering process that is applied to the final products after the hard-scattering is referred to as \acrlong{FSRlabel}~(\acrshort{FSRlabel}), while the simulation of the \acrlong{ISRlabel}~(\acrshort{ISRlabel}) is performed to the incoming partons. In the case of \acrshort{ISRlabel}, the subsequent emissions grow on energy and are modelled instead with a backwards-evolution algorithm. % https://www.sciencedirect.com/science/article/abs/pii/0370269385906744?via%3Dihub
 
-There is an incompatibility with the full cross-section computation at order $n>1$ as there is a possible overlap in the phase space of the extra partons that are considered for the \acrshort{ME} computation at order $n$ with the ones considered in the \acrshort{PSlabel} at order $n-1$. There are different approaches to solve the double counting, known as ME-PS matching. The most common strategy is known as slicing, which defines a matching scale where the higher energy region is described by the \acrshort{MElabel} while any additional parton below the scale is vetoed and only allowed to be prompted by the \acrshort{PS} algorithm.
+There is an incompatibility with \acrshort{MElabel} and \acrshort{PSlabel} for a full cross-section computation at order $n>1$, as there is a possible overlap in the phase space of the extra partons that are considered for the \acrshort{MElabel} at order $n$ with the ones considered in the splitting at order $n-1$. There are different approaches to solve the double counting, known as ME-PS matching. The most common strategy is known as slicing, which defines a matching scale where the higher energy region is covered only by the \acrshort{MElabel} while any additional parton with energy below the scale is vetoed and only covered with the \acrshort{PSlabel} algorithm. With this strategy, both energy regions are described with the corresponding optimal algorithm.
 
 \subsection{Hadronisation}
 
+The hadronisation process starts when the energy of the \acrshort{PSlabel} emissions is low enough to reach the hadronisation scale ($\sim$1~GeV), where the perturbative regime of \acrshort{QCD} is not valid. At that point, the partons from the \acrshort{PSlabel} have defined momentum, flavour and color and furhter description of the emissions has to rely on phenomenological models. The process consists on a reconstruction algorithm that groups together the partons into different hadrons, that can further split, until all partons are confinend into stable hadrons. 
 
+The two most widely used models are: the Lund string model %https://www.sciencedirect.com/science/article/pii/0370157383900807?via%3Dihub
+and the cluster model. %https://link.springer.com/article/10.1140/epjc/s2004-01960-8
+In the first, the quark-antiquark pair colour interaction is described as a string with a potential assumed to be linearly increasing with the distance, emulating the \acrshort{QCD} potential. The string then splits forming new quark-antiquark pairs when the energy stored passes the quark-antiquark total mass, forming hadrons which momentum is determined from the initial momentum by a fragmentation function. The momentum of the hadron as a fraction . On the otherhand, the second model is based on forcing the final state gluons to split into quark-antiquark pairs and then grouping all quarks in colour-singlet clusters, allowed to decay and split into smaller clusters or hadrons. For both models, the process is repeated iteratively until only stable hadrons remain.
+
+\subsection{Pile-up and underlying event}
+
+Other interactions aside the hard-scattering event have to be included in the \acrshort{MClabel} simulations to properly model the \acrshort{LHClabel} collisions, the pile-up and the underlying event. Both sources mainly consist of soft \acrshort{QCD} interactions, the first arising from other protons colliding in the same or previous bunch-crossing while the second being the interaction of the other partons that do not originate the hard-scattering process. Both mainly consist of soft \acrshort{QCD} interactions in the forward regime, close to the beam axis, and the description is based of the combination of phenomenological models and the configuration of the \acrshort{LHClabel} beam. In the especial case of out-of-time pileup (interactions from previous bunch-crossings), the simulation has to take into account the time response of the detector.
 
 \subsection{Monte Carlo simulation and generators}
 
-The simulation of the hadron collisions is performed through dedicated software tools called
-\acrshort{MClabel} generators, which use pseudo-random numbers to generate the distributions predicted by the process. They are generally classified according to which of the steps of the simulation can perform, with general purpose generators being capable of simulating the whole event process, while dedicated generators target specific parts of the chain, such as the matrix element or the parton shower.
+\acrshort{MClabel} generators are dedicated software tools to perform the \acrshort{MClabel} simulations, based on pseudo-ranom numbers to generate the events from the predicted distributions. They are generally classified according to which of the steps of the simulation can perform, with general purpose generators being capable of simulating the whole event process, while dedicated generators target specific parts of the chain, such as the \acrshort{MElabel} or the \acrshort{PSlabel} computation.
 
-Typically, the event generation is divided into two steps: the \acrlong{MElabel}~(\acrshort{MElabel}) generation and the \acrlong{PSlabel}~(\acrshort{PSlabel}) evolution and hadronisation modelling. 
-The hard scattering describing the hard scattering and secondly the parton shower (PS) evolution and hadronisation modelling including initial state radiation (ISR) and final state radiation (FSR). While the ME and most
-parts of the PS can be calculated perturbatively, the other processes are non-perturbative. A simplified
-illustration of this full simulation process is shown in Figure 4.2. For the modelling of the hadronisation, there are different models, the most widely used models are: the Lund string model [81] and
-the cluster model [82]. In the Lund string model, the colour connection of a quark-antiquark pair is
-described as a string and the potential between them is assumed to be linearly increasing with their
-distance. The strings then split according to a fragmentation function forming new quark-antiquark
-pairs which continues until only hadrons with on-shell mass remain. The cluster model is based on
-QCD pre-confinement, where neighbouring partons build colour-singlet clusters, these clusters then
-decay into two hadrons and they then decay further until the final state hadrons are formed.
+The full process involving \acrshort{MElabel} generation, \acrshort{PSlabel}, underlying event, hadronisation and fragmentation can be simulated by \acrshort{MClabel} generators like \PYTHIA~8 %https://www.sciencedirect.com/science/article/pii/S0010465515000442?via%3Dihub
+, \HERWIG~7 %https://link.springer.com/article/10.1140/epjc/s10052-008-0798-9 https://link.springer.com/article/10.1140/epjc/s10052-016-4018-8
+or \SHERPA %https://scipost.org/10.21468/SciPostPhys.7.3.034
+. However, \PYTHIA~8 provides leading order calculations which are often not
+sufficient and hence, the generator is tipically used to compute the \acrshort{PS} process, which is based on the Lund string model. On the other hand, \HERWIG~7 provides many \acrshort{MElabel} at NLO, however since the fraction of negative event weights can be quite large (up to $\sim40\%$ for certain generator setups), the generator is also tipically used for \acrshort{PSlabel} computation, based on the cluster model. \POWHEGBOX %https://iopscience.iop.org/article/10.1088/1126-6708/2004/11/040 https://iopscience.iop.org/article/10.1088/1126-6708/2007/11/070 https://link.springer.com/article/10.1007/JHEP06(2010)043 https://journals.aps.org/prd/abstract/10.1103/PhysRevD.91.094003 https://iopscience.iop.org/article/10.1088/1126-6708/2007/09/126
+and \MGMCatNLO %https://iopscience.iop.org/article/10.1088/1126-6708/2007/09/028
+are examples of other generators that are especially designed to provide accurate high-order \acrshort{ME} calculations which are tipically interfaced with \PYTHIA~8 or \HERWIG~7 for the simulation of \acrshort{PSlabel} and hadronisation. 
 
-The full process involving matrix element generation, parton shower, underlying event, hadronisation and fragmentation can be simulated by MC generators like PYTHIA8 [84], HERWIG7 [85, 86]
-or SHERPA [87]. However, PYTHIA8 provides mainly leading order calculations which are often not
-sufficient since the next-to-leading order (NLO) corrections can be fairly large. HERWIG7 provides
-many MEs also at NLO. Since the fraction of negative event weights can be quite large (up to
-∼ 40% for certain generator setups), the generator is only used as parton shower in this thesis. In fact,
-there are other generators like POWHEGBOX [88–92] or MADGRAPH5_aMC@NLO [93] providing
-higher-order calculations which can be interfaced with PYTHIA8 or HERWIG7 for the simulation of
-PS and hadronisation.
-Furthermore, the models used to describe the non-perturbative processes have parameters that can
-be tuned using collision data. The most common tunes used by the ATLAS experiment are the A14
-parameters [94] for PYTHIA8 or the H7UE set of tuned parameters [86] for HERWIG7
-
-Throughout this thesis the physics processes for proton-proton collisions at a centre-of-mass energy
-√
-s = 13 TeV are modelled using various combinations of MC generators and settings. The specific
-details are stated in the dedicated chapters. Nevertheless, all MC samples using PYTHIA8 or HERWIG7 to model the multi-parton interaction (MPI), hadronisation and PS use the same settings if not
-differently stated. The mass of the top quark is set to mt = 172.5 GeV, the Higgs boson mass to
-mH = 125 GeV and the mass of the b-quark to mb = 4.8 GeV for PYTHIA8, to mb = 4.5 GeV for
-HERWIG7 and to mb = 4.75 GeV for SHERPA. The simulation of b- and c-hadron decays is performed via the EVTGEN v1.6.0 program [95] with the exception of SHERPA. As mentioned above
-the two tunes A14 combined with the NNPDF2.3LO PDF set [96] and H7UE together with the set
-of MMHT2014LO PDFs [97] are used for PYTHIA8 and HERWIG7, respectivel
-
+More in detail, these tools have parameters to describe the non-perturbative processes that can be tuned using collision data. The most common tunes used by the \acrshort{ATLASlabel} collaboration are the A14 %https://cds.cern.ch/record/1966419
+parameters combined with \textit{NNPDF3.0LO} \acrshort{PDFlabel}s set %https://www.sciencedirect.com/science/article/pii/S0550321312005500?via%3Dihub 
+for \PYTHIA~8 and the H7UE set % repeated https://link.springer.com/article/10.1140/epjc/s10052-016-4018-8
+with the \textit{MMHT2014LO} \acrshort{PDFlabel}s sets %https://link.springer.com/article/10.1140/epjc/s10052-015-3397-6
+for \HERWIG~7. Throughout this thesis different combinations of \acrshort{MC} generators and settings, which are detailed in the corresponding chapters and, if not stated otherwise, share the same parameters. The mass of the top quark is set to $m_t=172.5$~GeV, the mass of the Higgs boson to $m_H=125$~GeV and the mass of the $b$-quark to $m_b=4.8$~GeV for \PYTHIA~8, to $m_b=4.5$~GeV for \HERWIG~7 and to $m_b=4.75$~GeV for \SHERPA. The simulation involving $b$- and $c$-hadron decays is performed with \EVTGEN %https://www.sciencedirect.com/science/article/pii/S0168900201000894?via%3Dihub
+(except for \SHERPA). 
 
 \section{Detector simulation}
 
-The last step in the simulation chain is the detector simulation. The MC generators, as described
-in Section 4.1, provide information about stable particles in the final state, not taking into account
-the detector response. The full ATLAS detector simulation [98] is performed in two steps. The
-first step is based on GEANT4 [99] incorporating the geometry of the detector and providing highly
-precise modelling of the particle interactions with the detector matter. However, it comes with the
-shortcoming of using a large fraction of the available computing power of ATLAS. As an alternative,
-fast calorimeter simulation algorithms [100–102] are developed and already used in practice. They
-mimic the GEANT4 results, based on thousands of individual parametrisations of the calorimeter
-response, using significantly less computing resources with a trade-off in precision. A comparison
-of the necessary CPU time for the different detector simulations are shown in Figure 4.3. In practice,
+With the proton-proton collisions simulated and the final-state stable particles defined, the remaining step is to simulate the interactions with the detector. The full \acrshort{ATLAS} detector simulation is performed in two steps: first, the \acrshort{ATLAS} detector response of the \acrshort{MClabel} output is simulated and then the signals are reconstructed using the same algorithms used in real data. \textcolor{red}{Figure} depicts the different steps both for data and simulated \acrshort{MC} events.
 
-he fast simulation algorithms are widely used in ATLAS and are called AtlFast-II. In the second
-step, the readout electronics and digitisation is simulated which is adjusted for the different detector
-systems.
-Taking advantage of the latest machine learning developments in the last years, deep generative
-algorithms such as Generative Adversarial Networks (GANs) and Variational Auto-Encoders (VAEs)
-are studied to improve the fast calorimeter simulation [103] showing already promising results.
+The \GEANT~4 package %https://linkinghub.elsevier.com/retrieve/pii/S0168900203013688 
+is a widely used in physics to simulate the propagation and interaction of particles with matter. The simulation that includes all the geometry of the \acrshort{ATLAS} sub-detector systems with \GEANT~4 is referred to \textit{Full Simulation}~(FullSim), which is computationally expensive (several minutes per event) but gives the most accurate result. As more than 90\% of the dedicated CPU time is spent on the calorimeter simulations, alternatives are used in practice. The \textit{AtlFast-II} (AF-II) simulation is performed with faster simulation algorithms for the calorimeter simulation, \acrshort{ATLASlabel} Fast Calorimeter Simulation~(\textsc{FastCaloSim}) % https://cds.cern.ch/record/1300517
+, and for the \acrshort{IDlabel} simulation, Fast \acrshort{ATLASlabel} Tracking Simulation~(\textsc{Fatras}) % https://cds.cern.ch/record/1091969
+. The rest of systems are simulated with \GEANT~4 adding to significantly less CPU time while maintaining an adequate level of accuary. Finally, the normalisation of a \acrshort{SMlabel} process is normally chosen according to the cross-section at the highest-order available and other corrections are applied in the form of scale factors (SFs), derived from the ratio between data and \acrshort{MC} in specific calibration regions.
+
+%https://arxiv.org/abs/1005.4568
