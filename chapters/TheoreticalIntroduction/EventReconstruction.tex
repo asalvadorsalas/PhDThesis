@@ -1,12 +1,30 @@
-Intro
+The concept of \textit{reconstruction} refers to the use of algorithms for the identification of physics objects from the signals recorded in the different sub-systems of the detector. The physics processes described in this thesis produce electrons, muons, taus, photons, neutrinos and quarks in the final state. However, not all of these listed particles can be directly observed as quarks form cascades of hadronic particles, neutrinos leave without interacting with \acrshort{ATLASlabel} and tau leptons decay before reaching the detector. \textcolor{red}{Figure} ilustrates the interaction of different particles with the \acrshort{ATLAS} detector. Charged particles produce a track in the \acrshort{IDlabel}, electrons and photons shower in the \acrshort{EMlabel} calorimeter, hadrons shower in the hadronic calorimeter and muons leave signals in the muon spectrometer.
 
-Tracks
+The reconstruction of the different objects used in this thesis is described in the following chapter. 
 
+\section{Base objects}
+
+The fundamental blocks used in the reconstruction algorithms are tracks, vertices and topo-clusters (or calorimeter energy clusters). All physics objects are composed by these blocks and introduced in the following section.
+
+\subsection{Tracks and vertices}
+
+Tracks are objects produced by charged particles interacting in the \acrshort{IDlabel} and used to identify their trajectory. The reconstruction consists in grouping hits in the different tracking sub-systems and requiring different criteria to ensure the quality of the tracks. The tracks that originate from the hard-scattering are referred to as primary tracks, and the origin of the track (vertex) is refered to as the  \acrfull{PVlabel}~(\acrshort{PVlabel})
+
+As a first step, hits are built from groups of pixels and strips that reach a threshold energy deposit starting from the inner layers \acrshort{IDlabel}. The seed to reconstruct a track consists in three hits in the silicon detector, and then hits from the outler layers of the tracker compatible with the trajectory are added iteratively. When adding points, a score is assigned to the track to quantify the correctness of the track trajectory and suppresses the contribution of random collections of hits (or fake tracks). Then, a dedicated algorithm evaluates the different seeds to limit shared hits, which typically indicate wrong assignements. In addition, quality criteria are applied where tracks are required to have $\pT>500$~MeV, $\abs{\eta}<2.5$, minimum of seven pixel and \acrshort{SCTlabel} clusters, a maximum of either one shared pixel cluster or two acrshort{SCTlabel} on the same layer, no more than one missing expected hit (or hole) in the pixel detector and a maximum of two holes in both pixel and \acrshort{SCTlabel}. Also, requirements in the transverse impact parameter calculated with respect to the beamline position, $\abs{d_0}<2$~mm, and related to $z_0$, the longitudinal difference between the \acrshort{PVlabel} and $d_0$ along the beamline, $\abs{z_0 \sin\theta} <3$~mm. As a last step, \acrshort{TRTlabel} hits are added to the tracks after extrapolation.
+
+Vertices are of particular interest as they are the origin of the charged particles or interactions. The \acrshort{PVlabel} is the most importat, as denotes the origin of the hard-scattering interaction, but secondary vertices are also characteristic of long-lived particles or for heavy-flavour tagging.\todo{not talked yet}
+
+For a given event, the \acrshort{PVlabel}s are reconstructed iteratively from tracks using a dedicated vertex finding algorithm. From a set of quality tracks, a candidate position is defined and the compatibility with the set of tracks in terms of weights is evaluated in order to recompute the vertex position. In each step then, the tracks that are less compatible are given smaller weights and, after the convergence of the optimal vertex position, are left unassined and remain as input for the following vertex. The \acrshort{PVlabel} is defined as the vertex with the largest $\pT^2$ sum. 
+
+\subsection{Topological clusters}
+
+Topological cell clusters, or topo-clusters, are objects reconstructed iteratively from calorimeter information and are the first step in the reconstruction of electrons, photons and hadrons. The seed consists of calorimeter cells which readout signal is four times higher than the background noise, and neihgbour cells are added if the ratio is higher than two. As a last step, an extra layer is added regardless of the signal-to-background ratio. \todo{a little bit weak?}
 Vertex
 
-Topo Clusters
+\section{Jet reconstruction}
 
-Jets
+Jets are the cone-shaped collimated showers formed by the hadronic cascades that originate from the complex interactions of quarks and gluons when travelling through the detector. These objects are essential for physics analyses with partons in the final state, especially $b$-quarks, which jets have particular properties that can be used to classify them with great efficiency. Nevertheless, the kinematic properties of the cascades are challenging to define, as they can contain information from one or multiple final state partons and from the hard-scattering or other radiation processes. There are different possible definitions that depend of dedicated algorithms which group calorimeter information and do not depend on common \acrshort{QCD} effects. Jet algorithms are collinear safe, refered to the jet not changing if two constituents are merged forming one with double the momentum (or vice-versa), and infrared safe, meaning that the reconstruction is not affected by adding low \pT\ particles.
+
 
 EMTopo Jets
 
