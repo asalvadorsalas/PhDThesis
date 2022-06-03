@@ -1,6 +1,6 @@
-The concept of \textit{reconstruction} refers to the use of algorithms for the identification of physics objects from the signals recorded in the different sub-systems of the detector. The physics processes described in this thesis produce electrons, muons, taus, photons, neutrinos and quarks in the final state. However, not all of these listed particles can be directly observed as quarks form cascades of hadronic particles, neutrinos leave without interacting with \acrshort{ATLASlabel} and tau leptons decay before reaching the detector. \textcolor{red}{Figure} ilustrates the interaction of different particles with the \acrshort{ATLAS} detector. Charged particles produce a track in the \acrshort{IDlabel}, electrons and photons shower in the \acrshort{EMlabel} calorimeter, hadrons shower in the hadronic calorimeter and muons leave signals in the muon spectrometer.
+The concept of \textit{reconstruction} refers to the use of algorithms for the identification of physics objects from the signals recorded in the different sub-systems of the detector. The physics processes described in this thesis produce electrons, muons, taus, photons, neutrinos and quarks in the final state. However, not all of these listed particles can be directly observed, as quarks form cascades of hadronic particles, neutrinos leave without interacting with \acrshort{ATLASlabel} and tau leptons decay before reaching the detector. \textcolor{red}{Figure} ilustrates the interaction of different particles with the \acrshort{ATLAS} detector. Charged particles produce a track in the \acrshort{IDlabel}, electrons and photons shower in the \acrshort{EMlabel} calorimeter, hadrons shower in the hadronic calorimeter and muons leave signals in the muon spectrometer.
 
-The reconstruction of the different objects used in this thesis is described in the following chapter. 
+The reconstruction of the different physics objects used in this thesis analyses is described in the following chapter.
 
 \section{Base objects}
 
@@ -21,10 +21,57 @@ For a given event, the \acrshort{PVlabel}s are reconstructed iteratively from tr
 Topological cell clusters, or topo-clusters, are objects reconstructed iteratively from calorimeter information and are the first step in the reconstruction of electrons, photons and hadrons. The seed consists of calorimeter cells which readout signal is four times higher than the background noise, and neihgbour cells are added if the ratio is higher than two. As a last step, an extra layer is added regardless of the signal-to-background ratio. \todo{a little bit weak?}
 Vertex
 
-\section{Jet reconstruction}
+\section{Jets}
 
-Jets are the cone-shaped collimated showers formed by the hadronic cascades that originate from the complex interactions of quarks and gluons when travelling through the detector. These objects are essential for physics analyses with partons in the final state, especially $b$-quarks, which jets have particular properties that can be used to classify them with great efficiency. Nevertheless, the kinematic properties of the cascades are challenging to define, as they can contain information from one or multiple final state partons and from the hard-scattering or other radiation processes. There are different possible definitions that depend of dedicated algorithms which group calorimeter information and do not depend on common \acrshort{QCD} effects. Jet algorithms are collinear safe, refered to the jet not changing if two constituents are merged forming one with double the momentum (or vice-versa), and infrared safe, meaning that the reconstruction is not affected by adding low \pT\ particles.
+Jets are the cone-shaped collimated showers formed by the hadronic cascades that originate from the complex interactions of quarks and gluons when travelling through the detector. These objects are essential for physics analyses with partons in the final state, especially $b$-quarks, which jets have particular properties that can be used to characterise them with great efficiency. Nevertheless, the kinematic properties of the cascades are challenging to define, as they can contain information from one or multiple final state partons and from the hard-scattering or other radiation processes. There are different possible definitions that depend of dedicated algorithms which group calorimeter information and do not depend on common \acrshort{QCD} effects. Jet algorithms are collinear safe, refered to the jet not changing if two constituents are merged forming one with double the momentum (or vice-versa), and infrared safe, meaning that the reconstruction is not affected by adding low \pT\ particles.
 
+\subsection{Reconstruction}
+
+The jet reconstruction is typically performed using the anti-k$_t$ algorithm. %https://iopscience.iop.org/article/10.1088/1126-6708/2008/04/063
+. This family of algorithms merges clusters based on a relative distance defined as,
+
+\begin{equation}
+    d_{i,j} = \min (p_{\text{T},i}^{2n},p_{\text{T},j}^{2n}) \frac{\Delta R_{i,j}}{R^2}
+\end{equation}
+
+with $p_{\text{T},i/j}$ the \pT\ of the cluster $i$ and $j$, $\Delta R_{i,j}$ the angle separation between them, $R$ the chosen radius parameter that sets the size of the jet and $n$ chosen integer that defines the \pT\ dependance of $d_{i,j}$. The decision to combine clusters or to define a cluster as a jet comes from comparing the $d_{i,j}$ value with the beamspot distance, $d_{i,B} = p_{\text{T},i}^{2n}$. Clusters are grouped if $d_{i,j} < d_{i,B}$, otherwise the cluster $i$ is defined as a jet, in an iterative process until all input clusters are used. The anti-k$_t$ algorithm is defined by setting $n=-1$, which groups with higher priority the high energy clusters, and leads to a cone-shape around the highest object. This feature can be observed in \textcolor{red}{Figure}.
+
+Various jet collections based on the anti-k$_t$ algorithm are used in \acrshort{ATLASlabel}, two of them are used in this thesis: EMTopo jets and Pflow jets.
+
+\subsubsection{EMTopo jets}
+
+The so-called EMTopo jets are calorimeter jets reconstructed at the EM energy scale only using topo
+clusters [118] with the anti-kt algorithm implemented in the software package FASTJET [119]. For
+the scope of this thesis, the radius parameter R = 0.4 is used (for boosted topologies also jets with
+R = 1.0 are used). Additionally, the jets have to satisfy pT > 25 GeV and |η| < 2.5. Until recently,
+the EMTopo jets were the primary jet collection, used in physics analyses in ATLAS, showing robust
+energy characteristics.
+The calibration of EMTopo jets is performed in several steps illustrated in Figure 6.3 correcting the
+four-momentum of the jet [120]. After the jet reconstruction, the jet direction is modified at the topo
+cluster level, such that the jet originates from the primary vertex. Then, pT-density based pile-up corrections are applied including jet area information as well as a MC-driven residual correction.
+The absolute jet energy calibration corrects the jets to agree in energy and direction with dijet MC
+events. Then a global sequential calibration is set to improve the pT resolution and the associated
+uncertainties. The final step is the in situ calibration which is only applied to data. If there are still
+remaining differences between data and MC, they are corrected at this step
+
+\subsubsection{PFlow jets}
+
+During RUN II, ATLAS introduced Particle Flow jets, a new jet collection also denoted as PFlow
+jets. They combine tracking and calorimeter information in the jet reconstruction [121] also using
+the anti-kt clustering algorithm with a radius parameter of R = 0.4.
+The first step is to match the tracks from charged particles in the ID to the topo clusters from the
+calorimeter. In case of a successful match, the energy deposit of the topo cluster is replaced by the
+corresponding track momentum. The anti-kt algorithm then takes as input the topo clusters that
+remain after substitution as well as tracks that match the hard-scattering PV. The calibration follows
+closely the EMTopo scheme performed in the range 20 GeV < pT < 1500 GeV [120].
+The advantage of PFlow jets is their improved energy and angular resolution compared to EMTopo
+jets. Also not negligible is the enhanced reconstruction efficiency and pile-up stability.
+
+\subsection{Jet tagging}
+
+\subsubsection{Working points}
+
+\subsubsection{Algorithms}
 
 EMTopo Jets
 
