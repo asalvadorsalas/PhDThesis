@@ -39,11 +39,11 @@ Various jet collections based on the anti-k$_t$ algorithm are used in \acrshort{
 
 \subsubsection{EMTopo jets}
 
-The so-called EMTopo jets were the primary jet collection used in physics analyses in \acrshort{ATLAS} before the end of Run~2. The reconstruction is performed at the EM energy scale only using topo clusters %https://doi.org/10.1103/PhysRevD.96.072002
+The so-called EMTopo jets were the primary jet collection used in physics analyses in \acrshort{ATLASlabel} before the end of Run~2. The reconstruction is performed at the EM energy scale only using topo clusters %https://doi.org/10.1103/PhysRevD.96.072002
 with the anti-k$_t$ algorithm implemented in the \textit{FASTJET} software package %https://link.springer.com/article/10.1140/epjc/s10052-012-1896-2
 . The jets used in this thesis are reconstructed with the radius parameter $R = 0.4$ with requirements in $\pT > 25$~GeV and $\abs{\eta} < 2.5$. The EMtopo jets are calibrated in several steps summarised in \textcolor{red}{Figure} %https://arxiv.org/pdf/2007.02645.pdf
 . After the jet reconstruction, the jet direction is modified such that the jet originates from the primary vertex. Then, energy corrections based on pile-up are applied subtracting the average energy due to in-time pile-up and other residual corrections that depend on the number of \acrshort{PVlabel} and bunch crossings. After, absolute calibrations are applied to the \acrlong{JESlabel}~\acrshort{JESlabel} and $\eta$ derived from dedicated dijet \acrshort{MClabel} events. Then, a global sequential calibration is set to improve the \pT\ resolution and the associated
-uncertainties from the jet fluctuations that can arise from various initial factors like the flavour or energy of the original parton. The final step is the in-situ calibration which is only applied to data, extracted from \pT and $\eta$ comparisons to known well-modelled \acrshort{MC} that include central jets in dijet events, $\gamma/Z+jets$ or multijet events. 
+uncertainties from the jet fluctuations that can arise from various initial factors like the flavour or energy of the original parton. The final step is the in-situ calibration which is only applied to data, extracted from \pT and $\eta$ comparisons to known well-modelled \acrshort{MClabel} that include central jets in dijet events, $\gamma/Z+jets$ or multijet events. 
 
 \subsubsection{PFlow jets}
 
@@ -52,14 +52,25 @@ is also based on the anti-k$_t$ algorithm with $R=0.4$, and the first step consi
 
 \subsection{Jet tagging}
 
+Jet or flavour tagging consists in identifying the parton flavour that generated the signal reconstructed as the jet. Efficient tagging is essential for analyses studying processes with $b$- or $c$-quarks in their final state (knows as heavy flavour quarks), as it is additional information which can be used to select events based on the flavour of their jets and improve the selection of the signal.
+
+Jets originating from the hadronisation of $b$-quarks, or $b$-tagged jets, leave a distinct signal due to the properties of $b$-hadrons: lifetime of $\sim 10^-12$~s (decay after 2.5~mm with a momentum of 30~GeV), mass of $\sim 5$~GeV and high decay multiplicity (including semi-leptonic decays). \textcolor{red}{Figure} shows a scheme of a typical signal, that includes displaced tracks from the \acrshort{PVlabel} with large $d_0$.
+The signal of the $c$-hadrons is similar but not identical as the lifetime, mass and decay multiplicity are lower, which makes the distinction between these two kinds of jets difficult. The last type of jet is referred to light-flavour jets, which signal originates directly from quark fragmentation and can be easily separated from $b$-jets. However, other phenomena like long-lived particles, photon conversion or low quality tracks can also prompt displaced vertices and tracks.
+
+\subsubsection{Algorithms}
+
+Flavour tagging algorithms use the properties of a given jet to return a score, referred to as output discriminant, which indicates how likely the input jet is considered to be a $b$-, $c$- or $light$-jet. Two main taggers are used in \acrshort{ATLASlabel}: the MV2c10 tagger which was the default option for EMTopo jets, and the DL1r tagger that is the recommendation for PFlow jets.
+
+The MV2c10 tagger  %http://cdsweb.cern.ch/record/2037697 
+is a MV2 algorithm, which relies on boosted decision trees trained with several kinematic and other trigger taggers as inputs. This particular tagger was trained with \ttbar\ and $Z'$ events, to cover a large \pT\ spectrum, and $b$-jets defined as signal while the background was defined to consist of 7\% $c$-jets and 93\% light-jets.
+
+The DL1r tagger
+
 
 
 \subsubsection{Working points}
 
-\subsubsection{Algorithms}
-
-
-
+The full spectrum of the final $b$-tagging discriminant is not directly used in physics analyses due to the complexity of the calibration. Instead, four different $b$-tagging \acrlong{WPlabel}~(\acrshort{WPlabel}) are defined based on the $b$-jet acceptance efficiency evaluated on a \ttbar\ sample: 60\%, 70\%, 77\% and 85\%, which are often referred to as \textit{Very Tight},\textit{Tight},\textit{Medium} and \textit{Loose} operating points, respectively. Most of the $c$- and light-jets do not pass the 85\% \acrshort{WPlabel}, ending up in the $b$-tagging efficiency between 85\% and 100\%. Meanwhile, the jets that pass the 60\% \acrshort{WPlabel} mainly consists in $b$-jets. This criteria is important when defining the $b$-jets for event selection, as the $b-$jets misidentification, so $c$- and $light$-jet acceptance inefficiency, improves for lower $b$-jet efficiency working points, therefore rejecting more background but with lower signal statistics. On the other hand, the pseudo-continuous b-tagging \acrshort{WPlabel}, so the \acrshort{WPlabel} that a jet passes, is additional information that can be used to further refine the selection or in multivariate methods.
 
 \section{Electrons}
 
@@ -68,8 +79,8 @@ signature of an electron is that they leave a track in the ID and are then absor
 tagging studies in this thesis use the algorithms described in detail in Ref. [126, 127]
 
 The electron object is constructed using a dynamic clustering algorithm with variable-size clusters,
-so-called superclusters. The reconstruction is performed in the region |ηcluster| < 2.47 excluding the
-transition region of the barrel and end-cap (1.37 < |ηcluster| < 1.52).
+so-called superclusters. The reconstruction is performed in the region |etacluster| < 2.47 excluding the
+transition region of the barrel and end-cap (1.37 < |etacluster| < 1.52).
 At first, topo clusters (described in sec. 6.1.3) are selected and loosely matched to ID tracks. Simultaneously, the conversion vertices matched to the topo clusters are built. Next, the superclusters are
 built from matched clusters and a first position correction and energy calibration is applied. Tracks
 are then matched to the electron superclusters. The energy scale and resolution of electrons are
@@ -84,25 +95,25 @@ deposits like jets, converted photons or genuine electrons stemming from heavy-f
 decays. Important observables for the likelihood calculation are based on the track quality in the ID,
 the lateral and longitudinal development of the electromagnetic shower described by shower shape
 variables as well as the particle identification in the TRT. The algorithm uses probability density
-functions as input which are derived for the signal from Z → ee (ET > 15 GeV) and J/ψ → ee
+functions as input which are derived for the signal from Z → ee (ET > 15 GeV) and J/psi → ee
 (ET < 15 GeV) events.
 The efficiency of the electron identification is provided in three operating points: Loose, Medium
 and Tight, yielding different purities. Figure 6.4 shows the data efficiency as a function of ET and
 as a function of the average number of bunch crossings for all three operating points. They are
-all optimised in 9 |η| and 12 ET bins. For this thesis the Medium and Tight operation points are
+all optimised in 9 |eta| and 12 ET bins. For this thesis the Medium and Tight operation points are
 
 Electrons are typically required to be spatially separated from other particles. There are two kinds of
 isolation variables: calorimeter-based and track-based.
 The calorimeter-based isolation is calculated via the sum of the transverse energy of positive-energy
-topo clusters with a barycentre falling in a ∆R = 0.2 of the electron barycentre (other than the
+topo clusters with a barycentre falling in a deltaR = 0.2 of the electron barycentre (other than the
 electron clusters themselves). In addition, leakage and pile-up corrections are applied.
 For the track-based isolation the sum of the transverse momentum of tracks within a cone centred
 around the electron track are considered, where the cone radius decreases with pT. Moreover, only
-tracks are taken into account which have pT > 1 GeV and |η| < 2.5 as well as satisfy certain track
+tracks are taken into account which have pT > 1 GeV and |eta| < 2.5 as well as satisfy certain track
 quality criteria and have a loose vertex association2
 . In this thesis the Gradient isolation working
 point (WP) is chosen which gives an efficiency of 90% at pT = 25 GeV and 99% at pT = 60 GeV
-uniform in η
+uniform in eta
 
 \section{Muons}
 
@@ -117,9 +128,9 @@ In the MS at first a search for hit patterns is performed in each muon chamber t
 the MDTs and nearby trigger chambers, hits are aligned on the trajectory in the bending plane of
 the detector using a Hough transformation and the segments are reconstructed with a straight line
 fit to hits found in each layer. The hits of the RPCs and TGCs provide measurements for the plane
-orthogonal to the bending plane and in the CSCs a combinatorial search in the η and φ plane is
+orthogonal to the bending plane and in the CSCs a combinatorial search in the eta and phi plane is
 utilised to build the segments. Given this information, muon track candidates are constructed by
-fitting segments from different layers using a global χ
+fitting segments from different layers using a global chi
 2 fit.
 The combined reconstruction is based on various algorithms defining four different types of muons.
 The combined (CB) muons are first independently reconstructed in the ID and MS and then their
@@ -128,9 +139,9 @@ to the ID (complementary an inside-out approach is also used). The segment-tagge
 mainly reconstructed from tracks in the ID extrapolated to typically one track segment in the MDTs
 and CSCs. The third type are the calorimeter-tagged (CT) muons where an ID track is matched to an
 energy deposit in the calorimeter compatible with a minimal ionising particle. This muon type has
-the lowest purity and is optimised for the region |η| < 0.1 with 15 GeV < pT < 100 GeV. There
+the lowest purity and is optimised for the region |eta| < 0.1 with 15 GeV < pT < 100 GeV. There
 are also extrapolated (ME) muons that are only reconstructed in the MS extending the acceptance to
-2.5 < |η| < 2.7 but they are not used in this thesis
+2.5 < |eta| < 2.7 but they are not used in this thesis
 
 Similarly to the electron identification, the muon identification is performed applying quality criteria
 to suppress background processes.The goal is to identify prompt muons with high efficiency and a
@@ -138,7 +149,7 @@ good momentum resolution which requires a certain amount of hits in the ID and t
 different needs of physics analyses, four different muon WPs are available: Loose, Medium, Tight
 and high pT. For the scope of this thesis, the Medium and Loose WPs are used.
 For the Medium WP only combined muons are taken into account. The combined muons are required
-to have three or more hits in at least two MDT layers except for the |η| < 0.1 region where only one
+to have three or more hits in at least two MDT layers except for the |eta| < 0.1 region where only one
 MDT layer is sufficient combined with no more than one hole layer due to a gap in the MS. This WP
 tries to minimise systematic reconstruction and calibration systematic uncertainties associated with
 the muon. The Medium WP reconstruction efficiency with pT > 20 GeV is 96.1%
@@ -146,15 +157,15 @@ the muon. The Medium WP reconstruction efficiency with pT > 20 GeV is 96.1%
 The Loose WP maximises the reconstruction efficiency with good-quality muon tracks. In this case,
 all muon types are utilised. In fact, the combined muons are used as they are from the Medium
 selection. Additionally, the calorimeter-tagged and segment-tagged muons are taken into account for
-|η| < 0.1. The reconstruction efficiency for muons with pT > 20 GeV is 98.1%.
+|eta| < 0.1. The reconstruction efficiency for muons with pT > 20 GeV is 98.1%.
 Figure 6.5 shows the reconstruction efficiency measured in data for the two described WPs obtained
-from Z → µµ and Jψ → µµ event
+from Z → µµ and J/psi → µµ event
 
 Analogously to the electron isolation strategy, the muon isolation is assessed via track- and calorimeter-based variables with very similar definitions. The track-based variable p
 varcone30
 T
 is the scalar pT sum
-of all tracks, excluding the muon track, with pT > 1 GeV in a radius of ∆R = min(10 GeV/pµ
+of all tracks, excluding the muon track, with pT > 1 GeV in a radius of deltaR = min(10 GeV/pµ
 T
 , 0.3)
 around the muon transverse momentum p
@@ -172,13 +183,13 @@ Z → µµ events.
 
 \section{Taus}
 
-τ-leptons can decay either leptonically (into electrons or muons) or hadronically. The leptonic decays
-are similarly reconstructed as electrons or muons. The τ decays with a hadronic final state are seeded
-by jets which are required to have pT > 10 GeV and |η| < 2.5 excluding the barrel-end-cap transition
+tau-leptons can decay either leptonically (into electrons or muons) or hadronically. The leptonic decays
+are similarly reconstructed as electrons or muons. The taus decays with a hadronic final state are seeded
+by jets which are required to have pT > 10 GeV and |eta| < 2.5 excluding the barrel-end-cap transition
 region [129]. Tau leptons are calibrated to correct their energy deposit in the detector to the average
-value at generator level. The τ identification is based on BDTs discriminating τ-jets from the quark-and gluon-initiated background jets. Three different efficiency WPs are defined: Loose, Medium
-and Tight. In this thesis the Medium τ-WP and the requirement pT > 25 GeV is used as well as an
-isolation criterion of ∆Ry < 0.2 between a τhad candidate and any selected electron or muon.
+value at generator level. The tau identification is based on BDTs discriminating tau-jets from the quark-and gluon-initiated background jets. Three different efficiency WPs are defined: Loose, Medium
+and Tight. In this thesis the Medium tau-WP and the requirement pT > 25 GeV is used as well as an
+isolation criterion of deltaRy < 0.2 between a tauhad candidate and any selected electron or muon.
 
 \section{Missing transverse energy}
 
