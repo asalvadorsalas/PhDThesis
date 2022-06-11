@@ -62,10 +62,11 @@ The signal of the $c$-hadrons is similar but not identical as the lifetime, mass
 Flavour tagging algorithms use the properties of a given jet to return a score, referred to as output discriminant, which indicates how likely the input jet is considered to be a $b$-, $c$- or $light$-jet. Two main taggers are used in \acrshort{ATLASlabel}: the MV2c10 tagger which was the default option for EMTopo jets, and the DL1r tagger that is the recommendation for PFlow jets.
 
 The MV2c10 tagger  %http://cdsweb.cern.ch/record/2037697 
-is a MV2 algorithm, which relies on boosted decision trees trained with several kinematic and other trigger taggers as inputs. This particular tagger was trained with \ttbar\ and $Z'$ events, to cover a large \pT\ spectrum, and $b$-jets defined as signal while the background was defined to consist of 7\% $c$-jets and 93\% light-jets.
+is based on the MV2 algorithm, which relies on boosted decision trees trained with several kinematic and other trigger taggers as inputs. This particular tagger was trained with \ttbar\ and $Z'$ events, to cover a large \pT\ spectrum, and $b$-jets defined as signal while the background was defined to consist of 7\% $c$-jets and 93\% light-jets.
 
-The DL1r tagger
+The DL1r tagger is a multi-class Deep Neural Network (DNN) model, with three output nodes corresponding to the classification of the input jet to be a $b$-, $c$- or light jet. The final discriminant is given as a function of the three probabilities. The input consists in the MV2c10 tagger input, additional variables for $c$-jet identification used in a jet vertex finder algorithm and flavour probabilities provided by a recursive NN \todo{NN defined at this point?}. The training set consists of the same \ttbar\ + $Z'$ events, weighted to have an equal mix of quark flavour jets.
 
+Comparing the two algorithms used in this thesis, the DL1r tagger is the most recent recommendation and relies on more advanced machine learning techniques than the MV2c10 tagger. The multi-class output together with the possibility of tunning the final discriminant computation, makes the DL1r tagger more flexible than the binary classification of the MV2c10. Regarding performance, the efficiency of both algorithms to tag true $b$-jets is comparable, while the rejection rates of $c$- and light jets is greater for the DL1r tagger. The improvement in rejection for the 60\% WP, detailed below, is by up to 70\% for $c$-jets and 120\% for light jets.
 
 
 \subsubsection{Working points}
