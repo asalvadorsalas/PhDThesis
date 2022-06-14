@@ -75,46 +75,19 @@ The full spectrum of the final $b$-tagging discriminant is not directly used in 
 
 \section{Electrons}
 
-Electrons are reconstructed using the information of the ID and the calorimeter system. The typical
-signature of an electron is that they leave a track in the ID and are then absorbed in the electromagnetic calorimeter where they leave an electromagnetic shower. The ttH¯ (bb¯) analysis and the flavour
-tagging studies in this thesis use the algorithms described in detail in Ref. [126, 127]
+Electrons are present in the majority of \acrshort{ATLASlabel} physics analyses and the reconstruction is based on information from the \acrshort{IDlabel} and the \acrshort{EMlabel} calorimeter system. The typical signature of an electron is a track in the \acrshort{IDlabel} and electromagnetic shower in the \acrshort{EMlabel} electromagnetic calorimeter. Overall, the performance in terms of identification and reconstruction is high.
 
-The electron object is constructed using a dynamic clustering algorithm with variable-size clusters,
-so-called superclusters. The reconstruction is performed in the region |etacluster| < 2.47 excluding the
-transition region of the barrel and end-cap (1.37 < |etacluster| < 1.52).
-At first, topo clusters (described in sec. 6.1.3) are selected and loosely matched to ID tracks. Simultaneously, the conversion vertices matched to the topo clusters are built. Next, the superclusters are
-built from matched clusters and a first position correction and energy calibration is applied. Tracks
-are then matched to the electron superclusters. The energy scale and resolution of electrons are
-calibrated using Z → ee decays and validated in Z → ``gamma decays [127]. In addition, the energy resolution of the electron is optimised using a multivariate regression algorithm based on the properties
-of shower developments in the electromagnetic calorimeter.
+First, topo-clusters are selected and matched to \acrshort{IDlabel} tracks in the region $\abs{\eta}$ < 2.47 excluding the transition region of the barrel and end-cap (1.37 < $\abs{\eta}$ < 1.52). Next, the matched clusters are grouped to form superclusters, which are variable-size clusters, using a dynamic clustering algorithm. After a first energy and position calibration, tracks are matched to the electron superclusters. The calibration of the energy scale and resolution of electrons is computed from $Z\rightarrow ee$ decays and validated in $Z\rightarrow \ell\ell\gamma$ %https://doi.org/10.1088/1748-0221/14/12/P12006
+. In addition, the energy resolution of the reconstructed electron is optimised using a multivariate algorithm based on the properties of showers in the \acrshort{EMlabel} calorimeter.
 
-Further quality criteria are required for an electron object, passing several identification selections
-to improve the purity of the selected objects. The prompt electrons are identified using a likelihood
-discriminant which uses quantities measured in the ID and the electromagnetic calorimeter. These
-quantities are chosen such that they discriminate well prompt isolated electrons from other energy
-deposits like jets, converted photons or genuine electrons stemming from heavy-flavoured hadron
-decays. Important observables for the likelihood calculation are based on the track quality in the ID,
-the lateral and longitudinal development of the electromagnetic shower described by shower shape
-variables as well as the particle identification in the TRT. The algorithm uses probability density
-functions as input which are derived for the signal from Z → ee (ET > 15 GeV) and J/psi → ee
-(ET < 15 GeV) events.
-The efficiency of the electron identification is provided in three operating points: Loose, Medium
-and Tight, yielding different purities. Figure 6.4 shows the data efficiency as a function of ET and
-as a function of the average number of bunch crossings for all three operating points. They are
-all optimised in 9 |eta| and 12 ET bins. For this thesis the Medium and Tight operation points are
 
-Electrons are typically required to be spatially separated from other particles. There are two kinds of
-isolation variables: calorimeter-based and track-based.
-The calorimeter-based isolation is calculated via the sum of the transverse energy of positive-energy
-topo clusters with a barycentre falling in a deltaR = 0.2 of the electron barycentre (other than the
-electron clusters themselves). In addition, leakage and pile-up corrections are applied.
-For the track-based isolation the sum of the transverse momentum of tracks within a cone centred
-around the electron track are considered, where the cone radius decreases with pT. Moreover, only
-tracks are taken into account which have pT > 1 GeV and |eta| < 2.5 as well as satisfy certain track
-quality criteria and have a loose vertex association2
-. In this thesis the Gradient isolation working
-point (WP) is chosen which gives an efficiency of 90% at pT = 25 GeV and 99% at pT = 60 GeV
-uniform in eta
+Further identification criteria are required for an electron object, passing a selection to improve the purity of the candidates. The prompt electrons are evaluated with a likelihood discriminant to define three operating points with different purities: Loose, Medium and Tight. The discriminant is computed using variables measured in the \acrshort{IDlabel} and the \acrshort{EMlabel} calorimeter, chosen such that they discriminate prompt isolated electrons from other signals
+deposits (jets, converted photons or other electrons from heavy-flavoured hadron
+decays). The most important quantities are based on the track quality, the lateral and longitudinal development of the electromagnetic shower as well as the particle identification in the \acrshort{TRTlabel}. The probability density function to build the likelihood are derived from $Z\rightarrow ee$ ($E^\text{T}$ > 15~GeV) and $J/\psi \righarrow ee$ ($E^\text{T}$ < 15~GeV) events.
+%Figure 6.4 shows the data efficiency as a function of ET and as a function of the average number of bunch crossings for all three operating points. They are all optimised in 9 |eta| and 12 ET bins. 
+
+Another requirement is the isolation criteria, to require the electron signal to be separated from other particles.  
+Electrons are typically required to be spatially separated from other particles. The criteria is based on two quantities: a maximum value for the sum of transverse energy of topo-clusters in a $\Delta R=0.2$ cone surrounding the electron and of the sum of transverse momentum of tracks around the electron, with a $\Delta R$ cone that decreases with \pT. Effects of leakage and pile-up are taken into account and also tracks are required to satify \pT\ > 1~GeV, $\abs{\eta}<2.5$ and quality criteria. In this thesis the criteria used is the Gradient isolation, with an efficiency of 90\% at $\pT = 25$~GeV and 99\% at $\pT = 60$~GeV.
 
 \section{Muons}
 
