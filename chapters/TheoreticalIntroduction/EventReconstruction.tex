@@ -71,69 +71,34 @@ Comparing the two algorithms used in this thesis, the DL1r tagger is the most re
 
 \subsubsection{Working points}
 
-The full spectrum of the final $b$-tagging discriminant is not directly used in physics analyses due to the complexity of the calibration. Instead, four different $b$-tagging \acrlong{WPlabel}~(\acrshort{WPlabel}) are defined based on the $b$-jet acceptance efficiency evaluated on a \ttbar\ sample: 60\%, 70\%, 77\% and 85\%, which are often referred to as \textit{Very Tight},\textit{Tight},\textit{Medium} and \textit{Loose} operating points, respectively. Most of the $c$- and light-jets do not pass the 85\% \acrshort{WPlabel}, ending up in the $b$-tagging efficiency between 85\% and 100\%. Meanwhile, the jets that pass the 60\% \acrshort{WPlabel} mainly consists in $b$-jets. This criteria is important when defining the $b$-jets for event selection, as the $b-$jets misidentification, so $c$- and $light$-jet acceptance inefficiency, improves for lower $b$-jet efficiency working points, therefore rejecting more background but with lower signal statistics. On the other hand, the pseudo-continuous b-tagging \acrshort{WPlabel}, so the \acrshort{WPlabel} that a jet passes, is additional information that can be used to further refine the selection or in multivariate methods.
+The full spectrum of the final $b$-tagging discriminant is not directly used in physics analyses due to the complexity of the calibration. Instead, four different $b$-tagging \acrlong{WPlabel}~(\acrshort{WPlabel}) are defined based on the $b$-jet acceptance efficiency evaluated on a \ttbar\ sample: 60\%, 70\%, 77\% and 85\%, which are often referred to as \textit{Very Tight}, \textit{Tight}, \textit{Medium} and \textit{Loose} operating points, respectively. Most of the $c$- and light-jets do not pass the 85\% \acrshort{WPlabel}, ending up in the $b$-tagging efficiency between 85\% and 100\%. Meanwhile, the jets that pass the 60\% \acrshort{WPlabel} mainly consists in $b$-jets. This criteria is important when defining the $b$-jets for event selection, as the $b-$jets misidentification, so $c$- and $light$-jet acceptance inefficiency, improves for lower $b$-jet efficiency working points, therefore rejecting more background but with lower signal statistics. On the other hand, the pseudo-continuous b-tagging \acrshort{WPlabel}, so the \acrshort{WPlabel} that a jet passes, is additional information that can be used to further refine the selection or in multivariate methods.
 
 \section{Electrons}
 
-Electrons are present in the majority of \acrshort{ATLASlabel} physics analyses and the reconstruction is based on information from the \acrshort{IDlabel} and the \acrshort{EMlabel} calorimeter system. The typical signature of an electron is a track in the \acrshort{IDlabel} and electromagnetic shower in the \acrshort{EMlabel} electromagnetic calorimeter. Overall, the performance in terms of identification and reconstruction is high.
+Electrons interact with the \acrshort{IDlabel} and the \acrshort{EMlabel} calorimeter system. The typical signature is a track in the \acrshort{IDlabel} and electromagnetic shower in the \acrshort{EMlabel} calorimeter. Overall, the performance in terms of identification and reconstruction of electrons is high.
 
 First, topo-clusters are selected and matched to \acrshort{IDlabel} tracks in the region $\abs{\eta}$ < 2.47 excluding the transition region of the barrel and end-cap (1.37 < $\abs{\eta}$ < 1.52). Next, the matched clusters are grouped to form superclusters, which are variable-size clusters, using a dynamic clustering algorithm. After a first energy and position calibration, tracks are matched to the electron superclusters. The calibration of the energy scale and resolution of electrons is computed from $Z\rightarrow ee$ decays and validated in $Z\rightarrow \ell\ell\gamma$ %https://doi.org/10.1088/1748-0221/14/12/P12006
 . In addition, the energy resolution of the reconstructed electron is optimised using a multivariate algorithm based on the properties of showers in the \acrshort{EMlabel} calorimeter.
 
-
-Further identification criteria are required for an electron object, passing a selection to improve the purity of the candidates. The prompt electrons are evaluated with a likelihood discriminant to define three operating points with different purities: Loose, Medium and Tight. The discriminant is computed using variables measured in the \acrshort{IDlabel} and the \acrshort{EMlabel} calorimeter, chosen such that they discriminate prompt isolated electrons from other signals
-deposits (jets, converted photons or other electrons from heavy-flavoured hadron
-decays). The most important quantities are based on the track quality, the lateral and longitudinal development of the electromagnetic shower as well as the particle identification in the \acrshort{TRTlabel}. The probability density function to build the likelihood are derived from $Z\rightarrow ee$ ($E^\text{T}$ > 15~GeV) and $J/\psi \righarrow ee$ ($E^\text{T}$ < 15~GeV) events.
+Further identification criteria are required for an electron candidate, passing a selection to increase the purity. The prompt electrons are evaluated with a likelihood discriminant to define three operating points with different purities: \textit{Tight}, \textit{Medium} and \textit{Loose}. The discriminant is computed using variables measured in the \acrshort{IDlabel} and the \acrshort{EMlabel} calorimeter, chosen such that they discriminate prompt isolated electrons from other signals deposits (jets, converted photons or other electrons from heavy-flavoured hadron decays). The most important quantities are based on the track quality, the lateral and longitudinal development of the electromagnetic shower as well as the particle identification in the \acrshort{TRTlabel}. The probability density function to build the likelihood are derived from $Z\rightarrow ee$ ($E^\text{T}$ > 15~GeV) and $J/\psi \rightarrow ee$ ($E^\text{T}$ < 15~GeV) events.
 %Figure 6.4 shows the data efficiency as a function of ET and as a function of the average number of bunch crossings for all three operating points. They are all optimised in 9 |eta| and 12 ET bins. 
 
-Another requirement is the isolation criteria, to require the electron signal to be separated from other particles.  
-Electrons are typically required to be spatially separated from other particles. The criteria is based on two quantities: a maximum value for the sum of transverse energy of topo-clusters in a $\Delta R=0.2$ cone surrounding the electron and of the sum of transverse momentum of tracks around the electron, with a $\Delta R$ cone that decreases with \pT. Effects of leakage and pile-up are taken into account and also tracks are required to satify \pT\ > 1~GeV, $\abs{\eta}<2.5$ and quality criteria. In this thesis the criteria used is the Gradient isolation, with an efficiency of 90\% at $\pT = 25$~GeV and 99\% at $\pT = 60$~GeV.
+Another requirement is the isolation criteria, to require the electron signal to be separated from other particles. Electrons are typically required to be spatially separated from other particles. The criteria is based on two quantities: a maximum value for the sum of transverse energy of topo-clusters in a $\Delta R=0.2$ cone surrounding the electron and of the sum of transverse momentum of tracks around the electron, with a $\Delta R$ cone that decreases with \pT. Effects of leakage and pile-up are taken into account and also tracks are required to satisfy \pT\ > 1~GeV, $\abs{\eta}<2.5$ and quality criteria. In this thesis, the criteria used is the Gradient isolation which has an efficiency of 90\% at $\pT = 25$~GeV and 99\% at $\pT = 60$~GeV.
 
 \section{Muons}
 
-Muons leave a track in the detector and traverse the calorimeter system typically without significant
-energy loss. Therefore, the muon is mainly reconstructed in the ID and the MS sub-detector systems.
-The RUN II muon reconstruction and performance is described in detail in [128]
+Muons leave the \acrshort{ATLASlabel} detector without significant energy loss. The typical signal consists on a track in the \acrshort{IDlabel} and \acrshort{MSlabel} sub-detectors. There are different types of muons depending on which \acrshort{IDlabel}, \acrshort{MSlabel} or calorimeter information is available %https://link.springer.com/article/10.1140/epjc/s10052-016-4120-y
+.
 
-The muon reconstruction has two stages: first the independent reconstruction in the ID and MS
-and secondly the combination of the two to form the muon tracks. The reconstruction in the ID is
-performed as for any other charged particle.
-In the MS at first a search for hit patterns is performed in each muon chamber to form segments. In
-the MDTs and nearby trigger chambers, hits are aligned on the trajectory in the bending plane of
-the detector using a Hough transformation and the segments are reconstructed with a straight line
-fit to hits found in each layer. The hits of the RPCs and TGCs provide measurements for the plane
-orthogonal to the bending plane and in the CSCs a combinatorial search in the eta and phi plane is
-utilised to build the segments. Given this information, muon track candidates are constructed by
-fitting segments from different layers using a global chi
-2 fit.
-The combined reconstruction is based on various algorithms defining four different types of muons.
-The combined (CB) muons are first independently reconstructed in the ID and MS and then their
-information is combined with an outside-in approach, extrapolating reconstructed tracks from the MS
-to the ID (complementary an inside-out approach is also used). The segment-tagged (ST) muons are
-mainly reconstructed from tracks in the ID extrapolated to typically one track segment in the MDTs
-and CSCs. The third type are the calorimeter-tagged (CT) muons where an ID track is matched to an
-energy deposit in the calorimeter compatible with a minimal ionising particle. This muon type has
-the lowest purity and is optimised for the region |eta| < 0.1 with 15 GeV < pT < 100 GeV. There
-are also extrapolated (ME) muons that are only reconstructed in the MS extending the acceptance to
-2.5 < |eta| < 2.7 but they are not used in this thesis
+As a summary, the muon reconstruction has two stages: tracks are reconstructed independently in the \acrshort{IDlabel} and \acrshort{MSlabel}, and then are combined to form the muon tracks. The muon track candidates are built from track segments found in the different \acrshort{MSlabel} sub-systems. In the muon trigger chambers and \acrshort{MDTlabel}s, segments are reconstructed with a straight line to fit the hits of each detector layer after an alignment to the trajectory in the bending plane of the detector. The \acrshort{RPClabel}, \acrshort{TGClabel} and \acrshort{CSClabel} hits provide measurements in the orthogonal direction and the forward region of the detector to build additional track segments. The muon track candidates are then built from the track segments fit together using a global $\chi^2$ fit. With that information, different types of muons can be defined.
 
-Similarly to the electron identification, the muon identification is performed applying quality criteria
-to suppress background processes.The goal is to identify prompt muons with high efficiency and a
-good momentum resolution which requires a certain amount of hits in the ID and the MS. To cover
-different needs of physics analyses, four different muon WPs are available: Loose, Medium, Tight
-and high pT. For the scope of this thesis, the Medium and Loose WPs are used.
-For the Medium WP only combined muons are taken into account. The combined muons are required
-to have three or more hits in at least two MDT layers except for the |eta| < 0.1 region where only one
-MDT layer is sufficient combined with no more than one hole layer due to a gap in the MS. This WP
-tries to minimise systematic reconstruction and calibration systematic uncertainties associated with
-the muon. The Medium WP reconstruction efficiency with pT > 20 GeV is 96.1%
+The combined (CB) muons are the muon candidates obtained from using combined information from \acrshort{MSlabel} tracks that are extrapolated to the tracks of \acrshort{IDlabel} (an inside-out approach is also used). The segment-tagged (ST) muons are reconstructed from tracks in the \acrshort{IDlabel} extrapolated to typically one track segment in the \acrshort{MDTlabel}s and \acrshort{CSClabel}. ST muons are normally low in \pT\ and in regions with low acceptance. Calorimeter-tagged (CT) muons are built from an \acrshort{IDlabel} track that is instead matched to an energy deposit in the calorimeter compatible with a minimal ionising particle. The CT muon strategy outputs the lowest purity, although proves useful for detector regions not fully covered by \acrshort{MSlabel}, optimised for 15~GeV < \pT\ < 100~GeV and $\abs{\eta}<0.1$ is optimised. The fourth type, extrapolated (ME) muons, are only reconstructed using the \acrshort{MS} with an acceptance of $2.5 < \abs{\eta} < 2.7$.
 
-The Loose WP maximises the reconstruction efficiency with good-quality muon tracks. In this case,
-all muon types are utilised. In fact, the combined muons are used as they are from the Medium
-selection. Additionally, the calorimeter-tagged and segment-tagged muons are taken into account for
-|eta| < 0.1. The reconstruction efficiency for muons with pT > 20 GeV is 98.1%.
-Figure 6.5 shows the reconstruction efficiency measured in data for the two described WPs obtained
-from Z → µµ and J/psi → µµ event
+The muon identification criteria (similar to the electron identification) is performed applying quality criteria
+to increase the purity of the selection. In order to identify prompt muons with high efficiency and a
+good momentum resolution, a requirement is done for amount of hits in the \acrshort{IDlabel} and the \acrshort{MSlabel} systems. Four different muon operating points are defined: \textit{Tight}, \textit{Medium}, \textit{Loose}, \textit{high \pT} and \texit{low \pT}. The Medium and Loose working points are used in this thesis. The first one is widely used in physics analyses and is designed to minimise muon reconstruction and calibration systematic uncertainties. It consists of combined and extrapolated muons with three or more hits in at least two \acrshort{MDTlabel} layers, or just one hit for $\abs{\eta}<0.1$ with no more than one hole in the \acrshort{MSlabel}. On the other hand, the Loose working point maximises the reconstruction efficiency and accounts all types of muons, adding the segmented- and calorimeter-tagged muons for $\abs{\eta}<0.1$. The reconstruction efficiency for muons with \pT > 20~GeV at the Medium and Loose working points is 96.1\% and 98.1\%, respectively.
+
+The isolation criteria, 
 
 Analogously to the electron isolation strategy, the muon isolation is assessed via track- and calorimeter-based variables with very similar definitions. The track-based variable p
 varcone30
