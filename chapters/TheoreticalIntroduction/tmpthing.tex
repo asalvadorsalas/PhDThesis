@@ -63,12 +63,290 @@ Table~\ref{tab:MC_samples_HpWh} lists the nominal MadGraph5+\PYTHIA8 samples, wh
     \end{tabular}}
       \caption{
         List of all DAOD containers of the $H^+$ MC samples used in this analysis for nominal signal prediction.
-        All the listed samples are simulated with the fast ATLAS detector simulation (AFII).
+        All the listed samples are simulated with the AtlFast2 detector simulation (AFII).
         To reduce the size of this table, only the mc16a sub-campaing is shown and the standard prefix \textsf{mc16\_13TeV.} is not shown.
       }
       \label{tab:MC_samples_HpWh}
     \end{table}
 
+
+
+
+    \subsubsection{List of $t\bar{t}$ background MC samples}
+    \label{subsubsec:MC_samples_ttbar}
+    
+    The $t\bar{t}$ MC samples are listed in this Section.
+    Table~\ref{tab:MC_samples_ttbar_nominal} lists the FS \textsc{Powheg-Box}+\PYTHIA8 samples used for the nominal $t\bar{t}+\geq 1b$, $t\bar{t}+\geq 1c$ and $t\bar{t}+$light prediction.
+    Table~\ref{tab:MC_samples_ttbar_systs} lists the samples used for the assessment of modelling systematics of $t\bar{t}+\geq 1b$, $t\bar{t}+\geq 1c$ and $t\bar{t}+$light.
+
+    \begin{table}[htbp]\centering
+      {\tiny
+      \begin{tabular}{ll|l}
+      \toprule
+      \hline
+      Process/decay/filter & \verb|DAOD_TOPQ1| container                                                    \\ \hline\hline
+      $t\bar{t}\rightarrow 1,2\ell$ & $t\bar{t}$  & \verb|410470.PhPy8EG_A14_ttbar_hdamp258p75_nonallhad.deriv.DAOD_TOPQ1.e6337_s3126_r9364_p4514| \\ hline
+      $t\bar{t}\rightarrow 1\ell$ & $t\bar{t}+BB$ & \verb|411073.PhPy8EG_A14_ttbar_hdamp258p75_ljets_BBFilt.deriv.DAOD_TOPQ1.e6798_s3126_r9364_p4514| \\ hline
+      $t\bar{t}\rightarrow 1\ell$ & $t\bar{t}+B$  & \verb|411074.PhPy8EG_A14_ttbar_hdamp258p75_ljets_BFiltBBVeto.deriv.DAOD_TOPQ1.e6798_s3126_r9364_p4514| \\ hline
+      $t\bar{t}\rightarrow 1\ell$ & $t\bar{t}+C$  & \verb|411075.PhPy8EG_A14_ttbar_hdamp258p75_ljets_CFiltBVeto.deriv.DAOD_TOPQ1.e6798_s3126_r9364_p4514| \\ hline
+      $t\bar{t}\rightarrow 2\ell$ & $t\bar{t}+BB$ & \verb|411076.PhPy8EG_A14_ttbar_hdamp258p75_dil_BBFilt.deriv.DAOD_TOPQ1.e6798_s3126_r9364_p4514| \\ hline
+      $t\bar{t}\rightarrow 2\ell$ & $t\bar{t}+B$  & \verb|411077.PhPy8EG_A14_ttbar_hdamp258p75_dil_BFiltBBVeto.deriv.DAOD_TOPQ1.e6798_s3126_r9364_p4514| \\ hline
+      $t\bar{t}\rightarrow 2\ell$ & $t\bar{t}+C$  & \verb|411078.PhPy8EG_A14_ttbar_hdamp258p75_dil_CFiltBVeto.deriv.DAOD_TOPQ1.e6798_s3126_r9364_p4514| \\ hline
+      \bottomrule
+      \end{tabular}}
+        \caption{
+          List of all DAOD containers of the $t\bar{t}$ MC samples used in this analysis for the nominal prediction of the $t\bar{t}+\geq 1b$, $t\bar{t}+\geq 1c$ and $t\bar{t}+$light backgrounds.
+          All the listed samples are simulated with the full detector simulation (FS).
+          To reduce the size of this table, only the mc16a sub-campaing is shown and the standard prefix \textsf{mc16\_13TeV.} is not shown.
+        }
+        \label{tab:MC_samples_ttbar_nominal}
+      \end{table}
+    
+    
+      \begin{table}[htbp]\centering
+        {\tiny
+        \begin{tabular}{ll|l}
+        \toprule
+        \hline
+        Process/decay/filter & \verb|DAOD_TOPQ1| container                                                    \\ \hline\hline
+        $t\bar{t}\rightarrow 1,2\ell$ & $t\bar{t}$  & \verb|410470.PhPy8EG_A14_ttbar_hdamp258p75_nonallhad.deriv.DAOD_TOPQ1.e6337_a875_r9364_p4514| \\ hline
+        $t\bar{t}\rightarrow 1\ell$ & $t\bar{t}+BB$ & \verb|411073.PhPy8EG_A14_ttbar_hdamp258p75_ljets_BBFilt.deriv.DAOD_TOPQ1.e6798_a875_r9364_p4514| \\ hline
+        $t\bar{t}\rightarrow 1\ell$ & $t\bar{t}+B$  & \verb|411074.PhPy8EG_A14_ttbar_hdamp258p75_ljets_BFiltBBVeto.deriv.DAOD_TOPQ1.e6798_a875_r9364_p4514| \\ hline
+        $t\bar{t}\rightarrow 1\ell$ & $t\bar{t}+C$  & \verb|411075.PhPy8EG_A14_ttbar_hdamp258p75_ljets_CFiltBVeto.deriv.DAOD_TOPQ1.e6798_a875_r9364_p4514| \\ hline
+        $t\bar{t}\rightarrow 2\ell$ & $t\bar{t}+BB$ & \verb|411076.PhPy8EG_A14_ttbar_hdamp258p75_dil_BBFilt.deriv.DAOD_TOPQ1.e6798_a875_r9364_p4514| \\ hline
+        $t\bar{t}\rightarrow 2\ell$ & $t\bar{t}+B$  & \verb|411077.PhPy8EG_A14_ttbar_hdamp258p75_dil_BFiltBBVeto.deriv.DAOD_TOPQ1.e6798_a875_r9364_p4514| \\ hline
+        $t\bar{t}\rightarrow 2\ell$ & $t\bar{t}+C$  & \verb|411078.PhPy8EG_A14_ttbar_hdamp258p75_dil_CFiltBVeto.deriv.DAOD_TOPQ1.e6798_a875_r9364_p4514| \\ hline
+        $t\bar{t}\rightarrow 2\ell$ &  $t\bar{t}+\geq 1b$       & \verb|411178.PhPy8EG_A14_NNPDF30ME_ttbb_4FS_MS_dilep.deriv.DAOD_TOPQ1.e7818_a875_r9364_p4346| \\ hline
+        $t\bar{t}\rightarrow 1\ell^+$ & $t\bar{t}+\geq 1b$      & \verb|411179.PhPy8EG_A14_NNPDF30ME_ttbb_4FS_MS_lplus.deriv.DAOD_TOPQ1.e7818_a875_r9364_p4346| \\ hline
+        $t\bar{t}\rightarrow 1\ell^-$ & $t\bar{t}+\geq 1b$      & \verb|411180.PhPy8EG_A14_NNPDF30ME_ttbb_4FS_MS_lminus.deriv.DAOD_TOPQ1.e7818_a875_r9364_p4346| \\ hline
+        $t\bar{t}\rightarrow 2\ell$ & $t\bar{t}$      & \verb|410557.PowhegHerwig7EvtGen_H7UE_tt_hdamp258p75_704_SingleLep.deriv.DAOD_TOPQ1.e6366_a875_r9364_p4514| \\ hline
+        $t\bar{t}\rightarrow 1\ell$ & $t\bar{t}$      & \verb|410558.PowhegHerwig7EvtGen_H7UE_tt_hdamp258p75_704_dil.deriv.DAOD_TOPQ1.e6366_a875_r9364_p4514| \\ hline
+        $t\bar{t}\rightarrow 0\ell$ & $t\bar{t}$      & \verb|410559.PowhegHerwig7EvtGen_H7UE_tt_hdamp258p75_allhad.deriv.DAOD_TOPQ1.e6567_a875_r9364_p4514| \\ hline
+        $t\bar{t}\rightarrow 1\ell$ & $t\bar{t}+BB$   & \verb|411082.PhHerwig7EG_H7UE_ttbar_hdamp258p75_ljets_BBFilt.deriv.DAOD_TOPQ1.e6799_a875_r9364_p4346| \\ hline
+        $t\bar{t}\rightarrow 1\ell$ & $t\bar{t}+B$    & \verb|411083.PhHerwig7EG_H7UE_ttbar_hdamp258p75_ljets_BFiltBBVeto.deriv.DAOD_TOPQ1.e6799_a875_r9364_p4346| \\ hline
+        $t\bar{t}\rightarrow 1\ell$ & $t\bar{t}+C$    & \verb|411084.PhHerwig7EG_H7UE_ttbar_hdamp258p75_ljets_CFiltBVeto.deriv.DAOD_TOPQ1.e6799_a875_r9364_p4346| \\ hline
+        $t\bar{t}\rightarrow 2\ell$ & $t\bar{t}+BB$   & \verb|411085.PhHerwig7EG_H7UE_ttbar_hdamp258p75_dil_BBFilt.deriv.DAOD_TOPQ1.e6799_a875_r9364_p4346| \\ hline
+        $t\bar{t}\rightarrow 2\ell$ & $t\bar{t}+B$    & \verb|411086.PhHerwig7EG_H7UE_ttbar_hdamp258p75_dil_BFiltBBVeto.deriv.DAOD_TOPQ1.e6799_a875_r9364_p4346| \\ hline
+        $t\bar{t}\rightarrow 2\ell$ & $t\bar{t}+C$    & \verb|411087.PhHerwig7EG_H7UE_ttbar_hdamp258p75_dil_CFiltBVeto.deriv.DAOD_TOPQ1.e6799_a875_r9364_p4346| \\ hline
+        $t\bar{t}\rightarrow 0\ell$ & $t\bar{t}+BB$   & \verb|411088.PhHerwig7EG_H7UE_ttbar_hdamp258p75_allhad_BBFilt.deriv.DAOD_TOPQ1.e6799_a875_r9364_p4346| \\ hline
+        $t\bar{t}\rightarrow 0\ell$ & $t\bar{t}+B$    & \verb|411089.PhHerwig7EG_H7UE_ttbar_hdamp258p75_allhad_BFiltBBVeto.deriv.DAOD_TOPQ1.e6799_a875_r9364_p4346| \\ hline
+        $t\bar{t}\rightarrow 0\ell$ & $t\bar{t}+C$    & \verb|411090.PhHerwig7EG_H7UE_ttbar_hdamp258p75_allhad_CFiltBVeto.deriv.DAOD_TOPQ1.e6799_a875_r9364_p4346| \\ hline
+        $t\bar{t}\rightarrow 1\ell$ & $t\bar{t}$      & \verb|410464.aMcAtNloPy8EvtGen_MEN30NLO_A14N23LO_ttbar_noShWe_SingleLep.deriv.DAOD_TOPQ1.e6762_a875_r9364_p4514| \\ hline
+        $t\bar{t}\rightarrow 2\ell$ & $t\bar{t}$      & \verb|410465.aMcAtNloPy8EvtGen_MEN30NLO_A14N23LO_ttbar_noShWe_dil.deriv.DAOD_TOPQ1.e6762_a875_r9364_p4514| \\ hline
+        $t\bar{t}\rightarrow 0\ell$ & $t\bar{t}$      & \verb|410466.aMcAtNloPy8EvtGen_MEN30NLO_A14N23LO_ttbar_noShWe_AllHadronic.deriv.DAOD_TOPQ1.e6762_a875_r9364_p4514| \\ hline
+        $t\bar{t}\rightarrow 1\ell$ & $t\bar{t}+BB$   & \verb|412066.aMcAtNloPy8EG_A14_ttbar_hdamp258p75_ljets_BBFilt.deriv.DAOD_TOPQ1.e7129_a875_r9364_p4346| \\ hline
+        $t\bar{t}\rightarrow 1\ell$ & $t\bar{t}+B$    & \verb|412067.aMcAtNloPy8EG_A14_ttbar_hdamp258p75_ljets_BFiltBBVeto.deriv.DAOD_TOPQ1.e7129_a875_r9364_p4346| \\ hline
+        $t\bar{t}\rightarrow 1\ell$ & $t\bar{t}+C$    & \verb|412068.aMcAtNloPy8EG_A14_ttbar_hdamp258p75_ljets_CFiltBVeto.deriv.DAOD_TOPQ1.e7129_a875_r9364_p4346| \\ hline
+        $t\bar{t}\rightarrow 2\ell$ & $t\bar{t}+BB$   & \verb|412069.aMcAtNloPy8EG_A14_ttbar_hdamp258p75_dil_BBFilt.deriv.DAOD_TOPQ1.e7129_a875_r9364_p4346| \\ hline
+        $t\bar{t}\rightarrow 2\ell$ & $t\bar{t}+B$    & \verb|412070.aMcAtNloPy8EG_A14_ttbar_hdamp258p75_dil_BFiltBBVeto.deriv.DAOD_TOPQ1.e7129_a875_r9364_p4346| \\ hline
+        $t\bar{t}\rightarrow 2\ell$ & $t\bar{t}+C$    & \verb|412071.aMcAtNloPy8EG_A14_ttbar_hdamp258p75_dil_CFiltBVeto.deriv.DAOD_TOPQ1.e7129_a875_r9364_p4346| \\ hline
+        $t\bar{t}\rightarrow 0\ell$ & $t\bar{t}+BB$   & \verb|412072.aMcAtNloPy8EG_A14_ttbar_hdamp258p75_allhad_BBFilt.deriv.DAOD_TOPQ1.e7129_a875_r9364_p4346| \\ hline
+        $t\bar{t}\rightarrow 0\ell$ & $t\bar{t}+B$    & \verb|412073.aMcAtNloPy8EG_A14_ttbar_hdamp258p75_allhad_BFiltBBVeto.deriv.DAOD_TOPQ1.e7129_a875_r9364_p4346| \\ hline
+        $t\bar{t}\rightarrow 0\ell$ & $t\bar{t}+C$    & \verb|412074.aMcAtNloPy8EG_A14_ttbar_hdamp258p75_allhad_CFiltBVeto.deriv.DAOD_TOPQ1.e7129_a875_r9364_p4346| \\ hline
+
+        \bottomrule
+      \end{tabular}}
+      \caption{
+        List of all DAOD containers of $t\bar{t}$ MC samples used in this analysis for $t\bar{t}+\geq 1b$, $t\bar{t}+\geq 1c$ and $t\bar{t}+$light systematic uncertainties.
+        All the listed samples are simulated with the AtlFast2 simulation (AF2).
+        To reduce the size of this table, only the mc16a sub-campaing is shown and the standard prefix \textsf{mc16\_13TeV.} is not shown.
+        }
+      \label{tab:MC_samples_ttbar_systs}
+    \end{table}
+  
+    \subsubsection{List of }
+    \begin{table}[htbp]\centering
+      {\tiny
+      \begin{tabular}{ll|l}
+      \toprule
+      \hline
+      Process/decay/filter & \verb|DAOD_TOPQ1| container     
+  ttH
+    mc16_13TeV.346343.PhPy8EG_A14NNPDF23_NNPDF30ME_ttH125_allhad.deriv.DAOD_TOPQ1.e7148_s3126_r9364_p4514
+    mc16_13TeV.346344.PhPy8EG_A14NNPDF23_NNPDF30ME_ttH125_semilep.deriv.DAOD_TOPQ1.e7148_s3126_r9364_p4514
+    mc16_13TeV.346345.PhPy8EG_A14NNPDF23_NNPDF30ME_ttH125_dilep.deriv.DAOD_TOPQ1.e7148_s3126_r9364_p4514
+    mc16_13TeV.346443.aMcAtNloPythia8EvtGen_ttH_noShWe_dilep.deriv.DAOD_TOPQ1.e7310_a875_r9364_p4514
+    mc16_13TeV.346444.aMcAtNloPythia8EvtGen_ttH_noShWe_semilep.deriv.DAOD_TOPQ1.e7310_a875_r9364_p4514
+    mc16_13TeV.346445.aMcAtNloPythia8EvtGen_ttH_noShWe_allhad.deriv.DAOD_TOPQ1.e7310_a875_r9364_p4514
+    mc16_13TeV.346343.PhPy8EG_A14NNPDF23_NNPDF30ME_ttH125_allhad.deriv.DAOD_TOPQ1.e7148_a875_r9364_p4346
+    mc16_13TeV.346344.PhPy8EG_A14NNPDF23_NNPDF30ME_ttH125_semilep.deriv.DAOD_TOPQ1.e7148_a875_r9364_p4346
+    mc16_13TeV.346345.PhPy8EG_A14NNPDF23_NNPDF30ME_ttH125_dilep.deriv.DAOD_TOPQ1.e7148_a875_r9364_p4346
+    mc16_13TeV.346346.PhH7EG_H7UE_NNPDF30ME_ttH125_allhad.deriv.DAOD_TOPQ1.e7148_a875_r9364_p4514
+    mc16_13TeV.346347.PhH7EG_H7UE_NNPDF30ME_ttH125_semilep.deriv.DAOD_TOPQ1.e7148_a875_r9364_p4514
+    mc16_13TeV.346348.PhH7EG_H7UE_NNPDF30ME_ttH125_dilep.deriv.DAOD_TOPQ1.e7148_a875_r9364_p4514
+  
+  tH
+  mc16_13TeV.346676.aMcAtNloPythia8EvtGen_tHjb125_4fl_CPalpha_0.deriv.DAOD_TOPQ1.e7815_a875_r9364_p4346
+  mc16_13TeV.346678.aMcAtNloPythia8EvtGen_tWH125_4fl_CPalpha_0.deriv.DAOD_TOPQ1.e7816_a875_r9364_p4346
+
+  st nom
+  mc16_13TeV.410658.PhPy8EG_A14_tchan_BW50_lept_top.deriv.DAOD_TOPQ1.e6671_s3126_r9364_p4346
+  mc16_13TeV.410659.PhPy8EG_A14_tchan_BW50_lept_antitop.deriv.DAOD_TOPQ1.e6671_s3126_r9364_p4346
+  mc16_13TeV.410646.PowhegPythia8EvtGen_A14_Wt_DR_inclusive_top.deriv.DAOD_TOPQ1.e6552_s3126_r9364_p4346
+  mc16_13TeV.410647.PowhegPythia8EvtGen_A14_Wt_DR_inclusive_antitop.deriv.DAOD_TOPQ1.e6552_s3126_r9364_p4346
+  mc16_13TeV.410644.PowhegPythia8EvtGen_A14_singletop_schan_lept_top.deriv.DAOD_TOPQ1.e6527_s3126_r9364_p4346
+  mc16_13TeV.410645.PowhegPythia8EvtGen_A14_singletop_schan_lept_antitop.deriv.DAOD_TOPQ1.e6527_s3126_r9364_p4346
+  mc16_13TeV.410560.MadGraphPythia8EvtGen_A14_tZ_4fl_tchan_noAllHad.deriv.DAOD_TOPQ1.e5803_s3126_r9364_p4346
+  mc16_13TeV.410408.aMcAtNloPythia8EvtGen_tWZ_Ztoll_minDR1.deriv.DAOD_TOPQ1.e6423_s3126_r9364_p4346
+
+  st syst
+  mc16_13TeV.410654.PowhegPythia8EvtGen_A14_Wt_DS_inclusive_top.deriv.DAOD_TOPQ1.e6552_s3126_r9364_p4514
+  mc16_13TeV.410655.PowhegPythia8EvtGen_A14_Wt_DS_inclusive_antitop.deriv.DAOD_TOPQ1.e6552_s3126_r9364_p4514
+  mc16_13TeV.411036.PowhegHerwig7EvtGen_H7UE_Wt_DR_inclusive_top.deriv.DAOD_TOPQ1.e6702_a875_r9364_p4514
+  mc16_13TeV.411037.PowhegHerwig7EvtGen_H7UE_Wt_DR_inclusive_antitop.deriv.DAOD_TOPQ1.e6702_a875_r9364_p4514
+  mc16_13TeV.412002.aMcAtNloPythia8EvtGen_HThalfscale_tW_inclusive.deriv.DAOD_TOPQ1.e6817_a875_r9364_p4514
+  mc16_13TeV.411032.PowhegHerwig7EvtGen_H7UE_704_tchan_lept_antitop.deriv.DAOD_TOPQ1.e6719_a875_r9364_p4514
+  mc16_13TeV.411033.PowhegHerwig7EvtGen_H7UE_704_tchan_lept_top.deriv.DAOD_TOPQ1.e6719_a875_r9364_p4514
+  mc16_13TeV.412004.aMcAtNloPy8EG_tchan_NLO.deriv.DAOD_TOPQ1.e6888_a875_r9364_p4514
+  mc16_13TeV.411034.PhHerwig7EG_H7UE_singletop_schan_lept_top.deriv.DAOD_TOPQ1.e6734_a875_r9364_p4514
+  mc16_13TeV.411035.PhHerwig7EG_H7UE_singletop_schan_lept_antitop.deriv.DAOD_TOPQ1.e6734_a875_r9364_p4514
+  mc16_13TeV.410644.PowhegPythia8EvtGen_A14_singletop_schan_lept_top.deriv.DAOD_TOPQ1.e6527_a875_r9364_p4514
+  mc16_13TeV.410645.PowhegPythia8EvtGen_A14_singletop_schan_lept_antitop.deriv.DAOD_TOPQ1.e6527_a875_r9364_p4514
+  mc16_13TeV.410646.PowhegPythia8EvtGen_A14_Wt_DR_inclusive_top.deriv.DAOD_TOPQ1.e6552_a875_r9364_p4514
+  mc16_13TeV.410647.PowhegPythia8EvtGen_A14_Wt_DR_inclusive_antitop.deriv.DAOD_TOPQ1.e6552_a875_r9364_p4514
+  mc16_13TeV.410658.PhPy8EG_A14_tchan_BW50_lept_top.deriv.DAOD_TOPQ1.e6671_a875_r9364_p4514
+  mc16_13TeV.410659.PhPy8EG_A14_tchan_BW50_lept_antitop.deriv.DAOD_TOPQ1.e6671_a875_r9364_p4514
+  mc16_13TeV.412005.aMcAtNloPythia8EvtGen_A14_singletop_schan_lept.deriv.DAOD_TOPQ1.e6867_a875_r9364_p3832
+
+  ttV4tops nom
+  mc16_13TeV.413008.Sherpa_221_NN30NNLO_ttW_multilegNLO.deriv.DAOD_TOPQ1.e7286_s3126_r9364_p4514
+  mc16_13TeV.413023.Sherpa_221_ttll_multileg_NLO.deriv.DAOD_TOPQ1.e7504_s3126_r9364_p4514
+  mc16_13TeV.412043.aMcAtNloPythia8EvtGen_A14NNPDF31_SM4topsNLO.deriv.DAOD_TOPQ1.e7101_a875_r9364_p4346
+
+  ttV4tops sys
+  mc16_13TeV.410218.aMcAtNloPythia8EvtGen_MEN30NLO_A14N23LO_ttee.deriv.DAOD_TOPQ1.e5070_s3126_r9364_p4514
+  mc16_13TeV.410219.aMcAtNloPythia8EvtGen_MEN30NLO_A14N23LO_ttmumu.deriv.DAOD_TOPQ1.e5070_s3126_r9364_p4514
+  mc16_13TeV.410220.aMcAtNloPythia8EvtGen_MEN30NLO_A14N23LO_tttautau.deriv.DAOD_TOPQ1.e5070_s3126_r9364_p4514
+  mc16_13TeV.410155.aMcAtNloPythia8EvtGen_MEN30NLO_A14N23LO_ttW.deriv.DAOD_TOPQ1.e5070_s3126_r9364_p4514
+  
+  Wjets
+  mc16_13TeV.364170.Sherpa_221_NNPDF30NNLO_Wenu_MAXHTPTV0_70_CVetoBVeto.deriv.DAOD_TOPQ1.e5340_s3126_r9364_p4512
+  mc16_13TeV.364171.Sherpa_221_NNPDF30NNLO_Wenu_MAXHTPTV0_70_CFilterBVeto.deriv.DAOD_TOPQ1.e5340_s3126_r9364_p4512
+  mc16_13TeV.364172.Sherpa_221_NNPDF30NNLO_Wenu_MAXHTPTV0_70_BFilter.deriv.DAOD_TOPQ1.e5340_s3126_r9364_p4512
+  mc16_13TeV.364173.Sherpa_221_NNPDF30NNLO_Wenu_MAXHTPTV70_140_CVetoBVeto.deriv.DAOD_TOPQ1.e5340_s3126_r9364_p4512
+  mc16_13TeV.364174.Sherpa_221_NNPDF30NNLO_Wenu_MAXHTPTV70_140_CFilterBVeto.deriv.DAOD_TOPQ1.e5340_s3126_r9364_p4512
+  mc16_13TeV.364175.Sherpa_221_NNPDF30NNLO_Wenu_MAXHTPTV70_140_BFilter.deriv.DAOD_TOPQ1.e5340_s3126_r9364_p4512
+  mc16_13TeV.364176.Sherpa_221_NNPDF30NNLO_Wenu_MAXHTPTV140_280_CVetoBVeto.deriv.DAOD_TOPQ1.e5340_s3126_r9364_p4512
+  mc16_13TeV.364177.Sherpa_221_NNPDF30NNLO_Wenu_MAXHTPTV140_280_CFilterBVeto.deriv.DAOD_TOPQ1.e5340_s3126_r9364_p4512
+  mc16_13TeV.364178.Sherpa_221_NNPDF30NNLO_Wenu_MAXHTPTV140_280_BFilter.deriv.DAOD_TOPQ1.e5340_s3126_r9364_p4512
+  mc16_13TeV.364179.Sherpa_221_NNPDF30NNLO_Wenu_MAXHTPTV280_500_CVetoBVeto.deriv.DAOD_TOPQ1.e5340_s3126_r9364_p4512
+  mc16_13TeV.364180.Sherpa_221_NNPDF30NNLO_Wenu_MAXHTPTV280_500_CFilterBVeto.deriv.DAOD_TOPQ1.e5340_s3126_r9364_p4512
+  mc16_13TeV.364181.Sherpa_221_NNPDF30NNLO_Wenu_MAXHTPTV280_500_BFilter.deriv.DAOD_TOPQ1.e5340_s3126_r9364_p4512
+  mc16_13TeV.364182.Sherpa_221_NNPDF30NNLO_Wenu_MAXHTPTV500_1000.deriv.DAOD_TOPQ1.e5340_s3126_r9364_p4512
+  mc16_13TeV.364183.Sherpa_221_NNPDF30NNLO_Wenu_MAXHTPTV1000_E_CMS.deriv.DAOD_TOPQ1.e5340_s3126_r9364_p4512
+  mc16_13TeV.364156.Sherpa_221_NNPDF30NNLO_Wmunu_MAXHTPTV0_70_CVetoBVeto.deriv.DAOD_TOPQ1.e5340_s3126_r9364_p4512
+  mc16_13TeV.364157.Sherpa_221_NNPDF30NNLO_Wmunu_MAXHTPTV0_70_CFilterBVeto.deriv.DAOD_TOPQ1.e5340_s3126_r9364_p4512
+  mc16_13TeV.364158.Sherpa_221_NNPDF30NNLO_Wmunu_MAXHTPTV0_70_BFilter.deriv.DAOD_TOPQ1.e5340_s3126_r9364_p4512
+  mc16_13TeV.364159.Sherpa_221_NNPDF30NNLO_Wmunu_MAXHTPTV70_140_CVetoBVeto.deriv.DAOD_TOPQ1.e5340_s3126_r9364_p4512
+  mc16_13TeV.364160.Sherpa_221_NNPDF30NNLO_Wmunu_MAXHTPTV70_140_CFilterBVeto.deriv.DAOD_TOPQ1.e5340_s3126_r9364_p4512
+  mc16_13TeV.364161.Sherpa_221_NNPDF30NNLO_Wmunu_MAXHTPTV70_140_BFilter.deriv.DAOD_TOPQ1.e5340_s3126_r9364_p4512
+  mc16_13TeV.364162.Sherpa_221_NNPDF30NNLO_Wmunu_MAXHTPTV140_280_CVetoBVeto.deriv.DAOD_TOPQ1.e5340_s3126_r9364_p4512
+  mc16_13TeV.364163.Sherpa_221_NNPDF30NNLO_Wmunu_MAXHTPTV140_280_CFilterBVeto.deriv.DAOD_TOPQ1.e5340_s3126_r9364_p4512
+  mc16_13TeV.364164.Sherpa_221_NNPDF30NNLO_Wmunu_MAXHTPTV140_280_BFilter.deriv.DAOD_TOPQ1.e5340_s3126_r9364_p4512
+  mc16_13TeV.364165.Sherpa_221_NNPDF30NNLO_Wmunu_MAXHTPTV280_500_CVetoBVeto.deriv.DAOD_TOPQ1.e5340_s3126_r9364_p4512
+  mc16_13TeV.364166.Sherpa_221_NNPDF30NNLO_Wmunu_MAXHTPTV280_500_CFilterBVeto.deriv.DAOD_TOPQ1.e5340_s3126_r9364_p4512
+  mc16_13TeV.364167.Sherpa_221_NNPDF30NNLO_Wmunu_MAXHTPTV280_500_BFilter.deriv.DAOD_TOPQ1.e5340_s3126_r9364_p4512
+  mc16_13TeV.364168.Sherpa_221_NNPDF30NNLO_Wmunu_MAXHTPTV500_1000.deriv.DAOD_TOPQ1.e5340_s3126_r9364_p4512
+  mc16_13TeV.364169.Sherpa_221_NNPDF30NNLO_Wmunu_MAXHTPTV1000_E_CMS.deriv.DAOD_TOPQ1.e5340_s3126_r9364_p4512
+  mc16_13TeV.364184.Sherpa_221_NNPDF30NNLO_Wtaunu_MAXHTPTV0_70_CVetoBVeto.deriv.DAOD_TOPQ1.e5340_s3126_r9364_p4512
+  mc16_13TeV.364185.Sherpa_221_NNPDF30NNLO_Wtaunu_MAXHTPTV0_70_CFilterBVeto.deriv.DAOD_TOPQ1.e5340_s3126_r9364_p4512
+  mc16_13TeV.364186.Sherpa_221_NNPDF30NNLO_Wtaunu_MAXHTPTV0_70_BFilter.deriv.DAOD_TOPQ1.e5340_s3126_r9364_p4512
+  mc16_13TeV.364187.Sherpa_221_NNPDF30NNLO_Wtaunu_MAXHTPTV70_140_CVetoBVeto.deriv.DAOD_TOPQ1.e5340_s3126_r9364_p4512
+  mc16_13TeV.364188.Sherpa_221_NNPDF30NNLO_Wtaunu_MAXHTPTV70_140_CFilterBVeto.deriv.DAOD_TOPQ1.e5340_s3126_r9364_p4512
+  mc16_13TeV.364189.Sherpa_221_NNPDF30NNLO_Wtaunu_MAXHTPTV70_140_BFilter.deriv.DAOD_TOPQ1.e5340_s3126_r9364_p4512
+  mc16_13TeV.364190.Sherpa_221_NNPDF30NNLO_Wtaunu_MAXHTPTV140_280_CVetoBVeto.deriv.DAOD_TOPQ1.e5340_s3126_r9364_p4512
+  mc16_13TeV.364191.Sherpa_221_NNPDF30NNLO_Wtaunu_MAXHTPTV140_280_CFilterBVeto.deriv.DAOD_TOPQ1.e5340_s3126_r9364_p4512
+  mc16_13TeV.364192.Sherpa_221_NNPDF30NNLO_Wtaunu_MAXHTPTV140_280_BFilter.deriv.DAOD_TOPQ1.e5340_s3126_r9364_p4512
+  mc16_13TeV.364193.Sherpa_221_NNPDF30NNLO_Wtaunu_MAXHTPTV280_500_CVetoBVeto.deriv.DAOD_TOPQ1.e5340_s3126_r9364_p4512
+  mc16_13TeV.364194.Sherpa_221_NNPDF30NNLO_Wtaunu_MAXHTPTV280_500_CFilterBVeto.deriv.DAOD_TOPQ1.e5340_s3126_r9364_p4512
+  mc16_13TeV.364195.Sherpa_221_NNPDF30NNLO_Wtaunu_MAXHTPTV280_500_BFilter.deriv.DAOD_TOPQ1.e5340_s3126_r9364_p4512
+  mc16_13TeV.364196.Sherpa_221_NNPDF30NNLO_Wtaunu_MAXHTPTV500_1000.deriv.DAOD_TOPQ1.e5340_s3126_r9364_p4512
+  mc16_13TeV.364197.Sherpa_221_NNPDF30NNLO_Wtaunu_MAXHTPTV1000_E_CMS.deriv.DAOD_TOPQ1.e5340_s3126_r9364_p4512
+
+  Zjets
+  mc16_13TeV.364114.Sherpa_221_NNPDF30NNLO_Zee_MAXHTPTV0_70_CVetoBVeto.deriv.DAOD_TOPQ1.e5299_s3126_r9364_p4512
+  mc16_13TeV.364115.Sherpa_221_NNPDF30NNLO_Zee_MAXHTPTV0_70_CFilterBVeto.deriv.DAOD_TOPQ1.e5299_s3126_r9364_p4512
+  mc16_13TeV.364116.Sherpa_221_NNPDF30NNLO_Zee_MAXHTPTV0_70_BFilter.deriv.DAOD_TOPQ1.e5299_s3126_r9364_p4512
+  mc16_13TeV.364117.Sherpa_221_NNPDF30NNLO_Zee_MAXHTPTV70_140_CVetoBVeto.deriv.DAOD_TOPQ1.e5299_s3126_r9364_p4512
+  mc16_13TeV.364118.Sherpa_221_NNPDF30NNLO_Zee_MAXHTPTV70_140_CFilterBVeto.deriv.DAOD_TOPQ1.e5299_s3126_r9364_p4512
+  mc16_13TeV.364119.Sherpa_221_NNPDF30NNLO_Zee_MAXHTPTV70_140_BFilter.deriv.DAOD_TOPQ1.e5299_s3126_r9364_p4512
+  mc16_13TeV.364120.Sherpa_221_NNPDF30NNLO_Zee_MAXHTPTV140_280_CVetoBVeto.deriv.DAOD_TOPQ1.e5299_s3126_r9364_p4512
+  mc16_13TeV.364121.Sherpa_221_NNPDF30NNLO_Zee_MAXHTPTV140_280_CFilterBVeto.deriv.DAOD_TOPQ1.e5299_s3126_r9364_p4512
+  mc16_13TeV.364122.Sherpa_221_NNPDF30NNLO_Zee_MAXHTPTV140_280_BFilter.deriv.DAOD_TOPQ1.e5299_s3126_r9364_p4512
+  mc16_13TeV.364123.Sherpa_221_NNPDF30NNLO_Zee_MAXHTPTV280_500_CVetoBVeto.deriv.DAOD_TOPQ1.e5299_s3126_r9364_p4512
+  mc16_13TeV.364124.Sherpa_221_NNPDF30NNLO_Zee_MAXHTPTV280_500_CFilterBVeto.deriv.DAOD_TOPQ1.e5299_s3126_r9364_p4512
+  mc16_13TeV.364125.Sherpa_221_NNPDF30NNLO_Zee_MAXHTPTV280_500_BFilter.deriv.DAOD_TOPQ1.e5299_s3126_r9364_p4512
+  mc16_13TeV.364126.Sherpa_221_NNPDF30NNLO_Zee_MAXHTPTV500_1000.deriv.DAOD_TOPQ1.e5299_s3126_r9364_p4512
+  mc16_13TeV.364127.Sherpa_221_NNPDF30NNLO_Zee_MAXHTPTV1000_E_CMS.deriv.DAOD_TOPQ1.e5299_s3126_r9364_p4512
+  mc16_13TeV.364100.Sherpa_221_NNPDF30NNLO_Zmumu_MAXHTPTV0_70_CVetoBVeto.deriv.DAOD_TOPQ1.e5271_s3126_r9364_p4512
+  mc16_13TeV.364101.Sherpa_221_NNPDF30NNLO_Zmumu_MAXHTPTV0_70_CFilterBVeto.deriv.DAOD_TOPQ1.e5271_s3126_r9364_p4512
+  mc16_13TeV.364102.Sherpa_221_NNPDF30NNLO_Zmumu_MAXHTPTV0_70_BFilter.deriv.DAOD_TOPQ1.e5271_s3126_r9364_p4512
+  mc16_13TeV.364103.Sherpa_221_NNPDF30NNLO_Zmumu_MAXHTPTV70_140_CVetoBVeto.deriv.DAOD_TOPQ1.e5271_s3126_r9364_p4512
+  mc16_13TeV.364104.Sherpa_221_NNPDF30NNLO_Zmumu_MAXHTPTV70_140_CFilterBVeto.deriv.DAOD_TOPQ1.e5271_s3126_r9364_p4512
+  mc16_13TeV.364105.Sherpa_221_NNPDF30NNLO_Zmumu_MAXHTPTV70_140_BFilter.deriv.DAOD_TOPQ1.e5271_s3126_r9364_p4512
+  mc16_13TeV.364106.Sherpa_221_NNPDF30NNLO_Zmumu_MAXHTPTV140_280_CVetoBVeto.deriv.DAOD_TOPQ1.e5271_s3126_r9364_p4512
+  mc16_13TeV.364107.Sherpa_221_NNPDF30NNLO_Zmumu_MAXHTPTV140_280_CFilterBVeto.deriv.DAOD_TOPQ1.e5271_s3126_r9364_p4512
+  mc16_13TeV.364108.Sherpa_221_NNPDF30NNLO_Zmumu_MAXHTPTV140_280_BFilter.deriv.DAOD_TOPQ1.e5271_s3126_r9364_p4512
+  mc16_13TeV.364109.Sherpa_221_NNPDF30NNLO_Zmumu_MAXHTPTV280_500_CVetoBVeto.deriv.DAOD_TOPQ1.e5271_s3126_r9364_p4512
+  mc16_13TeV.364110.Sherpa_221_NNPDF30NNLO_Zmumu_MAXHTPTV280_500_CFilterBVeto.deriv.DAOD_TOPQ1.e5271_s3126_r9364_p4512
+  mc16_13TeV.364111.Sherpa_221_NNPDF30NNLO_Zmumu_MAXHTPTV280_500_BFilter.deriv.DAOD_TOPQ1.e5271_s3126_r9364_p4512
+  mc16_13TeV.364112.Sherpa_221_NNPDF30NNLO_Zmumu_MAXHTPTV500_1000.deriv.DAOD_TOPQ1.e5271_s3126_r9364_p4512
+  mc16_13TeV.364113.Sherpa_221_NNPDF30NNLO_Zmumu_MAXHTPTV1000_E_CMS.deriv.DAOD_TOPQ1.e5271_s3126_r9364_p4512
+  mc16_13TeV.364128.Sherpa_221_NNPDF30NNLO_Ztautau_MAXHTPTV0_70_CVetoBVeto.deriv.DAOD_TOPQ1.e5307_s3126_r9364_p4512
+  mc16_13TeV.364129.Sherpa_221_NNPDF30NNLO_Ztautau_MAXHTPTV0_70_CFilterBVeto.deriv.DAOD_TOPQ1.e5307_s3126_r9364_p4512
+  mc16_13TeV.364130.Sherpa_221_NNPDF30NNLO_Ztautau_MAXHTPTV0_70_BFilter.deriv.DAOD_TOPQ1.e5307_s3126_r9364_p4512
+  mc16_13TeV.364131.Sherpa_221_NNPDF30NNLO_Ztautau_MAXHTPTV70_140_CVetoBVeto.deriv.DAOD_TOPQ1.e5307_s3126_r9364_p4512
+  mc16_13TeV.364132.Sherpa_221_NNPDF30NNLO_Ztautau_MAXHTPTV70_140_CFilterBVeto.deriv.DAOD_TOPQ1.e5307_s3126_r9364_p4512
+  mc16_13TeV.364133.Sherpa_221_NNPDF30NNLO_Ztautau_MAXHTPTV70_140_BFilter.deriv.DAOD_TOPQ1.e5307_s3126_r9364_p4512
+  mc16_13TeV.364134.Sherpa_221_NNPDF30NNLO_Ztautau_MAXHTPTV140_280_CVetoBVeto.deriv.DAOD_TOPQ1.e5307_s3126_r9364_p4512
+  mc16_13TeV.364135.Sherpa_221_NNPDF30NNLO_Ztautau_MAXHTPTV140_280_CFilterBVeto.deriv.DAOD_TOPQ1.e5307_s3126_r9364_p4512
+  mc16_13TeV.364136.Sherpa_221_NNPDF30NNLO_Ztautau_MAXHTPTV140_280_BFilter.deriv.DAOD_TOPQ1.e5307_s3126_r9364_p4512
+  mc16_13TeV.364137.Sherpa_221_NNPDF30NNLO_Ztautau_MAXHTPTV280_500_CVetoBVeto.deriv.DAOD_TOPQ1.e5307_s3126_r9364_p4512
+  mc16_13TeV.364138.Sherpa_221_NNPDF30NNLO_Ztautau_MAXHTPTV280_500_CFilterBVeto.deriv.DAOD_TOPQ1.e5313_s3126_r9364_p4512
+  mc16_13TeV.364139.Sherpa_221_NNPDF30NNLO_Ztautau_MAXHTPTV280_500_BFilter.deriv.DAOD_TOPQ1.e5313_s3126_r9364_p4512
+  mc16_13TeV.364140.Sherpa_221_NNPDF30NNLO_Ztautau_MAXHTPTV500_1000.deriv.DAOD_TOPQ1.e5307_s3126_r9364_p4512
+  mc16_13TeV.364141.Sherpa_221_NNPDF30NNLO_Ztautau_MAXHTPTV1000_E_CMS.deriv.DAOD_TOPQ1.e5307_s3126_r9364_p4512
+  mc16_13TeV.364204.Sherpa_221_NN30NNLO_Zee_Mll10_40_MAXHTPTV0_70_BVeto.deriv.DAOD_TOPQ1.e5421_s3126_r9364_p4512
+  mc16_13TeV.364205.Sherpa_221_NN30NNLO_Zee_Mll10_40_MAXHTPTV0_70_BFilter.deriv.DAOD_TOPQ1.e5421_s3126_r9364_p4512
+  mc16_13TeV.364206.Sherpa_221_NN30NNLO_Zee_Mll10_40_MAXHTPTV70_280_BVeto.deriv.DAOD_TOPQ1.e5421_s3126_r9364_p4512
+  mc16_13TeV.364207.Sherpa_221_NN30NNLO_Zee_Mll10_40_MAXHTPTV70_280_BFilter.deriv.DAOD_TOPQ1.e5421_s3126_r9364_p4512
+  mc16_13TeV.364208.Sherpa_221_NN30NNLO_Zee_Mll10_40_MAXHTPTV280_E_CMS_BVeto.deriv.DAOD_TOPQ1.e5421_s3126_r9364_p4512
+  mc16_13TeV.364209.Sherpa_221_NN30NNLO_Zee_Mll10_40_MAXHTPTV280_E_CMS_BFilter.deriv.DAOD_TOPQ1.e5421_s3126_r9364_p4512
+  mc16_13TeV.364198.Sherpa_221_NN30NNLO_Zmm_Mll10_40_MAXHTPTV0_70_BVeto.deriv.DAOD_TOPQ1.e5421_s3126_r9364_p4512
+  mc16_13TeV.364199.Sherpa_221_NN30NNLO_Zmm_Mll10_40_MAXHTPTV0_70_BFilter.deriv.DAOD_TOPQ1.e5421_s3126_r9364_p4512
+  mc16_13TeV.364200.Sherpa_221_NN30NNLO_Zmm_Mll10_40_MAXHTPTV70_280_BVeto.deriv.DAOD_TOPQ1.e5421_s3126_r9364_p4512
+  mc16_13TeV.364201.Sherpa_221_NN30NNLO_Zmm_Mll10_40_MAXHTPTV70_280_BFilter.deriv.DAOD_TOPQ1.e5421_s3126_r9364_p4512
+  mc16_13TeV.364202.Sherpa_221_NN30NNLO_Zmm_Mll10_40_MAXHTPTV280_E_CMS_BVeto.deriv.DAOD_TOPQ1.e5421_s3126_r9364_p4512
+  mc16_13TeV.364203.Sherpa_221_NN30NNLO_Zmm_Mll10_40_MAXHTPTV280_E_CMS_BFilter.deriv.DAOD_TOPQ1.e5421_s3126_r9364_p4512
+  mc16_13TeV.364210.Sherpa_221_NN30NNLO_Ztt_Mll10_40_MAXHTPTV0_70_BVeto.deriv.DAOD_TOPQ1.e5421_s3126_r9364_p4512
+  mc16_13TeV.364211.Sherpa_221_NN30NNLO_Ztt_Mll10_40_MAXHTPTV0_70_BFilter.deriv.DAOD_TOPQ1.e5421_s3126_r9364_p4512
+  mc16_13TeV.364212.Sherpa_221_NN30NNLO_Ztt_Mll10_40_MAXHTPTV70_280_BVeto.deriv.DAOD_TOPQ1.e5421_s3126_r9364_p4512
+  mc16_13TeV.364213.Sherpa_221_NN30NNLO_Ztt_Mll10_40_MAXHTPTV70_280_BFilter.deriv.DAOD_TOPQ1.e5421_s3126_r9364_p4512
+  mc16_13TeV.364214.Sherpa_221_NN30NNLO_Ztt_Mll10_40_MAXHTPTV280_E_CMS_BVeto.deriv.DAOD_TOPQ1.e5421_s3126_r9364_p4512
+  mc16_13TeV.364215.Sherpa_221_NN30NNLO_Ztt_Mll10_40_MAXHTPTV280_E_CMS_BFilter.deriv.DAOD_TOPQ1.e5421_s3126_r9364_p4512
+    
+diboson
+mc16_13TeV.364250.Sherpa_222_NNPDF30NNLO_llll.deriv.DAOD_TOPQ1.e5894_s3126_r9364_p4512
+mc16_13TeV.364253.Sherpa_222_NNPDF30NNLO_lllv.deriv.DAOD_TOPQ1.e5916_s3126_r9364_p4512
+mc16_13TeV.364254.Sherpa_222_NNPDF30NNLO_llvv.deriv.DAOD_TOPQ1.e5916_s3126_r9364_p4512
+mc16_13TeV.364255.Sherpa_222_NNPDF30NNLO_lvvv.deriv.DAOD_TOPQ1.e5916_s3126_r9364_p4512
+mc16_13TeV.363494.Sherpa_221_NNPDF30NNLO_vvvv.deriv.DAOD_TOPQ1.e5332_s3126_r9364_p4512
+mc16_13TeV.364288.Sherpa_222_NNPDF30NNLO_llll_lowMllPtComplement.deriv.DAOD_TOPQ1.e6096_s3126_r9364_p4512
+mc16_13TeV.364289.Sherpa_222_NNPDF30NNLO_lllv_lowMllPtComplement.deriv.DAOD_TOPQ1.e6133_s3126_r9364_p4512
+mc16_13TeV.364290.Sherpa_222_NNPDF30NNLO_llvv_lowMllPtComplement.deriv.DAOD_TOPQ1.e6096_s3126_r9364_p4512
+mc16_13TeV.363355.Sherpa_221_NNPDF30NNLO_ZqqZvv.deriv.DAOD_TOPQ1.e5525_s3126_r9364_p4512
+mc16_13TeV.363356.Sherpa_221_NNPDF30NNLO_ZqqZll.deriv.DAOD_TOPQ1.e5525_s3126_r9364_p4512
+mc16_13TeV.363357.Sherpa_221_NNPDF30NNLO_WqqZvv.deriv.DAOD_TOPQ1.e5525_s3126_r9364_p4512
+mc16_13TeV.363358.Sherpa_221_NNPDF30NNLO_WqqZll.deriv.DAOD_TOPQ1.e5525_s3126_r9364_p4512
+mc16_13TeV.363359.Sherpa_221_NNPDF30NNLO_WpqqWmlv.deriv.DAOD_TOPQ1.e5583_s3126_r9364_p4512
+mc16_13TeV.363360.Sherpa_221_NNPDF30NNLO_WplvWmqq.deriv.DAOD_TOPQ1.e5983_s3126_r9364_p4512
+mc16_13TeV.363489.Sherpa_221_NNPDF30NNLO_WlvZqq.deriv.DAOD_TOPQ1.e5525_s3126_r9364_p4512
+mc16_13TeV.364283.Sherpa_222_NNPDF30NNLO_lllljj_EW6.deriv.DAOD_TOPQ1.e6055_s3126_r9364_p4512
+mc16_13TeV.364284.Sherpa_222_NNPDF30NNLO_lllvjj_EW6.deriv.DAOD_TOPQ1.e6055_s3126_r9364_p4512
+mc16_13TeV.364287.Sherpa_222_NNPDF30NNLO_llvvjj_ss_EW6.deriv.DAOD_TOPQ1.e6055_s3126_r9364_p4512
+mc16_13TeV.345705.Sherpa_222_NNPDF30NNLO_ggllll_0M4l130.deriv.DAOD_TOPQ1.e6213_s3126_r9364_p4512
+mc16_13TeV.345706.Sherpa_222_NNPDF30NNLO_ggllll_130M4l.deriv.DAOD_TOPQ1.e6213_s3126_r9364_p4512
+mc16_13TeV.345723.Sherpa_222_NNPDF30NNLO_ggllvvZZ.deriv.DAOD_TOPQ1.e6213_s3126_r9364_p4512
 
 The \ttH signal MC samples are listed in this Section.
 The derivations are unskimmed, as mentioned in Section~\ref{sec:Samples}.
@@ -152,238 +430,6 @@ Process/decay/fiter & \verb|DAOD_TOPQ1| container                               
   }
   \label{tab:MC_samples_ttH_systs}
 \end{table}
-
-
-\subsubsection{List of \texorpdfstring{\ttbbMC(4FS)}{ttbb(4FS)} background MC samples}
-\label{subsubsec:MC_samples_ttbb}
-
-The \ttbbMC(4FS) MC samples are listed in this Section.
-The derivations are unskimmed, as mentioned in Section~\ref{sec:Samples}.
-Table~\ref{tab:MC_samples_ttbb_nominal} lists the \PowPyttbb\ samples used for the nominal \ttbin\ prediction, while Table~\ref{tab:MC_samples_ttbb_alt} lists the \sherpa2.2.1~\ttbbMC(4FS) alternative samples used for cross-checks.
-All the samples are simulated in AF2 (cf. Section~\ref{subsec:commonMC}).
-
-\begin{table}[htbp]\centering
-{\tiny
-\begin{tabular}{l|l|r}
-\toprule
-\hline
-Process/decay/fiter & \verb|DAOD_TOPQ1| container                                                    & $\mathrm{\sigma~[\si{\pb}]}$ \\ \hline\hline
-\multirow{3}{*}{$\ttbar\to\mathrm{2\ell}$}       & \verb|411178.PhPy8EG_A14_NNPDF30ME_ttbb_4FS_MS_dilep.deriv.DAOD_TOPQ1.e7818_a875_r9364_p3866|   & \multirow{3}{*}{3.246} \\
-                                                 & \verb|411178.PhPy8EG_A14_NNPDF30ME_ttbb_4FS_MS_dilep.deriv.DAOD_TOPQ1.e7818_a875_r10201_p3866|  &  \\
-                                                 & \verb|411178.PhPy8EG_A14_NNPDF30ME_ttbb_4FS_MS_dilep.deriv.DAOD_TOPQ1.e7818_a875_r10724_p3866|  &  \\ \hline
-\multirow{3}{*}{$\ttbar\to\mathrm{1\ell^+}$}     & \verb|411179.PhPy8EG_A14_NNPDF30ME_ttbb_4FS_MS_lplus.deriv.DAOD_TOPQ1.e7818_a875_r9364_p3866|   & \multirow{3}{*}{6.913} \\
-                                                 & \verb|411179.PhPy8EG_A14_NNPDF30ME_ttbb_4FS_MS_lplus.deriv.DAOD_TOPQ1.e7818_a875_r10201_p3866|  &  \\
-                                                 & \verb|411179.PhPy8EG_A14_NNPDF30ME_ttbb_4FS_MS_lplus.deriv.DAOD_TOPQ1.e7818_a875_r10724_p3866|  &  \\ \hline
-\multirow{3}{*}{$\ttbar\to\mathrm{1\ell^-}$}     & \verb|411180.PhPy8EG_A14_NNPDF30ME_ttbb_4FS_MS_lminus.deriv.DAOD_TOPQ1.e7818_a875_r9364_p3866|  & \multirow{3}{*}{6.732} \\
-                                                 & \verb|411180.PhPy8EG_A14_NNPDF30ME_ttbb_4FS_MS_lminus.deriv.DAOD_TOPQ1.e7818_a875_r10201_p3866| &  \\
-                                                 & \verb|411180.PhPy8EG_A14_NNPDF30ME_ttbb_4FS_MS_lminus.deriv.DAOD_TOPQ1.e7818_a875_r10724_p3866| &  \\ \hline
-\multirow{3}{*}{$\ttbar\to\mathrm{0\ell}$}       & \verb|411275.PhPy8EG_A14_NNPDF30ME_ttbb_4FS_MS_allhad.deriv.DAOD_TOPQ1.e7818_a875_r9364_p3866|  & \multirow{3}{*}{14.529} \\
-                                                 & \verb|411275.PhPy8EG_A14_NNPDF30ME_ttbb_4FS_MS_allhad.deriv.DAOD_TOPQ1.e7818_a875_r10201_p3866| &  \\
-                                                 & \verb|411275.PhPy8EG_A14_NNPDF30ME_ttbb_4FS_MS_allhad.deriv.DAOD_TOPQ1.e7818_a875_r10724_p3866| &  \\ \hline
-\bottomrule
-\end{tabular}}
-  \caption{
-    List of all DAOD containers of the \PowPyttbb\ MC samples used in this analysis for the nominal prediction of the \ttbin\ background.
-    For each DSID, the cross-section used to normalise the sample to the integrated luminosity is shown.
-    All the listed samples are simulated with the AtlFast2 simulation (AF2).
-    To reduce the width of this table, the standard prefix \textsf{mc16\_13TeV.} which is identical for all MC samples of the MC16 campaign, used in this analysis, is not shown.
-  }
-  \label{tab:MC_samples_ttbb_nominal}
-\end{table}
-
-
-\begin{table}[htbp]\centering
-{\tiny
-\begin{tabular}{l|l|r}
-\toprule
-\hline
-Process/decay/fiter & \verb|DAOD_TOPQ1| container                                                    & $\mathrm{\sigma~[\si{\pb}]}$ \\ \hline\hline
-\multirow{3}{*}{$\ttbar\to\mathrm{2\ell}$}       & \verb|410325.Sherpa_NNPDF30NNLO_ttbb_lpluslminus.deriv.DAOD_TOPQ1.e5695_a875_r9364_p3832|  & \multirow{3}{*}{2.7549} \\
-                                                 & \verb|410325.Sherpa_NNPDF30NNLO_ttbb_lpluslminus.deriv.DAOD_TOPQ1.e5695_a875_r10201_p3832| &  \\
-                                                 & \verb|410325.Sherpa_NNPDF30NNLO_ttbb_lpluslminus.deriv.DAOD_TOPQ1.e5695_a875_r10724_p3832| &  \\ \hline
-\multirow{3}{*}{$\ttbar\to\mathrm{1\ell^+}$}     & \verb|410323.Sherpa_NNPDF30NNLO_ttbb_lplush.deriv.DAOD_TOPQ1.e5695_a875_r9364_p3832|       & \multirow{3}{*}{5.7314} \\
-                                                 & \verb|410323.Sherpa_NNPDF30NNLO_ttbb_lplush.deriv.DAOD_TOPQ1.e5695_a875_r10201_p3832|      &  \\
-                                                 & \verb|410323.Sherpa_NNPDF30NNLO_ttbb_lplush.deriv.DAOD_TOPQ1.e5695_a875_r10724_p3832|      &  \\ \hline
-\multirow{3}{*}{$\ttbar\to\mathrm{1\ell^-}$}     & \verb|410324.Sherpa_NNPDF30NNLO_ttbb_lminush.deriv.DAOD_TOPQ1.e5695_a875_r9364_p3832|      & \multirow{3}{*}{5.7283} \\
-                                                 & \verb|410324.Sherpa_NNPDF30NNLO_ttbb_lminush.deriv.DAOD_TOPQ1.e5695_a875_r10201_p3832|     &  \\
-                                                 & \verb|410324.Sherpa_NNPDF30NNLO_ttbb_lminush.deriv.DAOD_TOPQ1.e5695_a875_r10724_p3832|     &  \\ \hline
-\multirow{3}{*}{$\ttbar\to\mathrm{0\ell}$}       & \verb|410369.Sherpa_NNPDF30NNLO_ttbb_allhad.deriv.DAOD_TOPQ1.e7933_a875_r9364_p4062|       & \multirow{3}{*}{11.911} \\
-                                                 & \verb|410369.Sherpa_NNPDF30NNLO_ttbb_allhad.deriv.DAOD_TOPQ1.e7933_a875_r10201_p4062|      &  \\
-                                                 & \verb|410369.Sherpa_NNPDF30NNLO_ttbb_allhad.deriv.DAOD_TOPQ1.e7933_a875_r10724_p4062|      &  \\ \hline
-\bottomrule
-\end{tabular}}
-  \caption{
-    List of all DAOD containers of \sherpa2.2.1~\ttbbMC(4FS) MC samples used in this analysis as alternative prediction of \ttbin\ background, used for cross-checks.
-    For each DSID, the cross-section used to normalise the sample to the integrated luminosity is shown.
-    All the listed samples are simulated with the AtlFast2 simulation (AF2).
-    To reduce the width of this table, the standard prefix \textsf{mc16\_13TeV.} which is identical for all MC samples of the MC16 campaign, used in this analysis, is not shown.
-  }
-  \label{tab:MC_samples_ttbb_alt}
-\end{table}
-
-
-\subsubsection{List of \texorpdfstring{\ttbar(5FS)}{ttbar(5FS)} background MC samples}
-\label{subsubsec:MC_samples_ttbar}
-
-The \ttbar(5FS) MC samples are listed in this Section.
-The derivations are unskimmed, as mentioned in Section~\ref{sec:Samples}, and all the samples are simulated in AF2 (cf. Section~\ref{subsec:commonMC}).
-Table~\ref{tab:MC_samples_ttbar_nominal} lists the \PowPyttbar\ samples used for the nominal \ttcin\ and \ttlight\ prediction,
-and as reference (i.e. denominator) for modelling systematics of \ttbin.
-Table~\ref{tab:MC_samples_ttbar_systs} lists the samples used for the assessment of modelling systematics of \ttbin\, \ttcin\, and \ttlight;
-the \PowHwttbar\ samples are listed in the first part of the table, and the \aMCPyttbar\ samples in the second part (cf. Section~\ref{subsubsec:ttjetSysts}).
-
-\begin{table}[htbp]\centering
-{\tiny
-\begin{tabular}{ll|l|r}
-\toprule
-\hline
-\multicolumn{2}{l|}{Process/decay/fiter} & \verb|DAOD_TOPQ1| container                                                    & $\mathrm{\sigma~[\si{\pb}]}$ \\ \hline\hline
-\multirow{12}{*}{$\ttbar\to\mathrm{2\ell}$}              & \multirow{3}{*}{\ttbar}        & \verb|410472.PhPy8EG_A14_ttbar_hdamp258p75_dil.deriv.DAOD_TOPQ1.e6348_a875_r9364_p3832|                 &  \multirow{3}{*}{87.7076} \\
-                                                         &                                & \verb|410472.PhPy8EG_A14_ttbar_hdamp258p75_dil.deriv.DAOD_TOPQ1.e6348_a875_r10201_p3832|                &  \\
-                                                         &                                & \verb|410472.PhPy8EG_A14_ttbar_hdamp258p75_dil.deriv.DAOD_TOPQ1.e6348_a875_r10724_p3832|                &  \\ \cline{2-4}
-                                                         & \multirow{3}{*}{\ttbar{}+BB}   & \verb|411076.PhPy8EG_A14_ttbar_hdamp258p75_dil_BBFilt.deriv.DAOD_TOPQ1.e6798_a875_r9364_p3832|          &  \multirow{3}{*}{0.768225} \\
-                                                         &                                & \verb|411076.PhPy8EG_A14_ttbar_hdamp258p75_dil_BBFilt.deriv.DAOD_TOPQ1.e6798_a875_r10201_p3832|         &  \\
-                                                         &                                & \verb|411076.PhPy8EG_A14_ttbar_hdamp258p75_dil_BBFilt.deriv.DAOD_TOPQ1.e6798_a875_r10724_p3832|         &  \\ \cline{2-4}
-                                                         & \multirow{3}{*}{\ttbar{}+B}    & \verb|411077.PhPy8EG_A14_ttbar_hdamp258p75_dil_BFiltBBVeto.deriv.DAOD_TOPQ1.e6798_a875_r9364_p3832|     &  \multirow{3}{*}{4.08276} \\
-                                                         &                                & \verb|411077.PhPy8EG_A14_ttbar_hdamp258p75_dil_BFiltBBVeto.deriv.DAOD_TOPQ1.e6798_a875_r10201_p3832|    &  \\
-                                                         &                                & \verb|411077.PhPy8EG_A14_ttbar_hdamp258p75_dil_BFiltBBVeto.deriv.DAOD_TOPQ1.e6798_a875_r10724_p3832|    &  \\ \cline{2-4}
-                                                         & \multirow{3}{*}{\ttbar{}+C}    & \verb|411078.PhPy8EG_A14_ttbar_hdamp258p75_dil_CFiltBVeto.deriv.DAOD_TOPQ1.e6798_a875_r9364_p3832|      &  \multirow{3}{*}{3.45785} \\
-                                                         &                                & \verb|411078.PhPy8EG_A14_ttbar_hdamp258p75_dil_CFiltBVeto.deriv.DAOD_TOPQ1.e6798_a875_r10201_p3832|     &  \\
-                                                         &                                & \verb|411078.PhPy8EG_A14_ttbar_hdamp258p75_dil_CFiltBVeto.deriv.DAOD_TOPQ1.e6798_a875_r10724_p3832|     &  \\ \hline
-
-\multirow{3}{*}{$\ttbar\to\mathrm{1,2\ell}$}             & \multirow{3}{*}{\ttbar}        & \verb|410470.PhPy8EG_A14_ttbar_hdamp258p75_nonallhad.deriv.DAOD_TOPQ1.e6337_a875_r9364_p3832|           &  \multirow{3}{*}{452.352} \\
-                                                         &                                & \verb|410470.PhPy8EG_A14_ttbar_hdamp258p75_nonallhad.deriv.DAOD_TOPQ1.e6337_a875_r10201_p3832|          &  \\
-                                                         &                                & \verb|410470.PhPy8EG_A14_ttbar_hdamp258p75_nonallhad.deriv.DAOD_TOPQ1.e6337_a875_r10724_p3832|          &  \\ \hline
-\multirow{9}{*}{$\ttbar\to\mathrm{1\ell}$}               & \multirow{3}{*}{\ttbar{}+BB}   & \verb|411073.PhPy8EG_A14_ttbar_hdamp258p75_ljets_BBFilt.deriv.DAOD_TOPQ1.e6798_a875_r9364_p3832|        &  \multirow{3}{*}{3.34987} \\
-                                                         &                                & \verb|411073.PhPy8EG_A14_ttbar_hdamp258p75_ljets_BBFilt.deriv.DAOD_TOPQ1.e6798_a875_r10201_p3832|       &  \\
-                                                         &                                & \verb|411073.PhPy8EG_A14_ttbar_hdamp258p75_ljets_BBFilt.deriv.DAOD_TOPQ1.e6798_a875_r10724_p3832|       &  \\ \cline{2-4}
-                                                         & \multirow{3}{*}{\ttbar{}+B}    & \verb|411074.PhPy8EG_A14_ttbar_hdamp258p75_ljets_BFiltBBVeto.deriv.DAOD_TOPQ1.e6798_a875_r9364_p3832|   &  \multirow{3}{*}{17.6669} \\
-                                                         &                                & \verb|411074.PhPy8EG_A14_ttbar_hdamp258p75_ljets_BFiltBBVeto.deriv.DAOD_TOPQ1.e6798_a875_r10201_p3832|  &  \\
-                                                         &                                & \verb|411074.PhPy8EG_A14_ttbar_hdamp258p75_ljets_BFiltBBVeto.deriv.DAOD_TOPQ1.e6798_a875_r10724_p3832|  &  \\ \cline{2-4}
-                                                         & \multirow{3}{*}{\ttbar{}+C}    & \verb|411075.PhPy8EG_A14_ttbar_hdamp258p75_ljets_CFiltBVeto.deriv.DAOD_TOPQ1.e6798_a875_r9364_p3832|    &  \multirow{3}{*}{15.0340} \\
-                                                         &                                & \verb|411075.PhPy8EG_A14_ttbar_hdamp258p75_ljets_CFiltBVeto.deriv.DAOD_TOPQ1.e6798_a875_r10201_p3832|   &  \\
-                                                         &                                & \verb|411075.PhPy8EG_A14_ttbar_hdamp258p75_ljets_CFiltBVeto.deriv.DAOD_TOPQ1.e6798_a875_r10724_p3832|   &  \\ \hline
-
-\multirow{12}{*}{$\ttbar\to\mathrm{0\ell}$}              & \multirow{3}{*}{\ttbar}       & \verb|410471.PhPy8EG_A14_ttbar_hdamp258p75_allhad.deriv.DAOD_TOPQ1.e6337_a875_r9364_p3832|               &  \multirow{3}{*}{379.486} \\
-                                                         &                               & \verb|410471.PhPy8EG_A14_ttbar_hdamp258p75_allhad.deriv.DAOD_TOPQ1.e6337_a875_r10201_p3832|              &  \\
-                                                         &                               & \verb|410471.PhPy8EG_A14_ttbar_hdamp258p75_allhad.deriv.DAOD_TOPQ1.e6337_a875_r10724_p3832|              &  \\ \cline{2-4}
-                                                         & \multirow{3}{*}{\ttbar{}+BB}  & \verb|411079.PhPy8EG_A14_ttbar_hdamp258p75_allhad_BBFilt.deriv.DAOD_TOPQ1.e6798_a875_r9364_p3832|        &  \multirow{3}{*}{3.64622} \\
-                                                         &                               & \verb|411079.PhPy8EG_A14_ttbar_hdamp258p75_allhad_BBFilt.deriv.DAOD_TOPQ1.e6798_a875_r10201_p3832|       &  \\
-                                                         &                               & \verb|411079.PhPy8EG_A14_ttbar_hdamp258p75_allhad_BBFilt.deriv.DAOD_TOPQ1.e6798_a875_r10724_p3832|       &  \\ \cline{2-4}
-                                                         & \multirow{3}{*}{\ttbar{}+B}   & \verb|411080.PhPy8EG_A14_ttbar_hdamp258p75_allhad_BFiltBBVeto.deriv.DAOD_TOPQ1.e6798_a875_r9364_p3832|   &  \multirow{3}{*}{19.0803} \\
-                                                         &                               & \verb|411080.PhPy8EG_A14_ttbar_hdamp258p75_allhad_BFiltBBVeto.deriv.DAOD_TOPQ1.e6798_a875_r10201_p3832|  &  \\
-                                                         &                               & \verb|411080.PhPy8EG_A14_ttbar_hdamp258p75_allhad_BFiltBBVeto.deriv.DAOD_TOPQ1.e6798_a875_r10724_p3832|  &  \\ \cline{2-4}
-                                                         & \multirow{3}{*}{\ttbar{}+C}   & \verb|411081.PhPy8EG_A14_ttbar_hdamp258p75_allhad_CFiltBVeto.deriv.DAOD_TOPQ1.e6798_a875_r9364_p3832|    &  \multirow{3}{*}{16.0826} \\
-                                                         &                               & \verb|411081.PhPy8EG_A14_ttbar_hdamp258p75_allhad_CFiltBVeto.deriv.DAOD_TOPQ1.e6798_a875_r10201_p3832|   &  \\
-                                                         &                               & \verb|411081.PhPy8EG_A14_ttbar_hdamp258p75_allhad_CFiltBVeto.deriv.DAOD_TOPQ1.e6798_a875_r10724_p3832|   &  \\ \hline
-\bottomrule
-\end{tabular}}
-  \caption{
-    List of all DAOD containers of \PowPyttbar\ MC samples used in this analysis as nominal \ttcin\ and \ttlight\ prediction.
-    For each DSID, the cross-section used to normalise the sample to the integrated luminosity is shown.
-    All the listed samples are simulated with the AtlFast2 simulation (AF2).
-    To reduce the width of this table, the standard prefix \textsf{mc16\_13TeV.} which is identical for all MC samples of the MC16 campaign, used in this analysis, is not shown.
-  }
-  \label{tab:MC_samples_ttbar_nominal}
-\end{table}
-
-
-\begin{table}[htbp]\centering
-{\tiny
-\begin{tabular}{ll|l|r}
-\toprule
-\hline
-\multicolumn{2}{l|}{Process/decay/fiter} & \verb|DAOD_TOPQ1| container                                                    & $\mathrm{\sigma~[\si{\pb}]}$ \\ \hline\hline
-\multirow{12}{*}{$\ttbar\to\mathrm{2\ell}$}     & \multirow{3}{*}{\ttbar}       & \verb|410558.PowhegHerwig7EvtGen_H7UE_tt_hdamp258p75_704_dil.deriv.DAOD_TOPQ1.e6366_a875_r9364_p3832|                &  \multirow{3}{*}{87.7107} \\
-                                                &                               & \verb|410558.PowhegHerwig7EvtGen_H7UE_tt_hdamp258p75_704_dil.deriv.DAOD_TOPQ1.e6366_a875_r10201_p3832|               &  \\
-                                                &                               & \verb|410558.PowhegHerwig7EvtGen_H7UE_tt_hdamp258p75_704_dil.deriv.DAOD_TOPQ1.e6366_a875_r10724_p3832|               &  \\ \cline{2-4}
-                                                & \multirow{3}{*}{\ttbar{}+BB}  & \verb|411085.PhHerwig7EG_H7UE_ttbar_hdamp258p75_dil_BBFilt.deriv.DAOD_TOPQ1.e6799_a875_r9364_p3832|                  &  \multirow{3}{*}{0.548980} \\
-                                                &                               & \verb|411085.PhHerwig7EG_H7UE_ttbar_hdamp258p75_dil_BBFilt.deriv.DAOD_TOPQ1.e6799_a875_r10201_p3832|                 &  \\
-                                                &                               & \verb|411085.PhHerwig7EG_H7UE_ttbar_hdamp258p75_dil_BBFilt.deriv.DAOD_TOPQ1.e6799_a875_r10724_p3832|                 &  \\ \cline{2-4}
-                                                & \multirow{3}{*}{\ttbar{}+B}   & \verb|411086.PhHerwig7EG_H7UE_ttbar_hdamp258p75_dil_BFiltBBVeto.deriv.DAOD_TOPQ1.e6799_a875_r9364_p3832|             &  \multirow{3}{*}{5.54563} \\
-                                                &                               & \verb|411086.PhHerwig7EG_H7UE_ttbar_hdamp258p75_dil_BFiltBBVeto.deriv.DAOD_TOPQ1.e6799_a875_r10201_p3832|            &  \\
-                                                &                               & \verb|411086.PhHerwig7EG_H7UE_ttbar_hdamp258p75_dil_BFiltBBVeto.deriv.DAOD_TOPQ1.e6799_a875_r10724_p3832|            &  \\ \cline{2-4}
-                                                & \multirow{3}{*}{\ttbar{}+C}   & \verb|411087.PhHerwig7EG_H7UE_ttbar_hdamp258p75_dil_CFiltBVeto.deriv.DAOD_TOPQ1.e6799_a875_r9364_p3832|              &  \multirow{3}{*}{2.95964} \\
-                                                &                               & \verb|411087.PhHerwig7EG_H7UE_ttbar_hdamp258p75_dil_CFiltBVeto.deriv.DAOD_TOPQ1.e6799_a875_r10201_p3832|             &  \\
-                                                &                               & \verb|411087.PhHerwig7EG_H7UE_ttbar_hdamp258p75_dil_CFiltBVeto.deriv.DAOD_TOPQ1.e6799_a875_r10724_p3832|             &  \\ \hline
-
-\multirow{12}{*}{$\ttbar\to\mathrm{1\ell}$}     & \multirow{3}{*}{\ttbar}       & \verb|410557.PowhegHerwig7EvtGen_H7UE_tt_hdamp258p75_704_SingleLep.deriv.DAOD_TOPQ1.e6366_a875_r9364_p3832|          &  \multirow{3}{*}{364.672} \\
-                                                &                               & \verb|410557.PowhegHerwig7EvtGen_H7UE_tt_hdamp258p75_704_SingleLep.deriv.DAOD_TOPQ1.e6366_a875_r10201_p3832|         &  \\
-                                                &                               & \verb|410557.PowhegHerwig7EvtGen_H7UE_tt_hdamp258p75_704_SingleLep.deriv.DAOD_TOPQ1.e6366_a875_r10724_p3832|         &  \\ \cline{2-4}
-                                                & \multirow{3}{*}{\ttbar{}+BB}  & \verb|411082.PhHerwig7EG_H7UE_ttbar_hdamp258p75_ljets_BBFilt.deriv.DAOD_TOPQ1.e6799_a875_r9364_p3832|                &  \multirow{3}{*}{2.39118} \\
-                                                &                               & \verb|411082.PhHerwig7EG_H7UE_ttbar_hdamp258p75_ljets_BBFilt.deriv.DAOD_TOPQ1.e6799_a875_r10201_p3832|               &  \\
-                                                &                               & \verb|411082.PhHerwig7EG_H7UE_ttbar_hdamp258p75_ljets_BBFilt.deriv.DAOD_TOPQ1.e6799_a875_r10724_p3832|               &  \\ \cline{2-4}
-                                                & \multirow{3}{*}{\ttbar{}+B}   & \verb|411083.PhHerwig7EG_H7UE_ttbar_hdamp258p75_ljets_BFiltBBVeto.deriv.DAOD_TOPQ1.e6799_a875_r9364_p3832|           &  \multirow{3}{*}{23.3650} \\
-                                                &                               & \verb|411083.PhHerwig7EG_H7UE_ttbar_hdamp258p75_ljets_BFiltBBVeto.deriv.DAOD_TOPQ1.e6799_a875_r10201_p3832|          &  \\
-                                                &                               & \verb|411083.PhHerwig7EG_H7UE_ttbar_hdamp258p75_ljets_BFiltBBVeto.deriv.DAOD_TOPQ1.e6799_a875_r10724_p3832|          &  \\ \cline{2-4}
-                                                & \multirow{3}{*}{\ttbar{}+C}   & \verb|411084.PhHerwig7EG_H7UE_ttbar_hdamp258p75_ljets_CFiltBVeto.deriv.DAOD_TOPQ1.e6799_a875_r9364_p3832|            &  \multirow{3}{*}{12.7363} \\
-                                                &                               & \verb|411084.PhHerwig7EG_H7UE_ttbar_hdamp258p75_ljets_CFiltBVeto.deriv.DAOD_TOPQ1.e6799_a875_r10201_p3832|           &  \\
-                                                &                               & \verb|411084.PhHerwig7EG_H7UE_ttbar_hdamp258p75_ljets_CFiltBVeto.deriv.DAOD_TOPQ1.e6799_a875_r10724_p3832|           &  \\ \hline
-
-\multirow{12}{*}{$\ttbar\to\mathrm{0\ell}$}     & \multirow{3}{*}{\ttbar}       & \verb|410559.PowhegHerwig7EvtGen_H7UE_tt_hdamp258p75_allhad.deriv.DAOD_TOPQ1.e6567_a875_r9364_p3832|                 &  \multirow{3}{*}{379.466} \\
-                                                &                               & \verb|410559.PowhegHerwig7EvtGen_H7UE_tt_hdamp258p75_allhad.deriv.DAOD_TOPQ1.e6567_a875_r10201_p3832|                &  \\
-                                                &                               & \verb|410559.PowhegHerwig7EvtGen_H7UE_tt_hdamp258p75_allhad.deriv.DAOD_TOPQ1.e6567_a875_r10724_p3832|                &  \\ \cline{2-4}
-                                                & \multirow{3}{*}{\ttbar{}+BB}  & \verb|411088.PhHerwig7EG_H7UE_ttbar_hdamp258p75_allhad_BBFilt.deriv.DAOD_TOPQ1.e6799_a875_r9364_p3832|               &  \multirow{3}{*}{2.59624} \\
-                                                &                               & \verb|411088.PhHerwig7EG_H7UE_ttbar_hdamp258p75_allhad_BBFilt.deriv.DAOD_TOPQ1.e6799_a875_r10201_p3832|              &  \\
-                                                &                               & \verb|411088.PhHerwig7EG_H7UE_ttbar_hdamp258p75_allhad_BBFilt.deriv.DAOD_TOPQ1.e6799_a875_r10724_p3832|              &  \\ \cline{2-4}
-                                                & \multirow{3}{*}{\ttbar{}+B}   & \verb|411089.PhHerwig7EG_H7UE_ttbar_hdamp258p75_allhad_BFiltBBVeto.deriv.DAOD_TOPQ1.e6799_a875_r9364_p3832|          &  \multirow{3}{*}{24.6181} \\
-                                                &                               & \verb|411089.PhHerwig7EG_H7UE_ttbar_hdamp258p75_allhad_BFiltBBVeto.deriv.DAOD_TOPQ1.e6799_a875_r10201_p3832|         &  \\
-                                                &                               & \verb|411089.PhHerwig7EG_H7UE_ttbar_hdamp258p75_allhad_BFiltBBVeto.deriv.DAOD_TOPQ1.e6799_a875_r10724_p3832|         &  \\ \cline{2-4}
-                                                & \multirow{3}{*}{\ttbar{}+C}   & \verb|411090.PhHerwig7EG_H7UE_ttbar_hdamp258p75_allhad_CFiltBVeto.deriv.DAOD_TOPQ1.e6799_a875_r9364_p3832|           &  \multirow{3}{*}{13.4881} \\
-                                                &                               & \verb|411090.PhHerwig7EG_H7UE_ttbar_hdamp258p75_allhad_CFiltBVeto.deriv.DAOD_TOPQ1.e6799_a875_r10201_p3832|          &  \\
-                                                &                               & \verb|411090.PhHerwig7EG_H7UE_ttbar_hdamp258p75_allhad_CFiltBVeto.deriv.DAOD_TOPQ1.e6799_a875_r10724_p3832|          &  \\ \hline
-\hline
-\multirow{12}{*}{$\ttbar\to\mathrm{2\ell}$}     & \multirow{3}{*}{\ttbar}       & \verb|410465.aMcAtNloPy8EvtGen_MEN30NLO_A14N23LO_ttbar_noShWe_dil.deriv.DAOD_TOPQ1.e6762_a875_r9364_p3832|           &  \multirow{3}{*}{89.1447} \\
-                                                &                               & \verb|410465.aMcAtNloPy8EvtGen_MEN30NLO_A14N23LO_ttbar_noShWe_dil.deriv.DAOD_TOPQ1.e6762_a875_r10201_p3832|          &  \\
-                                                &                               & \verb|410465.aMcAtNloPy8EvtGen_MEN30NLO_A14N23LO_ttbar_noShWe_dil.deriv.DAOD_TOPQ1.e6762_a875_r10724_p3832|          &  \\ \cline{2-4}
-                                                & \multirow{3}{*}{\ttbar{}+BB}  & \verb|412069.aMcAtNloPy8EG_A14_ttbar_hdamp258p75_dil_BBFilt.deriv.DAOD_TOPQ1.e7129_a875_r9364_p3832|                 &  \multirow{3}{*}{0.759006} \\
-                                                &                               & \verb|412069.aMcAtNloPy8EG_A14_ttbar_hdamp258p75_dil_BBFilt.deriv.DAOD_TOPQ1.e7129_a875_r10201_p3832|                &  \\
-                                                &                               & \verb|412069.aMcAtNloPy8EG_A14_ttbar_hdamp258p75_dil_BBFilt.deriv.DAOD_TOPQ1.e7129_a875_r10724_p3832|                &  \\ \cline{2-4}
-                                                & \multirow{3}{*}{\ttbar{}+B}   & \verb|412070.aMcAtNloPy8EG_A14_ttbar_hdamp258p75_dil_BFiltBBVeto.deriv.DAOD_TOPQ1.e7129_a875_r9364_p3832|            &  \multirow{3}{*}{4.59415} \\
-                                                &                               & \verb|412070.aMcAtNloPy8EG_A14_ttbar_hdamp258p75_dil_BFiltBBVeto.deriv.DAOD_TOPQ1.e7129_a875_r10201_p3832|           &  \\
-                                                &                               & \verb|412070.aMcAtNloPy8EG_A14_ttbar_hdamp258p75_dil_BFiltBBVeto.deriv.DAOD_TOPQ1.e7129_a875_r10724_p3832|           &  \\ \cline{2-4}
-                                                & \multirow{3}{*}{\ttbar{}+C}   & \verb|412071.aMcAtNloPy8EG_A14_ttbar_hdamp258p75_dil_CFiltBVeto.deriv.DAOD_TOPQ1.e7129_a875_r9364_p3832|             &  \multirow{3}{*}{3.82099} \\
-                                                &                               & \verb|412071.aMcAtNloPy8EG_A14_ttbar_hdamp258p75_dil_CFiltBVeto.deriv.DAOD_TOPQ1.e7129_a875_r10201_p3832|            &  \\
-                                                &                               & \verb|412071.aMcAtNloPy8EG_A14_ttbar_hdamp258p75_dil_CFiltBVeto.deriv.DAOD_TOPQ1.e7129_a875_r10724_p3832|            &  \\ \hline
-
-\multirow{12}{*}{$\ttbar\to\mathrm{1\ell}$}     & \multirow{3}{*}{\ttbar}       & \verb|410464.aMcAtNloPy8EvtGen_MEN30NLO_A14N23LO_ttbar_noShWe_SingleLep.deriv.DAOD_TOPQ1.e6762_a875_r9364_p3832|     &  \multirow{3}{*}{366.250} \\
-                                                &                               & \verb|410464.aMcAtNloPy8EvtGen_MEN30NLO_A14N23LO_ttbar_noShWe_SingleLep.deriv.DAOD_TOPQ1.e6762_a875_r10201_p3832|    &  \\
-                                                &                               & \verb|410464.aMcAtNloPy8EvtGen_MEN30NLO_A14N23LO_ttbar_noShWe_SingleLep.deriv.DAOD_TOPQ1.e6762_a875_r10724_p3832|    &  \\ \cline{2-4}
-                                                & \multirow{3}{*}{\ttbar{}+BB}  & \verb|412066.aMcAtNloPy8EG_A14_ttbar_hdamp258p75_ljets_BBFilt.deriv.DAOD_TOPQ1.e7129_a875_r9364_p3832|               &  \multirow{3}{*}{3.29406} \\
-                                                &                               & \verb|412066.aMcAtNloPy8EG_A14_ttbar_hdamp258p75_ljets_BBFilt.deriv.DAOD_TOPQ1.e7129_a875_r10201_p3832|              &  \\
-                                                &                               & \verb|412066.aMcAtNloPy8EG_A14_ttbar_hdamp258p75_ljets_BBFilt.deriv.DAOD_TOPQ1.e7129_a875_r10724_p3832|              &  \\ \cline{2-4}
-                                                & \multirow{3}{*}{\ttbar{}+B}   & \verb|412067.aMcAtNloPy8EG_A14_ttbar_hdamp258p75_ljets_BFiltBBVeto.deriv.DAOD_TOPQ1.e7129_a875_r9364_p3832|          &  \multirow{3}{*}{19.6616} \\
-                                                &                               & \verb|412067.aMcAtNloPy8EG_A14_ttbar_hdamp258p75_ljets_BFiltBBVeto.deriv.DAOD_TOPQ1.e7129_a875_r10201_p3832|         &  \\
-                                                &                               & \verb|412067.aMcAtNloPy8EG_A14_ttbar_hdamp258p75_ljets_BFiltBBVeto.deriv.DAOD_TOPQ1.e7129_a875_r10724_p3832|         &  \\ \cline{2-4}
-                                                & \multirow{3}{*}{\ttbar{}+C}   & \verb|412068.aMcAtNloPy8EG_A14_ttbar_hdamp258p75_ljets_CFiltBVeto.deriv.DAOD_TOPQ1.e7129_a875_r9364_p3832|           &  \multirow{3}{*}{16.2383} \\
-                                                &                               & \verb|412068.aMcAtNloPy8EG_A14_ttbar_hdamp258p75_ljets_CFiltBVeto.deriv.DAOD_TOPQ1.e7129_a875_r10201_p3832|          &  \\
-                                                &                               & \verb|412068.aMcAtNloPy8EG_A14_ttbar_hdamp258p75_ljets_CFiltBVeto.deriv.DAOD_TOPQ1.e7129_a875_r10724_p3832|          &  \\ \hline
-
-\multirow{12}{*}{$\ttbar\to\mathrm{0\ell}$}     & \multirow{3}{*}{\ttbar}       & \verb|410466.aMcAtNloPy8EvtGen_MEN30NLO_A14N23LO_ttbar_noShWe_AllHadronic.deriv.DAOD_TOPQ1.e6762_a875_r9364_p3832|   &  \multirow{3}{*}{376.451} \\
-                                                &                               & \verb|410466.aMcAtNloPy8EvtGen_MEN30NLO_A14N23LO_ttbar_noShWe_AllHadronic.deriv.DAOD_TOPQ1.e6762_a875_r10201_p3832|  &  \\
-                                                &                               & \verb|410466.aMcAtNloPy8EvtGen_MEN30NLO_A14N23LO_ttbar_noShWe_AllHadronic.deriv.DAOD_TOPQ1.e6762_a875_r10724_p3832|  &  \\ \cline{2-4}
-                                                & \multirow{3}{*}{\ttbar{}+BB}  & \verb|412072.aMcAtNloPy8EG_A14_ttbar_hdamp258p75_allhad_BBFilt.deriv.DAOD_TOPQ1.e7129_a875_r9364_p3832|              &  \multirow{3}{*}{3.56506} \\
-                                                &                               & \verb|412072.aMcAtNloPy8EG_A14_ttbar_hdamp258p75_allhad_BBFilt.deriv.DAOD_TOPQ1.e7129_a875_r10201_p3832|             &  \\
-                                                &                               & \verb|412072.aMcAtNloPy8EG_A14_ttbar_hdamp258p75_allhad_BBFilt.deriv.DAOD_TOPQ1.e7129_a875_r10724_p3832|             &  \\ \cline{2-4}
-                                                & \multirow{3}{*}{\ttbar{}+B}   & \verb|412073.aMcAtNloPy8EG_A14_ttbar_hdamp258p75_allhad_BFiltBBVeto.deriv.DAOD_TOPQ1.e7129_a875_r9364_p3832|         &  \multirow{3}{*}{20.9902} \\
-                                                &                               & \verb|412073.aMcAtNloPy8EG_A14_ttbar_hdamp258p75_allhad_BFiltBBVeto.deriv.DAOD_TOPQ1.e7129_a875_r10201_p3832|        &  \\
-                                                &                               & \verb|412073.aMcAtNloPy8EG_A14_ttbar_hdamp258p75_allhad_BFiltBBVeto.deriv.DAOD_TOPQ1.e7129_a875_r10724_p3832|        &  \\ \cline{2-4}
-                                                & \multirow{3}{*}{\ttbar{}+C}   & \verb|412074.aMcAtNloPy8EG_A14_ttbar_hdamp258p75_allhad_CFiltBVeto.deriv.DAOD_TOPQ1.e7129_a875_r9364_p3832|          &  \multirow{3}{*}{17.0069} \\
-                                                &                               & \verb|412074.aMcAtNloPy8EG_A14_ttbar_hdamp258p75_allhad_CFiltBVeto.deriv.DAOD_TOPQ1.e7129_a875_r10201_p3832|         &  \\
-                                                &                               & \verb|412074.aMcAtNloPy8EG_A14_ttbar_hdamp258p75_allhad_CFiltBVeto.deriv.DAOD_TOPQ1.e7129_a875_r10724_p3832|         &  \\ \hline
-\bottomrule
-\end{tabular}}
-  \caption{
-    List of all DAOD containers of \ttbar(5FS) MC samples used in this analysis for \ttbin, \ttcin, and \ttlight\ modelling systematic uncertainties.
-    For each DSID, the cross-section used to normalise the sample to the integrated luminosity is shown.
-    All the listed samples are simulated with the AtlFast2 simulation (AF2).
-    The \powhegboxherwig\ samples are listed in the first part of the Table, and the \mgamc+\pythia\ ones in the second part.
-    To reduce the width of this table, the standard prefix \textsf{mc16\_13TeV.} which is identical for all MC samples of the MC16 campaign, used in this analysis, is not shown.
-  }
-  \label{tab:MC_samples_ttbar_systs}
-\end{table}
-
-\clearpage
 
 \subsubsection{List of smaller top background MC samples}
 \label{subsubsec:MC_samples_otherTop}
