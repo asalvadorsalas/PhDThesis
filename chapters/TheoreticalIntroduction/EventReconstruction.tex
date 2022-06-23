@@ -73,7 +73,9 @@ Comparing the two algorithms used in this thesis, the DL1r tagger is the most re
 
 The full spectrum of the final $b$-tagging discriminant is not directly used in physics analyses due to the complexity of the calibration. Instead, four different $b$-tagging \acrlong{WPlabel}~(\acrshort{WPlabel}) are defined based on the $b$-jet acceptance efficiency evaluated on a \ttbar\ sample: 60\%, 70\%, 77\% and 85\%, which are often referred to as \textit{Very Tight}, \textit{Tight}, \textit{Medium} and \textit{Loose} operating points, respectively. Most of the $c$- and light-jets do not pass the 85\% \acrshort{WPlabel}, ending up in the $b$-tagging efficiency between 85\% and 100\%. Meanwhile, the jets that pass the 60\% \acrshort{WPlabel} mainly consists in $b$-jets. This criteria is important when defining the $b$-jets for event selection, as the $b-$jets misidentification, so $c$- and $light$-jet acceptance inefficiency, improves for lower $b$-jet efficiency working points, therefore rejecting more background but with lower signal statistics. On the other hand, the pseudo-continuous b-tagging \acrshort{WPlabel}, so the \acrshort{WPlabel} that a jet passes, is additional information that can be used to further refine the selection or in multivariate methods.
 
-\section{Electrons}
+\section{Leptons}
+
+\subsection{Electrons}
 
 Electrons interact with the \acrshort{IDlabel} and the \acrshort{EMlabel} calorimeter system. The typical signature is a track in the \acrshort{IDlabel} and electromagnetic shower in the \acrshort{EMlabel} calorimeter. Overall, the performance in terms of identification and reconstruction of electrons is high.
 
@@ -85,7 +87,7 @@ Further identification criteria are required for an electron candidate, passing 
 
 Another requirement is the isolation criteria, to require the electron signal to be separated from other particles. Electrons are typically required to be spatially separated from other particles, based on two quantities: a maximum value for the sum of transverse energy of topo-clusters in a $\Delta R=0.2$ cone surrounding the electron and of the sum of transverse momentum of tracks around the electron, with a $\Delta R$ cone that decreases with \pT. Effects of leakage and pile-up are taken into account and also tracks are required to satisfy \pT\ > 1~GeV, $\abs{\eta}<2.5$ and quality criteria. In this thesis, the criteria used is the Gradient isolation which has an efficiency of 90\% at $\pT = 25$~GeV and 99\% at $\pT = 60$~GeV.
 
-\section{Muons}
+\subsection{Muons}
 
 Muons leave the \acrshort{ATLASlabel} detector without significant energy loss. The typical signal consists on a track in the \acrshort{IDlabel} and \acrshort{MSlabel} sub-detectors. There are different types of muons depending on which \acrshort{IDlabel}, \acrshort{MSlabel} or calorimeter information is available %https://link.springer.com/article/10.1140/epjc/s10052-016-4120-y
 .
@@ -97,31 +99,11 @@ The combined (CB) muons are the muon candidates obtained from using combined inf
 The muon identification criteria (similar to the electron identification) is performed applying quality criteria to increase the purity of the selection. In order to identify prompt muons with high efficiency and a
 good momentum resolution, a requirement is done for amount of hits in the \acrshort{IDlabel} and the \acrshort{MSlabel} systems. Four different muon operating points are defined: \textit{Tight}, \textit{Medium}, \textit{Loose}, \textit{high \pT} and \texit{low \pT}. The Medium and Loose working points are used in this thesis. The first one is widely used in physics analyses and is designed to minimise muon reconstruction and calibration systematic uncertainties. It consists of combined and extrapolated muons with three or more hits in at least two \acrshort{MDTlabel} layers, or just one hit for $\abs{\eta}<0.1$ with no more than one hole in the \acrshort{MSlabel}. On the other hand, the Loose working point maximises the reconstruction efficiency and accounts all types of muons, adding the segmented- and calorimeter-tagged muons for $\abs{\eta}<0.1$. The reconstruction efficiency for muons with \pT > 20~GeV at the Medium and Loose working points is 96.1\% and 98.1\%, respectively.
 
-The isolation criteria is based on track and calorimeter variables, similar to the electron case. Non-prompt muons, generated in parton shower processes for example, are usually close to jets and other objects The track isolation variable 
-
-Analogously to the electron isolation strategy, the muon isolation is assessed via track- and calorimeter-based variables with very similar definitions. The track-based variable p
-varcone30
-T
-is the scalar pT sum
-of all tracks, excluding the muon track, with pT > 1 GeV in a radius of deltaR = min(10 GeV/pµ
-T
-, 0.3)
-around the muon transverse momentum p
-µ
-T
-. The calorimeter isolation variable is constructed from
-the sum of transverse energies around the muon track, as described for electrons. However, for the
-scope of this thesis the isolation WP FixedCutTightTrackOnly is utilised which is only using the
-track-based isolation satisfying p
-varcone30
-T
-/pµ
-T < 0.06. The isolation efficiencies are measured using
-Z → µµ events.
+The isolation criteria is based on track and calorimeter variables, similar to the electron case. The criteria improves the efficiency removing non-prompt muons, the ones not generated in the hard-scattering but in other parton shower processes for example, which are usually close to jets and other objects. The track related variable, \pT^{\text{varcone30}} is the scalar \pT\ sum of the additional tracks in a cone $\Delta R=10$~GeV$/\pT^\mu$ (maximum of 0.3), that depends on the muon transverse momentum \pT$^\mu$. The calorimeter related variable is the same as for electrons, build from the sum of energies around the muon track. In this thesis, the \textit{FixedCutTightTrackOnly} working point is used, which is defined only with track isolation: $\pT^\text{varcone30}/\pT^\mu<0.06$.       
 
 \section{Taus}
 
-tau-leptons can decay either leptonically (into electrons or muons) or hadronically. The leptonic decays
+The $\tau$ leptons typically decay before reaching active electronics of the \acrshort{ATLASlabel} detector.H tau-leptons can decay either leptonically (into electrons or muons) or hadronically. The leptonic decays
 are similarly reconstructed as electrons or muons. The taus decays with a hadronic final state are seeded
 by jets which are required to have pT > 10 GeV and |eta| < 2.5 excluding the barrel-end-cap transition
 region [129]. Tau leptons are calibrated to correct their energy deposit in the detector to the average
