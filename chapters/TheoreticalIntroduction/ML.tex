@@ -1,0 +1,70 @@
+\acrlong{MLlabel}~(\acrshort{MClabel}) is one of the core developing fields in computer science allowing the analysis of large and complex datasets, offering sophisticated techniques with a broad range of possible applications. Regarding high energy physics, the large amount of \acrshort{MClabel} simulations or data that is being recorded is well suited for the application of \acrshort{ML} techniques.
+
+The deployment of these methods is already reaching crucial tasks as online data recording in \acrshort{ATLASlabel}, from neural networks in calorimetry FPGAs  %https://inspirehep.net/literature/2013724
+to particle reconstruction in trigger algorithms %https://inspirehep.net/literature/1795210
+, which benefit from faster and more efficient response than previous filters. For those cases, a neural network is trained to reduce background signal, to offer a high-level discriminating variable for a classification problem or to provide a prediction of a certain quantity. These methods can outperform conventional algorithms as the inference is usually performed from multi-dimensional inputs, providing large amounts of information to the learning algorithm. Regarding simulation, the detector simulation is one of the most computational intensive tasks within \acrshort{ATLAS} and solutions involving adversarial networks and auto-encoders are being studied to output faster output, specially from the calorimeter simulation. Regarding particle reconstruction and identification, examples of implementations can be found within the $\tau$ identification %https://inspirehep.net/literature/1795210
+ or $b$-tagging algorithms %https://cds.cern.ch/record/2718948
+ . In physics analyses, the use of \acrshort{MLlabel} is already standarised to typically reconstruct or discriminate the signal process.
+
+\section{Pipeline}
+
+Machine Learning is a very broad umbrella term covering all kinds of algorithms which are not per
+se optimised for a specific task but are flexible enough to adapt to different problem sets by tuning
+(training) their parameter set.
+ML requires besides the model itself also preparation and follow-up processing steps. In which
+extent they are necessary always depends on the available data, the model and its later application.
+Figure 7.1 shows such an example workflow (the single steps are explained in more detail in the
+dedicated sections e.g. sec. 9.2).
+
+Generally, two types of machine learning are distinguished: Supervised learning requiring fully
+labelled training data and Unsupervised learning not requiring any labelled data. There are also
+
+intermediate approaches called Semi-Supervised learning. In the context of this thesis supervised
+approaches are used based on Neural Networks (NNs) and Boosted Decision Trees (BDTs).
+In the following, a statistical parametric (ML) model is denoted as Pmodel(~xi; θ) parametrised with
+the parameters θ while Pdata is the true but unknown distribution. A data set of length N is given
+as X~ = (~x1,~x2, ...,~xN), in which each data point i has a feature set ~xi = (x
+1
+i
+, x
+2
+i
+, ..., xM
+i
+) with M
+features and true labels yi in case of supervised learning.
+
+t is important to ensure an unbiased training process. For this purpose, at least three orthogonal
+datasets are needed as indicated in Figure 7.2. The training sample is utilised for the actual algorithm
+training. The validation set is typically used to choose between different models and to optimise
+the model further such as hyperparameter optimisation. While for the training itself mostly a loss
+function is used (see sec. 7.2.3) to find the best parameter set, on the validation set, the performance
+measures dedicated for the problem set are evaluated (e.g. signal over background ratio) to fine-tune
+the model choice. The testing sample is only used to evaluate the final performance and is not involved in the training process. In the case of samples with low statistics, one can use cross-validation
+or also called k-folding [139] where pairs of training and test-/validation sets are partitioned into k
+subsets.
+
+Typically, in particle physics the event number1 variable is used to split the dataset into the training
+and testing set. The advantage is that at every point it is clear which events were used for the training
+1 The event number is a unique integer number associated to each event not correlated with any physical observable.
+\section{Performance}
+
+Even though every ML application is different, the model performance is the decisive measure in the
+end. Depending on the task, different metrics are used to judge the performance. In the following,
+the most common approaches are discussed.
+
+Likelihood Discriminant
+
+Loss Function
+
+\section{Neural networks}
+
+Optimiser
+
+Backpropagation
+
+Activation Functions
+
+Regularisation
+
+\section{BDTs if used}
