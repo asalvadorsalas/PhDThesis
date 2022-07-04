@@ -1,3 +1,21 @@
+\chapter{The \acrlong{SMlabel} of Particle Physics and beyond}
+\label{chapter:SM}
+
+The \acrfull{SMlabel} of particle physics~\cite{PhysRevLett.19.1264,GLASHOW1961579,RevModPhys.52.525} is the theoretical framework
+that so far better describes subatomic particles and their interactions.
+It is a \acrlongpl{QFT} (\acrshort{QFT}) and since its initial development in the 1960's,
+the model has been overwhelmingly successful and guided many experimental achievements
+including the discovery of the top quark~\cite{topsearch1995,PhysRevLett.74.2626} in 1995
+and the Higgs boson at the LHC in 2012~\cite{ATLASHiggs2012,CMShiggs2012}.
+Regardless of the success of the model, there are known phenomena not covered in the model
+and other questions which clearly point to the need of a new theories.
+
+This chapter starts with an overview of the \acrshort{SMlabel}, building it with its mathematical formalism, and a summary of the particle content and their interactions as of yet. Then, it continues with a summary of the current success of the theory, but also shortcomings and alternative models that could serve as solutions. The focus is given to models that include charged Higgs bosons or top FCNC interactions involving a scalar.
+
+Throughout this dissertation, natural units are used: the speed of light and the reduced Plank constant are set to unity ($c=\hbar=1$),
+electric charges are expressed in units of the electron electric charge ($-e$) and masses are expressed in terms of energy (eV).
+Within the theoretical developments in this chapter, the Einstein's summation convention is used by default.
+
 \section{The \acrlong{SMlabel} of Particle Physics}
 
 From the mathematical point of view, the \acrshort{SMlabel} is a renormalisable non-abelian gauge \acrshort{QFT} based on the
@@ -28,7 +46,33 @@ Fermions can be divided further into two categories: quarks and leptons, based o
 Both types manifest in \acrshort{EW} interactions, having a weak isospin $T_3=\pm1/2$ although only the quarks experience
 the strong interaction in addition,
 so have strong charge refereed to as \textit{colour}. Quarks have a fractional electric charge $Q=2/3$ or $1/3$, and the colour,
-which values are usually denoted as \textit{red}, \textit{green} and \textit{blue}. \textcolor{red}{Table~[] presents a summary of the fundamental fermions and their characteristics}.\\
+which values are usually denoted as \textit{red}, \textit{green} and \textit{blue}. Table~\ref{tabSM:fermionscontent}presents a summary of the fundamental fermions and their characteristics.\\
+
+\begin{table}[htbp]
+    \begin{tabular}{ccccc}
+    \toprule\toprule
+    Generation & Name & Symbol & Mass & Charge \\ \midrule
+    \multicolumn{5}{c}{Quarks}                          \\ \midrule
+    \multirow{2}{*}{1\ts{st}}       & Up       &  $u$      &  $2.15^{+0.49}_{-0.26}$~MeV    &  $+2/3$ \\
+                                    & Down     &  $d$      &  $4.67^{+0.48}_{-0.17}$~MeV    &  $-1/3$ \\
+    \multirow{2}{*}{2\ts{nd}}       & Charm    &  $c$      &  $1.27\pm 0.02$~GeV            &  $+2/3$ \\
+                                    & Strange  &  $s$      &  $93.4^{+8.6}_{-3.4}$~MeV      &  $-1/3$ \\
+    \multirow{2}{*}{3\ts{rd}}       & Top      &  $t$      &  $172.69\pm 0.30$~GeV          &  $+2/3$ \\
+                                    & Bottom   &  $b$      &  $4.18^{+0.03}_{-0.02}$~GeV    &  $-1/3$ \\
+    \midrule
+    \multicolumn{5}{c}{Leptons}                          \\ \midrule
+    \multirow{2}{*}{1\ts{st}}       & Electron             &  $e^-$        &  $0.511$~MeV            &  $-1$ \\
+                                    & Electron neutrino    &  $\nu_e$    &  $<1.1$~eV 90\% CL      &  $0$  \\
+    \multirow{2}{*}{2\ts{nd}}       & Muon                 &  $\mu^-$      &  $0.106$~GeV            &  $-1$ \\
+                                    & Muon neutrino        &  $\nu_\mu$  &  $<0.19$~MeV 90\% CL    &  $0$  \\
+    \multirow{2}{*}{3\ts{rd}}       & Tau                  &  $\tau^-$     &  $1776.86\pm 0.12$~MeV  &  $-1$ \\
+                                    & Tau neutrino         &  $\nu_\tau$ &  $<18.2$~MeV 95\% CL    &  $0$  \\
+
+    \bottomrule\bottomrule
+    \end{tabular}
+    \caption{Table of the different quarks and leptons of the \acrshort{SMlabel} grouped in families with their mass and electric charge according to the Particle Data Group~\cite{pdg}. The uncertainties on the electron and the muon masses are below $10^{-10}$ and $10^{-6}$~MeV, respectively. The anti-matter states are not shown. }
+    \label{tabSM:fermionscontent}
+    \end{table}
 
 There is a total of six quark types, named \textit{flavours} and are split into three generations.
 The first generation consists in the \textit{up} and the \textit{down} quark, the former with $Q=+2/3$ and $T_3=+1/2$,
@@ -45,13 +89,12 @@ Each generation contains a lepton with $Q=-1$ and $T_3=+1/2$ named after its gen
 and an associated electrically neutral lepton with $T_3=-1/2$ named neutrino ($\nu$).
 The neutrino is assumed to be massless in the formulation of the \acrshort{SMlabel},
 however the phenomena of neutrino oscillations is experimental proof of them actually having very small, but non-zero, mass values.
-This apparent failure of the theory is discussed in \textcolor{red}{Section[]}. As before, the associated antimatter states have the
-same mass but opposite quantum numbers.
+This apparent failure of the theory is discussed in Section~\ref{subsec:openquestions}. As before, the associated antimatter states have the same mass but opposite quantum numbers.
 
 All the stable \acrshort{SMlabel} matter in the universe is constituted by the massive particles of the first generations of quarks
 and leptons, as the heavier versions eventually decay to lighter ones through their disclosed interactions.
 While it is possible to observe free leptons, quarks exist only in bound states, or hadrons, like the neutron or the proton.
-This is a feature of the strong interaction under the name of confinement, discussed in \textcolor{red}{Section[]}.
+This is a feature of the strong interaction under the name of confinement, discussed in Section~\ref{subsec:QCD}.
 Only colour-less bounded states are observable then, and can be built from three quarks with overall half-spin, named baryons,
 or by two quarks with integer spin, named mesons.
 
@@ -66,16 +109,27 @@ where $\gamma^\mu$ are Dirac matrices and $\partial_\mu$ is the four-momentum de
 
 \subsubsection{Bosons}
 
-Particles with integer spin are referred to as bosons. The bosonic sector with spin-1 gauge fields are force carriers that
-naturally follow from imposing the requirement of local gauge invariance on Eq.~\ref{Theory_eq:diraceq} under symmetry groups,
-in this case Eq.~\ref{Theory_eq:SMgroup}. \textcolor{red}{In Section[]} the nature and origin of the gauge bosons will be detailed.
-In summary, the photon ($\gamma$) is the carrier of the electromagnetic force, being a massless and electrically neutral particle.
-The weak force carriers are the $W^+$, $W^-$ and $Z$ bosons, all massive with the $Z$ boson being electrically neutral and the $W^\pm$ with either $Q=\pm1$.
-Gluons ($g$) are the strong force carriers which are massless and with no electric charge.
-Instead, there are eight different gluons representing each possible colour exchange. \textcolor{red}{Table~[]} presents a summary of the gauge bosons that mediate the different interactions.\\
+Particles with integer spin are referred to as bosons. The bosonic sector with spin-1 gauge fields are force carriers that naturally follow from imposing the requirement of local gauge invariance on Eq.~\ref{Theory_eq:diraceq} under symmetry groups, in this case Eq.~\ref{Theory_eq:SMgroup}. In Section~\ref{subsec:SMinteractions} the nature and origin of the gauge bosons will be detailed. Table~\ref{tabSM:bosonscontent} presents a summary of the bosons of the \acrshort{SMlabel}.\\
 
-The \acrshort{SMlabel} also includes a neutral spin-0 particle, or \textit{scalar}, the Higgs boson, with a mass of 125.25 $\pm$ 0.17 GeV~\cite{pdg}.
-The Higgs field is responsible for all SM particles acquiring mass through the Higgs mechanism, as described in \textcolor{red}{Section[]}.
+\begin{table}[htbp]
+    \begin{tabular}{ccccc}
+    \toprule\toprule
+    Name                  & Mass [GeV] & Charge & Interaction \\ \midrule
+    Photon ($\gamma$)     &  0                             &  $+2/3$ & Electromagnetic\\
+    $Z$                   &  $91.1876 \pm 0.0021$~GeV      &  $+2/3$ & \multirow{2}{*}{Weak} \\
+    $W^\pm$               &  $80.377\pm 0.012$~GeV         &  $-1/3$ & \\
+    Gluon ($g$)           &  0                             &  $+2/3$ & Strong \\
+    Higgs                 &  $125.25\pm0.17$~GeV           &  0      & - \\
+    \bottomrule\bottomrule
+    \end{tabular}
+    \caption{Table of the different bosons of the \acrshort{SMlabel} with their mass and electric charge according to the Particle Data Group~\cite{pdg}. The Higgs boson has spin 0 and does not mediate an interaction, while the rest have spin 1 and mediate one of the fundamental forces (except gravity).}
+    \label{tabSM:bosonscontent}
+    \end{table}
+
+In summary, the photon ($\gamma$) is the carrier of the electromagnetic force, being a massless and electrically neutral particle.
+The weak force carriers are the $W^+$, $W^-$ and $Z$ bosons, all massive with the $Z$ boson being electrically neutral and the $W^\pm$ with either $Q=\pm1$. Gluons ($g$) are the strong force carriers which are massless and with no electric charge. Instead, there are eight different gluons representing each possible colour exchange. 
+
+The \acrshort{SMlabel} also includes a neutral spin-0 particle, or \textit{scalar}, the Higgs boson, with a mass of 125.25 $\pm$ 0.17 GeV~\cite{pdg}. The Higgs field is responsible for all SM particles acquiring mass through the Higgs mechanism, as described in Section~\ref{subsec:SSB}.
 The kinematics of a generic scalar, $\phi$ with mass $m$, is described by the Klein-Gordon Lagrangian,
 
 \begin{equation}
@@ -100,7 +154,7 @@ with $F^{\mu\nu}=\partial^\mu A_\nu -\partial^\nu A_\mu$ the field strength tens
 In the case of massless particles, the previous expression with $m=0$ is known as the Maxwell Lagrangian.
 
 \subsection{Interactions of the Standard Model}
-
+\label{subsec:SMinteractions}
 The Lagrangian of the \acrshort{SMlabel} is defined to be locally invariant to the Eq.~\ref{Theory_eq:SMgroup} symmetry group,
 condition that generates and defines the interactions of the corresponding particles as representations of the symmetry transformations.
 For a generic Lagrangian, the physical system can have symmetries, so its Lagrangian is invariant under different kind of transformations.
@@ -109,7 +163,7 @@ Any invariant transformation of a Lagrangian describes a physical system which c
 as described by the Noether theorem~\cite{Noether}.
 Then, the interactions are introduced in the Lagrangian as additional terms by promoting an already existing global symmetry, $\phi$,
 of the Lagrangian to a local gauge symmetry, $\phi(x)$. The physical motivation behind introducing gauge symmetries
-is to be able to describe vector bosons in \acrshort{QFT}, as seen in \textcolor{red}{Section~[]}.
+is to be able to describe vector bosons in \acrshort{QFT}.
 The procedure expands the theory with additional fields that mediate the resulting interactions,
 which properties depend on the characteristics of the symmetry group.
 
@@ -182,7 +236,7 @@ the Maxwell Lagrangian from Equation~\ref{Theory_eq:Proca} with a slightly diffe
 \end{equation}
 
 The last term is present only for non-abelian symmetry groups, since it is proportional to the structure constants,
-and has huge consequences in the resulting interactions as discussed in \textcolor{red}{Section~[]}.
+and has huge consequences in the resulting interactions as discussed in the next Section.
 Another remark is that the gauge fields have to be massless, as a mass term proportional to $A_\mu^cA^{\mu c}$ is not gauge invariant.
 
 As an example, the promotion of the global $U(1)$ symmetry seen in Equation~\ref{Theory_eq:diraceq} results in the upgraded Lagrangian,
@@ -208,7 +262,7 @@ After this introduction on field theory, the theories of the two orthogonal sect
 the mechanism to introduce mass terms in the Lagrangian, the spontaneous symmetry breaking.
 
 \subsection{\acrlongpl{QCD}}
-
+\label{subsec:QCD}
 The quantum field theory that describes quarks and gluons interactions is named \textit{\acrlong{QCD}},
 based on the $SU(3)_C$ symmetry group. Each quark has an internal degree of freedom, known as the colour charge, and it is defined by a triplet of fields,
 
@@ -251,7 +305,7 @@ known as the first state of the gluon colour octet. The rest of the states are e
 the three different colour flows.
 
 The QCD Lagrangian can be obtained from modifying the the Dirac Lagrangian (Equation~\ref{Theory_eq:diraceq})
-to achieve gauge invariance under $SU(3)_C$ transformations, following the definitions from \textcolor{red}{Section[]}.
+to achieve gauge invariance under $SU(3)_C$ transformations, following the definitions from Section~\ref{subsec:SMinteractions}.
 The resulting Lagrangian is,
 
 \begin{equation}
@@ -265,41 +319,108 @@ The resulting Lagrangian is,
 
 with $g_s$ being the strong force coupling constant and where the covariant derivative has been introduced
 with the $G_\mu^a$ gluons fields, together with the kinematic term for the gluons, introducing the gluon tensor, $G_{\mu\nu}^a$.
-As described in \textcolor{red}{Section[]}, gluons are massless because the term in the Lagrangian is not gauge invariant.
+As described in Section~\ref{subsec:SMinteractions}, gluons are massless because the term in the Lagrangian is not gauge invariant.
 Notice that the masses of the quarks are also not present, not because it would break the symmetry, but for convention.
 The masses in the \acrshort{SMlabel} come from the electro-weak sector.
 Another remark is that the addition of a charge conjugation and parity symmetry (CP)
 violating interaction term is allowed under local gauge invariance, but such an interaction has been experimentally observed
-to be effectively zero\textcolor{red}{referencethestrongCPexperiment}.
+to be effectively zero~\cite{PhysRevLett.124.081803}.
 
-The resulting interactions in the Lagrangian are shown in \textcolor{red}{Figure[]}, consisting of couplings between quarks and gluons\sidenote{Equivalent to the interaction obtained from the gauge $U(1)$ symmetry.}, and three- and four-point gluon self-interactions. As foreshadowed in \textcolor{red}{Section[]}, for non-abelian groups the gauge bosons have the self-interacting terms in the tensor.
+ The possible interactions in the Lagrangian are shown in Figure~\ref{figSM:QCDfey}, consisting of couplings between quarks and gluons\footnote{Equivalent to the interaction obtained from the gauge $U(1)$ symmetry.}, and three- and four-point gluon self-interactions. As foreshadowed in Section~\ref{subsec:SMinteractions}, for non-abelian groups the gauge bosons have the self-interacting terms in the tensor.
 
-There are two more important characteristics of this theory, that also arise from the non-abelian nature of the symmetry:
-asymptotic freedom and confinement~\cite{PhysRevLett.30.1346,PhysRevLett.30.1343}. Asymptotic freedom refers to the fact that at very
-high energies (in momentum transfer), or short distances, quarks and gluons interact weakly with each other allowing predictions
-to be obtained using perturbation theory. Confinement is the name given to the impossibility of directly observing quarks,
-only confined in hadrons, which are colorless composite states\sidenote{Color singlets are quantum states that are invariant under all eight generators of $SU(3)$, and therefore carry vanishing values of all colour conserved charges.}.
-The idea is that for high distances, the strong coupling becomes larger, so when the distance between two quarks is increased, the energy of the gluon field is larger, up to the point to create from the vacuum a quark/anti-quark pair and thus forming a new hadron.
+\begin{figure}[htbp]
+    \RawFloats
+    \begin{center}
+    \subfloat[]{\includegraphics[width=0.25\textwidth]{SM/gqq.pdf}}
+    \quad
+    \subfloat[]{\includegraphics[width=0.25\textwidth]{SM/ggg.pdf}}
+    \quad
+    \subfloat[]{\includegraphics[width=0.25\textwidth]{SM/gggg.pdf}}
+    \caption{Vertices allowed in QCD: (a) quark-gluon coupling, (b) three-point gluon self-coupling, and (c) four-point gluon self-coupling. The color charge is depicted in the the quark-gluon vertex to depict an example of the interaction.}
+    \label{figSM:QCDfey}
+    \end{center}
+\end{figure}
+
+There are two more important characteristics of this theory:
+asymptotic freedom and confinement~\cite{PhysRevLett.30.1346,PhysRevLett.30.1343}. Asymptotic freedom refers to the fact that at very high energies (in momentum transfer), or short distances, quarks and gluons interact weakly with each other allowing predictions to be obtained using perturbation theory. Confinement is the name given to the impossibility of directly observing quarks, only confined in hadrons, which are colorless composite states\footnote{Color singlets are quantum states that are invariant under all eight generators of $SU(3)$, and therefore carry vanishing values of all colour conserved charges.}.
+The idea is that for high distances, the strong coupling becomes larger, so when the distance between two quarks is increased, the energy of the gluon field is larger, up to the point to create from the vacuum a quark/anti-quark pair and thus forming a new hadron. These characteristics arise from the non-abelian nature of the symmetry, which prompt the coupling to decrease with the energy of the interaction.
 
 \subsubsection{Running coupling}
-Say somewhere that we abuse group theory
-?????????
-introduce the beta function? just the coupling from griffits?
 
-\subsection{\acrfullpl{EW} theory}
+To understand the fact that the couplings can vary with the energy, the renormalisation and regularisation procedures have to be introduced, which are another domain of \acrshort{QFT}. So as to predict physical quantities, as cross-sections or branching ratios, those are proportional to the sum of the \acrlong{MElabel}~(\acrshort{MElabel}) from every possible Feynman diagram that yields the same initial and final particles. The \acrshort{MElabel} of a diagram involves the integration for all possible four-momentum of the virtual particles involved, like the gauge bosons, and can diverge in the presence of loop contributions. Nevertheless, these divergencies can be isolated with regularisation techniques, which renders them finite by introducing a parameter $\Lambda$ such that only for a given value of the parameter the divergence is recovered. This allows the computation of any quantity in terms of the \textit{bare} quantities appearing in the Lagrangian, such as masses and couplings along the regularisation parameter. The other key point is renormalisation, from the idea that what is measured in experiments, the physical quantities, are different from the bare quantities. Therefore, one has the freedom to apply renormalisation conditions which cause the expressions to depend only on the physical quantities if the theory is renormalisable.
+
+As an example, to compute the gluon two-point function an infinite sum of loop contributions is needed,
+\begin{align}
+\begin{gathered}
+    \includegraphics[width=0.25\textwidth]{SM/gluonSEA.pdf}
+\end{gathered}&=\begin{gathered}\includegraphics[width=0.25\textwidth]{SM/gluonSEB.pdf}
+\end{gathered}&+\begin{gathered}\includegraphics[width=0.25\textwidth]{SM/gluonSEC.pdf}
+\end{gathered}+...
+\end{align}
+
+which first loop contribution will be mainly the result of three different diagrams,
+
+
+\begin{align}
+    \begin{gathered}
+        \includegraphics[width=0.25\textwidth]{SM/gluonSEC.pdf}
+    \end{gathered}&=\begin{gathered}\includegraphics[width=0.2\textwidth]{SM/gluonLoopC.pdf}
+    \end{gathered}&+\begin{gathered}\includegraphics[width=0.2\textwidth]{SM/gluonLoopA.pdf}
+    \end{gathered}&+\begin{gathered}\includegraphics[width=0.2\textwidth]{SM/gluonLoopB.pdf}
+    \end{gathered}+ ...
+    \end{align}
+
+
+which includes the loop involving gluons, quarks and a third one with a new propagator, the ghost. This propagator is a regularisation artifact to compensate unphysical degrees of freedom. Focusing on the gluon loop contribution,
+
+\begin{equation}
+\includegraphics[width=0.25\textwidth]{SM/gluonLoopD.pdf}
+\end{equation}
+
+prompts a badly divergent integral,  
+
+\begin{align}
+    \begin{split} 
+        \frac{1}{2}g_s^2f^{acd}f^{bcd}\int\frac{d^4p}{(2\pi)^4} \frac{1}{(q-p)^2+i\epsilon}\frac{1}{p^2+i\epsilon}&\qty[g^{\mu\alpha}(p-2q)^\beta+g^{\alpha\beta}(q-2p)^\mu+g^{\beta\mu}(p+q)^\alpha]\\
+       &\qty[\delta_\alpha^\nu(p-2q)_\beta+g_{\alpha\beta}(q-2p)^\nu+\delta_\beta^\nu(p+q)_\alpha]
+       \label{ipi}
+    \end{split}
+    \end{align}
+
+which can be worked around with a regularisation constant $\mu$,
+
+\begin{equation*}
+    \int \frac{d^4p}{(2\pi)^4}\to \int \frac{d^Dp}{(2\pi)^D}\mu^{2\varepsilon}.
+\end{equation*}\\
+
+and $D=4-2\varepsilon$ with later $\varepsilon\to 0$. After the computation of all main contributions, the divergent term can be summarised as,
+
+\begin{equation}
+    \frac{g_s^2}{24\pi}\qty[11n_c-2 n_f]\frac{1}{\epsilon}+\mathcal{O}(g_s^4)
+\end{equation}
+
+with $n_c$ the number of colours, $n_f$ the number of quark flavours and $\varepsilon\to 0$ the condition to recover the original divergence. Hence the bare coupling constant can be rewritten to account for this divergence, completing the regularisation process for the gluon self-energy. The final strong coupling constant is given by, 
+
+\begin{equation}
+    \alpha_s(Q^2) = \frac{12\pi}{(11n_c - 2 n_f)\log \frac{Q^2}{\Lambda^2_\text{QCD}}}
+\end{equation}
+
+which depends on the energy scale $Q$ at which is evaluated and $\Lambda_\text{QCD}$ the infrared cutoff scale which sets the validity of the perturbative regime of \acrshort{QCD}. As $n_c=3$, for $n_f$<16 the coupling constant decreases with the energy scale, the very feature of \acrshort{QCD} that causes asymptotic freedom and confinement.
+
+\subsection{Electroweak theory}
 
 The quantum field theory that describes both the electromagnetic and weak interactions is named \textit{\acrlong{EW}} theory,
-based on the $SU(2)_L\otimes U(1)_Y$ symmetry group\sidenote{$L$ refers to the left-handed chirality and $Y$ to the weak hypercharge}.
+based on the $SU(2)_L\otimes U(1)_Y$ symmetry group\footnote{$L$ refers to the left-handed chirality and $Y$ to the weak hypercharge}.
 The product is non-abelian, like the $SU(3)_C$ group, and chiral. It will spawn four mediators, as the number of generators.
 The symmetry spontaneously breaks down through \textit{\acrlongpl{EWSB}}, giving rise to the electromagnetic interaction,
 mediated by the photon, and to the weak interaction, mediated by the $Z$ and $W^\pm$ bosons.
 This process occurs at $\sim$100~GeV, defined as the \acrshort{EW} scale, and after which only the $U(1)_Q$ symmetry is unbroken,
-described by \textit{\acrlongpl{EWSB}}~(\acrshort{QED}). The process of the \acrshort{EWSB}, and the resulting effects are described in
-more detail in \textcolor{red}{Section}.\\
+described by \textit{\acrlongpl{EWSB}}~(\acrshort{EWSB}). The process of the \acrshort{EWSB}, and the resulting effects are described in
+more detail in Section~\ref{subsec:SSB}.\\
 
-The interactions for the \acrshort{EW} sector can be obtained following the procedure described in general in \textcolor{red}{Section},
-already used in \textcolor{red}{Section} for \acrshort{QCD}. First, only left-handed fermion fields interact via the weak
-interaction\sidenote{As a consequence, parity can be violated in weak interactions~\cite{Lee,Wu}.},
+The interactions for the \acrshort{EW} sector can be obtained following the procedure described in general in Section~\ref{subsec:SMinteractions},
+already used in Section~\ref{subsec:QCD} for \acrshort{QCD}. First, only left-handed fermion fields interact via the weak
+interaction\footnote{As a consequence, parity can be violated in weak interactions~\cite{Lee,Wu}.},
 transforming as doublets under $SU(2)_L$, whereas right-handed fermion fields do not interact weakly and thus transform as singlets,
 
 \begin{equation}
@@ -319,7 +440,7 @@ through the chirality operators $P_L$ and $P_R$, projecting a generic field into
     \end{split}
 \end{equation}
 
-with $\gamma_5$ defined from the Dirac matrices $\gamma_5\equiv i\gamma^0\gamma^1\gamma^2\gamma^3$.\\
+with $\gamma_5$ defined from the Dirac matrices $\gamma_5\equiv i\gamma^0\gamma^1\gamma^2\gamma^3$. Notice that there are no right-handed fields associated to the neutrinos. This convention exists to avoid the prediction of right-handed neutrinos, which would not interact with any of the forces described in the \acrshort{SMlabel}.
 
 The $SU(2)_L$ group consists of three generators, $\hat{T}_i$, which can be written as $\hat{T}_i=\sigma_i/2$ where $\sigma_i$
 denotes the Pauli matrices. Also, the quantum number associated is the weak isospin, $T$.
@@ -343,7 +464,7 @@ $SU(2)_L\otimes U(1)_Y$, $W_{\mu\nu}^i$ ($i$=1,2,3) from $SU(2)_L$, and $B_\mu$ 
     \end{split}
 \end{equation}
 
-with $\epsilon^{ijk}$ the Levi-Civita symbol, an antisymmetric tensor defined as $\epsilon^{ijk}\epsilon_{imn}=\delta^j_m\delta^k_n-\delta^j_n\delta^m_k$ with $i,j,k,l,m,n\in[1,2,3]$. Also, the $W_{\mu\nu}^i$ and $B_{\mu\nu}$ field tensors are defined to introduce the additional kinetic terms to the Lagrangian. The former contains a quadratic piece, due to the non-abelian nature of $SU(2)_L$, hence the full Lagrangian contains cubic and quartic self-interactions, as seen for the gluons in QCD. In contrast, the coupling constant $g$ increases rapidly with the energy scale.... As encountered before, mass terms for the gauge boson would break the gauge invariance. In this case, terms for the fermion masses would also break the symmetry as they would mix left- and right-handed fields, which transforms distinctively under $SU(2)_L$. Instead, the mass terms appear from the EWSB, described in Section[].
+with $\epsilon^{ijk}$ the Levi-Civita symbol, an antisymmetric tensor defined as $\epsilon^{ijk}\epsilon_{imn}=\delta^j_m\delta^k_n-\delta^j_n\delta^m_k$ with $i,j,k,l,m,n\in[1,2,3]$. Also, the $W_{\mu\nu}^i$ and $B_{\mu\nu}$ field tensors are defined to introduce the additional kinetic terms to the Lagrangian. The former contains a quadratic piece, due to the non-abelian nature of $SU(2)_L$, hence the full Lagrangian contains cubic and quartic self-interactions, as seen for the gluons in QCD. In contrast, the coupling constant $g$ increases rapidly with the energy scale. As encountered before, mass terms for the gauge boson would break the gauge invariance. In this case, terms for the fermion masses would also break the symmetry as they would mix left- and right-handed fields, which transforms distinctively under $SU(2)_L$.
 
 Summing all the interactions described, the SM Lagrangian for all the fermions before \acrshort{EWSB} becomes,
 
@@ -356,15 +477,11 @@ Summing all the interactions described, the SM Lagrangian for all the fermions b
     \end{split}
 \end{equation}
 
-no right handed neutrino, masses mix in EW
-
 \subsection{Spontaneous symmetry breaking and the Higgs mechanism}
-
+\label{subsec:SSB}
 The model described so far cannot reproduce measured results, first of all the different fermions and the weak force mediators
 have mass and second, the $SU(2)_L\times U(1)_Y$ symmetry is not preserved in nature.
-Even if somehow the \acrshort{EW} gauge bosons are allowed to have mass, it leads to the lack of renormalisability and the violation of
-unitarity. Renormalisation is a collection of techniques that allows the computation of measurable observables in \acrshort{QFT},
-managing the different sources of infinities within the theory like those from self-interactions.
+Even if somehow the \acrshort{EW} gauge bosons are allowed to have mass, it leads to the lack of renormalisability and the violation of unitarity. Renormalisation is a collection of techniques that allows the computation of measurable observables in \acrshort{QFT}, managing the different sources of infinities within the theory like those from self-interactions.
 Unitarity is needed more in general in quantum mechanics, to ensure proper time-evolution predictions of
 a quantum state. The longitudinal component of the massive boson is the cause of the problem,
 as in a boosted frame in which $p^\mu=(p^0,0,0,|\textbf{p}|)$, the parallel polarisation component of a massive boson is
@@ -399,8 +516,7 @@ with a general potential $V(\phi)$ given by,
 \end{equation}
 
 with the real parameters $\mu^2$ and $\lambda$ relating respectively to the mass term and the strength of the self-interaction.
-\textcolor{red}{[INSERT FIGURE]}
-There are two sensible ranges for these parameters, the first one is the case $\lambda,\mu^2>0$,
+There are two sensible ranges for these parameters, depicted in Figure~\ref{figSM:higgspotential}, the first one is the case $\lambda,\mu^2>0$,
 similar to the previous seen theories and only one solution in the minimisation.
 The second one is for $\lambda>0$ and $\mu^2<0$, where the $\mu^2\phi^\dag\phi$ term cannot be understood as a mass term and
 the solution $\phi=0$ is a local maximum, physically unstable. The minimum of the potential is degenerate and identified by the complex
@@ -409,6 +525,18 @@ plane circle, $\phi^\dag\phi=v^2/2$ with $v^2\equiv-\mu^2/\lambda$ and
 \begin{equation}
     \phi = v e^{-i\theta}
 \end{equation}
+
+\begin{figure}[htbp]
+    \RawFloats
+    \begin{center}
+    \subfloat[]{\includegraphics[width=0.3\textwidth]{SM/HiggspotentialA.pdf}}
+    \qquad
+    \subfloat[]{\includegraphics[width=0.3\textwidth]{SM/HiggspotentialB.pdf}}
+    \caption{Shape of the potential $V(\phi)$ for $\lambda>0$ and (a) $\mu^2>0$ or (b) $\mu^2<0$.
+    }
+    \label{figSM:higgspotential}
+    \end{center}
+\end{figure}
 
 The symmetry is broken spontaneously when the system choses the fundamental state. Suppose $\phi=0$, then the \textit{\acrlongpl{VEV}}~(\acrshort{VEV})
 of $\phi$ is set to,
@@ -656,7 +784,7 @@ There is a major consequence from the differences between the representation in 
 \begin{pmatrix} d'_L \\ s'_L \\ b'_L \end{pmatrix} = V_{CKM}\begin{pmatrix} d_L \\ s_L \\ b_L \end{pmatrix} =\begin{pmatrix} V_{ud} & V_{us} & V_{ub} \\ V_{cd} & V_{cs} & V_{cb} \\ V_{td} & V_{ts} & V_{tb} \end{pmatrix} \begin{pmatrix} d_L \\ s_L \\ b_L \end{pmatrix}
 \end{equation}
 
-where the superscript ' denotes the mass representation and $V_{CKM}$ is the Cabibbo-Kobayashi-Maskawa matrix~\cite{Cabibbo,KobayaMaska}. This unitary matrix is the product of the transformations that diagonalise the y and y' Yukawa matrices, which encodes the mixing of the different generations of fields in charged-mediated weak interactions. This is known as flavour violation, where a weak interaction of a quark can result on changing its flavour\sidenote{Maybe add a feynman diagram Rafel notes}. The neutral current interactions, mediated by the $Z$ boson, relate the fields with the same charge, affected by the same transformation, hence not spawning a mixing matrix. The reason for not having \textit{Flavour Changing Neutral Currents} (FCNC) explicitly in the SM Lagrangian. On the other side, the leptons are represented with the same $SU(2)_L$ doublet, so any mixing of lepton generations is not present in the theory.
+where the superscript ' denotes the mass representation and $V_{CKM}$ is the Cabibbo-Kobayashi-Maskawa matrix~\cite{Cabibbo,KobayaMaska}. This unitary matrix is the product of the transformations that diagonalise the y and y' Yukawa matrices, which encodes the mixing of the different generations of fields in charged-mediated weak interactions. This is known as flavour violation, where a weak interaction of a quark can result on changing its flavour\footnote{Maybe add a feynman diagram Rafel notes}. The neutral current interactions, mediated by the $Z$ boson, relate the fields with the same charge, affected by the same transformation, hence not spawning a mixing matrix. The reason for not having \textit{Flavour Changing Neutral Currents} (FCNC) explicitly in the SM Lagrangian. On the other side, the leptons are represented with the same $SU(2)_L$ doublet, so any mixing of lepton generations is not present in the theory.
 
 There is still another interesting feature that arises from the CKM matrix. The standard representation~\cite{Ling-Lie} of the matrix takes into account invariant phase rotations of the fields, leaving as free parameters three angles $\theta_{12}$, $\theta_{23}$ and $\theta_{13}$ (chosen to lie in the first quadrant so $\sin\theta,\cos\theta\geq0$), and a single complex phase $\delta$ that cannot be rotated to zero. The matrix reads,
 
@@ -667,7 +795,7 @@ There is still another interesting feature that arises from the CKM matrix. The 
     &= \begin{pmatrix} c_{12}c_{13} & s_{12}c_{13} & s_{13}e^{-i\delta} \\ -s_{12}c_{23}-c_{12}s_{23}s_{13}e^{i\delta} & c_{12}c_{23}-s_{12}s_{23}s_{13}e^{i\delta} & s_{23}c_{13} \\ s_{12}s_{23}-c_{12}c_{23}s_{13}e^{i\delta} & -c_{12}s_{23}-s_{12}c_{23}s_{13}e^{i\delta} & c_{23}c_{13} \end{pmatrix}
 \end{split}
 \end{equation}
-where $s_{ij}=\sin\theta_{ij}$ and $c_{ij}=\cos\theta_{ij}$. The presence of the complex phase leads to different couplings for anti-matter, as the complex phase will switch sign, leading to matter/anti-matter asymmetry. This asymmetry in flavour-changing processes is the only source in the SM of \textit{CP} violation, or \textit{T} violation (from the time-reversal symmetry\sidenote{The three symmetries are related as the combination, $CPT$ symmetry, must always be respected in theory. }) however, as discussed in Section[], fails to describe the current matter/anti-matter content of the universe. The CKM matrix is predicted and measured to be almost diagonal, with very small sources of CP violation, or $V_{ub}$ and $V_{td}$. The current matrix as in 2022~\cite{pdg} reads, 
+where $s_{ij}=\sin\theta_{ij}$ and $c_{ij}=\cos\theta_{ij}$. The presence of the complex phase leads to different couplings for anti-matter, as the complex phase will switch sign, leading to matter/anti-matter asymmetry. This asymmetry in flavour-changing processes is the only source in the SM of \textit{CP} violation, or \textit{T} violation (from the time-reversal symmetry\footnote{The three symmetries are related as the combination, $CPT$ symmetry, must always be respected in theory.}) however, as discussed in Section~\ref{subsec:openquestions}, fails to describe the current matter/anti-matter content of the universe. The CKM matrix is predicted and measured to be almost diagonal, with very small sources of CP violation, or $V_{ub}$ and $V_{td}$. The current matrix as in 2022~\cite{pdg} reads, 
 \begin{equation}
         V_{CKM}= \begin{pmatrix} 0.97401 \pm 0.00011 & 0.22650 \pm 0.00048 & 0.00361^{+0.00011}_{-0.00009} \\ 0.22636 \pm 0.00048 & 0.97320 \pm 0.00011 & 0.04053^{+0.00083}_{-0.00061} \\ 0.00854^{+0.00023}_{-0.00016} & 0.03978^{+0.00082}_{-0.00060} & 0.999172^{+0.000024}_{-0.000035} \end{pmatrix}
 \end{equation}
@@ -678,7 +806,7 @@ Since the formulation of the SM, most experimental observations and measurements
 
 \subsection{Experimental measurements}
 
-Decades of experiments have performed measurements into parameters that define the SM. The SM can be summarised with nineteen parameters, which have been described in this chapter: nine fermion masses (six for quarksm three for leptons), the three gauge couplings ($g_S$, $g$ and $g'$), the Higgs vacuum expectation value ($v$), the Higgs mass, four parameters of the CKM matrix (three angles and the complex phase), the QCD CP violating phase\sidenote{This has not been described}. There is no underlying relation between these parameters, only being set from experimental observations. With these parameters measured, theoretical predictions of observables can be tested with experimental data in order to explore new physics.\\
+Decades of experiments have performed measurements into parameters that define the SM. The SM can be summarised with nineteen parameters, which have been described in this chapter: nine fermion masses (six for quarksm three for leptons), the three gauge couplings ($g_S$, $g$ and $g'$), the Higgs vacuum expectation value ($v$), the Higgs mass, four parameters of the CKM matrix (three angles and the complex phase), the QCD CP violating phase\footnote{This has not been described}. There is no underlying relation between these parameters, only being set from experimental observations. With these parameters measured, theoretical predictions of observables can be tested with experimental data in order to explore new physics.\\
 
 One typical observable in particle physics is the cross-section $\sigma$, the expected interaction rate between two interacting particles in terms of the effective surface area measured in \textit{pb} (picobarn, 1pb = 10$^{-40}$ m$^2$). The cross-section of a process depends on the interacting forces involved, as well as the energy and momentum of the interacting particles, which can be calculated from the S-matrix (scattering matrix) using relativistic mechanics. Feynman diagrams are a tool to translate a visual description of a process to a mathematical expression, the matrix amplitude, which is proportional to the probability of the specific process happening and needed for the computation. The decay width, $\Gamma$, can be computed in similar fashion to obtain another common observable, the Branching Ratio (BR). The BR of an unstable particle is the probability for it to decay into specific particles among all possible states. It is computed dividing the $\Gamma$ of the specific process with respect to the sum of all the possible process. Both $\sigma$ and $\Gamma$ are calculated from perturbation approximations, as the actual process is not the product of just one Feynman diagram, but all the possible interactions that lead to the same final state including loops, interferences and radiative corrections, refereed to as high order corrections. However, each particle interaction is proportional to the probability making higher order corrections become less important. Typically, \textit{leading-order} (LO) calculations use only the leading order terms from the perturbation expansion, while if complemented by higher order corrections are referred to next-to-leading-order (NLO) or next-to-NLO (NNLO) calculations.\\
 
@@ -689,6 +817,7 @@ On another note, the top quark is the most massive known particle known to date 
 Interest in top physics
 
 \subsection{Open questions}
+\label{subsec:openquestions}
 
 Observed neutrino oscillations~\cite{neutrinoosc} are only possible if there are mass differences between the three neutrino generations, which implies non-zero masses for some neutrinos altought not measured directly. A mass term for neutrinos could be added in the SM in different ways, through adding right-handed neutrinos or as describing neutrinos as Majorana particles [ref]. Nevertheless, the description of the SM particles needs at least seven additional parameters: three for the neutrino masses, three for their mixing angles and one CP violating phase for the neutrino mixing Pontecorvo-Maki-Nakagawa-Sakata (PMNS) matrix~\cite{}, similar to the CKM quark flavor matrix.
 
@@ -696,7 +825,7 @@ The SM also fails to describe the other known fundamental force in nature, gravi
 
 The SM describes what is known as baryonic matter, which accounts for about 5\% of the energy density of the universe. Cosmology, which studies the composition of the universe, estimates huge amounts of \textit{dark matter} (DM) and \textit{dark energy}, phenomena not contemplated by the SM. The existence of DM was postulated as extra non-luminous matter needed to explain observed rotation curves of galaxies not matching the gravitational pull of observed stars~\cite{}. In addition, gravitational lensing effects observed in some galaxy collisions~\cite{} also provide the need of huge invisible mass concretations. More recently, the WMAP and Planck collaborations have studied anisotropies in the cosmic microwave background (CMB)~\cite{}, postulating cold DM. On the other side, the universe is observed to be expanding at an accelerated rate compatible with dark energy, understood to be the product of an intrinsic space-time energy density, or cosmological constant, that causes the expansion. Observation of red-shift of light from supernovae, used as standard candles, points that cosmological objects are moving away at faster rate with the distance~\cite{}. Further, studies of the CMB provide another measurements of the accelerated expansion~\cite{}. The most updated results~\cite{} points that baryonic matter accounts for a mere \% of the total energy density of the universe, dark matter for \%, while dark energy for \%.\\
 
-The universe seems to be completely made up by matter. To explain the imbalance in abundance of matter and anti-matter, often referred as matter/anti-matter assymetry, the SM only provides one not nearly sufficient source of CP violation in the quark weak interactions, as mentioned in Section[]. Additional sources are added such as the complex phase in the PMNS matrix, however more phenomena is needed to have generated the current net balance of matter, like possible baryon number violating effects at high energy scales.\\
+The universe seems to be completely made up by matter. To explain the imbalance in abundance of matter and anti-matter, often referred as matter/anti-matter assymetry, the SM only provides one not nearly sufficient source of CP violation in the quark weak interactions. Additional sources are added such as the complex phase in the PMNS matrix, however more phenomena is needed to have generated the current net balance of matter, like possible baryon number violating effects at high energy scales.\\
 
 Besides the natural phenomena uncovered by the SM, there are also what are known as naturalness problems. Those are aesthetic concerns about the precise different values of some of the SM parameters, which seem "unnatural" if there is no hidden mechanism behind. The general consensus is that the fewer fine tuning is needed in a theory, the more natural it is. Although these matters are completely subjective, these unexplained features could be a hint for the existence of a new underlying mechanism that could complement the SM. The first problem is commonly named as the hierarchy problem, where the cutoff energy of the SM ($\Lambda_{\text{SM}}$) is commonly set to the Planck scale, $\sim10^{18}$~GeV, but in contrast the EW scale ($v\sim246$~GeV) is very small. The problem can be read as there is no apparent reason for the EWSB to happen at its scale, orders of magnitude smaller than the Plank scale. When calculating high-order corrections from the SM like the computation of loops, $\Lambda_{\text{SM}}$ has to be introduced to manage ill-defined divergent integrals in a process called regularisation~\cite{}. As particles are endlessly interacting with virtual particles, represented by self-energy diagrams like Figure[], their mass are effectively diverging. This is solved by interpreting the physical mass measured in experiments as the resulting after dealing with the divergent terms. Leading radiation corrections for the fermion masses are of the order of $\log\Lambda_{\text{SM}}$, sensitive to the scale but the fine-tuning is considered small. On the other side, the physical Higgs mass including radiation corrections reads,
 
