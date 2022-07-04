@@ -1,5 +1,6 @@
 ## Ignore directiones
 .vs/
+.vscode/
 
 ## Custom exclusions
 article-template.pdf
