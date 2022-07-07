@@ -344,7 +344,7 @@ The idea is that for high distances, the strong coupling becomes larger, so when
 
 \subsubsection{Running coupling}
 
-To understand the fact that the couplings can vary with the energy, the \acrshort{QFT} renormalisation and regularisation procedures have to be introduced. Physical quantities as cross-sections or branching ratios, the quantity known as the matrix amplitude of the process is needed. Observables are actually proportial to the square sum of the amplitude of every possible Feynman diagram that yields the same initial and final particles of the process to be predicted. However, the computation in diagrams with loops spawns the integration for all possible four-momentum of the virtual particles involved, which are divergent. Nevertheless, these divergencies can be isolated with regularisation techniques, which renders them finite by introducing a parameter $\Lambda$ such that only for a given value of the parameter the divergence is recovered. This allows the computation of any quantity in terms of the \textit{bare} quantities appearing in the Lagrangian, such as masses and couplings, along the regularisation parameter. The other key point is renormalisation, from the idea that what is measured in experiments, the physical quantities, are different from the bare quantities. Therefore, one has the freedom to apply renormalisation conditions which cause the expressions to depend only on the physical quantities if the theory is renormalisable, removing the divergent sources.
+To understand the fact that the couplings can vary with the energy, the \acrshort{QFT} renormalisation and regularisation procedures have to be introduced. The quantity known as the matrix amplitude has to be computed for the prediction of physical quantities of a given process. Observables are actually proportional to the square sum of the amplitude of every possible Feynman diagram that yields the same initial and final particles of the process to be predicted. However, the computation in diagrams with loops spawns the integration for all possible four-momentum of the virtual particles involved, which are divergent. Nevertheless, these divergencies can be isolated with regularisation techniques, which renders them finite by introducing a parameter $\Lambda$ such that only for a given value of the parameter the divergence is recovered. This allows the computation of any quantity in terms of the \textit{bare} quantities appearing in the Lagrangian, such as masses and couplings, along the regularisation parameter. The other key point is renormalisation, from the idea that the physical quantities measured in experiments (masses and couplings), are different from the bare quantities (masses and couplings that appear in the lagrangian). Therefore, one has the freedom to apply renormalisation conditions which cause the expressions to depend only on the physical quantities if the theory is renormalisable, removing the divergent sources.
 
 As an example, to compute the gluon two-point function, an infinite sum of loop contributions is needed,
 \begin{align}
@@ -374,7 +374,7 @@ which includes the loop involving gluons, quarks and a third one with a new prop
 \includegraphics[width=0.25\textwidth]{SM/gluonLoopD.pdf}
 \end{equation}
 
-prompts in its computation a badly divergent integral,  
+prompts in its computation with Feynman rules a badly divergent integral,  
 
 \begin{align}
     \begin{split} 
@@ -396,7 +396,9 @@ and $D=4-2\varepsilon$ with later $\varepsilon\to 0$. After the computation of a
     \frac{g_s^2}{24\pi}\qty[11n_c-2 n_f]\frac{1}{\epsilon}+\mathcal{O}(g_s^4)
 \end{equation}
 
-with $n_c$ the number of colours, $n_f$ the number of quark flavours and $\varepsilon\to 0$ the condition to recover the original divergence. Hence the bare coupling constant can be rewritten to account for this divergence, completing the regularisation process for the gluon self-energy. The final strong coupling constant is commonly given by, 
+with $n_c$ the number of colours, $n_f$ the number of quark flavours and $\varepsilon\to 0$ the condition to recover the original divergence. Hence the bare coupling constant can be rewritten to account for this divergence, completing the regularisation process for the gluon self-energy.
+
+The final strong coupling constant is commonly given by, 
 
 \begin{equation}
     \alpha_s(Q^2) = \frac{12\pi}{(11n_c - 2 n_f)\log \frac{Q^2}{\Lambda^2_\text{QCD}}}
@@ -779,7 +781,7 @@ There is a major consequence from the differences between the representation in 
 \begin{pmatrix} d'_L \\ s'_L \\ b'_L \end{pmatrix} = V_{CKM}\begin{pmatrix} d_L \\ s_L \\ b_L \end{pmatrix} =\begin{pmatrix} V_{ud} & V_{us} & V_{ub} \\ V_{cd} & V_{cs} & V_{cb} \\ V_{td} & V_{ts} & V_{tb} \end{pmatrix} \begin{pmatrix} d_L \\ s_L \\ b_L \end{pmatrix}
 \end{equation}
 
-where the superscript ' denotes the mass representation and $V_{CKM}$ is the Cabibbo-Kobayashi-Maskawa matrix~\cite{Cabibbo,KobayaMaska}. This unitary matrix is the product of the transformations that diagonalise the y and y' Yukawa matrices, which encodes the mixing of the different generations of fields in charged-mediated weak interactions. This is known as flavour violation, where a weak interaction of a quark can result on changing its flavour\todo{Feyman diagram?} The neutral current interactions, mediated by the $Z$ boson, relate the fields with the same charge which are affected by the same transformation. As no mixing matrix spawns, there are no explicit \textit{Flavour Changing Neutral Currents} (FCNC) in the SM Lagrangian. On the other side, leptons are represented with the same $SU(2)_L$ doublet, so any mixing of lepton generations is not present in the theory.
+where the superscript ' denotes the mass representation and $V_{CKM}$ is the Cabibbo-Kobayashi-Maskawa matrix~\cite{Cabibbo,KobayaMaska}. This unitary matrix is the product of the transformations that diagonalise the y and y' Yukawa matrices, which encodes the mixing of the different generations of fields in charged-mediated weak interactions. This is known as flavour violation, where a weak interaction of a quark can result on changing its flavour\todo{Feyman diagram?}. The neutral current interactions, mediated by the $Z$ boson, relate the fields with the same charge which are affected by the same transformation. As no mixing matrix spawns, there are no explicit \textit{Flavour Changing Neutral Currents} (FCNC) in the SM Lagrangian. On the other side, leptons are represented with the same $SU(2)_L$ doublet, so any mixing of lepton generations is not present in the theory.
 
 There is still another interesting feature that arises from the CKM matrix. The standard representation~\cite{Ling-Lie} of the matrix takes into account invariant phase rotations of the fields, leaving as free parameters three angles $\theta_{12}$, $\theta_{23}$ and $\theta_{13}$ (chosen to lie in the first quadrant so $\sin\theta,\cos\theta\geq0$), and a single complex phase $\delta$ that cannot be rotated to zero. The matrix reads,
 
