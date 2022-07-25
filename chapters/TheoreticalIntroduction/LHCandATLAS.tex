@@ -64,9 +64,9 @@ The mean interactions per crossing, $\langle\mu\rangle$, is a measure to quantif
 \begin{figure}[htbp]
     \RawFloats
     \begin{center}
-    \subfloat[]{\includegraphics[width=0.45\textwidth]{ATLASLHC/Lumivsyear.pdf}}
+    \subfloat[]{\includegraphics[width=0.47\textwidth]{ATLASLHC/Lumivsyear.pdf}}
     \quad
-    \subfloat[]{\includegraphics[width=0.45\textwidth]{ATLASLHC/Pileupvsyear.pdf}}
+    \subfloat[]{\includegraphics[width=0.47\textwidth]{ATLASLHC/Pileupvsyear.pdf}}
     \caption{
         The total integrated luminosity delivered by the \acrshort{LHClabel}, recorded by \acrshort{ATLASlabel} and labeled good for physics during Run~2 (a) and the mean number of interactions per bunch crossing splitted into the different data taking periods weighted by the corresponding luminosity (b)~\cite{publiclumi}. 
     }
@@ -74,7 +74,7 @@ The mean interactions per crossing, $\langle\mu\rangle$, is a measure to quantif
     \end{center}
 \end{figure}
 
-The \acrshort{LHClabel} operation parameters have changed every year and some are summarised in Table~\ref{tabLHC:LHCparameters}.
+Table~\ref{tabLHC:LHCparameters} presents a summary of some \acrshort{LHClabel} operation parameters during Run~1 and Run~2.
 
 \begin{table}[htbp]
     \begin{tabular}{l|ccccccc}
@@ -93,7 +93,18 @@ The \acrshort{LHClabel} operation parameters have changed every year and some ar
 
 \section{The \acrshort{ATLASlabel} experiment}
 
-The \acrshort{ATLASlabel} detector is a multipurpose particle detector, used to study a wide range of physics topics. It is installed 100~m underground at IP-1 of the \acrshort{LHClabel}. Being 25~m in diameter, 44~m in length and 7000~tonnes in weight, \acrshort{ATLASlabel} is the largest particle detector ever built at a collider. As illustrated in \textcolor{red}{Figure}, the detector has a cylindrical shape and is composed of several detector layers built around the collision point of the particles, with an almost full solid angle coverage.
+The \acrshort{ATLASlabel} detector is a multipurpose particle detector, used to study a wide range of physics topics. It is installed 100~m underground at IP-1 of the \acrshort{LHClabel}. Being 25~m in diameter, 44~m in length and 7000~tonnes in weight, \acrshort{ATLASlabel} is the largest particle detector ever built at a collider. The detecor is illustrated in Figure~\ref{figLHC:ATLAS}, it consists of a cylindrical shape and is composed of several detector layers built around the collision point of the particles, with an almost full solid angle coverage.
+
+\begin{figure}[htbp]
+    \RawFloats
+    \begin{center}
+    \includegraphics[width=1.0\textwidth]{ATLASLHC/ATLASoverview.jpg}
+    \caption{
+        Schematic overview of the \acrshort{ATLASlabel} detector~\cite{Collaboration_2008}. 
+    }
+    \label{figLHC:ATLAS}
+    \end{center}
+\end{figure}
 
 The data recorded by the detector is used by the collaboration in an extensive physics program. One of the main branches is the measurement of \acrshort{SMlabel} processes, as the large luminosity provided by the \acrshort{LHClabel} allows both precision measurements or to target uncovered phenomena. The data collected during Run~2 allows the study of the Higgs boson and its properties, heavily scrutinised since the first observation of the particle. In addition, measurements of the interactions and processes involving the top-quark are particularly interesting to probe the \acrshort{SMlabel} and \acrshort{BSMlabel} theories. A large portion is dedicated to a wide range of \acrshort{BSMlabel} theories that includes supersymmetry, dark matter or additional resonances among others. Finally, the physics program also includes the study of the physics involving $b-$/$c-$quarks and heavy ions.
 
@@ -104,6 +115,8 @@ All detector systems are designed such that they provide optimal performance to 
 \subsection{Coordinate System}
 
 The convention to describe the particles recorded with the \acrshort{ATLASlabel} detector is a right-handed coordinate system as illustrated in \textcolor{red}{Figure}, with the origin at the centre of the detector which is also the interaction point. The $z$-axis is defined in the counterclockwise direction along the \acrshort{LHClabel} beam line, the $y$-axis points towards the surface and the $x$-axis towards the centre of the ring defined by the accelerator. To describe the physics objects within the detector, spherical coordinates are use instead, with the polar angle, $\theta$, measured from the $z$-axis while the azimuthal angle, $\phi$, measured from the $x$-axis in the $x-y$ plane. The pseudorapidity, $\eta$, is usually used instead of the polar angle, as it transforms easily under relativistic boosts along the $z$-axis. For particles with energy $E$ and forward momentum $p_z$, the expression of $\eta$ can be found from the rapidity, $y$, in the high-energy approximation,
+
+%https://tikz.net/axis3d_cms/
 
 \begin{equation}
    y \equiv \frac{1}{2}\ln\left(\frac{E+p_z}{E-p_z}\right) \xrightarrow[ \frac{m}{E} \to 0]{} -\ln\left(\tan\frac{\theta}{2}\right)\equiv \eta
@@ -126,10 +139,20 @@ as at the time of the collision the particles are made to collide along the $z$-
 
 \subsection{The Inner Detector}
 
-The \acrlong{IDlabel}~(\acrshort{IDlabel}) [54, 55] is the innermost detector system, which encloses the beam pipe. This detector system provides precise tracking information of charged particles with momentum as low as 100~MeV with a $|\eta|<2.5$ coverage. \textcolor{red}{Figure} shows an overview of the system, which is structured into three sub-detectors: the pixel detector, the \acrlong{SCTlabel}~(\acrshort{SCTlabel}) and the \acrlong{TRTlabel}~(\acrshort{TRTlabel}).
+The \acrlong{IDlabel}~(\acrshort{IDlabel}) [54, 55] is the innermost detector system, which encloses the beam pipe. This detector system provides precise tracking information of charged particles with momentum as low as 100~MeV with a $|\eta|<2.5$ coverage. Figure~\ref{figLHC:ATLASID} shows an overview of the system, which is structured into three sub-detectors: the pixel detector, the \acrlong{SCTlabel}~(\acrshort{SCTlabel}) and the \acrlong{TRTlabel}~(\acrshort{TRTlabel}).
 
-%: Overview of the inner detector of the ATLAS experiment divided into three sub-detectors (Pixels,SCT and TRT)
-
+\begin{figure}[htbp]
+    \RawFloats
+    \begin{center}
+    \subfloat[]{\includegraphics[width=0.47\textwidth]{ATLASLHC/ID_1.jpg}}
+    \quad
+    \subfloat[]{\includegraphics[width=0.47\textwidth]{ATLASLHC/ID_2.jpg}}
+    \caption{
+        Schematic view of the \acrshort{ATLASlabel} Inner Detector (a) and detaileds of the barrel section (b)~\cite{Collaboration_2008}. 
+    }
+    \label{figLHC:ATLASID}
+    \end{center}
+\end{figure}
 % https://cds.cern.ch/record/331063
 % https://cds.cern.ch/record/331064
 % https://arxiv.org/abs/1608.07850
@@ -154,7 +177,18 @@ The outermost part of the \acrshort{IDlabel} is the \acrlong{TRTlabel}~(\acrshor
 
 \subsection{The Calorimeter System}
 
-The calorimeter system is responsible for the precise measurement of the energy carried by both charged and neutral particles as well as measuring shower properties to allow for particle identification. Showers are cascades of secondary particles which are formed when a highly energetic particle interacts with dense material. \acrshort{ATLASlabel} uses sampling calorimeters which consist of alternating layers of active material (liquid argon and plastic scintillators) and passive detector material (copper, iron, tungsten and lead). While the active material measures the energy deposit of the particles going through, the passive material is designed to interact and absorb particles, thus induces the showering. The calorimeter system covers the region $|\eta|$ < 4.9 and is places between the central solenoid and the muon spectrometers. \textcolor{red}{Figure} shows an overview of the system, which is composed of two sub-detectors: the electromagnetic [61, 62] and the hadronic calorimeter [63, 64]. 
+The calorimeter system is responsible for the precise measurement of the energy carried by both charged and neutral particles as well as measuring shower properties to allow for particle identification. Showers are cascades of secondary particles which are formed when a highly energetic particle interacts with dense material. \acrshort{ATLASlabel} uses sampling calorimeters which consist of alternating layers of active material (liquid argon and plastic scintillators) and passive detector material (copper, iron, tungsten and lead). While the active material measures the energy deposit of the particles going through, the passive material is designed to interact and absorb particles, thus induces the showering. The calorimeter system covers the region $|\eta|$ < 4.9 and is places between the central solenoid and the muon spectrometers. Figure~\ref{figLHC:ATLASCalo} shows an overview of the system, which is composed of two sub-detectors: the electromagnetic [61, 62] and the hadronic calorimeter [63, 64]. 
+
+\begin{figure}[htbp]
+    \RawFloats
+    \begin{center}
+    \includegraphics[width=1.0\textwidth]{ATLASLHC/Calosystem.jpg}
+    \caption{
+        Schematic overview of the \acrshort{ATLASlabel} calorimeter system~\cite{Collaboration_2008}. 
+    }
+    \label{figLHC:ATLASCalo}
+    \end{center}
+\end{figure}
 
 % https://cds.cern.ch/record/331061
 % http://cds.cern.ch/record/2285582
@@ -186,7 +220,18 @@ $\sigma$E/E = 100\%/$\sqrt{E}\oplus$ 10\% [67, p. 2].
 
 \subsection{Muon Spectrometer}
 
-The \acrlong{MSlabel}~(\acrshort{MSlabel}) is the outermost detector system of \acrshort{ATLASlabel}, designed to identify and measure the energy of muons. \textcolor{red}{Figure} shows an overview of the system, which is composed of four detector systems grouped into trigger and precision muon tracking chambers. In total, the \acrshort{MSlabel} has more than one million readout channels and is embedded in three superconducting toroidal magnets, that provide a magnetic field in the $\phi$-direction. Muons mostly reach the \acrshort{MSlabel} without losing energy, and the strong magnetic fields is design for their precise measurement. The \pT\ resolution is around 3\% for 10-200~GeV and 10\% for 1~TeV muons. 
+The \acrlong{MSlabel}~(\acrshort{MSlabel}) is the outermost detector system of \acrshort{ATLASlabel}, designed to identify and measure the energy of muons. Figure~\ref{figLHC:ATLASMuon} shows an overview of the system, which is composed of four detector systems grouped into trigger and precision muon tracking chambers. In total, the \acrshort{MSlabel} has more than one million readout channels and is embedded in three superconducting toroidal magnets, that provide a magnetic field in the $\phi$-direction. Muons mostly reach the \acrshort{MSlabel} without losing energy, and the strong magnetic fields is design for their precise measurement. The \pT\ resolution is around 3\% for 10-200~GeV and 10\% for 1~TeV muons. 
+
+\begin{figure}[htbp]
+    \RawFloats
+    \begin{center}
+    \includegraphics[width=1.0\textwidth]{ATLASLHC/Muonsystem.jpg}
+    \caption{
+        Schematic overview of the \acrshort{ATLASlabel} muon spectrometer~\cite{Collaboration_2008}. 
+    }
+    \label{figLHC:ATLASMuon}
+    \end{center}
+\end{figure}
 
 % https://cds.cern.ch/record/331068
 % https://arxiv.org/abs/0910.2767
@@ -203,7 +248,18 @@ The precision muon tracking chambers are designed to provide high resolution and
 
 \subsection{Magnet System}
 
-The magnet system is of major importance to allow momenta and charge measurements, bending the trajectory of charged particles depending on these properties. \textcolor{red}{Figure} shows an overview of the system, which consists of two sub-systems: the central solenoid magnet, which is located between the \acrshort{IDlabel} and the calorimeters, and the toroidal magnet system, embedded within the \acrshort{MSlabel}. The solenoid generates a constant magnetic field of 2~T, with a superconducting magnet made out of NbTi cooled via liquid helium to a temperature of 1.8~K. There is one barrel toroid magnet and two end-cap toroid magnets with eight coils each, where each deliver an inhomogeneous magnetic field of roughly 0.5~T and 1~T, respectively.
+The magnet system is of major importance to allow momenta and charge measurements, bending the trajectory of charged particles depending on these properties. Figure~\ref{figLHC:ATLASMagnet} shows an overview of the system, which consists of two sub-systems: the central solenoid magnet, which is located between the \acrshort{IDlabel} and the calorimeters, and the toroidal magnet system, embedded within the \acrshort{MSlabel}. The solenoid generates a constant magnetic field of 2~T, with a superconducting magnet made out of NbTi cooled via liquid helium to a temperature of 1.8~K. There is one barrel toroid magnet and two end-cap toroid magnets with eight coils each, where each deliver an inhomogeneous magnetic field of roughly 0.5~T and 1~T, respectively.
+
+\begin{figure}[htbp]
+    \RawFloats
+    \begin{center}
+    \includegraphics[width=1.0\textwidth]{ATLASLHC/magnetSystems.png}
+    \caption{
+        Schematic overview of the \acrshort{ATLASlabel} magnet system~\cite{JetGoodson}. 
+    }
+    \label{figLHC:ATLASMagnets}
+    \end{center}
+\end{figure}
 
 %http://www.jetgoodson.com/images/thesisImages/magnetSystems.png Carlos
 
@@ -213,7 +269,7 @@ With a bunch crossing every 25~ns, the \acrshort{LHClabel} produces collisions a
 
 The trigger system, summarised in \textcolor{red}{Figure}, is structured into two parts since Run~II: the \acrlong{L1label}~(\acrshort{L1label}) hardware-based trigger system and the software-based \acrlong{HLTlabel}~(\acrshort{HLTlabel}). The \acrshort{L1label} trigger uses reduced-granularity information from the calorimeters and from the muon \acrshort{RPClabel} and \acrshort{TGClabel} to select events with interesting objects (normally high \pT\ electrons, muons, photons, jets or high missing transverse momentum). The latency is of 2.5~$\mu$s and reduces the rate from 40~MHz to about 100 kHz, which corresponds to 100 collisions. The information of the collisions is stored in buffers and the \acrlong{CTPlabel}~(\acrshort{CTPlabel}) performs the decision based on the inputs of the other L1 sub-systems. The \acrshort{L1label} trigger output are \acrlong{RoIlabel}~(\acrshort{RoIlabel}) in $\eta$ and $\phi$, which are passed to the \acrshort{HLTlabel}. The \acrshort{HLTlabel} uses the full detector information within the \acrshort{RoIlabel} to reduce the event rate down to approximately 1~kHz with a latency of 200~ms.
 
-After, the data is transferred to a computing centre for further processing and storage. An offline data quality monitoring system performs checks on fully reconstructed events, to ensure their quality for use in physics analyses. Some of the criteria to validate are requirements on the condition and performance of the beams and different \acrshort{ATLASlabel} sub-detectors at the time of operation. As summarised in \textcolor{red}{Figure}, from the 156~fb$^{-1}$ of integrated luminosity delivered by the \acrshort{LHClabel} during Run~2, 147~fb$^{-1}$ where recorded by the detector and 139~fb$^{-1}$ cataloged as good-quality data.
+After, the data is transferred to a computing centre for further processing and storage. An offline data quality monitoring system performs checks on fully reconstructed events, to ensure their quality for use in physics analyses. Some of the criteria to validate are requirements on the condition and performance of the beams and different \acrshort{ATLASlabel} sub-detectors at the time of operation. As summarised in Figure~\ref{figLHC:lumipileup}(b), from the 156~fb$^{-1}$ of integrated luminosity delivered by the \acrshort{LHClabel} during Run~2, 147~fb$^{-1}$ where recorded by the detector and 139~fb$^{-1}$ cataloged as good-quality data.
 
 % https://cds.cern.ch/record/616089
 % https://cds.cern.ch/record/2133909
