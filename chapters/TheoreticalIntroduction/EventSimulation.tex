@@ -1,8 +1,13 @@
+\chapter{Physics simulation of proton collisions}
+\label{chapter:EventSim}
+
 Proton collisions are complex processes and their understanding is essential to interpret the experimental data from the \acrshort{LHClabel}. Normally, physics analyses rely on the ability to accurately simulate the various processes of proton-proton collisions and the interactions with the detector in order to perform comparisons with the recorded data and quantify the level of agreement with the \acrshort{SMlabel}. The simulation is usually performed with \acrlong{MClabel}~(\acrshort{MClabel}) generators, which are stochastic tools that incorporate both theoretical predictions and empirical results to describe the statistical processes.
+
+The simulation of proton-proton interactions is summarised in this chapter, with an overview of each of the steps, starting from the theoretical foundations, computational methods, \acrshort{MClabel} generators and the simulation of the~\acrshort{ATLASlabel} detector.
 
 \section{Event simulation}
 
-The typical proton-proton collision at the LHC is depicted in Figure~\ref{figEVNTSIM:MCsim}. The inelastic scattering is the main interesting process, where the energy of the system is large enough and a constituent of each proton (parton) interacts and new particles are generated. The interaction that involves any of the other partons, normally at lower energies, is referred to as underlying event. A key phenomenon is the parton shower, a processes where due to the strong interaction, particles loose energy due the radiation of gluons which further generate quark-antiquark pairs, which in turn radiate gluons again in a chain reaction. These generated particles loose energy progressively down to the point where \acrshort{QCD} leaves the perturbative regime ($\sim$1~GeV) and the hadronisation occurs, when quarks and gluons form hadrons, colourless bound states. To complete the simulation of the collision, the pile-up is included which adds the effects from the other proton collisions that originate from the same or previous bunch-crossing.  
+The typical proton-proton collision at the LHC is depicted in Figure~\ref{figEVNTSIM:MCsim}. The inelastic scattering is the main interesting process, where the energy of the system is large enough and a constituent of each proton (parton) interacts, generating new particles. The interaction that involves any of the other partons, normally at lower energies, is referred to as underlying event. A key phenomenon is the parton shower, a processes where due to the strong interaction, particles loose energy due the radiation of gluons which further generate quark-antiquark pairs, which in turn radiate gluons again in a chain reaction. These generated particles loose energy progressively down to the point where \acrshort{QCD} leaves the perturbative regime ($\sim$1~GeV) and the hadronisation occurs, when quarks and gluons form hadrons, colourless bound states. To complete the simulation of the collision, the pile-up is included which adds the effects from the other proton collisions that originate from the same or previous bunch-crossing.  
 
 \begin{figure}[htbp]
     \RawFloats
@@ -15,10 +20,11 @@ The typical proton-proton collision at the LHC is depicted in Figure~\ref{figEVN
     \end{center}
 \end{figure}
 
+\clearpage
 
 \subsection{Factorisation theorem}
 
-The cross-section to produce a final stat $X$ from the hard scattering of two protons, $\sigma_{pp\to X}$ can be factorised into two components in perturbation theory, as the strong coupling constant, $\alpha_s$, is small at high energy kinematic regimes. Using the factorisation theorem~\cite{Factorisation},
+The cross-section to produce a final state $X$ from the hard scattering of two protons, $\sigma_{pp\to X}$ can be factorised into two components in perturbation theory, as the strong coupling constant, $\alpha_s$, is small at high energy kinematic regimes. Using the factorisation theorem~\cite{Factorisation},
 
 \begin{equation}
     \sigma_{pp\to X}=\sum_{a,b}\int \text{d}x_a\text{d}x_b f_a(x_a,\mu_F^2)f_b(x_b,\mu_F^2)\cdot\hat{\sigma}_{ab\to X}(x_a p_a,x_b p_b,\mu_F^2,\mu_R^2),
@@ -26,14 +32,16 @@ The cross-section to produce a final stat $X$ from the hard scattering of two pr
 
 where $f_i(x_i,\mu_F^2)$ are the \acrlong{PDFlabel}~(\acrshort{PDFlabel}) for partons $i=a,b\in\left\{g, u, \bar{u}, d, ...\right\}$ and encodes the probability of finding a parton of type $i$ within the proton carrying a fraction of the proton's momentum $x_i$, at the factorisation scale $\mu_F$. The dependence of the scale appears from performing only fixed-order calculations and the value is typically set comparable to the energy of the process, for example, to the total transverse mass of the final-state particles. The partonic cross-section, $\hat{\sigma}_{ab\to X}(x_a p_a,x_b p_b,\mu_F^2,\mu_R^2)$, is calculated at finite perturbative order, hence the additional dependence on the renormalisation scale, $\mu_R$, at which to evaluate $\alpha_s$.
 
+
 \subsection{Parton density function}
 
-The \acrshort{PDFlabel}s are crucial for the accurate description of the partons that form the protons. The first type of partons are the valence quarks which determine the quantum numbers of the proton. In addition, gluons and virtual quark-antiquark pairs (sea-quarks) are also part of the proton and come from the vacuum fluctuations. A \acrshort{PDFlabel}, $f_i^A(x_i,Q^2)$ describes the probability density of a parton of a certain type, $i$, inside a given hadron, $A$ to carry a certain momentum fraction, $x=p_i/p_A$ evaluated at a specific momentum transfer $Q^2$. In general, \acrshort{PDFlabel} are extracted from empirical measurements performed at a specific scale. Then, the \acrlong{DGLAPlabel}~(\acrshort{DGLAPlabel}) equations are used to extrapolate the \acrshort{PDFlabel} to different scales. Other alternatives to extract the functions like lattice \acrshort{QCD} are possible, but very computationally challenging~\cite{Bhat_2021}.
+The \acrshort{PDFlabel}s are crucial for the accurate description of the partons that form the protons. The first type of partons are the valence quarks which determine the quantum numbers of the proton. In addition, gluons and virtual quark-antiquark pairs (sea-quarks) are also part of the proton and come from vacuum fluctuations. A \acrshort{PDFlabel}, $f_i^A(x_i,Q^2)$ describes the probability density of a parton of a certain type, $i$, inside a given hadron, $A$ to carry a certain momentum fraction, $x=p_i/p_A$ evaluated at a specific momentum transfer $Q^2$. In general, \acrshort{PDFlabel} are extracted from empirical measurements performed at a specific scale. Then, the \acrlong{DGLAPlabel}~(\acrshort{DGLAPlabel}) equations are used to extrapolate the \acrshort{PDFlabel} to different scales. Other alternatives to extract the functions like lattice \acrshort{QCD} are possible, but very computationally challenging~\cite{Bhat_2021}.
 There are dedicated collaborations such as the \textit{NNPDF}, \textit{CTEQ} and \textit{MSTW} that provide~\cite{Ball_2015,LesHouches,Martin_2009}
  \acrshort{PDFlabel}s for physics analyses. Figure~\ref{figEVNTSIM:PDF} shows the \textit{NNPDF3.0NLO} \acrshort{PDFlabel} set for the different proton partons and two different factorisation scales.
 
+ There are two main factorisation schemes to describe processes involving $b$-quarks: the \acrlong{4FSlabel}~(\acrshort{4FSlabel}) and the \acrlong{5FSlabel}~(\acrshort{5FSlabel}). The \acrshort{4FSlabel} treats the $b$-quarks massive ($m_b>\mu_R$) and since $m_b>m_p$, they are not included in the sea of quarks and do not have an associated \acrshort{PDFlabel}. In the context of \acrshort{QCD} perturbative evolution, one of the consequences is that calculations at lower scales $\mu_R<m_b$ are especially impacted as the $\alpha_s$ running depends on the number of quark flavours in the initial state, $n_f=4$ (Equation~\ref{Theory_eq:runningcoupling}). On the other hand, at high scales the mass effects are negligible and usually described by the \acrshort{5FSlabel}, in which the $b$-quark is considered massless, included in the initial state and treated as the other quarks, $n_f=5$. 
 
-\begin{figure}[htbp]
+ \begin{figure}[hbtp]
     \RawFloats
     \begin{center}
     \includegraphics[width=1.0\textwidth]{EVENTSIM/NLOPDF.JPG}
@@ -42,8 +50,6 @@ There are dedicated collaborations such as the \textit{NNPDF}, \textit{CTEQ} and
     \label{figEVNTSIM:PDF}
     \end{center}
 \end{figure}
-
- There are two main factorisation schemes to describe processes involving $b$-quarks: the \acrlong{4FSlabel}~(\acrshort{4FSlabel}) and the \acrlong{5FSlabel}~(\acrshort{5FSlabel}). The \acrshort{4FSlabel} treats the $b$-quarks massive ($m_b>\mu_R$) and since $m_b>m_p$, they are not included in the sea of quarks and do not have an associated \acrshort{PDFlabel}. In the context of \acrshort{QCD} perturbative evolution, one of the consequences is that calculations at lower scales $\mu_R<m_b$ are especially impacted as the $\alpha_s$ running depends on the number of quark flavours in the initial state, $n_f=4$ (Equation~\ref{Theory_eq:runningcoupling}). On the other hand, at high scales the mass effects are negligible and usually described by the \acrshort{5FSlabel}, in which the $b$-quark is considered massless, included in the initial state and treated as the other quarks, $n_f=5$. 
 
 \subsection{Matrix element}
 
@@ -68,7 +74,7 @@ There is an incompatibility with \acrshort{MElabel} and \acrshort{PSlabel} for a
 The hadronisation process starts when the energy of the \acrshort{PSlabel} emissions is low enough to reach the hadronisation scale ($\sim$1~GeV), where the perturbative regime of \acrshort{QCD} is not valid. At that point, the partons from the \acrshort{PSlabel} have defined momentum, flavour and colour and further description of the emissions has to rely on phenomenological models. The process consists on a reconstruction algorithm that groups together the partons into different hadrons, that can further split, until all partons are confined into stable hadrons. 
 
 The two most widely used models are the Lund string model~\cite{ANDERSSON198331} and the cluster model~\cite{Winter2004}.
-In the first, the quark-antiquark pair colour interaction is described as a string with a potential assumed to be linearly increasing with the distance, emulating the \acrshort{QCD} potential. The string then splits forming new quark-antiquark pairs when the energy stored passes the quark-antiquark total mass, forming hadrons which momentum is determined from the initial momentum by a fragmentation function. The momentum of the hadron as a fraction. On the other hand, the second model is based on forcing the final state gluons to split into quark-antiquark pairs and then grouping all quarks in colour-singlet clusters, allowed to decay and split into smaller clusters or hadrons. For both models, the process is repeated iteratively until only stable hadrons remain.
+In the first, the quark-antiquark pair colour interaction is described as a string with a potential assumed to be linearly increasing with the distance, emulating the \acrshort{QCD} potential. The string then splits forming new quark-antiquark pairs when the energy stored passes the quark-antiquark total mass, forming hadrons which momentum is determined from the initial momentum by a fragmentation function. On the other hand, the second model is based on forcing the final state gluons to split into quark-antiquark pairs and then grouping all quarks in colour-singlet clusters, allowed to decay and split into smaller clusters or hadrons. For both models, the process is repeated iteratively until only stable hadrons remain.
 
 \subsection{Pile-up and underlying event}
 

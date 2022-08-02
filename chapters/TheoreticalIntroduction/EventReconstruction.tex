@@ -1,20 +1,26 @@
+\chapter{Object reconstruction}
+\label{chapter:EventReco}
+
 The concept of \textit{reconstruction} refers to the use of algorithms for the identification of physics objects from the signals recorded in the different sub-systems of the detector. The physics processes described in this thesis produce electrons, muons, taus, photons, neutrinos and quarks in the final state. However, not all of these listed particles can be directly observed, as quarks form cascades of hadronic particles, neutrinos leave without interacting with \acrshort{ATLASlabel} and tau leptons decay before reaching the detector. 
+
+The reconstruction of the different physics objects used in this thesis analyses is described in this chapter. Starting from the definition of basic detector objects, to describe jets and their flavour tagging, to end with the reconstruction of leptons and missing transverse energy.
 
 Figure~\ref{figEVNTRECO:ATLASOBJECTS} illustrates the interaction of different particles with the \acrshort{ATLASlabel} detector. Charged particles produce a track in the \acrshort{IDlabel}, electrons and photons shower in the \acrshort{EMlabel} calorimeter, hadrons shower in the hadronic calorimeter and muons leave signals in the muon spectrometer.
 
-The reconstruction of the different physics objects used in this thesis analyses is described in the following chapter.
+
 
 \begin{figure}[htbp]
-    \RawFloats
-    \begin{center}
-    \includegraphics[width=1.0\textwidth]{EVENTRECO/ATLASOBJECTS.jpg}
-    \caption{
-        Illustration of a section of the~\acrshort{ATLASlabel} detector showing the interaction of particles with the different sub-detectors~\cite{Pequenao:1505342}. 
-    }
-    \label{figEVNTRECO:ATLASOBJECTS}
-    \end{center}
-\end{figure}
+     \RawFloats
+     \begin{center}
+     \includegraphics[width=1.0\textwidth]{EVENTRECO/ATLASOBJECTS.jpg}
+     \caption{
+         Illustration of a section of the~\acrshort{ATLASlabel} detector showing the interaction of particles with the different sub-detectors~\cite{Pequenao:1505342}. 
+     }
+     \label{figEVNTRECO:ATLASOBJECTS}
+     \end{center}
+ \end{figure}
 
+\clearpage
 
 \section{Base objects}
 
@@ -66,6 +72,9 @@ Various jet collections based on the anti-k$_t$ algorithm are used in \acrshort{
 
 The so-called EMTopo jets were the primary jet collection used in physics analyses in \acrshort{ATLASlabel} before the end of Run~2. The reconstruction is performed at the EM energy scale only using topo-clusters~\cite{PhysRevD.96.072002} with the anti-k$_t$ algorithm implemented in the \textit{FASTJET} software package~\cite{Cacciari2012}. The jets used in this thesis are reconstructed with the radius parameter $R = 0.4$ with requirements in $\pT > 25$~GeV and $\abs{\eta} < 2.5$. The EMtopo jets are calibrated in several steps summarised in Figure~\ref{figEVNTRECO:EMTOPO}.
 
+After the jet reconstruction, the jet direction is modified such that the jet originates from the primary vertex. Then, energy corrections based on pile-up are applied subtracting the average energy due to in-time pile-up and other residual corrections that depend on the number of \acrshort{PVlabel} and bunch crossings. After, absolute calibrations are applied to the \acrlong{JESlabel}~\acrshort{JESlabel} and $\eta$ derived from dedicated dijet \acrshort{MClabel} events. Then, a global sequential calibration is set to improve the \pT\ resolution and the associated uncertainties from the jet fluctuations that can arise from various initial factors like the flavour or energy of the original parton. The final step is the in-situ calibration which is only applied to data, extracted from \pT and $\eta$ comparisons to known well-modelled \acrshort{MClabel} that include central jets in dijet events, $\gamma/Z+jets$ or multijet events. 
+
+\clearpage
 \begin{figure}[htbp]
     \RawFloats
     \begin{center}
@@ -76,12 +85,6 @@ The so-called EMTopo jets were the primary jet collection used in physics analys
     \label{figEVNTRECO:EMTOPO}
     \end{center}
 \end{figure}
-
-
-
-After the jet reconstruction, the jet direction is modified such that the jet originates from the primary vertex. Then, energy corrections based on pile-up are applied subtracting the average energy due to in-time pile-up and other residual corrections that depend on the number of \acrshort{PVlabel} and bunch crossings. After, absolute calibrations are applied to the \acrlong{JESlabel}~\acrshort{JESlabel} and $\eta$ derived from dedicated dijet \acrshort{MClabel} events. Then, a global sequential calibration is set to improve the \pT\ resolution and the associated
-uncertainties from the jet fluctuations that can arise from various initial factors like the flavour or energy of the original parton. The final step is the in-situ calibration which is only applied to data, extracted from \pT and $\eta$ comparisons to known well-modelled \acrshort{MClabel} that include central jets in dijet events, $\gamma/Z+jets$ or multijet events. 
-
 \subsubsection{PFlow jets}
 
 Particle Flow jets, known as PFlow jets, were introduced during Run~2 and combine tracking and calorimeter information. This collection of jets has improved energy and angular resolution compared to EMTopo jets and enhanced reconstruction and stability against pile-up. The reconstruction~\cite{pflow}
@@ -149,7 +152,7 @@ good momentum resolution, a requirement is done for amount of hits in the \acrsh
 
 The isolation criteria is based on track and calorimeter variables, similar to the electron case. The criteria improve the efficiency removing non-prompt muons, the ones not generated in the hard-scattering but in other parton shower processes for example, which are usually close to jets and other objects. The track related variable, \pT$^{\text{varcone30}}$ is the scalar \pT\ sum of the additional tracks in a cone $\Delta R=10$~GeV$/\pT^\mu$ (maximum of 0.3), that depends on the muon transverse momentum \pT$^\mu$. The calorimeter related variable is the same as for electrons, build from the sum of energies around the muon track. In this thesis, the \textit{FixedCutTightTrackOnly} working point is used, which is defined only with track isolation: $\pT^\text{varcone30}/\pT^\mu<0.06$.       
 
-\section{Taus}
+\subsection{Taus}
 
 The $\tau$ leptons typically decay before reaching active electronics of the \acrshort{ATLASlabel} detector and have to be identified via their decay products. The decay can be either leptonically (into electrons or muons) or hadronically. The leptonic decay represents the 35\% of the cases and is covered by the reconstruction of the produced electron or muon. The hadronic decays represent 65\%, which contain one or three charged pions in 72\% and 22\% of the cases, respectively. In addition, at least one associated neutral pion is also produced in 68\% of the hadronic decays. The dedicated $\tau$ reconstruction and identification algorithms in \acrshort{ATLASlabel} target the hadronic decay, with the main background being jets from energetic hadrons produced in the fragmentation of quarks and gluons, known as the \acrshort{QCD} background. Therefore, the $\tau$ objects in \acrshort{ATLASlabel} mentioned in this thesis refer to hadronically decaying $\tau$ leptons. 
 
