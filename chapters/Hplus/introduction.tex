@@ -169,7 +169,7 @@ Various \acrshort{MClabel} generators have been used for the production of the s
 
 
 The signal of this analysis is the associated production of a charged Higgs boson, $pp\to tb H^+$, followed by the $H^+\to tb$ decay. The samples are generated with \MGMCatNLO, which is a 4FS NLO generator. The \textit{NNPDF2.3NLO}~\acrshort{PDFlabel} set is used. Parton showers and hadronisation is modelled with \PYTHIA~8.212. The width of the $H^+$ has been set to zero, which is an assumption with negligible impact
-on the analysis for the models considered, as the experimental r00esolution is much larger than the $H^+$ natural width %https://doi.org/10.3389/fphy.2020.00039
+on the analysis for the models considered, as the experimental resolution is much larger than the $H^+$ natural width %https://doi.org/10.3389/fphy.2020.00039
 . Interference with the~\acrshort{SMlabel} $\ttbar bb$ background is neglected and only the $H^+$ decay into $tb$ is considered. The dynamic~\acrshort{QCD} factorisation and renormalisation scales, $\mu_F$ and $\mu_R$, are set to $\frac{1}{3}\sum_i\sqrt{m(i)^2+\pT(i)^2}$, where $i$ runs over the final-state particles used in the generation ($H^+$, $t$ and $b$). Eighteen different samples are generated, with $H^+$ masses ranging between 200 and 2000~GeV with step sizes chosen to match the experimental mass resolution of the $H^+$ signal. Table~\ref{Hplustb:signalsummarytable} lists the signal samples used in the analysis, also includes the Santander-matched cross-sections for 2HDM type-II (MSSM), but without SQCD corrections %https://link.springer.com/article/10.1007/JHEP10(2015)145 https://journals.aps.org/prd/abstract/10.1103/PhysRevD.91.075015 https://journals.aps.org/prd/abstract/10.1103/PhysRevD.83.055005 https://journals.aps.org/prd/abstract/10.1103/PhysRevD.71.115012
 The sample corresponding to the 1000 GeV $H^+$ mass has also been fully simulated. \textcolor{red}{Appendix presents a comparison of the full and fast simulated samples}
 
@@ -206,7 +206,7 @@ The sample corresponding to the 1000 GeV $H^+$ mass has also been fully simulate
 
 \subsection{Background modelling}
 
-\subsection{\ttbar+jets background}
+\subsubsection{\ttbar+ jets}
 
 The dominant background for the $H^+$ signal is the \ttbar\ pair production with additional jets, specially \ttb\ processes. Hence, events are categorised depending on the flavour of the additional jets. The labelling is performed with \textit{particle jets}, jets formed only taking account particles with a mean lifetime over $3\cdot10^{-11}$~s not originating from directly from top-quarks or $W$-bosons. Then, the jet flavour label is assigned from $\Delta R$(jet,hadron)<0.4 as follows:
 \begin{itemize}
@@ -217,8 +217,8 @@ The dominant background for the $H^+$ signal is the \ttbar\ pair production with
 
 The nominal production is modelled with the 5FS and \POWHEGBOX~v2 setting the renormalisation and factorisation scales to $µ_R = µ_F = m_\text{T}$(top) and $h_\text{damp}=1.5\cdot m_\text{top}$. The parton shower and hadronisation processes are simulated with \PYTHIA~8.
 
-\subsection{Single-top}
-\subsubsection{t-channel}
+\subsubsection{Single-top}
+\textbf{t-channel}
 Single-top t-channel production is modelled with \POWHEGBOX~v2, which provides~\acrshort{MElabel} at NLO in the 4FS with the \textit{NNPDF3.0NLOnf4}~\acrshort{PDFlabel} set. The renormalisation and factorisation scales are set to $µ_F=µ_R=\sqrt{m_b^2+p_{\text{T},b}^2}$. The events are showered with \PYTHIA~8.
 %The impact of the PS and hadronisation model is evaluated by comparing the nominal generator setup with a
 %sample produced with the PowhegBox v2 generator at NLO in QCD in the 4FS using the NNPDF3.0NLOnf4
@@ -280,12 +280,12 @@ the \textit{NNPDF3.0nnlo} set, along with the dedicated set of tuned PS paramete
 
 \subsection{Other small background}
 
-\subsubsection{\ttbar H}
+\subsubsection{$\ttbar H$}
 The production of $\ttbar H$ events is modelled with the \POWHEGBOX generator at NLO in the 5FS with the \textit{NNPDF3.0NLO} \acrshort{PDFlabel} set. The $h_\text{damp}$ parameter is set to $\frac{3}{4}\cdot(m_t + m_{tbar} + m_H ) = 352.5$~GeV. The events are showered with \PYTHIA~8.% The uncertainties due to ISR, FSR, PS and hadronisation
 %model, as well as that due to the matching scheme, are evaluated with the same procedures used for the tt¯ +
 %jets background.
 
-\subsubsection{tH}
+\subsubsection{$tH$}
 The production of $tHjb$ events is modelled using the \MGMCatNLO~v2.6.0 generator in the 4FS with the \textit{NNPDF3.0NLOnf4} \acrshort{PDFlabel} set. The renormalisation and factorisation scales are set to $\frac{1}{2}\sum_i\sqrt{m(i)^2+\pT(i)^2}$, where $i$ runs over the final-state particles used in the generation. The shower starting scale is set to $\mu_q = \HT /2$, where \HT\ is defined as the scalar sum of the \pT\
 of all outgoing partons. The events are showered with \PYTHIA~8.230.
 
