@@ -1,0 +1,57 @@
+\section{Systematic uncertainties}
+The presented analysis is heavily affected by systematic uncertainties from different sources, explained in this Section. There are two main categories of systematic uncertainties: the experimental uncertainties originating mainly from the reconstruction of the various physics objects and their calibrations and secondly the modelling uncertainties related to the signal and background process modelling in MC. In total, 216 nuisance parameters, corresponding to the systematic components, and the free-floating tt + >1b and ttc normalisation factors are included in this analysis. They are sorted into subcategories in Table 13.7.
+The systematic uncertainties can either affect both the shape and the normalisation (SN), only the normalisation (N) or only the shape (S) of a process, also indicated in Table 13.7.
+To each uncertainty component, one nuisance parameter is associated. Especially the experimental uncertainties often have several independent components coming from one type of uncertainty, e.g. the b-jet efficiency calibration provides 45 uncertainty components and thus 45 nuisance parameters are considered in the analysis.
+In addition, for every bin considered in the analysis one nuisance parameter is assigned to take into account the uncertainties coming from the finite statistics of the MC samples.
+
+%%%%table
+
+\subsection{Experimental uncertainties}
+The experimental uncertainties have in general a rather low impact on the final fit. Only the uncertainties associated to jets and b-tagging have a more important influence. All experimental nuisance parameters are correlated across all analysis channels, regions and processes and typically affect both the shape and normalisation except the luminosity uncertainty.
+The total uncertainty on the integrated luminosity of the full RUN II dataset was measured to be 1.7\% [201]. To account for differences between data and simulation in the pile-up modelling one additional uncertainty is considered [240].
+
+\subsubsection{Jets and heavy-flavour tagging}
+The uncertainties associated to jets dominate the experimental uncertainties. Even though the single components are in the range of 1\%-5\% of relative uncertainties, the large number of jets in the targeted final state enhances their effect. The uncertainties on the jet energy scale and resolution amount to 31 and 9 nuisance parameters, respectively [120]. The uncertainties for the jet energy scale are extracted from test-beam and LHC data as well as from simulation. Further uncertainty sources are also considered such as those related to the jet flavour assuming a conservative uncertainty of ±50\%
+on the quark-gluon fraction. Moreover, pileup corrections are taken into account as well as uncertainties from jet kinematics (eta-dependence, high pT jets) as well as detector simulation differences (GEANT4 vs. AtlFast-II). The jet energy resolution is measured in dijet events as a function of pT and rapidity using RUN II data and MC simulation from which also its uncertainties are extracted. Furthermore, one uncertainty is related to the jet vertex tagger calibration accounting for differences between data and simulation measured in Z to mumu events analogous to [203]
+
+Since this analysis relies heavily on b-tagging, it is also a source of systematic uncertainties. The b-tagging calibrations are described in Section 8.6 and provide uncertainties as a function of the different b-tagging working points and the jet pT (the inefficiency calibration depends also on jet |eta|). A principal component analysis (eigenvalue decomposition) yields uncorrelated uncertainties which are in the range of 2\%-10\% for the b-jet efficiency calibration and between 10\% to 25\% and
+15\% to 50\% for the c-jets and light-flavour jets mis-tag rate calibration, respectively. In total, the flavour-tagging uncertainties are decomposed into 85 components
+
+
+\subsubsection{Leptons}
+Even though the systematic uncertainties related to leptons have a small effect, 22 different uncertainty sources are taken into account [127, 128]. They are coming from the trigger, reconstruction, identification and isolation efficiencies for electrons (four components) and muons (ten components). Moreover, three (five) independent uncertainty components for electrons (muons) are arising from the lepton momentum scale and resolution.
+
+\subsubsection{Missing transverse momentum}
+The systematic uncertainties associated to the missing transverse momentum have only a mall impact on the final result because MET is only used in the event reconstruction. Since the MET calculated from the reconstructed physics objects and a soft term (see sec. 6.2.5), the energy scale and resolution uncertainties from the physics objects are propagated to the MET together with an additional component for the soft term. 
+
+\subsection{Modelling Uncertainties}
+In contrast to the experimental uncertainties, the modelling uncertainties are not correlated across all background and signal processes, but typically they are still correlated across channels and analysis regions with some exceptions. The uncertainties are split into several components depending on the signal and background processes as well as into different physics effects in MC generators. While the cross-section, branching fraction and normalisation uncertainties only affect the normalisation of the physics processes, all other modelling uncertainties are also sensitive to shape effects (see Table 13.7)
+
+
+\subsubsection{Signal modelling}
+
+\subsubsection{ttbar modelling}
+
+The ttjets modelling uncertainties are categorised in the subcategories ttb, ttc and ttlight since they are typically affected differently by the systematic uncertainties. Thus all systematic uncertainties associated to ttjets are uncorrelated across these three subcategories and therefore have separate nuisance parameters. Nevertheless, the uncertainty of one category is correlated across all bins (with some exceptions as explained below). The ttb and ttc processes are fairly sensitive to differences in the precision of the ME calculation or the utilised flavour scheme. The ttlight processes profit from already well known precise measurements. Table 13.8 lists all systematic sources related to the ttjets process. 
+
+On the inclusive ttbar cross-section (NNLO+NNLL) an uncertainty of ±6\% is taken only applied to ttlight samples due to their dominance in the inclusive phase space [206-212]. This uncertainty comprises several effects from varying different quantities like the factorisation and normalisation scales, the PDFs, $\alpha_S$ as well as the top-quark mass.
+The normalisation of the ttc component was a free-floating parameter in the previous iteratio of the analysis [13]. In the following, ttc is normalised to the SM prediction with a 100\% uncertainty. The ttb normalisation is kept free-floating in the fit.
+
+The systematic uncertainties listed in the middle row of Table 13.8 are retrieved as described for the ttH¯ modelling, with the exception that in all alternative samples the ttb fraction is reweighted to be the same as for the nominal generators, leaving it to the fit to extract this information from data via the normalisation factor k(ttb). For the ISR uncertainty the muR and muF in the ME are varied by a factor 0.5 (2.0) and $\alpha ISR_{S}$
+in the PS is set to 0.140 (0.115) rather than the nominal value 0.127. To retrieve the FSR uncertainty $\alpha FSR_{S}$ is changed to 0.1423 and 0.1147 in place of the nominal value $\alpha FSR_{S} = 0.127$. The variations for both systematic uncertainties (ISR, FSR) are
+performed on the respective nominal samples, i.e. PRESP8 (4FS) for ttb
+and PP8 (5FS) for ttc and ttlight. For the determination of the NLO
+matching and the PS and hadronisation uncertainties, both being two-point systematics, no
+ alternative 4FS generator samples with sufficient statistics are available. This 
+ uncertainty is not meant to cover differences between the 4FS and the 5FS modelling since
+  it was found that the 4FS represents data better than 5FS and therefore no dedicated uncertainty coping for this difference is being used in this analysis. Consequently, the 
+  relative difference between PP8 (5FS) and MG8 (5FS) as well as PH7 (5FS) for the NLO 
+  matching and PS and hadronisation uncertainty is used instead, respectively.
+The predicted fraction of the ttb subcomponents (ttbar + >2b and ttbar + 1b/1B) as shown in
+Figure 13.4 are varying for different MC generators. Therefore, an additional uncertainty
+ is associated to account for these differences. The discrepancies between the PP8
+ttbar (5FS) and PH7 ttbar (5FS) models are used to estimate this effect, 
+resulting in RW here?
+\subsubsection{Other background modelling}
+
+The systematic uncertainties associated to background processes other than ttjets are summarised in Table 13.9 with their respective sources and the corresponding descriptions. These uncertainties play a subordinate role compared to the ttjets uncertainties.
