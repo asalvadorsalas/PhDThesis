@@ -64,7 +64,7 @@ Figure~\ref{Hplustb:acceptance} shows the acceptance times efficiency of the $\g
 
 \clearpage
 \subsection{Reweighting technique}
-
+\label{Hplustb:secRW}
 The main background for the search is \ttbar+jets, and its correct modelling is essential for the correct description of the data. It is observed that the simulation does not properly model high jet multiplicities nor the hardness of additional jet emissions %https://cds.cern.ch/record/2630327 https://link.springer.com/article/10.1007/JHEP01(2021)033
 To improve the data/MC agreement of this essential background, data-based corrections are applied to the \ttbar samples. Since the mismodelling is assumed to be due mainly to the additional radiation in the parton shower, hence independent on the flavour of the associated jets, the corrections derived in the $\geq$5j2b regions are expected to improve the agreement in the 3b and $\geq$4b regions. The remaining discrepancies can still be covered by the systematic model.
 
@@ -291,18 +291,18 @@ where $\sigma$ is arbitrary and $\sigma_{ref}$ a reference value, typically a be
 Given a binned data distribution with $n_i$ events for a bin $i$, the expected events can be expressed as,
 
 \begin{equation}
-    E[n_i(\mu,\mathbf{b},\mathbf{\theta})] = \mu\cdot s_i(\mathbf{\theta}) + \sum_{k_{\alpha}\in\mathbf{\theta}}k_\alpha\cdot b_{\alpha,i}(\mathbf{\theta})
+    E[n_i(\mu,\mathbf{b},\boldsymbol{\theta})] = \mu\cdot s_i(\boldsymbol{\theta}) + \sum_{k_{\alpha}\in\mathbf{k}}k_\alpha\cdot b_{\alpha,i}(\boldsymbol{\theta})
 \end{equation}
 
-with $s_i$ the predicted signal events, $b_{\alpha,i}$ the predicted background events of the process $\alpha$. The normalisation factor $k_\alpha$ allows the background process $k_\alpha$ to vary in the fit. In this thesis, only two backgrounds are allowed to have freely floating normalisation factors, which are determined in the fit to data. The rest of the processes are normalised to their predicted cross-sections and the corresponding $k_\alpha$ is fixed to one. The nuisance parameters $\mathbf{\theta}$ are additional degrees of freedom which correspond to the systematic uncertainties acting both on the shape and normalisation of all processes. Their central value is defined to be zero and the deviation with respect to the original value is refered to as pull, where a deviation of $\pm$1 corresponds to a variation of one standard deviation. The fit procedure allows the reduction of the impact of systematic uncertainties, especially by taking advantage of the highly populated background-dominated bins included in the fit. This requires a good understanding of the background and the systematic effects. To verify the improved background prediction, fits under the background-only hypothesis are typically performed, and differences between the data and the post-fit background prediction are checked using kinematic variables other than the ones used in the fit.
+with $s_i$ the predicted signal events, $b_{\alpha,i}$ the predicted background events of the process $\alpha$. The normalisation factor $k_\alpha$ allows the background process $\alpha$ to vary in the fit. In this thesis, only two backgrounds are allowed to have freely floating normalisation factors, which are determined in the fit to data. The rest of the processes are normalised to their predicted cross-sections and the corresponding $k_\alpha$ is fixed to one. The nuisance parameters $\boldsymbol{\theta}$ are additional degrees of freedom which correspond to the systematic uncertainties acting both on the shape and normalisation of all processes. Their central value is defined to be zero and the deviation with respect to the original value is refered to as pull, where a deviation of $\pm$1 corresponds to a variation of one standard deviation. The fit procedure allows the reduction of the impact of systematic uncertainties, especially by taking advantage of the highly populated background-dominated bins included in the fit. This requires a good understanding of the background and the systematic effects. To verify the improved background prediction, fits under the background-only hypothesis are typically performed, and differences between the data and the post-fit background prediction are checked using kinematic variables other than the ones used in the fit.
 
 The binned likelihood function is given as
 \begin{equation}
-    \mathscr{L}(\mu,\mathbf{k},\mathbf{\theta}) = \prod_i^N \frac{ (E[n_i(\mu,\mathbf{b},\mathbf{\theta})])^{n_i}}{n_i!}e^{E[n_i(\mu,\mathbf{b},\mathbf{\theta})]}\prod_{\theta_j\in\mathbf{\theta}}P(\theta_j)
+    \mathscr{L}(\mu,\mathbf{k},\boldsymbol{\theta}) = \prod_i^N \frac{ (E[n_i(\mu,\mathbf{b},\boldsymbol{\theta})])^{n_i}}{n_i!}e^{E[n_i(\mu,\mathbf{b},\boldsymbol{\theta})]}\prod_{\theta_j\in\boldsymbol{\theta}}P(\theta_j)
 \end{equation}
 
 which corresponds to a product of Poisson probabilities for all $N$ bins and the penalty terms of all nuisance parameters. The $P(\theta_j)$ are generally Gaussian distributions for systematic uncertainties and Poisson for the statistical uncertanty of each bin, that are introduced in the likelihood to penalise large deviations.
-The optimal $\mu$, $\mathbf{k}$ and $\mathbf{\theta}$ are obtained from the fit to data that maximises the agreement between data and the prediction.
+The optimal $\mu$, $\mathbf{k}$ and $\boldsymbol{\theta}$ are obtained from the fit to data that maximises the agreement between data and the prediction.
 
 The optimal test statistic to perform the fit is the likelihood ratio, %https://link.springer.com/chapter/10.1007/978-1-4612-0919-5_5
 
