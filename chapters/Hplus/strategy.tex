@@ -20,8 +20,8 @@ Table~\ref{Hplustb:prefityields} shows the number of expected and selected event
 
 \begin{table}[htb]
     \small
-    \addtolength{\leftskip} {-2cm} % menja marges
-    \addtolength{\rightskip}{-2cm}
+    \addtolength{\leftskip} {-4cm} % menja marges
+    \addtolength{\rightskip}{-4cm}
     \centering
     \begin{tabular}{l r r r r r}
         \toprule\toprule
@@ -136,24 +136,25 @@ A set of NNs is trained for each of the signal regions: 5j3b, 5j$\geq$4b, $\geq$
         \toprule\toprule
         \multicolumn{1}{c}{Variable}  &  \multicolumn{1}{c}{Description}  \\
         \midrule
-        $D$                     &   Kinematic discriminant of the $H^+$ mass hypothesis   \\
+        $m_{H^+}$               & Parameter of the NN. $H^+$ mass hypothesis. \\
+        $D$                     &   Kinematic discriminant of the $H^+$ mass hypothesis.   \\
         \HTjets &   Scalar sum of the transverse energy of all jets. \\
         &  Sensible to events with massive $H^+$  \\
-        Centrality         &   Centrality calculated using all jets and leptons   \\
-        $\pT^0$                 &   Leading jet \pT. Similar to \HTjets \\
+        Centrality         &   Centrality calculated using all jets and leptons.   \\
+        $\pT^0$                 &   Leading jet \pT. Similar to \HTjets. \\
         $m^{\text{min}\Delta R}_{bb}$     &   Invariant mass of the closest $b$-jet pair. \\
         &                                     The $bb$ pair aims to partially reconstruct the $H^+$ invariant mass,\\
-        &                                      very different from the \ttbar\ background \\
-        $\pT^4$  &   \pT of fifth leading jet. Characterises the low energy scale of the event  \\
-        $H_1^{\mathrm{all}}$    &   Second Fox-Wolfram moment calculated using all jets and leptons  \\ %https://journals.aps.org/prd/abstract/10.1103/PhysRevD.87.073014
-        $\Delta R^{\text{avg}}_{bb}$ &   Average $\Delta R$ between all $b$-jet pairs in the event \\
-        $\text{min}\Delta R_{lep,bb}$  &   $\Delta R$ between the lepton and the pair of $b$-jets with smallest $\Delta R$   \\
+        &                                      very different from the \ttbar\ background. \\
+        $\pT^4$  &   \pT of fifth leading jet. Characterises the low energy scale of the event.  \\
+        $H_1^{\mathrm{all}}$    &   Second Fox-Wolfram moment calculated using all jets and leptons.  \\ %https://journals.aps.org/prd/abstract/10.1103/PhysRevD.87.073014
+        $\Delta R^{\text{avg}}_{bb}$ &   Average $\Delta R$ between all $b$-jet pairs in the event. \\
+        $\text{min}\Delta R_{lep,bb}$  &   $\Delta R$ between the lepton and the pair of $b$-jets with smallest $\Delta R$.   \\
         $m^{\text{min}\Delta R}_{uu}$   &   Invariant mass of the untagged jet-pair with minimum $\Delta R$.\\
                                         &  Aims to reconstruct the $W$-boson that decays hadronically.   \\
-        $m^{\text{max}\pT}_{bb}$ &   Invariant mass of the $b$-jet pair with maximum \pT  \\
-        $m^{\text{max}m}_{bb}$  &   Maximal invariant mass of $b$-jets   \\
-        $m^{\text{max}\pT}_{jjj}$ &   Invariant mass of the jet triplet with maximum \pT  \\
-        $N_{\text{jets}}$ and $N_{b\text{-jets}}$ & jet and $b$-jet multiplicity \\
+        $m^{\text{max}\pT}_{bb}$ &   Invariant mass of the $b$-jet pair with maximum \pT.  \\
+        $m^{\text{max}m}_{bb}$  &   Maximal invariant mass of $b$-jets.   \\
+        $m^{\text{max}\pT}_{jjj}$ &   Invariant mass of the jet triplet with maximum \pT.  \\
+        $N_{\text{jets}}$ and $N_{b\text{-jets}}$ & jet and $b$-jet multiplicity. \\
         \bottomrule\bottomrule
         \end{tabular}
     \caption{List of variables included in the training of the NN.}
@@ -221,7 +222,7 @@ The invariant masses considered are the mass of the $H^+$, the mass of the hadro
     \end{cases} 
 \end{equation}
 
-where $b_h$ denotes the $b$-quark from the $H^+\to tb$ decay and $b_{had/lep}$ the one from the top quark with the hadronically/leptonically decaying $W$-boson. $\chi_{t_{lep/had}b_4}$ refers to the recoil system of the $H^+$, from the $t$- and $b-$quarks generated in association with the boson.
+where $b_h$ denotes the $b$-quark from the $H^+\to tb$ decay and $b_{had/lep}$ the one from the top quark with the hadronically/leptonically decaying $W$-boson, $t_{had/lep}$. $\chi_{t_{lep/had}b_4}$ refers to the recoil system of the $H^+$, from the $t$- and $b-$quarks generated in association with the boson.
 Introducing the mixing between the two possible $H^+$ decays, the probability reads:
 
 \begin{align}
@@ -238,12 +239,12 @@ The full kinematic signal probability results,
 \end{align}
 
 which specifically shows the exceptions when using the $H^+$ recoil system: it is not used for 5j regions and a light jet is used instead for $\geq$6j3b.
-In the case of an event with two neutrino solutions, the leptonic quantities should be averaged with the analogous $\omega_{1\nu}/w_{\omega\nu}$.
+In the case of an event with two neutrino solutions, the leptonic quantities should be averaged with the analogous $\omega_{1\nu}/\omega_{2\nu}$.
 
 
 \textit{Background probability}
 
-The background kinematic pdf, $P_{\text{kin}}^{\text{bkg}}$, follows a similar formula to the signal kinematic pdf. Apart from the $H^+$ boson mass and its recoil system, all other masses can be reconstructed: the mass of the hadronic $W$ ($m_{q\bar{q}}$) and the mass of the leptonic and hadronic top-quark ($m_{b_{lep}\ell\nu}$ and $m_{b_{had}q\Bar{q}}$), a total of three masses. To replace the other two, the $m_{b\bar{b}}$ and the $chi_{\ttbar}=m_{\ttbar}-m_{t_{had}}-m_{t_{lep}}$ systems are used.
+The background kinematic pdf, $P_{\text{kin}}^{\text{bkg}}$, follows a similar formula to the signal kinematic pdf. Apart from the $H^+$ boson mass and its recoil system, all other masses can be reconstructed: the mass of the hadronic $W$ ($m_{q\bar{q}}$) and the mass of the leptonic and hadronic top-quark ($m_{b_{lep}\ell\nu}$ and $m_{b_{had}q\Bar{q}}$), a total of three masses. To replace the other two, the $m_{b\bar{b}}$ and the $\chi_{\ttbar}=m_{\ttbar}-m_{t_{had}}-m_{t_{lep}}$ systems are used.
 
 In the 5jet regions the $m_{b\bar{b}}$ system cannot be reconstructed, hence the fourth kinematic variable is replaced with a pseudo-$H^+$ reconstructed with a light jet. Concerning the $\geq$6j3b region, two light jets are used instead $m_{j_hj_4}$ as the soft $b$-quark is typically tagged as a light jet and outputs a better performance than mixing jet flavours. Following the description, the background kinematic pdf is expressed as:
 \begin{align}
@@ -276,35 +277,59 @@ The discriminant distributions for signal and background in the analysis regions
 
 \subsection{Profile likelihood fit}
 
-The profile likelihood fit is a statistical tool used in this thesis to extract the signal from data.\todo{to be moved}
+In order to test the compatibility between data and the \acrshort{MClabel} simulations, statistical methods in the context of hypothesis testing need to be introduced. The profile likelihood fit is a statistical tool used in this thesis to extract a measurement for the production of the signal targetted in the analysis. Also, the upper limits are extracted based on the asymptotic formulation. In this Section, the profile likelihood fit method is presented with the necessary concepts in the context of a \acrshort{BSMlabel} search. %https://arxiv.org/abs/1007.1727
 
-% To extract the ttH¯ signal from data, a complex fit model is required. A detailed description of
-% the statistical methods for high energy physics can be found in Ref. [236] based on the NeymanPearson lemma [237] which states that to reject a hypothesis H0 in favour of hypothesis H1 the most
-% powerful test is the ratio of their likelihoods. For the analysis presented here, a profile-likelihood
-% fit is employed to extract the signal strength, incorporating the predicted yields and uncertainties in
-% every bin of the analysis regions to fit them to data.
-% Given a binned data distribution with ni events per bin, the expectation value of the number of events
-% in a given bin i can be expressed as
-% E[ni(µ, k, θ)] = X
-% µα∈µ
-% µα · sα,i(θ) + X
-% kβ∈k
-% kβ · bβ,i(θ), (13.1)
-% where sα,i are the predicted signal events of category α and bβ,i the predicted background events of
-% category β in bin i. The set of signal-strength parameters µ are the so-called parameters of interest
-% where one element µα is defined as
-% µα =
-% σ
-% α
-% σ
-% α
-% SM
-% , (13.2)
-% with the signal cross-section σ
-% α and the expected SM cross-section σ
-% α
-% SM. For an inclusive crosssection measurement only one signal-strength parameter is used, while for the STXS measurement
-% in this analysis five signal-strength parameters are employed. The set of background normalisation
-% factors k with elements kβ allow a freely floating normalisation of a certain background process
-% β. In this analysis, only the tt¯ + >1b background is chosen to have a freely floating normalisation
+The idea behind hypothesis testing is to compare the agreement of the experimental data between two hypotheses and quantify which hypothesis can be discarded at a certain level of confidence. The two hypotheses to be compared are: the null-hypothesis $H_0$, the~\acrshort{SMlabel} without new physics, and the alternative hypothesis $H_\mu$ which accounts for \acrshort{BSMlabel} interactions. The $\mu$ refers to the signal strength, commonly referred as parameter of interest (POI), which is a normalisation factor for the targetted signal that can be expressed as,
 
+\begin{equation}
+    \mu = \frac{\sigma}{\sigma_{ref}}
+\end{equation}
+
+where $\sigma$ is arbitrary and $\sigma_{ref}$ a reference value, typically a benchmark value from a theory or an expected sensitivity like 1~pb. For the statistical method, the agreement is checked for $H_\mu$ with a continuous spectrum of signal strengths, which will approach the \acrshort{SMlabel}, $H_0$, for $\mu=0$.
+
+Given a binned data distribution with $n_i$ events for a bin $i$, the expected events can be expressed as,
+
+\begin{equation}
+    E[n_i(\mu,\mathbf{b},\mathbf{\theta})] = \mu\cdot s_i(\mathbf{\theta}) + \sum_{k_{\alpha}\in\mathbf{\theta}}k_\alpha\cdot b_{\alpha,i}(\mathbf{\theta})
+\end{equation}
+
+with $s_i$ the predicted signal events, $b_{\alpha,i}$ the predicted background events of the process $\alpha$. The normalisation factor $k_\alpha$ allows the background process $k_\alpha$ to vary in the fit. In this thesis, only two backgrounds are allowed to have freely floating normalisation factors, which are determined in the fit to data. The rest of the processes are normalised to their predicted cross-sections and the corresponding $k_\alpha$ is fixed to one. The nuisance parameters $\mathbf{\theta}$ are additional degrees of freedom which correspond to the systematic uncertainties acting both on the shape and normalisation of all processes. Their central value is defined to be zero and the deviation with respect to the original value is refered to as pull, where a deviation of $\pm$1 corresponds to a variation of one standard deviation. The fit procedure allows the reduction of the impact of systematic uncertainties, especially by taking advantage of the highly populated background-dominated bins included in the fit. This requires a good understanding of the background and the systematic effects. To verify the improved background prediction, fits under the background-only hypothesis are typically performed, and differences between the data and the post-fit background prediction are checked using kinematic variables other than the ones used in the fit.
+
+The binned likelihood function is given as
+\begin{equation}
+    \mathscr{L}(\mu,\mathbf{k},\mathbf{\theta}) = \prod_i^N \frac{ (E[n_i(\mu,\mathbf{b},\mathbf{\theta})])^{n_i}}{n_i!}e^{E[n_i(\mu,\mathbf{b},\mathbf{\theta})]}\prod_{\theta_j\in\mathbf{\theta}}P(\theta_j)
+\end{equation}
+
+which corresponds to a product of Poisson probabilities for all $N$ bins and the penalty terms of all nuisance parameters. The $P(\theta_j)$ are generally Gaussian distributions for systematic uncertainties and Poisson for the statistical uncertanty of each bin, that are introduced in the likelihood to penalise large deviations.
+The optimal $\mu$, $\mathbf{k}$ and $\mathbf{\theta}$ are obtained from the fit to data that maximises the agreement between data and the prediction.
+
+The optimal test statistic to perform the fit is the likelihood ratio, %https://link.springer.com/chapter/10.1007/978-1-4612-0919-5_5
+
+\begin{equation}
+    \lambda_\mu = \frac{\mathscr{L}(\mu, \hat{\hat{\mathbf{k}}},\hat{\hat{\mathbf{k}}})}{\mathscr{L}(\hat{\mu}, \hat{\mathbf{k}},\hat{hat{\mathbf{k}}})}
+\end{equation}
+
+with the single-hat parameters that maximise likelihood while $\hat{\mathbf{k}},\hat{hat{\mathbf{k}}}$ those that maximise the likelihood for a given $\mu$. As the likelihoods are products of several terms smaller than one, a more stable test statistic is the negative log-likelihood,
+
+\begin{equation}
+    q_\mu = -2\ln\lambda_\mu
+\end{equation}
+
+For the purpose of setting upper limits on the signal production, some special cases are defined depending on $\mu$ and $\hat{\mu}$. If $\hat{\mu}$ is negative, i.e. the fitted signal has a negative normalisation, the modified test statistic assumes signal to be only positive: $\tilde{q}(\mu)=-2\ln\frac{\mathscr{L}(\mu, \hat{\hat{\mathbf{k}}},\hat{\hat{\mathbf{k}}})}{\mathscr{L}(0, \hat{\hat{\mathbf{k}}},\hat{\hat{\mathbf{k}}})}$, where the parameters in the denominator optimise the likelihood for $\mu=0$. Another exception is to set the modified test statistic to 0 for $\hat{\mu}>\mu$, as signal below the observed is in complete agreement with the observed measurement.
+
+The level of agreement between data and predictions for a given signal strength is quantified by computing the p-value, $p_\mu$, which is the probability of the measured data being a deviation from $H_\mu$, assumed true,
+
+\begin{equation}
+    p_\mu = \int_{q_{\mu,obs}}^\infty f(q_\mu|H_\mu)dq_\mu
+\end{equation}
+
+where $f(q_\mu|H_\mu)$ is the probability density function of $q_\mu$ under the assumption of $H_\mu$. The significance $Z=\Phi^{-1}(1-p_\mu)$ (being $\Phi$ the cumulative Gaussian distribution) is often preferred to quantify the level of disagreement in terms of sigma deviations. Typically, an alternative hypothesis is rejected at 1.64$\sigma$ ($p_\mu=0.05$) and the background-only at 5$\sigma$ ($p_0=2.87\cdot10^{-7}$).
+
+Normally, searches are dedicated to very small signals and poorly separated from the background. Rejecting the null hypothesis at a fixed probability as mentioned, leads to exclude signals with very low statistics not really targetted by the analysis. %https://www.sciencedirect.com/science/article/abs/pii/S0168900299004982?via%3Dihub
+The $CL_{s}$ method solves this issue,
+
+\begin{equation}
+    CL_{s}=\frac{p_\mu}{1-p_0}
+\end{equation}
+
+which is the previous p-value, which any bad compatibility benefits the background-only hypothesis, normalised to the confidence level of the background-only hypothesis, which when closer to 1 points that the measurement is not compatible with the background. In general, the exclusion limits obtained with this method are conservative.
