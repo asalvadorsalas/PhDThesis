@@ -210,8 +210,12 @@
 
 \mainmatter % Denotes the start of the main document content, resets page numbering and uses arabic numbers
 \setchapterstyle{kao} % Choose the default chapter heading style
-
+\clearpage
+\pagestyle{pagenum.scrheadings}
 \input{chapters/introduction.tex}
+\clearpage
+\pagestyle{scrheadings}
+ % Choose the default chapter heading style
 
 \pagelayout{wide} % No margins
 \addpart{Theoretical and experimental setup}
