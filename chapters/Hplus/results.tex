@@ -1,5 +1,5 @@
 \chapter{$H^+\to tb$ analysis results}
-In order to test for the presence of an $H^+\to tb$ signal, a binned maximum-likelihood fit to the data is performed as described in Section. In total 18 fits are performed, one for each mass hypothesis, fitting the NN output evaluated at the corresponding mass as explained in Section. Four regions are used in the fit: 5j3b, 5j$\geq$4b, $\geq$6j3b and $\geq$6j$\geq$4b. The distributions have ten bins, except 5j$\geq$4b which have eight, and the irregular binning of each region is optimised to increase sensitivity. Two initially unconstrained fit parameters are used to model the normalisation of the \ttb\ and \ttc\ backgrounds. The parameter of interest is the product of the production cross-section $\sigma(pp\to tbH^+)$ and the branching ratio BR($H^+\to tb$).
+In order to test for the presence of a $H^+\to tb$ signal, a binned maximum-likelihood fit to the data is performed as described in Section. In total 18 fits are performed, one for each mass hypothesis, fitting the NN output evaluated at the corresponding mass as explained in Section. Four regions are used in the fit: 5j3b, 5j$\geq$4b, $\geq$6j3b and $\geq$6j$\geq$4b. The distributions have ten bins, except 5j$\geq$4b which have eight, and the irregular binning of each region is optimised to increase sensitivity. Two initially unconstrained fit parameters are used to model the normalisation of the \ttb\ and \ttc\ backgrounds. The parameter of interest is the product of the production cross-section $\sigma(pp\to tbH^+)$ and the branching ratio BR($H^+\to tb$).
 
 A total of 350 nuisance parameters are introduced in the fit. To speed up the fit and ease the convergence, the shape or normalisation compontents of the different systematic uncertainties are pruned if their effect is below a threshold of 1\%. In addition, smoothing techniques are applied to reduce the impact of statistical fluctuations when computing the templates of systematic uncertainties.
 
@@ -7,7 +7,7 @@ This section provides the expected and observed results on the fitted signal str
 
 \section{Fit results}
 
-The analysis optimisation is performed on \acrshort{MClabel} simulation and the performance is evaluated via \textit{Asimov} data instead of experimental data. The dataset is built from the nominal background and the chosen signal, thus the normalisation factors and nuisance parameters extracted from the fit are the default ones by construction. Nevertheless, the profile likelihood fit provides uncertainties on the signal strength and the expected upper limits. It is the standard procedure to optimise the analysis without looking at the experimental data to avoid introducing any bias, specially in sensitive regions. Once the desired expected sensitivity is obtained and the background modelling reproduces the experimental data in signal-depleted regions, more experimental data is added to the fit. Multiple studies were performed to validate the fits studying the effect of pulls and contraints of the nusance parameters, evaluate possible biases in the signal modelling or evaluating the data/MC agreement in the post-fit distributions among them.
+The analysis optimisation is performed on \acrshort{MClabel} simulation and the performance is evaluated via \textit{Asimov} data instead of experimental data. The dataset is built from the nominal background and the chosen signal, thus the normalisation factors and nuisance parameters extracted from the fit are the default ones by construction. Nevertheless, the profile likelihood fit provides uncertainties on the signal strength and the expected upper limits. It is the standard procedure to optimise the analysis without looking at the experimental data to avoid introducing any bias, specially in sensitive regions. Once the desired expected sensitivity is obtained and the background modelling reproduces the experimental data in signal-depleted regions, more experimental data is added to the fit. Multiple studies were performed to validate the fits studying the effect of pulls and contraints of the nuisance parameters, evaluate possible biases in the signal modelling or evaluating the data/MC agreement in the post-fit distributions among them.
 
 The agreement between the observed and expected event yields in all regions is shown in Figure~\ref{Hplustb:Summaryyieldsplot800} before and after performing the 800~GeV hypothesis fit. The pre-fit shows the background with an overlay of the signal, while the post-fit includes the signal, although fitted to a negative value and is not visible. The data and \acrshort{MClabel} compatibility improves significantly with the fit. This is general for all the mass hypotheses. Table~\ref{Hplustb:postfityields} shows the event yields after the corresponding fit under the 200 GeV and 800 GeV $H^+$ mass hypotheses.
 
@@ -214,7 +214,7 @@ No significant excess above the expected \acrshort{MClabel} background is observ
     a top quark and a bottom quark. The bands surrounding the expected limit show the 68\% and
     95\% confidence intervals. The red lines show the observed and expected 95\% CL exclusion limits
     obtained with the 36 fb$^{-1}$ data sample\cite{ATLASHptb2018}. Theory predictions are shown for two representative values of $\tan\beta$ in the hMSSM benchmark scenario. Uncertainties in the predicted $H^+$ cross-sections or branching ratios are not considered.}
-    \label{Hplustb:fittedfactorsvsmass}
+    \label{Hplustb:xseclimits}
 \end{figure}
 
 The obtained $H^+\to tb$ production upper limits results are model independent, and therefore can be interpreted in the context of various \acrshort{BSMlabel} theories, as long as the topology and kinematics of the targeted channel remains equivalent. Figure~\ref{Hplustb:exclusionstanb} shows 95\% CL exclusion limits set on the $\tan\beta$ parameter as a function of $m_{H^+}$ for various benchmark scenarios in the MSSM. It is the first time that they are shown for all $\text{M}^{125}_\text{h}$ available scenarios using the $H^+\to tb$ channel. In the hMSSM framework, effective couplings of the lighter Higgs boson to the top quark, bottom quark and vector bosons are derived from fits to LHC data on the production and decay rates of the observed Higgs boson, including the limits from the search for heavier neutral and charged Higgs boson states. The $\text{M}^{125}_\text{h}$, $\text{M}^{125}_\text{h}$($\tilde{chi}$), $\text{M}^{125}_{\text{h}_1}$($\tilde{tau}$), $\text{M}^{125}_\text{h}$(alignment) and $\text{M}^{125}_\text{h}$(CPV) scenarios also feature a scalar particle with mass and couplings compatible with those of the observed Higgs
@@ -411,7 +411,23 @@ ATLAS Collaboration [23]. Constraints on the model have also been derived by the
 using the results from searches in the \MET+ h(\bbar) [24] and \MET.
 -------------------------
 
+\section{Outlook}
+
+Lowmass decorrelate, difficult to optimise 18 fits
+Enhance selection with btagging although less statistics
+
+Pflow, b-tagging
+NN with low level inputs
+Tried to include alt in the training
+Region definition with reco method
+Include boosted region
+Being explored in H+Wh
 
 
+The analysis strategy presented in the previous chapter was fxed before the start of the publication process and could not change afterwards, in order to proceed with the publication itself. The analysis development has however continued in view of the 100 fb1 of pp collisions that the LHC is expected to deliver by the end of Run-2. This chapter proposes a set of refnements that could be implemented to improve the sensitivity and robustness of the analysis. The frst part is dedicated to the low-mass region, with the aim of reducing the correlation between the signal and the ttb background, while the second part focuses on discrimination techniques. The conclusion provides the expected limit obtained with the proposed changes and the projection of such a limit to the integrated luminosity of 100 fb-1
+. All results are to be intended as preliminary.
 
 
+The ttHbb analysis presented in Chapters 13 and 14 is dominated by systematic uncertainties
+among which the modelling of the ttb background is by far the largest uncertainty. In the following, ideas to further reduce the systematic uncertainties and ideas to improve the general analysis strategy will be discussed. The multivariate techniques, namely the reconstruction and classification BDTs, are well suited to be replaced by Neural Networks opening new possibilities in the reconstruction and classification of events. And in particular, the improvements achieved within this thesis in the b-tagging algorithm performance described in detail in Part III are a great basis for further improvements. In the following two different optimisation possibilities are demonstrated: a new tagger incorporating the tt1B category and a first look into possible improvements using the newly
+optimised b-tagging algorithm DL1r

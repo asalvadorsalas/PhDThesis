@@ -1,5 +1,5 @@
 \section{Systematic uncertainties}
-The presented analysis is heavily affected by systematic uncertainties from different sources, explained in this Section. There are two main categories of systematic uncertainties: experimental uncertainties, mainly associated to the reconstruction of the various physics objects, and the modelling uncertainties related to the signal and background process modelling in MC. In total, 352 nuisance parameters are used and summarised in Table~\ref{Hplustb:tablesys}, corresponding to the systematic components, and the \ttb\ and \ttc\ normalisation factors are included in the fit. The systematic uncertainties can either affect both the shape and the normalisation (SN), only the normalisation (N) or only the shape (S) of a process. Some uncertainty sources might consist of several independent components, e.g. the b-jet efficiency calibrations or the PDF tunings, and one nuisance parameter is associated to each component. In addition, for every bin considered in the analysis one nuisance parameter is assigned to take into account the uncertainties coming from the finite statistics of the \acrshort{MClabel} samples.
+The presented analysis is heavily affected by systematic uncertainties from different sources, explained in this Section. There are two main categories of systematic uncertainties: experimental uncertainties, mainly associated to the reconstruction of the various physics objects, and the modelling uncertainties related to the signal and background process modelling in MC. In total, 352 nuisance parameters are used and summarised in Table~\ref{Hplustb:tablesys}, corresponding to the systematic components, and the \ttb\ and \ttc\ normalisation factors are included in the fit. The systematic uncertainties can either affect both the shape and the normalisation (SN), only the normalisation (N) or only the shape (S) of a process. Some uncertainty sources might consist of several independent components, e.g. the $b$-jet efficiency calibrations or the PDF tunings, and one nuisance parameter is associated to each component. In addition, for every bin considered in the analysis one nuisance parameter is assigned to take into account the uncertainties coming from the finite statistics of the \acrshort{MClabel} samples.
 
 \begin{table}[htbp]
   \centering
@@ -10,7 +10,7 @@ The presented analysis is heavily affected by systematic uncertainties from diff
   \multicolumn{3}{l}{\textbf{Experimental uncertainties}} \\
   \midrule
   Luminosity             			  	        &   N  &  1  \\
-  Pileup modeling       				        &  SN  &  1  \\
+  Pileup modelling       				        &  SN  &  1  \\
   \midrule
   \multicolumn{3}{l}{\textit{Physics objects}} \\
   \hspace{2ex}Electrons 				        &  SN  &  7 \\
@@ -25,7 +25,7 @@ The presented analysis is heavily affected by systematic uncertainties from diff
   \hspace{2ex}Mis-tag rate ($c$)			    &  SN  & 20  \\
   \hspace{2ex}Mis-tag rate (light)			    &  SN  & 20  \\
   \midrule
-  \multicolumn{3}{l}{\textbf{Signal and background modeling}} \\
+  \multicolumn{3}{l}{\textbf{Signal and background modelling}} \\
   \midrule
   \multicolumn{3}{l}{\textit{Signal}} \\
   \hspace{2ex} PDF variations                   &  SN  & 30   \\
@@ -48,7 +48,7 @@ The presented analysis is heavily affected by systematic uncertainties from diff
   \hspace{2ex}$t\bar{t}W$ modelling			    &  SN  &  1  \\
   \hspace{2ex}$t\bar{t}Z$ modelling			    &  SN  &  1  \\
   \hspace{2ex}Single top cross-section		    &   N  &  3  \\
-  \hspace{2ex}Single top modeling			    &  SN  &  7  \\
+  \hspace{2ex}Single top modelling			    &  SN  &  7  \\
   \hspace{2ex}$W$+jets normalisation		    &   N  &  3  \\
   \hspace{2ex}$Z$+jets normalisation		    &   N  &  3  \\
   \hspace{2ex}Diboson normalisation			    &   N  &  1  \\
@@ -78,7 +78,7 @@ The uncertainties associated to jets are the most relevant experimental sources 
 The uncertainties for the jet energy scale are extracted from test-beam and LHC data as well as from simulation, being less than 4\% for jets with $\pT=25$~GeV and less than 2\% for central jets with 1.5~TeV$>\pT>$100 GeV. Further uncertainty sources are also considered assuming a conservative uncertainty of $\pm$50\% on the quark-gluon fraction for the simulation of jets with different flavours. Moreover, pile-up corrections are taken into account as well as uncertainties from jet kinematics as well as differences between the two detector simulations used in the analysis. The jet energy resolution uncertainties are extracted from measured di-jet events using Run~2 data and MC simulation. Finally, the jet vertex tagger uncertainty is extracted from data-\acrshort{MClabel} calibrations measured %https://link.springer.com/article/10.1140/epjc/s10052-016-4430-0
 in $Z\to\mu^+\mu^-$ events.
 
-Uncertainties related to $b$-tagging are relevant in this analysis due the use of the $b$-jets for the selection and the use of their kinematics in the multi-variate techniques. The $b$-tagging calibrations are derived separately for jets containing $b$-hadrons, $c$-hadrons or neither as a function of \pT\ and the different $b$-tagging working points in dedicated calibration analysis targetting different topologies. The different uncorrleated sources are obtained from a principal component analysis (eigenvalue decomposition) and are in the range of 2\%-10\% for the $b$-jet efficiency calibration and between 10\% to 25\% and
+Uncertainties related to $b$-tagging are relevant in this analysis due the use of the $b$-jets for the selection and the use of their kinematics in the multi-variate techniques. The $b$-tagging calibrations are derived separately for jets containing $b$-hadrons, $c$-hadrons or neither as a function of \pT\ and the different $b$-tagging working points in dedicated calibration analysis targetting different topologies. The different uncorrelated sources are obtained from a principal component analysis (eigenvalue decomposition) and are in the range of 2\%-10\% for the $b$-jet efficiency calibration and between 10\% to 25\% and
 15\% to 50\% for the c-jets and light-flavour jets mis-tag rate calibration, respectively. In total, the flavour-tagging uncertainties are decomposed into 85 components.
 
 \subsubsection{Leptons}
@@ -95,7 +95,7 @@ In contrast to the experimental uncertainties, the modelling uncertainties are n
 \subsubsection{Signal modelling}
 
 The sources of uncertainty considered for the signal are associated to the energy scales to generate the \acrshort{MClabel} and the \acrshort{PDFlabel} tunings. First, the impact of ISR in the \acrshort{MElabel} is estimated with the idependent variation of the renormalisation $\mu_R$ and factorisation scales $\mu_F$ by a factor 0.5 (higher parton radiation) and by 2 (lower parton radiation). The \acrshort{PDFlabel} uncertainty is estimated using a symmetrised Hessian \acrshort{PDFlabel} set, following the PDF4LHC recommendations for Run~2. %https://arxiv.org/abs/1510.03865
-\subsubsection{ttbar modelling}
+\subsubsection{\ttbar\ modelling}
 
 The \ttbar\ process is the most important background in the analysis and a large number of uncertainties are considered for an apropiate modelling. Since the composition of the \ttbar\ subcategories are different in the analyisis' regions, different effects are expected. The \ttb\ and \ttc\ processes are fairly sensitive to differences in the precision of the \acrshort{MElabel} calculation or the flavour scheme. The \ttl\ process profit from precise measurements [ref]. Hence, all systematic uncertainties associated to \ttbar\ are uncorrelated across the \ttb, \ttc\ and \ttl\ categories, having separate nuisance parameters. Unless stated otherwise, the nuisance parameters are correlated among bins and regions. Table~\ref{Hplustb:tablesysttbar} summarises the uncertainties applied to the \ttbar\ background. 
 
@@ -144,11 +144,11 @@ To cover the differences between 4FS and 5FS, the nominal is compared to a \text
 The weights derived in Section~\ref{Hplustb:secRW} that are applied to improve the modelling of the \ttbar\ background are also subject to uncertainties. The associated statistical uncertainties are varied obtaining 28 nuisance parameters, which are correlated between the different \ttbar\ components and $Wt$. Aside, the \ttbar\ samples with alternative \acrshort{MClabel} setups do not have the same composition of \ttbar\ subcomponents as the nominal sample, especially \POWHEGBOX+\HERWIG~7. This difference can change significantly the fractions in the fit however, the normalisation of the sub-processes in the analysis regions are measured with the fit. To avoid the propagation of the normalisation effect from the comparison, the alternative samples are scaled to ensure the same flavour composition as the nominal sample in the analysis regions. In addition, the same modelling issues that motivate the \ttbar\ weights can be found in the alternative samples, hence different sets of weights are also derived using the alternative samples.
 
 \subsubsection{Other background modelling}
-The systematic uncertainties associated to background processes other than ttjets are summarised in Table~\ref{Hplustb:tablesysalt} with their respective sources and the corresponding descriptions. These uncertainties play a subordinate role compared to the \ttbar\ uncertainties.
+The systematic uncertainties associated to background processes other than \ttbar+jets are summarised in Table~\ref{Hplustb:tablesysalt} with their respective sources and the corresponding descriptions. These uncertainties play a subordinate role compared to the \ttbar\ uncertainties.
 
 A 5\% uncertainty is considered for the cross-sections of the three single-top production modes [111-115]. Uncertainties associated with the \acrshort{PSlabel} model, and with the NLO matching scheme are evaluated by comparing, for each process individually, the nominal \POWHEGBOX+\PYTHIA~8 sample with a sample produced using \POWHEGBOX+\HERWIG~7 and \MGMCatNLO+\PYTHIA~8, respectively. As mentioned before, the $Wt$ single-top process is included in the reweighting procedure, and thus the same related uncertainties used for \ttbar\ are applied. The uncertainty associated to the interference between $Wt$ and \ttbar\ production at NLO [63] is assessed by comparing the nominal \POWHEGBOX+\PYTHIA~8 sample produced using the “diagram removal” scheme with an alternative sample produced with the same generator but using the “diagram subtraction” scheme.
 
-The predicted $\ttbar H$ signal cross-section uncertainty is $^{+5.8\%}_{-9.2\%}$ (QCD scale) $\pm$3.6\% (\acrshort{PDFlabel} + $\alpha_S$) [13, 117-121]. Uncertainties of the Higgs boson branching ratios amount to 2.2\% for the \bbar decay mode [13]. For the ISR and FSR, the amount of radiation is varied following the same procedure as for \ttbar, except that the ISR is made of one component varying the different parameters at the same time. Also, the assesment of the \acrshort{PSlabel} and the NLO matching uncertainties is similarly performed comparing the nominal with the same type of alternative \acrshort{MClabel}.
+The predicted $\ttbar H$ signal cross-section uncertainty is $^{+5.8\%}_{-9.2\%}$ (QCD scale) $\pm$3.6\% (\acrshort{PDFlabel} + $\alpha_S$) [13, 117-121]. Uncertainties of the Higgs boson branching ratios amount to 2.2\% for the \bbar decay mode [13]. For the ISR and FSR, the amount of radiation is varied following the same procedure as for \ttbar, except that the ISR is made of one component varying the different parameters at the same time. Also, the assessment of the \acrshort{PSlabel} and the NLO matching uncertainties is similarly performed comparing the nominal with the same type of alternative \acrshort{MClabel}.
 
 The uncertainty of the $\ttbar V$ NLO cross-section prediction is 15\%, split into PDF and scale uncertainties as for $\ttbar H$ [13, 122]. An additional $\ttbar V$ modelling uncertainty, related to the choice of both \acrshort{PSlabel} model and matching scheme, is assessed by comparing the nominal \MGMCatNLO+\PYTHIA~8 samples with the alternative samples generated with \SHERPA.
 
