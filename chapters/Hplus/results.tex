@@ -1,5 +1,5 @@
 \chapter{$H^+\to tb$ analysis results}
-In order to test for the presence of a $H^+\to tb$ signal, a binned maximum-likelihood fit to the data is performed as described in Section. In total 18 fits are performed, one for each mass hypothesis, fitting the NN output evaluated at the corresponding mass as explained in Section. Four regions are used in the fit: 5j3b, 5j$\geq$4b, $\geq$6j3b and $\geq$6j$\geq$4b. The distributions have ten bins, except 5j$\geq$4b which have eight, and the irregular binning of each region is optimised to increase sensitivity. Two initially unconstrained fit parameters are used to model the normalisation of the \ttb\ and \ttc\ backgrounds. The parameter of interest is the product of the production cross-section $\sigma(pp\to tbH^+)$ and the branching ratio BR($H^+\to tb$).
+In order to test for the presence of a $H^+\to tb$ signal, a binned maximum-likelihood fit to the data is performed as described in Section~\ref{sec:profilelikelihoodfit}. In total 18 fits are performed, one for each mass hypothesis fitting the NN output evaluated at the corresponding mass values as explained in Section~\ref{sec:HplusPNN}. Four regions are used in the fit: 5j3b, 5j$\geq$4b, $\geq$6j3b and $\geq$6j$\geq$4b. The distributions have ten bins, except 5j$\geq$4b which have eight, and the irregular binning of each region is optimised to increase sensitivity. Two initially unconstrained fit parameters are used to model the normalisation of the \ttb\ and \ttc\ backgrounds. The parameter of interest is the product of the production cross-section $\sigma(pp\to tbH^+)$ and the branching fraction B($H^+\to tb$).
 
 A total of 350 nuisance parameters are introduced in the fit. To speed up the fit and ease the convergence, the shape or normalisation compontents of the different systematic uncertainties are pruned if their effect is below a threshold of 1\%. In addition, smoothing techniques are applied to reduce the impact of statistical fluctuations when computing the templates of systematic uncertainties.
 
@@ -14,9 +14,9 @@ The agreement between the observed and expected event yields in all regions is s
 \begin{figure}[htb]
     \RawFloats
     \centering
-    \subfloat[Pre-fit]{\includegraphics[width = 0.9\textwidth]{HPLUSTB/Fits/Summary.pdf}}\\
+    \subfloat[Pre-fit]{\includegraphics[width = 0.8\textwidth]{HPLUSTB/Fits/Summary.pdf}}\\
     \subfloat[Post-fit]{\includegraphics[width = 0.8\textwidth]{HPLUSTB/Fits/Summary_postFit.pdf}}
-    \caption{Comparison of predicted and observed event yields before (a) and after (b) the fit for the 800~GeV hypothesis. The lower panel displays the ratio of the data to the total prediction and the hatched band shows the uncertainties. The pre-fit yields of a charged Higgs boson with a mass of 800~GeV corresponding to a cross-section of 10~pb are overlaid in red.}
+    \caption{Comparison of predicted and observed event yields before (a) and after (b) the fit in each of the signal regions for the 800~GeV hypothesis. The lower panel displays the ratio of the data to the total prediction and the hatched band shows the uncertainties. The pre-fit yields of a charged Higgs boson with a mass of 800~GeV corresponding to a cross-section of 10~pb are overlaid in red.}
     \label{Hplustb:Summaryyieldsplot800}
 \end{figure}
 
@@ -25,7 +25,7 @@ The agreement between the observed and expected event yields in all regions is s
     \small
     \centering
     \caption{
-    Event yields of the $H^\to tb$ signal and background processes in the four analysis regions 
+    Event yields of the $H^\to tb$ signal and background processes in the four signal regions 
     after the fit to the data under the $H^+$ hypotheses of 200 (top) and 800~GeV (bottom).
     The quoted uncertainties take into account correlations and constraints of the nuisance parameters
     and include both the statistical and systematic uncertainties. Negative correlations among \ttb, \ttc\ and \ttl\ modelling uncertainties can cause the uncertainty on the total yields to be smaller than on individual components. \vspace{0.5cm}
@@ -34,7 +34,7 @@ The agreement between the observed and expected event yields in all regions is s
     \toprule\toprule
     \multicolumn{5}{c}{200~GeV $H^+$ hypothesis}  \\
     \midrule \midrule
-        & {5j, 3b} & {5j, $\geq$ 4b} & {$\geq$ 6j, 3b} & {$\geq$ 6j, $\geq$ 4b}   \\
+        & {5j3b} & {5j$\geq$4b} & {$\geq$ 6j3b} & {$\geq$ 6j$\geq$4b}   \\
     \midrule 
   \ttl                  & 45000 $\pm$ 4000 & ~~310 $\pm$ 110 & 32000 $\pm$ 4000 & ~~340 $\pm$ 140  \\ 
   \ttb                  & 29600 $\pm$ 2900 & 2940 $\pm$ 220 & 40200 $\pm$ 3300 & 8000 $\pm$ 500  \\ 
@@ -57,7 +57,7 @@ $H^+\to tb$                & ~~600 $\pm$ 900 & ~~70 $\pm$ 90 & ~~~~700 $\pm$ 100
 \toprule
 \multicolumn{5}{c}{800~GeV $H^+$ hypothesis}   \\
 \midrule \midrule
-        & {5j, 3b} & {5j, $\geq$ 4b} & {$\geq$ 6j, 3b} & {$\geq$ 6j, $\geq$ 4b}   \\
+        & {5j3b} & {5j$\geq$4b} & {$\geq$ 6j3b} & {$\geq$ 6j$\geq$4b}   \\
     \midrule 
 \ttl                  & 46000 $\pm$ 4000 & ~~330 $\pm$ 120 & 33000 $\pm$ 4000 & ~~500 $\pm$ 200   \\
 \ttb                  & 29600 $\pm$ 3100 & 2920 $\pm$ 210 & 41000 $\pm$ 4000 & 8100 $\pm$ 400  \\ 
@@ -90,7 +90,7 @@ Pre-fit and post-fit distributions of the NN output in the signal regions are sh
     \subfloat[5j3b post-fit]{\includegraphics[width = 0.5\textwidth]{HPLUSTB/Fits/Hp200/Post/plot_5jex3bex_NN.pdf}}\\
     \subfloat[5j$\geq$4b pre-fit]{\includegraphics[width = 0.5\textwidth]{HPLUSTB/Fits/Hp200/Pre/plot_5jex4bin_NN.pdf}}
     \subfloat[5j$\geq$4b post-fit]{\includegraphics[width = 0.5\textwidth]{HPLUSTB/Fits/Hp200/Post/plot_5jex4bin_NN.pdf}}\\
-    \caption{Distributions of the NN output in the 5j regions before (left) and after (right) the fit for the 200~GeV $H^+$ mass hypothesis. The lower panels display the ratio of the data to the total prediction. The hatched bands show the corresponding uncertainties.
+    \caption{Distributions of the NN output in the 5j signal regions before (left) and after (right) the fit for the 200~GeV $H^+$ mass hypothesis. The lower panels display the ratio of the data to the total prediction. The hatched bands show the corresponding uncertainties.
     }
     \label{Hplustb:prepost2005j}
 \end{figure}
@@ -102,7 +102,7 @@ Pre-fit and post-fit distributions of the NN output in the signal regions are sh
     \subfloat[$\geq$6j3b post-fit]{\includegraphics[width =0.5\textwidth]{HPLUSTB/Fits/Hp200/Post/plot_6jin3bex_NN.pdf}}\\
     \subfloat[$\geq$6j$\geq$4b pre-fit]{\includegraphics[width =0.5\textwidth]{HPLUSTB/Fits/Hp200/Pre/plot_6jin4bin_NN.pdf}}
     \subfloat[$\geq$6j$\geq$4b post-fit]{\includegraphics[width =0.5\textwidth]{HPLUSTB/Fits/Hp200/Post/plot_6jin4bin_NN.pdf}}\\
-    \caption{Distributions of the NN output in the $\geq$6j regions before (left) and after (right) the fit for the 200~GeV $H^+$ mass hypothesis. The lower panels display the ratio of the data to the total prediction. The hatched bands show the corresponding uncertainties.
+    \caption{Distributions of the NN output in the $\geq$6j signal regions before (left) and after (right) the fit for the 200~GeV $H^+$ mass hypothesis. The lower panels display the ratio of the data to the total prediction. The hatched bands show the corresponding uncertainties.
     }
     \label{Hplustb:prepost2006j}
 \end{figure}
@@ -114,7 +114,7 @@ Pre-fit and post-fit distributions of the NN output in the signal regions are sh
     \subfloat[5j3b post-fit]{\includegraphics[width = 0.5\textwidth]{HPLUSTB/Fits/Hp800/Post/plot_5jex3bex_NN.pdf}}\\
     \subfloat[5j$\geq$4b pre-fit]{\includegraphics[width = 0.5\textwidth]{HPLUSTB/Fits/Hp800/Pre/plot_5jex4bin_NN.pdf}}
     \subfloat[5j$\geq$4b post-fit]{\includegraphics[width = 0.5\textwidth]{HPLUSTB/Fits/Hp800/Post/plot_5jex4bin_NN.pdf}}\\
-    \caption{Distributions of the NN output in the 5j regions before (left) and after (right) the fit for the 800~GeV $H^+$ mass hypothesis. The lower panels display the ratio of the data to the total prediction. The hatched bands show the corresponding uncertainties.
+    \caption{Distributions of the NN output in the 5j signal regions before (left) and after (right) the fit for the 800~GeV $H^+$ mass hypothesis. The lower panels display the ratio of the data to the total prediction. The hatched bands show the corresponding uncertainties.
     }
     \label{Hplustb:prepost8005j}
 \end{figure}
@@ -126,19 +126,19 @@ Pre-fit and post-fit distributions of the NN output in the signal regions are sh
     \subfloat[$\geq$6j3b post-fit]{\includegraphics[width = 0.5\textwidth]{HPLUSTB/Fits/Hp800/Post/plot_6jin3bex_NN.pdf}}\\
     \subfloat[$\geq$6j$\geq$4b pre-fit]{\includegraphics[width = 0.5\textwidth]{HPLUSTB/Fits/Hp800/Pre/plot_6jin4bin_NN.pdf}}
     \subfloat[$\geq$6j$\geq$4b post-fit]{\includegraphics[width = 0.5\textwidth]{HPLUSTB/Fits/Hp800/Post/plot_6jin4bin_NN.pdf}}\\
-    \caption{Distributions of the NN output in the $\geq$6j regions before (left) and after (right) the fit for the 800~GeV $H^+$ mass hypothesis. The lower panels display the ratio of the data to the total prediction. The hatched bands show the corresponding uncertainties.
+    \caption{Distributions of the NN output in the $\geq$6j signal regions before (left) and after (right) the fit for the 800~GeV $H^+$ mass hypothesis. The lower panels display the ratio of the data to the total prediction. The hatched bands show the corresponding uncertainties.
     }
     \label{Hplustb:prepost8006j}
 \end{figure}
 \clearpage
 
-The nuisance parameters and normalisation factors are different to the original values, as the fit accommodates for normalisation and shape differences between the observed and predicted distributions. The normalisation factors are summarised in Figure~\ref{Hplustb:fittedfactorsvsmass}, and range from 1.33 to 1.36 (0.94 to 1.1) with a typical uncertainty of 0.23 (0.48) for the \ttb\ (\ttc) background, depending on the $H^+$ mass hypothesis fit. Regarding the signal strength, the largest deviation with respect to the \acrshort{SMlabel} hypothesis is observed in the low-mass region, between 225--275~GeV. The deviation is negative and does not represent evidence of the signal, it is understood as the signal is the most similar to the \ttbar+HF and results in high anti-correlations in the fit.
+The nuisance parameters and normalisation factors are different to the original values, as the fit accommodates for normalisation and shape differences between the observed and predicted distributions. The normalisation factors are summarised in Figure~\ref{Hplustb:fittedfactorsvsmass}, and range from 1.33 to 1.36 (0.94 to 1.1) with a typical uncertainty of 0.23 (0.48) for the \ttb\ (\ttc) background, depending on the $H^+$ mass hypothesis fit. Regarding the signal strength, the largest deviation with respect to the \acrshort{SMlabel} hypothesis is observed in the low-mass region, between 225--275~GeV. The deviation is negative and does not represent evidence of the signal, it is understood as the signal is the most similar to the \ttHF\ and results in high anti-correlations in the fit.
 
 \begin{figure}[htb]
     \RawFloats
     \centering
     \includegraphics[width = 0.8\textwidth]{HPLUSTB/Fits/Fittedfactors.pdf}
-    \caption{Evolution of the obtained signal strength and the \ttbar+HF normalisation factors as
+    \caption{Evolution of the obtained signal strength and the \ttHF\ normalisation factors as
     a function of the $H^+$ mass with the corresponding uncertainties. The signal strength is normalised to 1~pb.   
     }
     \label{Hplustb:fittedfactorsvsmass}
@@ -147,7 +147,7 @@ The nuisance parameters and normalisation factors are different to the original 
 
 \subsection{Dominant uncertainties}
 
-The uncertainty associated to the fit result is mainly driven by systematic uncertainties. The different sources are ranked by the impact on the signal strength in terms of its shift from the default result, $\Delta\mu$, evaluated in separate fits where the associated nuisance parameters are fixed to $\hat{\theta}\pm\Delta\hat{\theta}$. $\hat{\theta}$ is the best fit value of the given nuisance parameter while $\Delta\hat{\theta}$ is the corresponding one standard deviation. Figure~\ref{Hplustb:ranking200800} lists the 20 top ranked nuisance parameters of the 200 and 800~GeV signal hypothesis fits. The upper axis represents the scale for the pre-fit and post-fit impact on $\mu$. The pre-fit (post-fit) impact is given as $\hat{\theta} \pm \Delta\theta (\hat{\theta} \pm \Delta\hat{\theta})$, with $\Delta\theta$ ($\Delta\hat{\theta}$) the pre-fit (post-fit) uncertainties. The post-fit value of $\Delta\hat{\theta}$ is typically smaller than the one standard deviation prior, $\Delta\theta$, due to constraints from the fit to data. The pre-fit and post-fit impacts are shown as empty and filled rectangles, respectively. The lower axis indicates the scale of the pull of the nuisance parameter defined as $\frac{\hat{\theta} -\theta_0}{\Delta\theta}$ with $\theta_0$ the nominal pre-fit value. The pulls are indicated as black points with their respective error bar while the background normalisations ($k$)and the single-bin statistical uncertainties ($\gamma$) are drawn with $\theta_0=0$ and without the pre-fit impact, as it is not properly defined.
+The uncertainty associated to the fit result is mainly driven by systematic uncertainties. The different sources are ranked by the impact on the signal strength in terms of its shift from the default result, $\Delta\mu$, evaluated in separate fits where the associated nuisance parameters are fixed to $\hat{\theta}\pm\Delta\hat{\theta}$. $\hat{\theta}$ is the best fit value of the given nuisance parameter while $\Delta\hat{\theta}$ is the corresponding one standard deviation. Figure~\ref{Hplustb:ranking200800} lists the 20 top ranked nuisance parameters of the 200 and 800~GeV signal hypothesis fits. The upper axis represents the scale for the pre-fit and post-fit impact on $\mu$. The pre-fit (post-fit) impact is given as $\hat{\theta} \pm \Delta\theta (\hat{\theta} \pm \Delta\hat{\theta})$, with $\Delta\theta$ ($\Delta\hat{\theta}$) the pre-fit (post-fit) uncertainties. The post-fit value of $\Delta\hat{\theta}$ is typically smaller than the one standard deviation prior $\Delta\theta$, due to constraints from the fit to data. The pre-fit and post-fit impacts are shown as empty and filled rectangles, respectively. The lower axis indicates the scale of the pull of the nuisance parameter defined as $\frac{\hat{\theta} -\theta_0}{\Delta\theta}$ with $\theta_0$ the nominal pre-fit value. The pulls are indicated as black points with their respective error bar while the background normalisations ($k$) and the single-bin statistical uncertainties ($\gamma$) are drawn directly, with $\theta_0=0$ and without the pre-fit impact as it is not properly defined.
 
 \begin{figure}[htb]
     \RawFloats
@@ -160,7 +160,7 @@ The uncertainty associated to the fit result is mainly driven by systematic unce
     \label{Hplustb:ranking200800}
 \end{figure}
 
-The five highest-ranked nuisance parameters of the 200~GeV signal hypothesis fit are all associated to the $\ttbar+\geq1b/c$, where the two dominant systematic uncertainties are from the \ttb\ NLO matching (retrieved from the comparison of \MGMCatNLO+\PYTHIA~8 and \POWHEGBOX+\PYTHIA~8) and the 4FS \ttb\ (from the comparison of 4FS and 5FS). Besides the \ttbar\ modelling, jet energy resolution and $b$-tagging nuisance parameters appear in the ranking, which have a very small impact in comparison. For the 800~GeV signal hypothesis fit, six $b$-tagging uncertainty components show up in the first 10, where the two top uncertainties are from the \ttb\ renormalisation scale (retrieved varying $\mu_R$) and $k(\ttc)$.
+The five highest-ranked nuisance parameters of the 200~GeV signal hypothesis fit are all associated to the $\ttbar+$$\geq$1$b/c$, where the two dominant systematic uncertainties are from the \ttb\ NLO matching (retrieved from the comparison of \MGMCatNLOPYTHIA~8 and \POWHEGPYTHIA~8) and the 4FS \ttb\ (from the comparison of 4FS and 5FS). Besides the \ttbar\ modelling, jet energy resolution and $b$-tagging nuisance parameters appear in the ranking, which have a very small impact in comparison. For the 800~GeV signal hypothesis fit, six $b$-tagging uncertainty components show up in the first 10, and the two top uncertainties are from the \ttb\ renormalisation scale (retrieved varying $\mu_R$) and $k(\ttc)$.
 
 Table~\ref{Hplustb:rankingbreak} shows the impact on the signal strength evaluated in groups of systematic uncertainty sources for the 200 and 800~GeV signal hypothesis fits. The total uncertainty is dominated by the systematic uncertainties, where \ttb\ modelling dominates for both masses. For the 800~GeV fit, the $b$-tagging related uncertainties play also a leading role. Meanwhile, the sub-leading uncertainties for the 200~GeV fit are related to the modelling of \ttc, \ttl\ or jets.
 
@@ -204,7 +204,7 @@ Table~\ref{Hplustb:rankingbreak} shows the impact on the signal strength evaluat
 
 \section{Exclusion limits}
 
-No significant excess above the expected \acrshort{MClabel} background is observed in all regions and mass intervals, hence upper limits on the signal production are derived as function of the $H^+$ mass. Figure~\ref{Hplustb:xseclimits} shows the 95\% confidence level (CL) upper limits on $\sigma(pp\to tbH^+)\times$B$(H^+ \to tb)$ obtained using the CL$_\text{S}$ method. Different predictions for the $H^+$ yields are shown without uncertainties. The observed (expected) limits range from $\sigma$ $\times$ B = 3.6 (2.6)~pb at $m_{H^+}= 200$~GeV to $\sigma\times$B = 0.036 (0.019)~pb at $m_{H^+}= 2$~TeV. Compared to the previous \acrshort{ATLASlabel} search for with 36~fb$^{-1}$, the observed $\sigma\times$B limits improved by 5\% to 70\%, depending on the $H^+$ mass, apart from the lowest one.
+No significant excess above the expected \acrshort{MClabel} background is observed in all regions and mass intervals, hence upper limits on the signal production are derived as function of the $H^+$ mass. Figure~\ref{Hplustb:xseclimits} shows the 95\% confidence level (CL) upper limits on $\sigma(pp\to tbH^+)\times$B$(H^+ \to tb)$ obtained using the CL$_\text{S}$ method. Different predictions for the $H^+$ yields are shown without uncertainties. The observed (expected) limits range from $\sigma$ $\times$ B = 3.6 (2.6)~pb at $m_{H^+}= 200$~GeV to $\sigma\times$B = 0.036 (0.019)~pb at $m_{H^+}= 2$~TeV. Compared to the previous \acrshort{ATLASlabel} search for with 36~fb$^{-1}$~\cite{ATLASHptb2018}, the observed $\sigma\times$B limits improved by 5\% to 70\%, depending on the $H^+$ mass, apart from the lowest one.
 
 \begin{figure}[htb]
     \RawFloats
@@ -213,18 +213,12 @@ No significant excess above the expected \acrshort{MClabel} background is observ
     \caption{Observed and expected upper limits for the production of $H^+\to tb$ in association with
     a top quark and a bottom quark. The bands surrounding the expected limit show the 68\% and
     95\% confidence intervals. The red lines show the observed and expected 95\% CL exclusion limits
-    obtained with the 36 fb$^{-1}$ data sample\cite{ATLASHptb2018}. Theory predictions are shown for two representative values of $\tan\beta$ in the hMSSM benchmark scenario. Uncertainties in the predicted $H^+$ cross-sections or branching ratios are not considered.}
+    obtained with the 36 fb$^{-1}$ data sample~\cite{ATLASHptb2018}. Theory predictions are shown for two representative values of $\tan\beta$ in the hMSSM benchmark scenario. Uncertainties in the predicted $H^+$ cross-sections or branching ratios are not considered.}
     \label{Hplustb:xseclimits}
 \end{figure}
 
-The obtained $H^+\to tb$ production upper limits results are model independent, and therefore can be interpreted in the context of various \acrshort{BSMlabel} theories, as long as the topology and kinematics of the targeted channel remains equivalent. Figure~\ref{Hplustb:exclusionstanb} shows 95\% CL exclusion limits set on the $\tan\beta$ parameter as a function of $m_{H^+}$ for various benchmark scenarios in the MSSM. It is the first time that they are shown for all $\text{M}^{125}_\text{h}$ available scenarios using the $H^+\to tb$ channel. In the hMSSM framework, effective couplings of the lighter Higgs boson to the top quark, bottom quark and vector bosons are derived from fits to LHC data on the production and decay rates of the observed Higgs boson, including the limits from the search for heavier neutral and charged Higgs boson states. The $\text{M}^{125}_\text{h}$, $\text{M}^{125}_\text{h}$($\tilde{chi}$), $\text{M}^{125}_{\text{h}_1}$($\tilde{tau}$), $\text{M}^{125}_\text{h}$(alignment) and $\text{M}^{125}_\text{h}$(CPV) scenarios also feature a scalar particle with mass and couplings compatible with those of the observed Higgs
-boson, and force a significant portion of their parameter space to be compatible with the limits from searches for supersymmetric particles. In the $\text{M}^{125}_\text{h}$ scenario, all supersymmetric particles are relatively heavy and the decays of the MSSM Higgs bosons are essentially unaffected, whereas the $\text{M}^{125}_\text{h}$($\tilde{chi}$) and $\text{M}^{125}_{\text{h}_1}$($\tilde{tau}$) models include either light charginos and neutralinos or light staus, respectively. In both cases a charged Higgs boson of sufficiently high mass is allowed to decay into the supersymmetric particles. Finally, the value of $\tan\beta$ in both the $\text{M}^{125}_\text{h}$(alignment) scenario, characterised by one of the two neutral CP-even scalars having couplings like those of the SM Higgs boson, and the $\text{M}^{125}_\text{h}$(CPV) scenario, which includes CP violation in the Higgs sector, is already constrained to be in the 1--20 range by previous searches at the LHC %https://arxiv.org/abs/1409.5615
-. Uncertainties in the predicted $H^+$ cross-sections or branching ratios are not included in the limits. For all scenarios except the hMSSM, Higgs boson masses and mixing (and effective Yukawa couplings) have been
-calculated with the code FeynHiggs %https://arxiv.org/abs/hep-ph/9812320 https://arxiv.org/abs/hep-ph/9812472 https://arxiv.org/abs/hep-ph/0212020 https://arxiv.org/abs/1312.4937 https://arxiv.org/abs/hep-ph/0611326 https://arxiv.org/abs/1608.01880 https://arxiv.org/abs/1706.00346
-. Whereas in the hMSSM the branching ratios are computed solely with HDECAY %https://arxiv.org/abs/1801.09506 https://arxiv.org/abs/hep-ph/9704448
-, all other scenarios combine the most
-precise results of FeynHiggs, HDECAY and PROPHECY4f %https://arxiv.org/abs/hep-ph/0604011 https://arxiv.org/abs/hep-ph/0611234
-. In the context of these scenarios, $\tan\beta$ values below 1 are observed to be excluded at 95\% CL for $H^+$ masses between 200 and $\sim$790 GeV. High values of $\tan\beta$ between 34 and 60 are excluded in a similar mass range in the hMSSM and $\text{M}^{125}_\text{h}$($\tilde{chi}$) models. The most stringent limit, $\tan\beta$ < 2.1 excluded at 95\% CL, is set for the $H^+$ mass hypothesis of 225 GeV in the hMSSM and for the 250 GeV $H^+$ mass hypothesis in the different $\text{M}^{125}_\text{h}$ models. The low $\tan\beta$ and high $H^+$ mass parameter space was not excluded by any other analysis before, while the high $\tan\beta$ was already excluded by the ATLAS $H^+\to\tau\nu$ search. Compared to previous results of the same search channel, this analysis excludes a broader region of large $\tan\beta$. Additionally, an extended region of low $\tan\beta$ and low and high $H^+$ masses is also excluded.
+The obtained $H^+\to tb$ production upper limits results are model independent, and therefore can be interpreted in the context of various \acrshort{BSMlabel} theories as long as the topology and kinematics of the targeted channel remains equivalent. Figure~\ref{Hplustb:exclusionstanb} shows 95\% CL exclusion limits set on the $\tan\beta$ parameter as a function of $m_{H^+}$ for various benchmark scenarios in the MSSM. It is the first time that they are shown for all $\text{M}^{125}_\text{h}$ available scenarios using the $H^+\to tb$ channel. In the hMSSM framework, effective couplings of the lighter Higgs boson to the top quark, bottom quark and vector bosons are derived from fits to LHC data on the production and decay rates of the observed Higgs boson, including the limits from the search for heavier neutral and charged Higgs boson states. The $\text{M}^{125}_\text{h}$, $\text{M}^{125}_\text{h}$($\tilde{\chi}$), $\text{M}^{125}_{\text{h}_1}$($\tilde{\tau}$), $\text{M}^{125}_\text{h}$(alignment) and $\text{M}^{125}_\text{h}$(CPV) scenarios also feature a scalar particle with mass and couplings compatible with those of the observed Higgs
+boson, and force a significant portion of their parameter space to be compatible with the limits from searches for supersymmetric particles. In the $\text{M}^{125}_\text{h}$ scenario, all supersymmetric particles are relatively heavy and the decays of the MSSM Higgs bosons are essentially unaffected, whereas the $\text{M}^{125}_\text{h}$($\tilde{chi}$) and $\text{M}^{125}_{\text{h}_1}$($\tilde{tau}$) models include either light charginos and neutralinos or light staus, respectively. In both cases a charged Higgs boson of sufficiently high mass is allowed to decay into the supersymmetric particles. Finally, the value of $\tan\beta$ in both the $\text{M}^{125}_\text{h}$(alignment) scenario, characterised by one of the two neutral CP-even scalars having couplings like those of the SM Higgs boson, and the $\text{M}^{125}_\text{h}$(CPV) scenario, which includes CP violation in the Higgs sector, is already constrained to be in the 1--20 range by previous searches at the \acrshort{LHClabel}~\cite{PhysRevD.91.075015}. Uncertainties in the predicted $H^+$ cross-sections or branching ratios are not included in the limits. For all scenarios except the hMSSM, Higgs boson masses and mixing (and effective Yukawa couplings) have been calculated with the code FeynHiggs~\cite{Heinemeyer_2000,Heinemeyer_1999,Degrassi_2003,Hahn_2014,Frank_2007,Bahl_2016,Bahl_2018}. Whereas in the hMSSM the branching ratios are computed solely with HDECAY~\cite{Djouadi_2019,Djouadi_1998}, all other scenarios combine the most precise results of FeynHiggs, HDECAY and PROPHECY4f~\cite{Bredenstein_2006,Bredenstein_2007}. In the context of these scenarios, $\tan\beta$ values below 1 are observed to be excluded at 95\% CL for $H^+$ masses between 200 and $\sim$790 GeV. High values of $\tan\beta$ between 34 and 60 are excluded in a similar mass range in the hMSSM and $\text{M}^{125}_\text{h}$($\tilde{\chi}$) models. The most stringent limit, $\tan\beta$ < 2.1 excluded at 95\% CL, is set for the $H^+$ mass hypothesis of 225 GeV in the hMSSM and for the 250 GeV $H^+$ mass hypothesis in the different $\text{M}^{125}_\text{h}$ models. The low $\tan\beta$ and high $H^+$ mass parameter space was not excluded by any other analysis before, while the high $\tan\beta$ was already excluded by the \acrshort{ATLASlabel} $H^+\to\tau\nu$ search~\cite{Hplustaunu16}. Compared to previous results of the same search channel~\cite{ATLASHptb2018}, this analysis excludes a broader region of large $\tan\beta$. Additionally, an extended region of low $\tan\beta$ and low and high $H^+$ masses is also excluded.
 
 \begin{figure}[htb]
     \RawFloats
@@ -250,26 +244,21 @@ precise results of FeynHiggs, HDECAY and PROPHECY4f %https://arxiv.org/abs/hep-p
 
 \section{2HDM+a interpretation}
 
-The $H^+$ upper limits results can be straightforwardly interpreted in addition in the context of the 2HDM+a as the production and decay modes, cross-sections and branching ratios of the charged Higgs bosons are identical in both models. The interpretation in this model interpreted is performed for the first time.
+The $H^+$ upper limits results can be straightforwardly interpreted in addition in the context of the 2HDM+a, as the production and decay modes, cross-sections and branching ratios of the charged Higgs bosons are identical in both models. The interpretation of $H^\pm\to tb$ results in this model is performed for the first time in literature.
 
-The 2HDM+a model %https://arxiv.org/abs/1701.07427  https://arxiv.org/abs/1810.09420 
-is built upon simplified Dark Matter~(DM) models, postulating a DM sector composed of a single fermionic DM particle and a pseudo-scalar mediator on top of the 2HDM assumption of building the Higgs sector with two complex Higgs doublets. In this particular model, the interactions between the \acrshort{SMlabel} and DM sectors is mediated by a pseudo-scalar, $a$, although other models contemplate axial-vectors or scalars as mediators %https://arxiv.org/abs/1507.00966 https://arxiv.org/abs/1603.04156 https://arxiv.org/abs/1703.05703
-. The choice is motivated by the potential in collider searches, as direct-detection is suppressed %https://arxiv.org/abs/1810.01039
-and does not provide strong constrains.
+The 2HDM+a model~\cite{Bauer_2017,10.48550/arxiv.1810.09420} is built upon simplified Dark Matter~(DM) models, postulating a DM sector composed of a single fermionic DM particle and a pseudo-scalar mediator on top of the 2HDM assumption of building the Higgs sector with two complex Higgs doublets. In this particular model, the interactions between the \acrshort{SMlabel} and DM sectors is mediated by a pseudo-scalar $a$, although other models contemplate axial-vectors or scalars~\cite{Abercrombie_2020,10.48550/arxiv.1603.04156,10.48550/arxiv.1703.05703}. The choice is motivated by the potential in collider searches, as direct-detection of pseudo-scalars is suppressed~\cite{Abe_2019} and does not provide strong constrains.
 
-The phenomenology of the model has the five Higgs bosons from the 2HDM sector: a light CP even boson $h$, a heavy CP-even boson $H$, a CP-odd boson $A$ and the charged bosons $H^+$. As in the previous models, the type-II structure is considered together with the alignment limit %https://arxiv.org/abs/hep-ph/0207010
-, to identify the $h$ state with the \acrshort{SMlabel} Higgs boson. The mediator $a$ couples the \acrshort{SMlabel} fermions and the Dirac DM particle $\chi$. In addition, the $a$ couples to \acrshort{SMlabel} fermions proportionally to the Yukawa couplings and mixes with $A$ with the mixing angle $\theta$. Figure~\ref{Hplustb:2hdmafeynman} shows a Feynman diagram with an interaction involving $H^+$, $a$ and $\chi$. A total of 14 parameters are needed to fully determine the model: the masses of the five 2HDM Higgs bosons; the mass of the mediator $a$; the mass of the DM $\chi$; the coupling between $a$ and $\chi$, $g_\chi$; the \acrshort{EW} \acrshort{VEV}, $v$; the \acrshort{VEV}s 2HDM ratio, $\tan\beta$; the mixing angles of the CP-even and CP-odd states, $\alpha$ and $\theta$, respectively; and three quartic couplings between the scalar doublets and $a$.
+The phenomenology of the model has the five Higgs bosons from the 2HDM sector: a light CP even boson $h$, a heavy CP-even boson $H$, a CP-odd boson $A$ and the charged bosons $H^+$. As in the previous models, the Type-II structure is considered together with the alignment limit~\cite{Gunion_2003}, to identify the $h$ state with the \acrshort{SMlabel} Higgs boson. The mediator $a$ couples the \acrshort{SMlabel} fermions and the Dirac DM particle $\chi$. In addition, $a$ couples to \acrshort{SMlabel} fermions proportionally to the Yukawa couplings and mixes with $A$ with mixing angle $\theta$. Figure~\ref{Hplustb:2hdmafeynman} shows a Feynman diagram with an interaction involving $H^+$, $a$ and $\chi$. A total of 14 parameters are needed to fully determine the model: the masses of the five 2HDM Higgs bosons; the mass of the mediator $a$; the mass of the DM $\chi$; the coupling between $a$ and $\chi$, $g_\chi$; the \acrshort{EW} \acrshort{VEV}, $v$; the \acrshort{VEV}s 2HDM ratio, $\tan\beta$; the mixing angles of the CP-even and CP-odd states, $\alpha$ and $\theta$, respectively; and three quartic couplings between the scalar doublets and the mediator.
 
 \begin{figure}[htb]
     \RawFloats
     \centering
     \includegraphics[width = 0.45\textwidth]{HPLUSTB/DM/feynmanHmin.pdf}
-    \caption{Representative Feynman diagram for the dominant gluon-induced production and decay mode in the 2HDM+a involving the charged Higgs boson.}
+    \caption{Representative Feynman diagram for the dominant gluon-induced production and decay mode in the 2HDM+a involving a charged Higgs boson, the DM particle and the pseudo-scalar mediator.}
     \label{Hplustb:2hdmafeynman}
 \end{figure}
 
-This model predicts a wide variety of signatures and \acrshort{ATLASlabel} has summary results which consist in a variety of dark matter searches using 139~fb$^{-1}$. The most prominent signatures, the production of DM in association with a Higgs boson $\MET+h(\bbar)$ %https://arxiv.org/abs/2108.13391
-and with a $Z$ boson $\MET+Z(\ell^+\ell^-)$ are used in a combined likelihood fit for the statistical combination. Further signatures are related to DM production in association with a top quark and a W boson (\MET+$Wt$), visible decays of the additional heavy Higgs bosons, and invisible decays of the SM Higgs boson to DM. 
+This model predicts a wide variety of signatures and \acrshort{ATLASlabel} has summary results which consist in a variety of dark matter searches using 139~fb$^{-1}$~\cite{Hpluscomb}. The most prominent signatures, the production of DM in association with a Higgs boson $\MET+h(\bbar)$~\cite{2108.13391} and with a $Z$ boson $\MET+Z(\ell^+\ell^-)$ are used in a combined likelihood fit for the statistical combination. Further signatures are related to DM production in association with a top quark and a W boson (\MET+$Wt$), visible decays of the additional heavy Higgs bosons, and invisible decays of the SM Higgs boson to DM. 
 
 The nominal $H^+$ samples are compared to samples generated with different 4FS 2HDM+a models for a range of relevant kinematic variables to verify that the signal signatures are the same, and hence the interpretation is possible. Figure~\ref{Hplustb:2hdmatruth} shows the compatibility of the truth jet multiplicity for various models in two $H^+$ example masses.
 
@@ -283,9 +272,9 @@ The nominal $H^+$ samples are compared to samples generated with different 4FS 2
     \label{Hplustb:2hdmatruth}
 \end{figure}
 
-To generate the exclusion figures, predictions for the $pp\to tbH^+$ cross-section and the $H^+\to tb$ BR have been computed for the 4FS 2HDM+a NLO model for different values: $\sin\theta\in[0.1,0.9]$, $\tan\beta\in[0.3,50]$, $m_a\in[100\text{ GeV},800\text{ GeV}]$, $m_{H^+}\in[200\text{ GeV},1000\text{ GeV}]$. In addition, different predictions were computed for $m_\chi$ in the 20--500~GeV range without any relevant change.
+To generate the exclusion figures, predictions for the $pp\to tbH^+$ cross-section and B($H^+\to tb$) have been computed for the 4FS 2HDM+a NLO model for different values: $\sin\theta\in[0.1,0.9]$, $\tan\beta\in[0.3,50]$, $m_a\in[100\text{ GeV},800\text{ GeV}]$, $m_{H^+}\in[200\text{ GeV},1000\text{ GeV}]$. In addition, different predictions were computed for $m_\chi$ in the 20--500~GeV range without any relevant change.
 
-Figure~\ref{Hplustb:BRprodexclmassvsmass} shows the dependence of the $H^+\to tb$ BR, the production of the signal and the exclusion result as a function of $m_{H^+}$ and $m_a$, for $\sin\theta=0.35,0.7$ and $\tan\beta=1$. As expected, the BR depends on both masses and decreases from $\sim$100\% at $m_{H^+}\sim m_a+80$~GeV, when the unrelated $H^+\to aW$ and $H^+\to WH$ decays are allowed. The dependence is small as $a$ is not directly targetted by the $H^+$ analysis. The corresponding cross-section does not change with $\sin\theta$. The exclusion contour is extracted in the $m_{H^+}--m_a$ plane from the analysis limits and the predicted production in the 2HDM+a.
+Figure~\ref{Hplustb:BRprodexclmassvsmass} shows the dependence of B($H^+\to tb$), the production of the signal and the exclusion result as a function of $m_{H^+}$ and $m_a$, for $\sin\theta=0.35,0.7$ and $\tan\beta=1$. As expected, the branching fraction depends on both masses and decreases from $\sim$100\% at $m_{H^+}\sim m_a+80$~GeV, when the unrelated $H^+\to aW$ and $H^+\to WH$ decays are allowed. The dependence is small as $a$ is not directly targetted by the $H^+$ analysis. The corresponding cross-section does not change with $\sin\theta$. The exclusion contour is extracted in the $m_{H^+}$--$m_a$ plane from the analysis limits and the predicted production in the 2HDM+a.
 
 \begin{figure}[htb]
     \RawFloats
@@ -301,7 +290,7 @@ Figure~\ref{Hplustb:BRprodexclmassvsmass} shows the dependence of the $H^+\to tb
        {\includegraphics[width = 0.33\textwidth]{HPLUSTB/DM/Limit2HDMa07.pdf}} 
        \subfloat[]
        {\includegraphics[width = 0.33\textwidth]{HPLUSTB/DM/2HDMa07.pdf}} 
-    \caption{(a) and (d) Branching ratio of $H^+\to tb$ as a function of the $H^+$ mass for $\sin\theta=0.35(0.7)$ at the top(bottom). Predictions are compared between the 2HDM Type-II (2HDM-II) and 2HDM+a for various $a$ masses. (b) and (e) Expected and observed cross-section times branching ratio limits of the $H^+$ process, with various 2HDM+a predictions overlaid. (c) and (f) Observed and expected exclusion plots in the $H^+--a$ mass plane.}
+    \caption{(a) and (d) Branching ratio of $H^+\to tb$ as a function of the $H^+$ mass for $\sin\theta=0.35(0.7)$ at the top(bottom). Predictions are compared between the 2HDM Type-II (2HDM-II) and 2HDM+a for various $a$ masses. (b) and (e) Expected and observed cross-section times branching ratio limits of the $H^+$ process, with various 2HDM+a predictions overlaid. (c) and (f) Observed and expected exclusion plots in the $H^+$--$a$ mass plane.}
     \label{Hplustb:BRprodexclmassvsmass}
 \end{figure}
 
@@ -312,29 +301,29 @@ Figure~\ref{Hplustb:2HDMa_mA_ma} shows the exclusion contours including other \a
     \centering
     \includegraphics[width = 0.45\textwidth]{HPLUSTB/DM/mA_ma_035_1_10.pdf}
     \includegraphics[width = 0.45\textwidth]{HPLUSTB/DM/mA_ma_07_1_10.pdf}
-    \caption{Observed (solid lines) and expected (dashed lines) exclusion regions at 95\% CL in the ($m_a, m_A)$ plane with $\sin\theta=0.35$ (left) and $\sin\theta=0.7$ (right). The results are shown for several individual searches as well as the combination of the $\MET+Z(\ell^+\ell^-)$ and $\MET+h(\bbar)$ searches. The dashed grey regions indicate the region where the width of the Higgs bosons exceeds 20\% of its mass.}
+    \caption{Observed (solid lines) and expected (dashed lines) exclusion regions at 95\% CL in the $m_a$--$m_A$ plane with $\sin\theta=0.35$ (left) and $\sin\theta=0.7$ (right). The results are shown for several individual searches as well as the combination of the $\MET+Z(\ell^+\ell^-)$ and $\MET+h(\bbar)$ searches. The dashed grey regions indicate the region where the width of the Higgs bosons exceeds 20\% of its mass.}
     \label{Hplustb:2HDMa_mA_ma}
 \end{figure}
 
-Figure~\ref{Hplustb:2HDMa_tanb_mA} shows the exclusion contours as a function of $m_A$ and $\tan\beta$, for $\sin\theta=0.35,0.7$ and $m_a=250$~GeV. Similarly, the parameter space is almost fully excluded by the $\MET+ Z(\ell^+\ell^-)$ search, except that$\MET+ Wt$ search also excludes low $\tan\beta$ region for large values. In addition, the $H^+\to tb$ search provides complementary sensitivity to the other searches, although with a moderate dependence in the lower parameter region.
+Figure~\ref{Hplustb:2HDMa_tanb_mA} shows the exclusion contours as a function of $m_A$ and $\tan\beta$, for $\sin\theta=0.35,0.7$ and $m_a=250$~GeV. Similarly, the parameter space is almost fully excluded by the $\MET+ Z(\ell^+\ell^-)$ search, except that $\MET+ Wt$ search also excludes low $\tan\beta$ region for large values. In addition, the $H^+\to tb$ search provides complementary sensitivity to the other searches, although with a moderate dependence in the lower parameter region.
 
 \begin{figure}[htb]
     \RawFloats
     \centering
     \includegraphics[width = 0.45\textwidth]{HPLUSTB/DM/tanb_mA_035_250_10.pdf}
     \includegraphics[width = 0.45\textwidth]{HPLUSTB/DM/tanb_mA_07_250_10.pdf}
-    \caption{Observed (solid lines) and expected (dashed lines) exclusion regions at 95\% CL in the $(m_A, \tan\beta)$ plane with $\sin\theta=0.35$ (left) and $\sin\theta=0.7$ (right). The results are shown for several individual searches as well as the combination of the $\MET+Z(\ell^+\ell^-)$ and $\MET+h(\bbar)$ searches. The dashed grey regions indicate the region where the width of the Higgs bosons exceeds 20\% of its mass.}
+    \caption{Observed (solid lines) and expected (dashed lines) exclusion regions at 95\% CL in the $m_A$--$\tan\beta$ plane with $\sin\theta=0.35$ (left) and $\sin\theta=0.7$ (right). The results are shown for several individual searches as well as the combination of the $\MET+Z(\ell^+\ell^-)$ and $\MET+h(\bbar)$ searches. The dashed grey regions indicate the region where the width of the Higgs bosons exceeds 20\% of its mass.}
     \label{Hplustb:2HDMa_tanb_mA}
 \end{figure}
 
-Figure~\ref{Hplustb:2HDMa_tanb_ma} shows a similar scan to the one in Figure 8 but varying the $m_a$ and fixing $m_A=600$~GeV. Again, the strongest exclusion is observed from the $\MET+ Z(\ell^+\ell^-)$ and $\MET+ h(\bbar)$ searches. An increase in the exclusion range is found for large values of $\tan\beta$, related to the contributions from $\bbar$-initiated signal production, dominant at large values of $\tan\beta$. The $H^+\to tb$ search provides complementary sensitivity at low $\tan\beta$ values with very small dependence on $m_a$.
+Figure~\ref{Hplustb:2HDMa_tanb_ma} shows a similar scan to the one in Figure 8 but varying the $m_a$ and setting $m_A=600$~GeV. Again, the strongest exclusion is observed from the $\MET+ Z(\ell^+\ell^-)$ and $\MET+ h(\bbar)$ searches. An increase in the exclusion range is found for large values of $\tan\beta$, related to the contributions from $\bbar$-initiated signal production, dominant at large values of $\tan\beta$. The $H^+\to tb$ search provides complementary sensitivity at low $\tan\beta$ values with very small dependence on $m_a$.
 
 \begin{figure}[htb]
     \RawFloats
     \centering
     \includegraphics[width = 0.45\textwidth]{HPLUSTB/DM/tanb_ma_035_600_10.pdf}
     \includegraphics[width = 0.45\textwidth]{HPLUSTB/DM/tanb_ma_07_600_10.pdf}
-    \caption{Observed (solid lines) and expected (dashed lines) exclusion regions at 95\% CL in the $(m_a, \tan\beta)$ plane with $\sin\theta=0.35$ (left) and $\sin\theta=0.7$ (right). The results are shown for several individual searches as well as the combination of the $\MET+Z(\ell^+\ell^-)$ and $\MET+h(\bbar)$ searches. The dashed grey regions indicate the region where the width of the Higgs bosons exceeds 20\% of its mass.}
+    \caption{Observed (solid lines) and expected (dashed lines) exclusion regions at 95\% CL in the $m_a$--$\tan\beta$ plane with $\sin\theta=0.35$ (left) and $\sin\theta=0.7$ (right). The results are shown for several individual searches as well as the combination of the $\MET+Z(\ell^+\ell^-)$ and $\MET+h(\bbar)$ searches. The dashed grey regions indicate the region where the width of the Higgs bosons exceeds 20\% of its mass.}
     \label{Hplustb:2HDMa_tanb_ma}
 \end{figure}
 
@@ -360,74 +349,23 @@ Finally, the experimental reach of the different searches to the DM mass $m_\chi
     \label{Hplustb:2HDMa_mchi}
 \end{figure}
 
-
----
-CONF %https://cds.cern.ch/record/2777863/files/ATLAS-CONF-2021-036.pdf
-The ATLAS experiment [6] at the Large Hadron Collider (LHC) [7] is a general-purpose detector that allows
-for a wide range of DM searches. In the following, the focus will be entirely on the hypothesis that DM is a
-weakly interacting massive particle (WIMP) [8] and, more specifically, a Dirac fermion. WIMPs could in
-principle interact with the SM sector in different ways. A particular strength of collider searches lies in the
-fact that the high-energy collisions of SM particles could not only produce DM directly under controlled
-experimental conditions but also provide access to particles mediating the interactions between DM and
-the SM sector. A mediator produced in a collision could decay to DM particles, which themselves could
-not be detected and would lead to missing transverse momentum (with magnitude \MET). Alternatively, a
-mediator could decay back into SM particles, from which its properties could be reconstructed.
-Dark matter searches at the LHC explore both avenues in the quest to solve the puzzle of DM. Invisible
-mediator decays can be detected only if the mediator is produced in association with another particle,
-for example from initial-state radiation that results in a hadronic jet, leading to a characteristic \MET+jet
-signature [9, 10]. Visible mediator decays allow for the reconstruction of the mediator particle from
-its decay products, for example in the context of resonance searches, if the mediator is produced in the
-s-channel [11-15].
-
-The above-mentioned searches are traditionally interpreted in the context of so-called simplified models of
-DM, which rely on a minimal set of new particles and interactions. The most commonly used among these
-simplified models postulate the existence of a single fermionic DM particle and a single mediator, which,
-depending on the model, could be a vector, axial-vector, scalar, or pseudo-scalar particle [16-18]. The
-models are characterised by a minimal set of free parameters, namely the masses of the DM and mediator
-particles and the couplings of the mediator to the SM and dark sectors.
-
-In this note, a more complete benchmark model is used. It provides an ultra-violet complete and
-renormalisable framework for the interpretation of DM searches. It is built upon the assumption that the
-SM Higgs boson is part of an extended Higgs sector with two complex Higgs doublets. This is a key
-assumption in many theories extending the SM, such as supersymmetry [19]. The interaction between the
-SM sector and DM in this model is mediated by a pseudoscalar particle a. Pseudoscalar mediators are not
-strongly constrained by direct-detection experiments because the tree-level amplitude for the DM-nucleon
-elastic scattering is suppressed by the momentum transfer in the non-relativistic limit [20]. This renders
-collider searches for these processes particularly useful.
-
-The model, referred to as Two Higgs Doublet Model (2HDM) + pseudoscalar mediator (a), 2HDM+a, is
-the simplest and currently only gauge-invariant and UV-complete extension of the simplified model with a
-pseudoscalar mediator, and has been first introduced in Ref. [21]. The model is adopted as a common LHC
-benchmark model by the LHC Dark Matter Working Group [22], which is a joint forum of theory groups
-and the ATLAS, CMS, and LHCb collaborations. This model, unlike the simplified models described above,
-predicts a wide variety of detector signatures. Among the most prominent signatures in the parameter space
-explored in this note are the production of DM in association with a Higgs boson (\MET+h signatures) or
-with a Z boson (\MET+Z signatures). Further signatures are related to DM production in association with
-a top quark and a W boson (\MET+Wt), visible decays of the additional heavy Higgs bosons, and invisible
-decays of the SM Higgs boson to DM.
-A summary paper including constraints on the 2HDM+a benchmark based on a variety of dark matter
-searches using 36 fb$^{-1}$ data of sqrts = 13 TeV proton-proton collisions has been previously published by the
-ATLAS Collaboration [23]. Constraints on the model have also been derived by the CMS Collaboration
-using the results from searches in the \MET+ h(\bbar) [24] and \MET.
--------------------------
-
 \section{Outlook}
 
-Lowmass decorrelate, difficult to optimise 18 fits
-Enhance selection with btagging although less statistics
-
-Pflow, b-tagging
-NN with low level inputs
-Tried to include alt in the training
-Region definition with reco method
-Include boosted region
-Being explored in H+Wh
-
-
-The analysis strategy presented in the previous chapter was fxed before the start of the publication process and could not change afterwards, in order to proceed with the publication itself. The analysis development has however continued in view of the 100 fb1 of pp collisions that the LHC is expected to deliver by the end of Run-2. This chapter proposes a set of refnements that could be implemented to improve the sensitivity and robustness of the analysis. The frst part is dedicated to the low-mass region, with the aim of reducing the correlation between the signal and the ttb background, while the second part focuses on discrimination techniques. The conclusion provides the expected limit obtained with the proposed changes and the projection of such a limit to the integrated luminosity of 100 fb-1
-. All results are to be intended as preliminary.
+\begin{itemize}
+    \item Difficult to optimise 18 fits
+    \item Work on lowmass, decorrelate NP or reduce kttb correlation
+    \item Enchance selection with tigther btagging at low mass (less statistics at high mass)
+    \item new recommendations PFlow, b-tagging has improvements
+    \item Complement NN with low-level inputs (already tried to include alt samples in the training to reduce impact of sys)
+    \item Region definition and classification with other methods, like a reco NN, to enhance purity, explored in H+Wh
+    \item Include boosted ? dilepton ?
+    \item Estimate improvement for Run3?
+\end{itemize}
 
 
-The ttHbb analysis presented in Chapters 13 and 14 is dominated by systematic uncertainties
-among which the modelling of the ttb background is by far the largest uncertainty. In the following, ideas to further reduce the systematic uncertainties and ideas to improve the general analysis strategy will be discussed. The multivariate techniques, namely the reconstruction and classification BDTs, are well suited to be replaced by Neural Networks opening new possibilities in the reconstruction and classification of events. And in particular, the improvements achieved within this thesis in the b-tagging algorithm performance described in detail in Part III are a great basis for further improvements. In the following two different optimisation possibilities are demonstrated: a new tagger incorporating the tt1B category and a first look into possible improvements using the newly
-optimised b-tagging algorithm DL1r
+%The analysis strategy presented in the previous chapter was fxed before the start of the publication process and could not change afterwards, in order to proceed with the publication itself. The analysis development has however continued in view of the 100 fb1 of pp collisions that the LHC is expected to deliver by the end of Run-2. This chapter proposes a set of refnements that could be implemented to improve the sensitivity and robustness of the analysis. The frst part is dedicated to the low-mass region, with the aim of reducing the correlation between the signal and the ttb background, while the second part focuses on discrimination techniques. The conclusion provides the expected limit obtained with the proposed changes and the projection of such a limit to the integrated luminosity of 100 fb-1
+%. All results are to be intended as preliminary.
+
+
+% The ttHbb analysis presented in Chapters 13 and 14 is dominated by systematic uncertainties
+% among which the modelling of the ttb background is by far the largest uncertainty. In the following, ideas to further reduce the systematic uncertainties and ideas to improve the general analysis strategy will be discussed. The multivariate techniques, namely the reconstruction and classification BDTs, are well suited to be replaced by Neural Networks opening new possibilities in the reconstruction and classification of events. And in particular, the improvements achieved within this thesis in the b-tagging algorithm performance described in detail in Part III are a great basis for further improvements. In the following two different optimisation possibilities are demonstrated: a new tagger incorporating the tt1B category and a first look into possible improvements using the newly optimised b-tagging algorithm DL1r
