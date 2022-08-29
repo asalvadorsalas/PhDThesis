@@ -64,7 +64,7 @@ Given two variable distributions from a signal and a background sample, the \tex
 
 
 \subsection{Neural networks}
-
+\label{ML:SectionNN}
 Neural Networks (NNs) were introduced in the 1940s~\cite{McCulloch1943} but became feasible in the last decades as large computing power and GPUs are widely available. The concept of a NN are nodes (neurons) connected to each other via weights, and the most basic network is referred as feed-forward NN. An example is illustrated in Figure~\ref{ML:normalNN}, with in one input layer, one hidden layer and one output node. The result of node has the form of a linear system $b+w\cdot x$, with bias $b$, weight $w$ and the input of the neuron $x$. More technically, the result of every node (except the input layer) is given by the sum of its inputs, the output of the different neurons connected to the given node multiplied by the weights $w_i$ which represent said connection. More generally, a bias $b_i$ is added to the sum and then used as input to an activation function $f_i$, which introduces non-linearity. The final output of the depicted feed-forward NN can be expressed as
 
 \begin{figure}[htbp]
@@ -119,12 +119,10 @@ For the gradient-descend method, the computation of the gradient of the loss fun
 The introduction of activation functions $f(z)$ is essential to allow the NNs to act as a non-linear function. Many candidates of activation functions exist, from simple step functions to monotically increasing fuctions (as $\tanh$) or logistic functions (as the \textit{sigmoid} function). Although these activation functions are simple and manage to harmonise the inputs of a node, the resulting NN suffers from vanishing gradient issues which significantly slow the training. The \textit{Rectified Linear Unit} ($\textsc{ReLU}$)~\cite{relu} activation function is widely used, defined as
 
 \begin{align}
-    f_\textsc{ReLU}(z)= 
-        Y_{ij} = \begin{cases}
+    f_\textsc{ReLU}(z)= \begin{cases}
             0& \text{for}  z<0 \\
             z& \text{for}  z\geq0\\
-            \end{cases}\qquad f'_\textsc{ReLU}(z)= 
-            Y_{ij} = \begin{cases}
+            \end{cases}\qquad f'_\textsc{ReLU}(z)= \begin{cases}
                 0& \text{for}  z<0 \\
                 1& \text{for}  z\geq0\\
                 \end{cases}
