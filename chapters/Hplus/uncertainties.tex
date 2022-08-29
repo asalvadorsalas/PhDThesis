@@ -67,6 +67,7 @@ The presented analysis is heavily affected by systematic uncertainties from diff
 \end{table}
 
 \subsection{Experimental uncertainties}
+\label{Hplustb:SectionExperimentalUnc}
 The experimental uncertainties have in general a low impact on the final fit. Only the uncertainties associated to jets and $b$-tagging have influence. All experimental nuisance parameters are correlated across all analysis regions and processes.
 
 The total uncertainty on the integrated luminosity of the full Run~2 is the only experimental uncertainty that only affects the normalisation, and is measured to be 1.7\%~\cite{luminosity}. The pile-up modelling uncertainty, that accounts for the related differences between data and simulation, is also considered~\cite{PhysRevLett.117.182002}.
@@ -94,7 +95,7 @@ In contrast to the experimental uncertainties, the modelling uncertainties are n
 
 The sources of uncertainty considered for the signal are associated to the energy scales to generate the \acrshort{MClabel} and the \acrshort{PDFlabel} tunings. First, the impact of ISR in the \acrshort{MElabel} is estimated with the idependent variation of the renormalisation $\mu_R$ and factorisation $\mu_F$ scales by a factor 0.5 (higher parton radiation) and by 2 (lower parton radiation). The \acrshort{PDFlabel} uncertainty is estimated using a symmetrised Hessian \acrshort{PDFlabel} set, following the PDF4LHC recommendations for Run~2~\cite{Butterworth_2016}.
 \subsubsection{\ttbar\ modelling}
-
+\label{Hplustb:Sectionttbarmodelling}
 The \ttbar\ process is the most important background in the analysis and a large number of uncertainties are considered for an apropiate modelling. Since the composition of the \ttbar\ subcategories are different in the signal regions, different effects are expected. The \ttb\ and \ttc\ processes are fairly sensitive to differences in the precision of the \acrshort{MElabel} calculation or the flavour scheme, while \ttl\ profits from precise measurements. Hence, all systematic uncertainties associated to \ttbar\ are uncorrelated across the \ttb, \ttc\ and \ttl\ categories, having separate nuisance parameters. Unless stated otherwise, the nuisance parameters are correlated among bins and regions. Table~\ref{Hplustb:tablesysttbar} summarises the uncertainties applied to the \ttbar\ background.  
 
 \begin{table}[htbp]
@@ -142,7 +143,7 @@ To cover the differences between the choice of the four or five flavour scheme, 
 The weights derived in Section~\ref{Hplustb:secRW} that are applied to improve the modelling of the \ttbar\ background are also subject to uncertainties. The associated statistical uncertainties are varied obtaining 28 nuisance parameters, which are correlated between the different \ttbar\ components and $Wt$. Aside, the \ttbar\ samples with alternative \acrshort{MClabel} setups do not have the same composition of \ttbar\ subcomponents as the nominal sample, especially \POWHEGBOX+\HERWIG~7. This difference can change significantly the fractions in the fit however, the normalisation of the sub-processes in the analysis regions are measured with the fit. To avoid the propagation of the normalisation effect from the comparison, the alternative samples are scaled to ensure the same flavour composition as the nominal sample in the signal regions. In addition, the same modelling issues that motivate the \ttbar\ weights can be found in the alternative samples, hence different sets of reweighting are also derived using the alternative samples.
 
 \subsubsection{Other background modelling}
-The systematic uncertainties associated to background processes other than \ttbar+jets are summarised in Table~\ref{Hplustb:tablesysalt} with their respective sources and the corresponding descriptions. These uncertainties play a subordinate role compared to the \ttbar\ uncertainties.
+The systematic uncertainties associated to background processes other than \ttbarjets\ are summarised in Table~\ref{Hplustb:tablesysalt} with their respective sources and the corresponding descriptions. These uncertainties play a subordinate role compared to the \ttbar\ uncertainties.
 
 A 5\% uncertainty is considered for the cross-sections of the three single-top production modes~\cite{Martin_2009,toprecomendation,Martin_2009v2,Aliev_2011,Kant_2015}. Uncertainties associated with the \acrshort{PSlabel} model, and with the NLO matching scheme are evaluated by comparing, for each process individually, the nominal \POWHEGPYTHIA~8 sample with a sample produced using \POWHEGHERWIG~7 and \MGMCatNLOPYTHIA~8, respectively. As mentioned before, the $Wt$ single-top process is included in the reweighting procedure, and thus the same related uncertainties used for \ttbar\ are applied. The uncertainty associated to the interference between $Wt$ and \ttbar\ production at NLO scheme~\cite{Frixione_2008} and the diagram
 subtraction scheme is assessed by comparing the nominal \POWHEGPYTHIA~8 sample produced using the “diagram removal” scheme with an alternative sample produced with the same generator but using the “diagram subtraction” scheme.

@@ -97,7 +97,7 @@ In order to avoid counting a single detector signal as more than one lepton or j
 Events are required to have at least five jets, from which at least two have to be tagged with the 70\% $b$-tagging working point. In addition, exactly one lepton with $\pT>$27~GeV and no additional lepton with $\pT>$10~GeV passing the \textit{medium} (\textit{loose}) identification working point for electrons (muons) is allowed.
 
 \section{Signal and background modelling}
-
+\ref{Hplustb:Sectionmodelling}
 The Monte Carlo modelling of signal and background samples is described in this section.
 
 The final state of the signal includes four $b$-jets, two light-jets, one lepton and one neutrino. Such final state is shared fully or partially by a large number of background processes, the main one being $\ttbar$+jets. Additional contributions to the background are from the production of $W$- and $Z$- bosons with jets ($V$+jets), single-top-quark production, diboson processes ($VV$) and the associated production of bosons and top quarks ($\ttbar V$, $\ttbar H$). Non-prompt leptons and misidentified jets form what is known as multi-jet background, which contribution is negligible due to the trigger and lepton quality requirements. Figure\todo{maybe in common section} shows examples of Feynman diagrams for some of the most important background processes.
@@ -213,7 +213,7 @@ The dominant background\todo{move to common description} for the $H^+$ signal is
     \item \ttl: all other cases.
 \end{itemize}
 
-The nominal production is modelled with the 5FS and \POWHEGBOX~v2 setting the renormalisation and factorisation scales to $\mu_R = \mu_F = m_\text{T}$(top) and $h_\text{damp}=1.5\cdot m_\text{top}$. The parton shower and hadronisation processes are simulated with \PYTHIA~8.
+The nominal production is modelled with the 5FS and \POWHEGBOX~v2 setting the renormalisation and factorisation scales to $\mu_R = \mu_F = m_\text{T}$(top) and $h_\text{damp}=1.5\cdot m_\text{top}$. The parton shower and hadronisation processes are simulated with \PYTHIA~8. All generated \ttbar\ samples assume a diagonal Cabibbo-Kobayashi-Maskawa matrix, thus the $W\to cb$ contribution is not included $(B = 5.72 \times 10^{-4}$. Additional \ttbar+jets events are produced with one of the $W$-bosons decaying leptonically and the other to $cb$, using the \acrshort{SMlabel} with non-zero Wolfenstein coefficients and 5FS.
 
 \subsubsection{Single-top}
 \textit{t-channel}
