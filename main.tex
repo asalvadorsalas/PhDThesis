@@ -75,7 +75,69 @@
 %\counterwithin*{sidenote}{chapter}
 
 %----------------------------------------------------------------------------------------
-
+\makeatletter
+\def\maketitle{%
+%\global\@topnum =\z@
+\setparsizes {\z@ }{\z@ }{\z@ \@plus 1fil}
+\par@updaterelative 
+\noindent 
+\vbox{}
+\begin{center}
+    \textsc{ \LARGE{Universitat Autònoma de Barcelona \\}}
+	\textsc{ \Large{Facultat de Ciències\\ }}
+	\textsc{ \Large{Departament de Física\\}}
+	\vspace{10mm}
+	\HRule\\
+	\textnormal{ \huge{\textbf{\@title}\\}}
+	\HRule\\
+	\vspace{10mm}
+    \LARGE{\textit{Ph.D. dissertation\\}
+	\LARGE{\textbf{Adrian Salvador Salas\\}}}
+	\vspace{30mm}
+\end{center}
+%\includegraphics[width=0.4\textwidth]{Ifae_logo_edit.png}\hfill\includegraphics[width=0.35\textwidth]{UAB_logo.eps}\\
+\begin{minipage}[t]{0.47\textwidth}
+\begin{flushleft}
+	\centering
+	\raisebox{-0.5\height}{\includegraphics[width=0.75\textwidth]{Ifae_logo_edit.png}}\\
+	\vspace{20mm}
+	\large
+	\emph{Thesis director}\\
+	Immaculada Riu Dachs\\
+	Institut de Física d'Altes Energies\\
+	Universitat Autònoma de Barcelona\\
+	Edifici Cn E-08193 Bellaterra (Barcelona)\\
+\end{flushleft}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.47\textwidth}
+	\begin{flushright}
+		\centering
+		\raisebox{-0.5\height}{\includegraphics[width=0.65\textwidth]{UAB_logo.eps}}\\
+		\vspace{20mm}
+		\large
+		\emph{Thesis tutor}\\
+		Maria Pilar Casado Lechuga\\
+		Institut de Física d'Altes Energies\\
+		Universitat Autònoma de Barcelona\\
+		Edifici Cn E-08193 Bellaterra (Barcelona)\\
+	\end{flushright}
+\end{minipage}
+\vfill
+\begin{center}
+	\large{September 2022}
+\end{center}
+\newpage~\newpage
+\ifx \@dedication \@empty 
+\else 	
+	\vbox{ }
+	\vspace{50mm}
+	{\usekomafont {dedication}{\@dedication \par }}
+\fi 
+\par
+\vskip 2em
+}
+\makeatother
 \begin{document}
 
 %----------------------------------------------------------------------------------------
@@ -96,9 +158,10 @@
 
 \publishers{An Awesome Publisher}
 
+
 %----------------------------------------------------------------------------------------
 
-%\frontmatter % Denotes the start of the pre-document content, uses roman numerals
+\frontmatter % Denotes the start of the pre-document content, uses roman numerals
 
 %----------------------------------------------------------------------------------------
 %	OPENING PAGE
@@ -155,8 +218,8 @@
 %----------------------------------------------------------------------------------------
 
 \dedication{
-	Life has its ups and downs, is sometimes strange and full of charm, but when you reach the bottom, then the only way is back to the top.\\
-	\flushright -- ?
+	Somewhere, something incredible is waiting to be known.
+	\flushright -- Carl Sagan
 }
 
 %----------------------------------------------------------------------------------------
@@ -164,9 +227,10 @@
 %----------------------------------------------------------------------------------------
 
 % Note that \maketitle outputs the pages before here
-
+%\makeatletter
+%\show\@maketitle
+%\makeatother
 \maketitle
-
 %----------------------------------------------------------------------------------------
 %	PREFACE
 %----------------------------------------------------------------------------------------
