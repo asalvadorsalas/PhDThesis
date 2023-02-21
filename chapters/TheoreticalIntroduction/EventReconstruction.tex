@@ -90,18 +90,18 @@ Particle Flow jets, known as PFlow jets, were introduced during Run~2 and combin
 
 \subsection{Jet tagging}
 
-Jet or flavour tagging consists in identifying the parton flavour that generated the signal reconstructed as the jet. Efficient tagging is essential for analyses studying processes with $b$- or $c$-quarks in their final state (knows as heavy flavour quarks), as it is additional information which can be used to select events based on the flavour of their jets and improve the selection of the signal.
+Jet or flavour tagging consists in identifying the parton flavour that generated the signal reconstructed as a jet. Efficient tagging is essential for analyses studying processes with $b$- or $c$-quarks in their final state (knows as heavy flavour quarks), as the jet tagging is additional information that can be used to select events with various jets and improves the signal efficiency.
 
-Jets originating from the hadronisation of $b$-quarks, or $b$-tagged jets, leave a distinct signal due to the properties of $b$-hadrons: lifetime of $\sim$10$^{-12}$~s (decay after 2.5~mm with a momentum of 30~GeV), mass of $\sim$5~GeV and high decay multiplicity (including semi-leptonic decays). Figure~\ref{figEVNTRECO:BTAGTOPO} shows a scheme of a typical signal, that includes displaced tracks with large $d_0$.
+Jets originating from the hadronisation of $b$-quarks, or $b$-tagged jets, leave a distinct signal due to the properties of $b$-hadrons: lifetime of $\sim$10$^{-12}$~s ($b$'s with $\pT>30$~GeV decay after 2.5~mm), mass of $\sim$5~GeV and high decay multiplicity (including semi-leptonic decays). Figure~\ref{figEVNTRECO:BTAGTOPO} shows a scheme of a typical signal, that includes displaced tracks with large $d_0$.
 
-The signal of the $c$-hadrons is similar but not identical as the lifetime, mass and decay multiplicity are lower, which makes the distinction between these two kinds of jets difficult. The last type of jet is referred to light-flavour jets, which signal originates directly from quark fragmentation and can be easily separated from $b$-jets. However, other phenomena like long-lived particles, photon conversion or low quality tracks can also prompt displaced vertices and tracks.
+The signal of the $c$-hadrons is similar but not identical as the lifetime, mass and decay multiplicity are lower, which makes the distinction between these two kinds of jets difficult. The last type of jet is referred to light-flavour jets, whose signal originates directly from quark fragmentation and can be easily separated from $b$-jets. However, other phenomena like long-lived particles, photon conversions or low quality tracks can also prompt displaced vertices and tracks.
 
 \begin{figure}[htbp]
     \RawFloats
     \begin{center}
     \includegraphics[width=0.75\textwidth]{EVENTRECO/btagdoodle.pdf}
     \caption{
-        Schematic view of the typical topology of an event with a $b$-jet, including the~\acrshort{PVlabel}, a secondary vertex with displaced tracks and the characteristic impact parameters.
+        Schematic view of the typical topology of an event with a $b$-jet, including the~\acrshort{PVlabel}, a \acrlong{SVlabel}~(\acrshort{SV}) with displaced tracks and the characteristic impact parameters, $d_0$ and $z_0$.
     }
     \label{figEVNTRECO:BTAGTOPO}
     \end{center}
@@ -109,13 +109,13 @@ The signal of the $c$-hadrons is similar but not identical as the lifetime, mass
 
 \subsubsection{Algorithms}
 
-Flavour tagging algorithms use the properties of a given jet to return a score, referred to as output discriminant, which indicates how likely the input jet is considered to be a $b$-, $c$- or $light$-jet. Two algorithms are used in this thesis: the MV2c10 tagger which was the default option for EMTopo jets, and the DL1r tagger that is the recommendation for PFlow jets.
+Flavour tagging algorithms use the properties of a given jet and return a score, referred to as output discriminant, which indicates how likely the input jet is considered to be a $b$-, $c$- or light-jet. Two algorithms are used in this thesis: the MV2c10 tagger which was the default option for EMTopo jets, and the DL1r tagger that is used for PFlow jets.
 
-The MV2c10 tagger~\cite{ATL-PHYS-PUB-2015-022} is based on the MV2 algorithm, which relies on boosted decision trees~(BDTs) trained with several kinematic and other trigger taggers as inputs. This particular tagger was trained with \ttbar\ and $Z'$ events, to cover a large \pT\ spectrum, and $b$-jets defined as signal while the background was defined to consist of 7\% $c$-jets and 93\% light-jets.
+The MV2c10 tagger~\cite{ATL-PHYS-PUB-2015-022} is based on the MV2 algorithm, which relies on boosted decision trees~(BDTs) trained using several kinematic variables of the jets, properties of the secondary vertices and other taggers as inputs. The MV2c10 tagger was trained with \ttbar\ and $Z'$ events, to cover a large \pT\ spectrum, and $b$-jets defined as signal while the background consisted of 7\% $c$-jets and 93\% light-jets.
 
-The DL1r tagger is a multi-class Deep Neural Network (DNN) model, with three output nodes corresponding to the classification of the input jet to be a $b$-, $c$- or light jet. The final discriminant is given as a function of the three probabilities. The input consists in the MV2c10 tagger input, additional variables for $c$-jet identification used in a jet vertex finder algorithm and flavour probabilities provided by a recursive NN. The training set consists of the same \ttbar\ + $Z'$ events, weighted to have an equal mix of quark flavour jets.
+The DL1r tagger~\cite{taggingeff} is a multi-class Deep Neural Network (DNN) model, with three output nodes corresponding to the classification of the input jet to be a $b$-, $c$- or light jet. The final discriminant is given as a function of the three probabilities. The input to the training consists in the same inputs used for the MV2c10 tagger, additional variables for $c$-jet identification used in a jet vertex finder algorithm and flavour probabilities provided by a recursive NN designed to exploit the correlations between the tracks originating from the same $b$-hadron. The training set consists of the same \ttbar\ and $Z'$ events, weighted to have an equal mix of quark flavour jets.
 
-The $b$-jet efficiency and the $c$- and light-jets rejection as a function of the jet \pT\ for both MV2c10 and DL1 algorithms are shown in Figure~\ref{figEVNTRECO:taggingeff}. The DL1r tagger is the most recent recommendation and relies on more advanced machine learning techniques than the MV2c10 tagger. The multi-class output together with the possibility of tuning the final discriminant computation, makes the DL1r tagger more flexible than the binary classification of MV2c10. Regarding performance, the efficiency of both algorithms to tag true $b$-jets is comparable, while the rejection rates of $c$- and light jets is greater for the DL1r tagger. The improvement in rejection for the 60\% working point, detailed below, is by up to 70\% for $c$-jets and 120\% for light jets.
+The $b$-jet efficiency as a function of the jet \pT\ and the $c$- and light-jets rejection as a function of the jet $b$-jet efficiency for both MV2c10 and DL1r algorithms are shown in Figure~\ref{figEVNTRECO:taggingeff}. The DL1r tagger relies on more advanced machine learning techniques than the MV2c10 tagger. The multi-class output together with the possibility of tuning the final discriminant computation makes the DL1r tagger more flexible than the binary classification of MV2c10. Regarding performance, the efficiency of both algorithms to tag true $b$-jets is comparable, while the rejection rates of $c$- and light jets is larger for the DL1r tagger. The improvement in rejection for the 60\% working point, detailed below, is by up to 70\% for $c$-jets and 120\% for light jets.
 
 \begin{figure}[htbp]
     \RawFloats
@@ -125,7 +125,7 @@ The $b$-jet efficiency and the $c$- and light-jets rejection as a function of th
         \quad
         \subfloat[]{\includegraphics[width=0.47\textwidth]{EVENTRECO/ltagrej.pdf}}
         \caption{
-        Identification efficiency for $b$-jets (a), and rejection rate for $c$-jets (b) and light-jets (c) for the MV2c10 and DL1 taggers as a function of \pT\ in a simulated \ttbar sample~\cite{taggingeff}.
+        Identification efficiency for $b$-jets as a function of \pT\ (a), and rejection rate for $c$-jets (b) and light-jets (c) as a function of the $b$-tagging efficiency for the MV2c10 and DL1 taggers in a simulated \ttbar sample~\cite{taggingeff}.
     }
     \label{figEVNTRECO:taggingeff}
     \end{center}
