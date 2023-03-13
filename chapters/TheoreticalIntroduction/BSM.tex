@@ -1,28 +1,65 @@
 \section{Beyond the Standard Model}
 
-Beyond the \acrshort{SMlabel} (\acrshort{BSMlabel}) theories aim to extend or replace the \acrshort{SM} by addessing its limitations and shortcomings. Several theories have been proposed to address some of the gaps mentioned in the previous section, and among them are the extended Higgs sectors and flavon models. Overall, \acrshort{BSMlabel} theories provide a rich landscape of new physics, and their predictions can be tested by current and future experiments.
+Beyond the \acrshort{SMlabel} (\acrshort{BSMlabel}) theories aim to extend or replace the \acrshort{SMlabel} by addessing its limitations and shortcomings. Several theories have been proposed to address some of the gaps mentioned in the previous section, and among them are the extended Higgs sectors and flavon models. Overall, \acrshort{BSMlabel} theories provide a rich landscape of new physics, and their predictions can be tested by current and future experiments.\\
 
-The Two Higgs Doublet Model (2HDM) extends the \acrshort{SMlabel} by adding a second Higgs doublet. TThe electroweak symmetry is broken by two scalar Higgs doublets, 
+\subsection{Two Higgs Doublet Model}
+
+The Two Higgs Doublet Model (2HDM) extends the \acrshort{SMlabel} by adding a second Higgs doublet. With two scalar Higgs doublets, the electroweak symmetry can be broken differently and the type of model can be defined depending on which fermions couple to each doublet. One of the most popular is the Type-II 2HDM, in which up-type quarks couple to one doublet while the down-type quarks and charged leptons couple to the other,
 
 \begin{equation}
-    \Phi_1\equiv H_u = \frac{1}{\sqrt{2}},
+    \Phi_1\equiv H_u = 
+    \begin{pmatrix} H^+_u \\ H^0_u \end{pmatrix}
+    \frac{1}{\sqrt{2}},
     \begin{pmatrix} 0 \\ v_u \end{pmatrix}
     \qquad
-    \Phi_2\equiv H_d = \frac{1}{\sqrt{2}}
+    \Phi_2\equiv H_d = 
+    \begin{pmatrix} H^-_d \\ H^0_d \end{pmatrix}
+    \frac{1}{\sqrt{2}}
     \begin{pmatrix} 0 \\ v_d \end{pmatrix}
-
 \end{equation}
 
-with $v_u$ and $v_d$ being the
-This scalar sector has eight initial degrees of freedom, four more than in the \acrshort{SM}, yielding a total of five physical scalars instead of just the \acrshort{SM} Higgs. The predicted particles are two neutral CP-even scalars $h$ and $H$, one CP-odd pseudo-scalar $A$ and two charged Higgs bosons $H^\pm$. This type of models has   has then eight initial predicts the existence of charged Higgs bosons, which have not yet been observed in experiments. The charged Higgs bosons can play a role in flavor-changing neutral current (FCNC) interactions, which are strictly forbidden in the SM but can occur in BSM theories. The search for charged Higgs bosons is an important topic in current particle physics research, and several experiments are actively looking for them.
+with $v_u$ and $v_d$ being the \acrshort{VEV} of each doublet field. This scalar sector has eight initial degrees of freedom, four more than in the \acrshort{SMlabel}, yielding a total of five physical scalars instead of just the \acrshort{SMlabel} Higgs. The predicted particles are two neutral CP-even scalars $h$ and $H$ ($m_h < m_H$), one CP-odd pseudo-scalar $A$ and two charged Higgs bosons $H^\pm$. Including the ratio of the two vacuum expectation values $\tan\beta=\frac{v_u}{v_d}$, and a mixing angle $\alpha$ that diagonalises the mass matrix of the CP even states. This type of models have six free parameters: $m_h$, $m_H$, $m_A$, $m_{H^\pm}$, $\tan\beta$ and $\alpha$.
 
-Introduce 2HDM -> potential -> massterms -> H+
-FCNC depending on the type
-Can be part of other theories like SUSY
-Brief SUSY for hmmsm 
-(what about mh125 models? what are those?)
+\subsection{Supersymmetry}
+
+One of the most popular \acrshort{BSMlabel} theories is Supersymmetry (SUSY). It is a framework of theories that introduce a symmetry between the fermion and boson sector (supersymmetry), and can solve many problems in particle physics like the hierarchy problem or introduce candidates for DM. No new particles have been found so far, hence if SUSY exists, it must be broken so SUSY particles can have a different mass from the known particles.\\
+
+The simplest realization of SUSY is the Minimal Supersymmetic~\acrshort{SMlabel} (MSSM), one of the models best studied and motivated. The model introduces the minimal amount of degrees of freedom with respect to the \acrshort{SMlabel}, with new particles and no new interactions. Every \acrshort{SMlabel} particle has an associated superpartner with different spin: the SUSY particles related to the \acrshort{SMlabel} gauge bosons are known as gauginos, the squarks are related to quarks, sleptons to leptons and Higgsinos to the Higgs bosons. The MSSM has an additional Higgs doublet to prevent anomalies from the Higgsino, therefore it is a 2HDM theory and predicts five physical scalars, as mentioned before.\\
+
+In addition, a new quantum number is introduced, the $R$-parity,
+
+\begin{equation}
+    R=(-1)^{3(B-L)+2S}
+\end{equation}
+
+where $B$ is the baryon number, $L$ is the lepton number, and $S$ is the spin. The parity has a value of $+1$ for \acrshort{SMlabel} particles and -1 for the SUSY particles. The $R$-parity is conserved in the MSSM and, as one of the consequences, the lightest SUSY particle (LSP) is stable and has a negligible coupling with the \acrshort{SMlabel} particles making it a candidate for DM.\\
+
+Since the discovery of the Higgs boson it is usual to interpret either of the CP-even neutral scalars ($h$ or $H$) of the theory to be the SM Higgs. One method is to work in the decoupling limit, where  all the non-standard Higgs bosons are assumed to be heavier so the $h$ scalar behaves just like the SM Higgs boson. Another method can be found comparing the \acrshort{SMlabel} Higgs couplings to the different particles. In the hMSSM model %https://arxiv.org/pdf/1502.05653.pdf
+the couplings of the new Higgs particles to the \acrshort{SMlabel} can be easily written and compared to the \acrshort{SMlabel} Higgs couplings,
+
+\begin{equation}
+    g_{H_\text{SM}VV}\quad \rightarrow\quad H_\text{SM} = H \cos(\beta-\alpha)+h\sin(\beta-\alpha)\\
+    g_{H_\text{SM}u\bar{u}}\quad \rightarrow\quad H_\text{SM} = H \sin\alpha/\sin\beta+h\cos\alpha/\sin\beta\\
+    g_{H_\text{SM}d\bar{d}}\quad \rightarrow\quad H_\text{SM} = H \cos\alpha/\cos\beta+h\cos\alpha/\sin\beta\\
+    
+\end{equation}
+
+with $V$ being the massive gauge bosons. Taking the limit $\cos(\beta-\alpha)\to 0$, the $h$ behaves like the \acrshort{SMlabel} Higgs. The coupling to gauge bosons is particularly important, as they arise from the gauge invariance and do not depend on the particular MSSM model. 
+The alignment limit is precisely working in the limit $\cos(\beta-\alpha)\to 0$, where the $h$
+
+the alignment limit is in which only one of the CP-even scalars couples to massive particles. % 
+
+
+
+%https://arxiv.org/pdf/1502.05653.pdf hmmsm
+%https://arxiv.org/pdf/1808.07542.pdf mh125
+
+
+Decide what to explain of 2HDMs, hmmsm different to mh125 i have the referneces
 
 Charged Higgs phenomenlogy (production and decay)
+
+As discussed in Section 1.2.3 FCNC measurements, FCNC processes are heavily suppressed in the SM, yielding BR unreachable by the current accelerators. Nevertheless, it makes FCNC searches a great candidate for BSM as any proof of FCNC at the reachable sensitivity would point to a theory that introduces this type of interactions or slightly modifies the GIM mechanism.
 
 Flavon -> types of mechanisms -> U(1) (check paper and internal note)
 Flavon, prediction and decay aswell?
