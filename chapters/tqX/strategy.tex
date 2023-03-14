@@ -1,9 +1,13 @@
 \section{Analysis strategy}
-The events that pass the selection described in Section~\ref{tqX:SectionEventSelection} are categorised into three types of regions depending on their role: signal regions, control regions and reweighting regions. The signal regions are signal enhanced and used in a profile likelihood fit with NN methods to distinguish between signal and the \acrshort{SMlabel} background. The control regions are also used in the fit, especially to constrain the \ttb\ background. Finally, the reweighting regions are used to derive data-driven factors to improve the \ttbar\ modelling.
+The events that pass the selection described in Section~\ref{tqX:SectionEventSelection} are categorised into three types of regions depending on their role: signal regions, control regions and reweighting regions.\\
+
+The signal regions are signal enhanced and used in a profile likelihood fit with NN methods to distinguish between signal and the \acrshort{SMlabel} background. The control regions are also used in the fit, especially to constrain the \ttb\ background. Finally, the reweighting regions are used to derive data-driven factors to improve the \ttbar\ modelling.
 
 \subsection{Region definition}
 
-The analysis regions are categorised as a function of the number of reconstructed jets and $b$-tagged jets. The signal regions are 4j3b, 5j3b and 6j3b, with the $b$-jets defined at the 60\% working point. Additionally, the control regions are defined in $\geq$4b also with the 60\% $b$-tagging working point: 4j4b, 5j$\geq$4b and 6j$\geq$4b. Finally, three additional regions are used to extract corrections for the \ttbar\ \acrshort{MClabel}, requiring two $b$-jets fulfilling the 60\% working point and a third $b$-jet identified with the 70\%: 4j2b+1bl, 5j2b+1bl and 6j2b+1bl. Figure~\ref{tqX:cheeseplots} illustrates the background composition for the different regions, which clearly shows the dominance of the \ttbar\ background, especially the \ttb\ component in the 5j3b, 6j3b and $\geq$4b regions. The 80\% of the 4j3b events is split almost equally by \ttb\ and \ttl\ events. The 2b+1bl categories consist of a mixture of the three \ttbar\ components, dominated by \ttl\ events and with increasing \ttc\ and \ttb\ with the number of jets.
+The analysis regions are categorised as a function of the number of reconstructed jets and $b$-tagged jets. The signal regions are 4j3b, 5j3b and 6j3b, with the $b$-jets defined at the 60\% working point. Additionally, the control regions are defined in $\geq$4b also with the 60\% $b$-tagging working point: 4j4b, 5j$\geq$4b and 6j$\geq$4b. Finally, three additional regions are used to extract corrections for the \ttbar\ \acrshort{MClabel}, requiring two $b$-jets fulfilling the 60\% working point and a third $b$-jet identified with the 70\%: 4j2b+1bl, 5j2b+1bl and 6j2b+1bl.\\
+
+Figure~\ref{tqX:cheeseplots} illustrates the background composition for the different regions, which clearly shows the dominance of the \ttbar\ background, especially the \ttb\ component in the 5j3b, 6j3b and $\geq$4b regions. The 80\% of the 4j3b events is split almost equally by \ttb\ and \ttl\ events. The 2b+1bl categories consist of a mixture of the three \ttbar\ components, dominated by \ttl\ events and with increasing \ttc\ and \ttb\ with the number of jets.\\
 
 \begin{figure}[htbp]
     \RawFloats
@@ -16,7 +20,11 @@ The analysis regions are categorised as a function of the number of reconstructe
     \end{center}
 \end{figure}
 
-Tables~\ref{tqX:prefityields2b1bl},~\ref{tqX:prefityields3b} and~\ref{tqX:prefityields4b} shows the number of expected and selected events in the different regions. The number of expected $t\to uX$ and $t\to cX$ signal events for the 60~GeV mass hypothesis is also shown, assuming a branching fraction B($t\to qX$)=0.1\%. Figure~\ref{tqX:signalyields} shows the different signal yields and $\text{S}/\sqrt{\text{B}}$ for different analysis regions. The sensitivity for the 3b regions is larger than for the $\geq$4b, and increases with $m_{X}$ up to 140~GeV. The 20~GeV mass has significantly fewer yields, as the jets from the $X\to\bbar$ decay are mostly merged, thus often not selected. In addition, yields and sensitivity are higher for $t\to cX$ than for $t\to uX$, especially in the $\geq$4b regions, as expected. Figure~\ref{tqX:acceptance} shows the acceptance times efficiency of the [4-6]j$\geq$3b inclusive selection per signal mass sample and for $t\to uX$ and $t\to cuX$, ranging from 0.2\% to 1.7\%. The acceptance and jet selection efficiency increase with the scalar mass as a consequence of the phase space dependence on the mass: the jets of the $b$-quark pair of the $X\to \bbar$ decay become merged at low $m_X$ because of the $X$ boost, reducing the jet multiplicity, while for high masses the jet from the $q$ is lost because of its smaller \pT.
+Tables~\ref{tqX:prefityields2b1bl},~\ref{tqX:prefityields3b} and~\ref{tqX:prefityields4b} shows the number of expected and selected events in the different regions. The number of expected $t\to uX$ and $t\to cX$ signal events for the 60~GeV mass hypothesis is also shown, assuming a branching fraction B($t\to qX$)=0.1\%.\\
+
+Figure~\ref{tqX:signalyields} shows the different signal yields and $\text{S}/\sqrt{\text{B}}$ for different analysis regions. The sensitivity for the 3b regions is larger than for the $\geq$4b, and increases with $m_{X}$ up to 140~GeV. The 20~GeV mass has significantly fewer yields, as the jets from the $X\to\bbar$ decay are mostly merged, thus often not selected. In addition, yields and sensitivity are higher for $t\to cX$ than for $t\to uX$, especially in the $\geq$4b regions, as expected.\\
+
+Figure~\ref{tqX:acceptance} shows the acceptance times efficiency of the [4-6]j$\geq$3b inclusive selection per signal mass sample and for $t\to uX$ and $t\to cuX$, ranging from 0.2\% to 1.7\%. The acceptance and jet selection efficiency increase with the scalar mass as a consequence of the phase space dependence on the mass: the jets of the $b$-quark pair of the $X\to \bbar$ decay become merged at low $m_X$ because of the $X$ boost, reducing the jet multiplicity, while for high masses the jet from the $q$ is lost because of its smaller \pT.\\
 
 \begin{table}[htb]
     \small
@@ -150,9 +158,9 @@ the $t\to uX$ and $t\to cX$ channels.
 \clearpage
 \subsection{Reweighting technique}
 \label{tqX:secRW}
-The main background for the search is \ttjets, and its correct modelling is essential for the correct description of the data. As mentioned for the $H^\to tb$ analysis (Section~\ref{Hplustb:secRW}), the simulation does not properly model high jet multiplicities nor the hardness of additional jet emissions and data-based corrections are applied to improve the data/MC agreement.
+The main background for the search is \ttjets, and its correct modelling is essential for the correct description of the data. As mentioned for the $H^\to tb$ analysis (Section~\ref{Hplustb:secRW}), the simulation does not properly model high jet multiplicities nor the hardness of additional jet emissions and data-based corrections are applied to improve the data/MC agreement.\\
 
-The correction factors are applied to the \ttbar\ samples as well as the signal samples, as they are modelled as using the same \acrshort{MClabel} generator. The corrections derived in the 2b+1bl regions are expected to improve the agreement in the 3b and $\geq$4b regions. The remaining discrepancies can be covered by the systematic model.
+The correction factors are applied to the \ttbar\ samples as well as the signal samples, as they are modelled as using the same \acrshort{MClabel} generator. The corrections derived in the 2b+1bl regions are expected to improve the agreement in the 3b and $\geq$4b regions. The remaining discrepancies can be covered by the systematic model.\\
 
 The corrections are derived for each jet multiplicity and as a function of \HTall, defined as the scalar \pT sum of jets, the lepton and \MET. The reweighting factors for each jet multiplicity is expressed as:
 
@@ -161,9 +169,9 @@ The corrections are derived for each jet multiplicity and as a function of \HTal
     R(\HTall)=\frac{ \text{Data}(\HTall) - \text{MC}^{\text{non-\ttbar}(\HTall)} }{\text{MC}^{\text{\ttbar}(\HTall)}}
 \end{equation}
 
-and, by construction, assumes that any disagreement between data and MC is from \ttbar.
+and, by construction, assumes that any disagreement between data and MC is from \ttbar.\\
 
-Figure~\ref{tqX:RWfactors} includes all the derived corrections, showing higher weights for increased jet multiplicities and, in general, the \HTall\ corrections have a hyperbolic behaviour: close to one for $\HTall > 800$~GeV and rapidly increasing towards lower values of \HTall. Among various functions, the hyperbolic function was found to best fit the \HTall\ weight distributions: $w=A+\frac{B}{(\HTall)^C}$. The eigenvalues of the error matrix of fitted parameters are included as systematic uncertainties.
+Figure~\ref{tqX:RWfactors} includes all the derived corrections, showing higher weights for increased jet multiplicities and, in general, the \HTall\ corrections have a hyperbolic behaviour: close to one for $\HTall > 800$~GeV and rapidly increasing towards lower values of \HTall. Among various functions, the hyperbolic function was found to best fit the \HTall\ weight distributions: $w=A+\frac{B}{(\HTall)^C}$. The eigenvalues of the error matrix of fitted parameters are included as systematic uncertainties.\\
 
 \begin{figure}[htb]
     \RawFloats
@@ -176,7 +184,7 @@ Figure~\ref{tqX:RWfactors} includes all the derived corrections, showing higher 
 \end{center}
 \end{figure}
 
-The agreement between simulation and data in the analysis region improves, as an example, Figure~\ref{tqX:RWeffect} shows the leading jet \pT\ distribution before and after the reweighting, which improves especially at low values. All studies included in this thesis are shown after the reweighting corrections are applied, unless stated otherwise.
+The agreement between simulation and data in the analysis region improves, as an example, Figure~\ref{tqX:RWeffect} shows the leading jet \pT\ distribution before and after the reweighting, which improves especially at low values. All studies included in this thesis are shown after the reweighting corrections are applied, unless stated otherwise.\\
 
 \begin{figure}[htb]
     \RawFloats
@@ -204,11 +212,17 @@ The agreement between simulation and data in the analysis region improves, as an
 \clearpage
 \subsection{Multivariate techniques}
 
-Multivariate techniques are used in this analysis to enhance the separation between signal and background. The kinematics of \ttb\ and signal events are very similar, and these methods can use different distributions as inputs to obtain a powerful discriminating variable. The main classifier is a parameterised NN trained over all masses for each $t\to qX$ signal process and background, implemented with the same software tools as the $H^+\to tb$ NN (Section~\ref{sec:HplusPNN}). As input variables, low-level observables of the reconstructed objects are used achieving comparable discrimination than other refined techniques used in previous $t\to qH$ searches~\cite{TOPQ-2017-07}, similar to the $H^+\to tb$ kinematic discriminant (Section~\ref{Hplustb:SectionHplusDiscriminant}).
+Multivariate techniques are used in this analysis to enhance the separation between signal and background. The kinematics of \ttb\ and signal events are very similar, and these methods can use different distributions as inputs to obtain a powerful discriminating variable.\\
+
+The main classifier is a parameterised NN trained over all masses for each $t\to qX$ signal process and background, implemented with the same software tools as the $H^+\to tb$ NN (Section~\ref{sec:HplusPNN}). As input variables, low-level observables of the reconstructed objects are used achieving comparable discrimination than other refined techniques used in previous $t\to qH$ searches~\cite{TOPQ-2017-07}, similar to the $H^+\to tb$ kinematic discriminant (Section~\ref{Hplustb:SectionHplusDiscriminant}).
 
 \subsubsection{$t\to qX$ parameterised NN}
 
-A set of NNs is trained separately for $t\to uX$ and $t\to cX$ including the [4-6]j$\geq$3b regions and $m_X\geq$30~GeV. The NN uses mainly low-level variables as input, hence the architecture and training set has to be large enough to extract all the discrimination power: the architecture is sequential with five fully connected layers of 250 nodes and a single output node. Batch normalisation is performed to speed up the learning process with a size of 3000 events, learning rate $10^{-0.75}$ and dropout is applied during training at a 25\% rate. To further regularise the training, inputs are transformed to the same scale (same mean and variance) as the training set, event weights of each label add up to the same value and a five-fold cross-validation setup is used. All signal samples of the corresponding process are used in the training against all background samples, which are weighted according to their cross-sections. The inputs of the NN are described below:
+A set of NNs is trained separately for $t\to uX$ and $t\to cX$ including the [4-6]j$\geq$3b regions and $m_X\geq$30~GeV. The NN uses mainly low-level variables as input, hence the architecture and training set has to be large enough to extract all the discrimination power.\\
+
+The architecture is sequential with five fully connected layers of 250 nodes and a single output node. Batch normalisation is performed to speed up the learning process with a size of 3000 events, learning rate $10^{-0.75}$ and dropout is applied during training at a 25\% rate. To further regularise the training, inputs are transformed to the same scale (same mean and variance) as the training set, event weights of each label add up to the same value and a five-fold cross-validation setup is used.\\
+
+All signal samples of the corresponding process are used in the training against all background samples, which are weighted according to their cross-sections. The inputs of the NN are described below:
 
 \begin{itemize}
     \item $m_X$,the $X$ scalar mass hypothesis: Parameter of the NN.
@@ -219,9 +233,9 @@ A set of NNs is trained separately for $t\to uX$ and $t\to cX$ including the [4-
     \item Three invariant masses and three $\Delta R$ of two $b$-tagged jets from pairs of the three most $b$-tagged jets. 
 \end{itemize}
 
-$m_X$ is the parameter that distinguishes the different signals, consequently the parameterised NN (Section~\ref{ML:PNN}) output is a function of $m_X$. For signal events, the parameter corresponds to the mass of the generated $X$ while for background events a random value of $m_X$ is assigned to each event, taken from the $m_X$ distribution of signal masses. This makes the NN not to directly use the parameter to perfectly classify the events.
+$m_X$ is the parameter that distinguishes the different signals, consequently the parameterised NN (Section~\ref{ML:PNN}) output is a function of $m_X$. For signal events, the parameter corresponds to the mass of the generated $X$ while for background events a random value of $m_X$ is assigned to each event, taken from the $m_X$ distribution of signal masses. This makes the NN not to directly use the parameter to perfectly classify the events.\\
 
-The presented setup has been scrutinised and is the result of exploring different sets of parameters, architectures, variables and setups. Efforts joining the two $t\to qX$ signals in a single training resulted in less discrimination for the $t\to uX$ process. Also, the 20 GeV signal sample is not included in the training as it introduced disagreement in data/MC in all NN outputs. Other more advanced setups, as a Graph NN, were not substantially improving the performance.
+The presented setup has been scrutinised and is the result of exploring different sets of parameters, architectures, variables and setups. Efforts joining the two $t\to qX$ signals in a single training resulted in less discrimination for the $t\to uX$ process. Also, the 20 GeV signal sample is not included in the training as it introduced disagreement in data/MC in all NN outputs. Other more advanced setups, as a Graph NN, were not substantially improving the performance.\\
 
 \begin{table}[htb]
     \centering
@@ -255,9 +269,11 @@ The presented setup has been scrutinised and is the result of exploring differen
     \label{tqX:inputNNtable}
 \end{table}
 
-The importance of the variables in the NN training depends on the mass of the scalar and in a lesser extent on the channel but, in general, the most important ones are the various combinations of both di-jet invariant masses and angular distances between the two jets. Less important, and only in a small range of masses, are the $b$-tagging score of the fourth jet and the transverse momentum of the third jet. The NN output is obtained evaluating the $t\to uX$ or the $t\to cX$ NN setting the $m_X$ at the desired hypothesis. The obtained distributions for signal and background in the analysis regions for various representative values of $m_X$ and the two signal decays are shown in Figure~\ref{tqX:NNshapescX} and Figure~\ref{tqX:NNshapesuX}. The shapes are significantly different between the presented mass-points, although the shape of the distributions transforms gradually from one mass to the next. Notice that the shape of the background changes, since the same NN is being evaluated but with different $m_X$ values.
+The importance of the variables in the NN training depends on the mass of the scalar and in a lesser extent on the channel but, in general, the most important ones are the various combinations of both di-jet invariant masses and angular distances between the two jets. Less important, and only in a small range of masses, are the $b$-tagging score of the fourth jet and the transverse momentum of the third jet.\\
 
-Figure~\ref{tqX:NNAUC} summarises the performance in terms of AUC. The performance is best at a mass of 30~GeV, given that this is the mass for which the input variables show the best discrimination, on the contrary the 120~GeV outputs the lowest performance. For 20~GeV, the performance is low because is not included in the training and due to the kinematics and statistics being too different from the rest of masses. The performance of $t\to uX$ and $t\to cX$ follow the same structure, with the $t\to uX$ training performance being slightly better in the lower range of masses.
+The NN output is obtained evaluating the $t\to uX$ or the $t\to cX$ NN setting the $m_X$ at the desired hypothesis. The obtained distributions for signal and background in the analysis regions for various representative values of $m_X$ and the two signal decays are shown in Figure~\ref{tqX:NNshapescX} and Figure~\ref{tqX:NNshapesuX}. The shapes are significantly different between the presented mass-points, although the shape of the distributions transforms gradually from one mass to the next. Notice that the shape of the background changes, since the same NN is being evaluated but with different $m_X$ values.\\
+
+Figure~\ref{tqX:NNAUC} summarises the performance in terms of AUC. The performance is best at a mass of 30~GeV, given that this is the mass for which the input variables show the best discrimination, on the contrary the 120~GeV outputs the lowest performance. For 20~GeV, the performance is low because is not included in the training and due to the kinematics and statistics being too different from the rest of masses. The performance of $t\to uX$ and $t\to cX$ follow the same structure, with the $t\to uX$ training performance being slightly better in the lower range of masses.\\
 
 \begin{figure}[htb]
     \RawFloats
