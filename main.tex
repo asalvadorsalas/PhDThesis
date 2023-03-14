@@ -61,8 +61,10 @@
 \graphicspath{{examples/documentation/images/}{images/}} % Paths in which to look for images
 
 \usepackage{latex/newcomands}
-\usepackage{layouts}
-\printinunitsof{cm}
+\usepackage{layout}
+\usepackage{bm}
+%\usepackage{layouts}
+%\printinunitsof{cm}
 
 \makeindex[columns=3, title=Alphabetical Index, intoc] % Make LaTeX produce the files required to compile the index
 
@@ -147,7 +149,7 @@
 
 %\titlehead{The \texttt{kaobook} class}
 
-\title[Searches for new neutral and charged scalars with multiple top and bottom quarks in Run~2 $pp$ collisions at $\sqrt{s}=13$~TeV with the ATLAS detector]{Searches for new neutral and charged scalars \\ with multiple top and bottom quarks in Run~2 $pp$ collisions at $\sqrt{s}=13$~TeV with the ATLAS detector}
+\title[Searches for new neutral and charged scalars with multiple top and bottom quarks in Run~2 $pp$ collisions at $\sqrt{s}=13$~TeV with the ATLAS detector]{Searches for new neutral and charged scalars \\ with multiple top and bottom quarks in Run~2 $\bm{pp}$ collisions at $\bm{\sqrt{s}=13}$~TeV with the ATLAS detector}
 \subtitle{Customise this page according to your needs}
 
 %\subject{Use this document as a templated}
@@ -292,7 +294,7 @@
 %\input{chapters/references.tex}
 
 \pagelayout{wide} % No margins
-\addpart{Search for charged Higgs bosons decaying into a top quark and a bottom quark}
+\addpart{Search for charged Higgs bosons decaying into a top and bottom quarks}
 \pagelayout{margin} % Restore margins
 
 \input{chapters/Hplus/analysismain.tex}
@@ -301,20 +303,20 @@
 %\input{chapters/mathematics.tex}
 
 \pagelayout{wide} % No margins
-\addpart{Neutral scalar produced in FCNC top processes decaying into a bottom quark pair}
+\addpart{Search for neutral scalars in FCNC top processes decaying into bottom quarks}
 \pagelayout{margin} % Restore margins
 \input{chapters/tqX/analysismain.tex}
 
-\pagelayout{wide} % No margins
-\addpart{Conclusion}
-\pagelayout{margin} % Restore margins
+%\pagelayout{wide} % No margins
+%\addpart*{}
+%\pagelayout{margin} % Restore margins
 \input{chapters/conclusions.tex}
 
 \appendix % From here onwards, chapters are numbered with letters, as is the appendix convention
 
-\pagelayout{wide} % No margins
-\addpart{Appendix}
-\pagelayout{margin} % Restore margins
+%\pagelayout{wide} % No margins
+%\addpart{Appendix}
+%\pagelayout{margin} % Restore margins
 %\input{chapters/appendix.tex}
 
 %----------------------------------------------------------------------------------------

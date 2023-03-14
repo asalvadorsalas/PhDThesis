@@ -1,4 +1,5 @@
 \chapter{$H^+\to tb$ analysis overview}
+\label{chapter:Htbanalysis}
 
 The discovered scalar particle in 2012 raises whether it is the Higgs boson of the~\acrshort{SMlabel} or part of an extended scalar sector. Charged Higgs bosons\footnote{In the following, charged Higgs bosons are denoted $H^+$, with the charge-conjugate $H^-$ always implied. Similarly, the difference between quarks and antiquarks $q$ and $\bar{q}$ is generally understood from the context, so that $H^+\to tb$ means both $H^+\to t\bar{b}$ and $H^-\to \bar{t}b$.} are predicted in several extensions of the~\acrshort{SMlabel} that add a second doublet or triplets to the scalar sector, as discussed in \textcolor{red}{Section}. 
 The~\acrshort{ATLASlabel} and CMS collaborations have searched for charged Higgs bosons in $pp$ collisions at $\sqrt{s}$= 7, 8 and 13~TeV with data samples ranging from 2.9 to 36 fb$^{-1}$, probing the mass range below the top-quark mass in the $\tau\nu$~\cite{Hplustaunu12,Hplustaunu13,Hplustaunu15,Hplustaunu12CMS,Hplustaunu15CMS,Hplustaunu18}, $cs$~\cite{Hpluscs2013,Hpluscs2015}, $cb$~\cite{HpluscbCMS,Hpluscb2022},$WA$ ($A$ pseudo-scalar) decay modes, as well as above the top-quark mass in the $\tau\nu$ and $tb$ decay modes~\cite{Hplustaunu12,Hplustaunu13,Hplustaunu15,Hplustaunu12CMS,Hplustaunu18,Hplustb2015,Sirunyan_2020,Hplustb21CMS,ATLASHptb2018}. In addition, $H^+\to WZ$ decays were searched for in the vector-boson-fusion production mode~\cite{HplusWZ15,HplusWZ15CMS}. \acrshort{ATLASlabel} has also set limits on the $H^+$ production in a search for di-jet resonances in events with an isolated lepton using the Run~2 dataset~\cite{Hplusdijet20}. No evidence of charged Higgs bosons was found in any of these searches.
@@ -206,9 +207,9 @@ The sample corresponding to the 1000 GeV $H^+$ mass has also been fully simulate
 
 \subsection{Background modelling}
 
-\subsubsection{\ttbar+ jets}
+\subsubsection{$\bm{t\bar{t}}$ + jets}
 
-The dominant background for the $H^+$ signal is the \ttbar\ pair production with additional jets, specially \ttb\ processes. Hence, events are categorised depending on the flavour of the additional jets. The labelling is performed with \textit{particle jets}, jets formed only taking into account particles with a mean lifetime over $3\cdot10^{-11}$~s not originating directly from top-quarks or $W$-bosons. Then, the jet flavour label is assigned from $\Delta R$(jet,hadron)<0.4 as follows:
+The dominant background for the $H^+$ signal is the \ttbar\ pair production with additional jets, especially \ttb\ processes. Hence, events are categorised depending on the flavour of the additional jets. The labelling is performed with \textit{particle jets}, jets formed only taking into account particles with a mean lifetime over $3\cdot10^{-11}$~s not originating directly from top-quarks or $W$-bosons. Then, the jet flavour label is assigned from $\Delta R$(jet,hadron)<0.4 as follows:
 \begin{itemize}
     \item \ttb: \ttbar + at least one additional jet containing at least one $b$-hadron.
     \item \ttc: not \ttb\ and at least one additional jet containing at least one $c$-hadron.
@@ -220,7 +221,7 @@ The nominal production is modelled with the 5FS and \POWHEGBOX~v2 setting the re
 \subsubsection{Single-top}
 \textit{t-channel}
 
-Single-top t-channel production is modelled with \POWHEGBOX~v2, which provides~\acrshort{MElabel} at NLO in the 4FS with the \textit{NNPDF3.0NLOnf4}~\acrshort{PDFlabel} set. The renormalisation and factorisation scales are set to $\sqrt{m_b^2+p_{\text{T},b}^2}$. The events are showered with \PYTHIA~8.
+Single-top t-channel production is modelled with \POWHEGBOX~v2, which provides~\acrshort{MElabel} at NLO in the 4FS with the \textit{NNPDF3.0NLOnf4}~\acrshort{PDFlabel} set. The renormalisation and factorisation scales are set to $\sqrt{m_b^2+p_{\text{T},b}^2}$. The events are showered with \PYTHIA~8.\\
 %The impact of the PS and hadronisation model is evaluated by comparing the nominal generator setup with a
 %sample produced with the PowhegBox v2 generator at NLO in QCD in the 4FS using the NNPDF3.0NLOnf4
 %PDF set. The same events produced for the nominal PowhegBox+Pythia8 sample are used. The events are
@@ -232,7 +233,7 @@ Single-top t-channel production is modelled with \POWHEGBOX~v2, which provides~\
 
 \textit{s-channel}
 
-Single-top s-channel production is modelled using the \POWHEGBOX~v2, which provides~\acrshort{MElabel} at NLO in the 5FS scheme with the \textit{NNPDF3.0NLO}~\acrshort{PDFlabel} set. The renormalisation and factorisation scales are set to the top-quark mass. The events are showered with \PYTHIA~8.
+Single-top s-channel production is modelled using the \POWHEGBOX~v2, which provides~\acrshort{MElabel} at NLO in the 5FS scheme with the \textit{NNPDF3.0NLO}~\acrshort{PDFlabel} set. The renormalisation and factorisation scales are set to the top-quark mass. The events are showered with \PYTHIA~8.\\
 %The impact of the PS and hadronisation model is evaluated by comparing the nominal generator setup with
 %a sample produced with the PowhegBox v2 generator at NLO in QCD in the 5Fs using the NNPDF3.0NLO
 %PDF set. The same events produced for the nominal PowhegBox+Pythia8 sample are used. The events are
@@ -256,7 +257,7 @@ The events are showered with \PYTHIA~8.
 %to a sample generated with the MG5_aMC v2.6.2 generator at NLO in QCD in the 5FS, using the
 %NNPDF2.3NLO PDF set. The events are showered with Pythia 8.230.
 
-\subsubsection{$\ttbar+V$}
+\subsubsection{$\bm{t\bar{t}}$ + $\bm{V}$}
 The production of $\ttbar+V$ events is modelled using \MGMCatNLO~v2.3.3, which provides~\acrshort{MElabel} at
 NLO with the \textit{NNPDF3.0NLO}~\acrshort{PDFlabel} set. The renormalisation and factorisation scales are set to $\frac{1}{2}\sum_i\sqrt{m(i)^2+\pT(i)^2}$, where $i$ runs over the final-state particles used in the generation. The events are showered with \PYTHIA~8.
 %Additional ttV¯ samples are produced with the Sherpa 2.2.0 [52] generator at LO accuracy, using the
@@ -265,7 +266,7 @@ NLO with the \textit{NNPDF3.0NLO}~\acrshort{PDFlabel} set. The renormalisation a
 %The CKKW matching scale of the additional emissions is set to 30 GeV. The default Sherpa 2.2.0 PS is
 %used along with the NNPDF3.0NNLO PDF set.
 
-\subsubsection{$V+jets$}
+\subsubsection{$\bm{V}$ + jets}
 Vector bosons plus jets production is simulated with the \SHERPA~v2.2.1 or v2.2.2 generator. In this setup, NLO-accurate \acrshort{MElabel} for up to two jets, and LO-accurate \acrshort{MElabel} for up to four jets are calculated with the Comix [62] and OpenLoops~\cite{Gleisberg_2008,PhysRevLett.108.111601,DENNER2017220} libraries. The default \SHERPA PS~\cite{Schumann_2008} based on Catani-Seymour dipoles and the cluster hadronisation model are used. They employ the dedicated set of tuned parameters developed by the \SHERPA authors for this version, based on the \textit{NNPDF3.0NNLO} \acrshort{PDFlabel} set. %The NLO ME of a given jet- productioplicity are matched to the PS using a colour-exact variant of the MC@NLO algorithm [67].
 %Different jet multiplicities are then merged into an inclusive sample using an improved CKKW matching
 %procedure [53, 54], which is extended to NLO accuracy using the MEPS@NLO prescription [68]. The
@@ -283,25 +284,25 @@ the \textit{NNPDF3.0NNLO} set, along with the dedicated set of tuned PS paramete
 
 \textit{$\ttbar H$}
 
-The production of $\ttbar H$ events is modelled with the \POWHEGBOX generator at NLO in the 5FS with the \textit{NNPDF3.0NLO} \acrshort{PDFlabel} set. The $h_\text{damp}$ parameter is set to $\frac{3}{4}\cdot(m_t + m_{tbar} + m_H ) = 352.5$~GeV. The events are showered with \PYTHIA~8.% The uncertainties due to ISR, FSR, PS and hadronisation
+The production of $\ttbar H$ events is modelled with the \POWHEGBOX generator at NLO in the 5FS with the \textit{NNPDF3.0NLO} \acrshort{PDFlabel} set. The $h_\text{damp}$ parameter is set to $\frac{3}{4}\cdot(m_t + m_{tbar} + m_H ) = 352.5$~GeV. The events are showered with \PYTHIA~8.\\% The uncertainties due to ISR, FSR, PS and hadronisation
 %model, as well as that due to the matching scheme, are evaluated with the same procedures used for the tt¯ +
 %jets background.
 
 \textit{$tH$}
 
 The production of $tHjb$ events is modelled using the \MGMCatNLO~v2.6.0 generator in the 4FS with the \textit{NNPDF3.0NLOnf4} \acrshort{PDFlabel} set. The renormalisation and factorisation scales are set to $\frac{1}{2}\sum_i\sqrt{m(i)^2+\pT(i)^2}$, where $i$ runs over the final-state particles used in the generation. The shower starting scale is set to $\mu_q = \HT /2$, where \HT\ is defined as the scalar sum of the \pT\
-of all outgoing partons. The events are showered with \PYTHIA~8.230.
+of all outgoing partons. The events are showered with \PYTHIA~8.230.\\
 
-The production of $tHW$ events is modelled instead using the \MGMCatNLO~v2.6.2 generator in the 5FS with the \textit{NNPDF3.0NLO} \acrshort{PDFlabel} set. The different scales are set to the same forms as for $tH$. The events are showered with \PYTHIA~8.235.
+The production of $tHW$ events is modelled instead using the \MGMCatNLO~v2.6.2 generator in the 5FS with the \textit{NNPDF3.0NLO} \acrshort{PDFlabel} set. The different scales are set to the same forms as for $tH$. The events are showered with \PYTHIA~8.235.\\
 
 \textit{$t\bar{t}t\bar{t}$}
 
-The production of four tops events is modelled with \MGMCatNLO~v2.3.3, which provides \acrshort{MElabel} at NLO with the \textit{NNPDF3.1NLO} \acrshort{PDFlabel} set. The renormalisation and factorisation scales are set to $\frac{1}{2}\sum_i\sqrt{m(i)^2+\pT(i)^2}$, where $i$ runs over the final-state particles used in the generation. The events are showered with \PYTHIA~8.230.
+The production of four tops events is modelled with \MGMCatNLO~v2.3.3, which provides \acrshort{MElabel} at NLO with the \textit{NNPDF3.1NLO} \acrshort{PDFlabel} set. The renormalisation and factorisation scales are set to $\frac{1}{2}\sum_i\sqrt{m(i)^2+\pT(i)^2}$, where $i$ runs over the final-state particles used in the generation. The events are showered with \PYTHIA~8.230.\\
 
 \textit{$tZq$ and $tZW$}
 
-The $tZq$ events are generated using the \MGMCatNLO~v2.3.3 generator at LO in the 4FS with the \textit{CTEQ6L1} LO \acrshort{PDFlabel} set. The renormalisation and factorisation scales are set to $4\sqrt{m(b)^2+\pT(b)^2}$, where the $b$-quark comes from the gluon splitting.
+The $tZq$ events are generated using the \MGMCatNLO~v2.3.3 generator at LO in the 4FS with the \textit{CTEQ6L1} LO \acrshort{PDFlabel} set. The renormalisation and factorisation scales are set to $4\sqrt{m(b)^2+\pT(b)^2}$, where the $b$-quark comes from the gluon splitting.\\
 
-The $tZW$ sample is simulated using the \MGMCatNLO~v2.3.3 generator but at NLO in the 5FS with the \textit{NNPDF3.0NLO} \acrshort{PDFlabel} set. The top quark is decayed inclusively while the Z boson decays to a pair of leptons. The renormalisation and factorisation scales are set instead to the top quark mass. The DR scheme is applied to handle the interference with $ttZ$.
+The $tZW$ sample is simulated using the \MGMCatNLO~v2.3.3 generator but at NLO in the 5FS with the \textit{NNPDF3.0NLO} \acrshort{PDFlabel} set. The top quark is decayed inclusively while the Z boson decays to a pair of leptons. The renormalisation and factorisation scales are set instead to the top quark mass. The DR scheme is applied to handle the interference with $ttZ$.\\
 
 Both $tZq$ and $tZW$ are showered with \PYTHIA~8.212.

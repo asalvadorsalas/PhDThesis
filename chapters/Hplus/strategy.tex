@@ -3,7 +3,7 @@ The search targets the $H^+$ production decaying into $tb$ in the single-lepton 
 
 \subsection{Region definition}
 
-The analysis regions are categorised as a function of the number of reconstructed jets and $b$-tagged jets at the 70\% $b$-tagging operating point. The signal regions are 5j3b, 5j$\geq$4b, $\geq$6j3b and $\geq$6j$\geq$4b. Figure~\ref{Hplustb:cheeseplots} illustrates the background composition, which clearly shows the dominance of the \ttbar\ background, specially the \ttb\ component in the $\geq$4b regions. The 3b categories consist of a mixture of the three \ttbar\ components: 52\% of the 5j3b background are \ttl\ events, while the 70\% of the $\geq$6j3b events is split equal by \ttb\ and \ttl\ events.
+The analysis regions are categorised as a function of the number of reconstructed jets and $b$-tagged jets at the 70\% $b$-tagging operating point. The signal regions are 5j3b, 5j$\geq$4b, $\geq$6j3b and $\geq$6j$\geq$4b. Figure~\ref{Hplustb:cheeseplots} illustrates the background composition, which clearly shows the dominance of the \ttbar\ background, especially the \ttb\ component in the $\geq$4b regions. The 3b categories consist of a mixture of the three \ttbar\ components: 52\% of the 5j3b background are \ttl\ events, while the 70\% of the $\geq$6j3b events is split equal by \ttb\ and \ttl\ events.
 
 \begin{figure}[htbp]
     \RawFloats
@@ -93,7 +93,7 @@ Figure~\ref{Hplustb:RWfactors} includes all the derived corrections, showing hig
 \end{center}
 \end{figure}
 
-The agreement between simulation and data in the analysis region improves, as an example, Figure~\ref{Hplustb:RWeffect} shows the improvement in the leading jet \pT\ distribution before and after the reweighting. The remaining disagreement is specially from normalisation effects, which are obtained in the combined likelihood fit. All figures of this analysis are shown after the reweighting corrections are applied, unless stated otherwise.
+The agreement between simulation and data in the analysis region improves, as an example, Figure~\ref{Hplustb:RWeffect} shows the improvement in the leading jet \pT\ distribution before and after the reweighting. The remaining disagreement is especially from normalisation effects, which are obtained in the combined likelihood fit. All figures of this analysis are shown after the reweighting corrections are applied, unless stated otherwise.
 
 \begin{figure}[htb]
     \RawFloats
@@ -125,7 +125,7 @@ The agreement between simulation and data in the analysis region improves, as an
 
 Multivariate techniques are used in this analysis to enhance the separation between signal and background. The kinematics of \ttb\ and signal events are very similar, and these methods can use different distributions as inputs to obtain a powerful discriminating variable. The main classificator is a parameterised NN trained over all signal and background, as described in Section~\ref{ML:SectionNN}. In the set of input variables, a kinematic discriminant is included to enhance the separation between a given $H^+$ sample and \ttjets.
 
-\subsubsection{$H^+$ parameterised NN}
+\subsubsection{$\bm{H^+}$ parameterised NN}
 \label{sec:HplusPNN}
 A set of NNs is trained for each of the signal regions: 5j3b, 5j$\geq$4b, $\geq$6j3b and $\geq$6j$\geq$4b separately. The NN uses high-level variables as input, hence a simple and small architecture is enough to extract all the discrimination power: the architecture is sequential with two fully connected layers of 64 nodes and a single output node, implemented with the Python deep learning library, Keras~\cite{chollet2015keras}. The activation function used is the commonly employed \textsc{ReLU}, the loss is the \textit{binary cross-entropy} function and the optimiser is the Adam algorithm. Batch normalisation is performed to speed up the learning process and dropout is applied during training at a 10\% rate. To further regularise the training, inputs are transformed to the same scale (same mean and variance) as the training set, event weights of each label add up to the same value and a two-fold cross-validation setup is used. All signal samples are used in the training against all background samples, which are weighted according to their cross-sections. Table~\ref{Hplustb:inputNNtable} shows the 15 variables used as input for the NN, which includes the $H^+$ mass. A NN using this technique, normally referred as parameterised NN~\cite{Baldi_2016}, is being provided with an input that distinguishes the different signals and has the output as a function of the $H^+$ value. For signal events the parameter corresponds to the mass of the $H^+$, while for background events a random value of the $H^+$ is assigned to each event, taken from the distribution of signal masses. This makes the NN not to directly use the parameter to perfectly classify the events, while the classification is optimised for each signal.
 
