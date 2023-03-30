@@ -1,28 +1,27 @@
 \chapter{Machine learning and statistical methods}
 \label{chapter:MLStat}
 
-This Chapter introduces the Machine Learning (ML) methods used in the different analysis to enhance the separation between the signal and the background, and also the statistical methods used to extract the measurements of the signal.\\
+This chapter introduces the Machine Learning (ML) methods used in the two analysis described in this thesis to enhance the separation between the signal and the background, and also the statistical methods used to extract the signal.\\
 
-\acrlong{MLlabel}~(\acrshort{MClabel}) is one of the core developing fields in computer science allowing the analysis of large and complex datasets, offering sophisticated techniques with a broad range of possible applications. Regarding high energy physics, the large amount of \acrshort{MClabel} simulations or data that is being recorded is well suited for the application of \acrshort{MLlabel} techniques. In this chapter, different multi-variate techniques used in this thesis are introduced, focusing on the classification methods used to improve signal and background separation.\\
+\acrlong{MLlabel}~(\acrshort{MClabel}) is one of the core developing fields in computer science allowing the analysis of large and complex datasets, offering sophisticated techniques with a broad range of possible applications. Regarding high energy physics, the large amount of \acrshort{MClabel} simulations or data that is being recorded makes it a field well suited for the application of \acrshort{MLlabel} techniques. In this chapter, different multi-variate techniques used in this thesis are introduced, focusing on the classification methods used to improve signal and background separation.\\
 
-In order to test the predictions of a given model, experimental data and \acrshort{MClabel} simulations are compared using statistical methods. This chapter describes the tools used to extract a measurement of the production of the target signal, in addition to upper limits.
+In order to test the predictions of a given model, experimental data and \acrshort{MClabel} simulations are compared using statistical methods. This chapter describes the tools used to extract the production cross-section of a given signal, in the absence of it, their upper limits.
 
 \section{Machine Learning}
 
-The deployment of \acrshort{MLlabel} methods is already reaching crucial tasks in \acrshort{ATLASlabel} as online data recording, from neural networks in calorimetry FPGAs~\cite{Laatu:2022fni} to particle reconstruction in trigger algorithms~\cite{ATLAS:2019uhp}, which benefit from faster and more efficient response than previous filters.\\
+The deployment of \acrshort{MLlabel} methods is already reaching crucial tasks in \acrshort{ATLASlabel} such as online data recording, the implementation of neural networks in calorimetry FPGAs~\cite{Laatu:2022fni} or for particle reconstruction in trigger algorithms~\cite{ATLAS:2019uhp}, which result in more efficient triggers than previous ones.\\
 
-For those cases, a neural network is trained to reduce background--signal ratio, to offer a high-level discriminating variable for a classification problem or to provide a prediction of a certain quantity. These methods can outperform conventional algorithms as the inference is performed from multi-dimensional inputs, providing large amounts of information to the machine learning algorithm. Regular algorithms rely on kinematic variables and although multiple can be combined, \acrshort{MLlabel} methods can use a greater amount of inputs and reach higher performance, given enough data.\\
+For these cases, a neural network is trained to reduce the signal to background ratio, offering a high-level discriminating variable for a classification problem or providing a prediction of a certain quantity. These methods can outperform conventional algorithms as machine learning algorithms perform the classification or inference from multi-dimensional inputs, allowing the extraction of more complex correlations and functions, given enough data. In addition, \acrshort{MLlabel} methods scale easier than non-\acrshort{MLlabel} algorithms in terms of the size of the dataset and the amount of input variables, or features.\\
 
-Regarding detector simulation, it is one of the most computational intensive tasks within \acrshort{ATLASlabel}, especially from the calorimeter simulation, and solutions involving adversarial networks and auto-encoders are being studied to output faster but reliable output.\\
+On the other hand, detector simulation is one of the most computational intensive tasks within \acrshort{ATLASlabel}, especially the calorimeter simulation, and solutions involving adversarial networks and auto-encoders are being studied to output faster and reliable output.\\
 
-Regarding particle reconstruction and identification, examples of implementations can be found within the $\tau$ identification~\cite{ATLAS:2019uhp} or $b$-tagging algorithms~\cite{ATL-PHYS-PUB-2020-014}. In physics analyses, the use of \acrshort{MLlabel} is already standardised to typically reconstruct signal processes or to discriminate them from the background. Then, the output is a high discriminating variable that can be used to define high-purity signal analysis regions, for example.\\
+Regarding particle reconstruction and identification, examples of \acrshort{MLlabel} implementations can be found within the $\tau$ identification~\cite{ATLAS:2019uhp} or $b$-tagging algorithms~\cite{ATL-PHYS-PUB-2020-014}. In physics analyses, the use of \acrshort{MLlabel} is already standardised typically to reconstruct signal processes or to discriminate them from the background. In this case, the output is a high discriminating variable that can be used to define high-purity signal analysis regions, for example.\\
 
-Machine Learning is a very broad umbrella term for algorithms which are not per se optimised for a specific task but are can adapt to different problem sets by tuning their parameter set using data (training).
-\acrshort{MLlabel} requires, besides the model itself, preparation and follow-up processing steps. In which extent they are necessary depends on the available data, the model and its application.\\
+\acrshort{MLlabel} algorithms are not designed for a specific task, they consist in general models with hundreds of free parameters that are tuned using data. The process of optimising the internal parameters to correclty solve a specific problem is known as training the model. Depending on the available data, model and its application, several steps are needed to adequately perform and evaluate the training.\\
 
-Generally, two types of machine learning are distinguished: Supervised learning and Unsupervised learning. The main difference is that the first requires fully labelled training data while the latter does not. In the context of this thesis, supervised approaches are used based on Neural Networks (NNs) and Boosted Decision Trees (BDTs).\\
+Generally, two types of \acrshort{MLlabel} algorithms can be distinguished: Supervised learning and Unsupervised learning models. The main difference is that the first requires fully labelled training data, namely that each instance in the data is associated with a known output or target value (like the true mass of a particle). The provided labels allows the model to map the input features and output labels, to generalise the relationship to unseen data. On the other hand, unsupervised learning models do not rely on labelled data and instead are used to uncover hidden patterns or structures within the data itself (like detection of anomalies). In the context of this thesis, supervised approaches are used based on Neural Networks (NNs) and Boosted Decision Trees (BDTs).\\
 
-The statistical model is denoted as $\text{P}_\text{model}(\mathbf{x_i}; \boldsymbol{\theta})$ parameterised with the set of parameters $\boldsymbol{\theta}$ while $\mathbf{x_i}=(x_i^1,x_i^2,...,x_i^M)$ is the feature set of a single input data point $i$ of the $\mathbf{X}=(\mathbf{x_1},\mathbf{x_2},...,\mathbf{x_N})$ dataset consisting of $N$ data points. $\text{P}_\text{data}$ is the true distribution that generates the data but is unknown. In the case of supervised learning, every data point has a label which categorizes the event, $\mathbf{y}=(y_1,y_2,...,y_N)$.
+The relationship between a machine learning model, its parameters, and the input data can be formally expressed using statistical notation.The statistical model of a general \acrshort{MLlabel} algorithm is denoted as $\text{P}_\text{model}(\mathbf{x_i}; \boldsymbol{\theta})$ and is parameterised with a set of parameters $\boldsymbol{\theta}$ while $\mathbf{x_i}=(x_i^1,x_i^2,...,x_i^M)$ is the input feature set of a single input data point $i$ of the $\mathbf{X}=(\mathbf{x_1},\mathbf{x_2},...,\mathbf{x_N})$ dataset consisting of $N$ data points. $\text{P}_\text{data}$ is the true distribution that generates the data but is unknown. In the case of supervised learning, every data point has a label that categorises the event, $\mathbf{y}=(y_1,y_2,...,y_N)$.
 
 \subsection{Pre-processing}
 
@@ -36,11 +35,11 @@ In this thesis and typically in \acrshort{ATLASlabel} analyses, every simulated 
 
 \subsection{Performance}
 
-The model performance is usually the decisive measure of an \acrshort{MLlabel} method and depending on the objective, different metrics are used to better evaluate the performance. The most common variables are discussed in the following.
+The model performance is usually the decisive measure of a \acrshort{MLlabel} method and, depending on the objective, different metrics are used. In the context of the NN implemented in this thesis, the loss function and the Area Under the ROC Curve (AUC) are presented. The loss function is the quantity optimised during the model training while the AUC is the quantity used to characterise the performance of the model.
 
 \subsection{Loss function}
 
-The loss function $E$ or cost function is the quantity optimised during the model training and represent the deviation of a model from the desired behaviour. To be suitable for minimisation, the function has to be differentiable. The choice of the loss function depends on the problem and requires optimisation. For supervised learning, the loss function depend on the labels and the worse the prediction is, the higher the loss function.\\
+The loss function $E$ or cost function is optimised during the model training and represents the deviation of a model from the desired behaviour. To be suitable for minimisation, the function has to be differentiable. The choice of the loss function depends on the problem and requires optimisation. For supervised learning, the loss function depends on the true and predicted label velues of the data so the worse the prediction is, the higher the loss function.\\
 
 It is standard to express the loss of the full dataset $\mathbf{X}$ as the average of loss of the single data points $\mathbf{x_i}$,
 
@@ -51,23 +50,34 @@ It is standard to express the loss of the full dataset $\mathbf{X}$ as the avera
 For regression problems the typical expression is the mean square error~\cite{EncyclopediaofML}, 
 
 \begin{equation}
-    E_{MSE}(\mathbf{X},\boldsymbol{\theta}) = \frac{1}{N}\sum_{i=1}^N (y_i\text{P}_\text{model})^2
+    E_{MSE}(\mathbf{X},\boldsymbol{\theta}) = \frac{1}{N}\sum_{i=1}^N (y_i\text{P}_\text{model})^2,
 \end{equation}
 
-simply an average of the deviation from the true labels. For binary classification, the so-called \textit{binary cross-entropy}~\cite{binarycross} is frequently used, 
+which is an average of the deviation from the true labels. For binary classification, the so-called \textit{binary cross-entropy}~\cite{binarycross} is frequently used, 
 
 \begin{equation}
-    E_{BSE}(\mathbf{X},\boldsymbol{\theta}) = -\frac{1}{N}\sum_{i=1}^N y_i\cdot\log(\text{P}_\text{model}(\mathbf{X},\boldsymbol{\theta}))+(1-y_i)\cdot\log(1-\text{P}_\text{model}(\mathbf{X},\mathbf{X}))
+    E_{BCE}(\mathbf{X},\boldsymbol{\theta}) = -\frac{1}{N}\sum_{i=1}^N y_i\cdot\log(\text{P}_\text{model}(\mathbf{X},\boldsymbol{\theta}))+(1-y_i)\cdot\log(1-\text{P}_\text{model}(\mathbf{X},\mathbf{\theta})),
 \end{equation}
 
-which is the negative log-likelihood of a Bernouilly distribution, and a modified version is used in multi-classification problems. 
+which is the negative log-likelihood of a Bernouilly distribution. A modified version is used in multi-classification problems. 
 
-\subsubsection{AUC}
+\subsection{Area Under the ROC Curve}
 
-In the analyses presented in this thesis, the output distribution of the NN is used as a high-level variable and in the  multi-variate fit to data. Hence, the loss function is not the only important criteria as both the shapes and the separation between the signal and background output distributions are essential for the performance of the analyses. The quantity to evaluate the separation from signal and background for a given variable is the \textit{Area Under the ROC Curve} (AUC), and is the main decisive variable for a training in this thesis.\\
+In the analyses presented in this thesis, the NN is trained to output a high-level variable with high separation between signal and background. Hence, the loss function is not the only important criteria as both the shape and the separation between the signal and background output distributions are essential to estimate the performance of the analyses. The quantity to evaluate the separation between signal and background for a given variable is the \textit{Area Under the ROC Curve} (AUC), and is the main decisive variable for to choose a training in this thesis.\\
 
-Given two variable distributions from a signal and a background sample, the \textit{ROC} curve (Receiver Operating Characteristic) is defined as the signal efficiency against the background rejection.%\todo{prepare graph?}
-The shape of the curve already provides a lot of the information regarding the overlap of the distributions, but the characteristic quantity is the integral of the curve, the AUC. The AUC minimum value is 0.5, when the overlap between two distributions is total, while the maximum value is 1, when the distributions are totally separated. In the maximum value case, there is a cut in the discriminating variable can distinguish completely between signal and background.
+When considering two distinct variable distributions, one originating from a signal sample and the other from a background sample, the \textit{Receiver Operating Characteristic} (ROC) curve is defined as the signal efficiency against the background rejection, and displays the trade-off between signal efficiency and background rejection when defining classification threshold.%\todo{prepare graph?}
+The shape of the curve already provides a lot of the information regarding the overlap of the distributions, but the characteristic quantity is the integral of the curve, the AUC. Figure~\ref{ML:AUC} illustrates two examples with a different degree of overlap. The AUC minimum value is 0.5, when the overlap between two distributions is total, while the maximum value is 1, when the distributions are totally separated. In the case of AUC=1, a cut in the discriminating variable is able to distinguish completely between signal and background.
+
+\begin{figure}[htbp]
+    \RawFloats
+    \begin{center}
+    \includegraphics[width=0.75\textwidth]{ML/AUCexample.pdf}
+    \caption{
+        Comparison of Gaussian distributions and corresponding ROC curves to illustrate the behaviour of the ROC curve and the AUC.
+    }
+    \label{ML:AUC}
+    \end{center}
+\end{figure}
 
 \subsection{Neural networks}
 \label{ML:SectionNN}
