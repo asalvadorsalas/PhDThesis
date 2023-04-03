@@ -1,11 +1,11 @@
 \section{Analysis strategy}
-The search targets the $H^+$ production decaying into $tb$ in the single-lepton channel. The events that pass the selection described in Section~\ref{Hplustb:SectionEventSelection} are further divided into two types of disjointed analysis regions: signal regions and control regions. The control regions are used to improve the modelling of the \ttjets\ background, while several multi-variate techniques are used in the signal regions to improve the separation between signal and background events.
+This analysis targets the $H^+$ production decaying into $tb$ in the single-lepton channel. The events that fulfil the selection described in Section~\ref{Hplustb:SectionEventSelection} are further divided into two types of disjoint analysis regions: signal regions and control regions. The control regions are used to improve the modelling of the \ttjets\ background, while several multi-variate techniques are used in the signal regions to improve the separation between signal and background events.
 
-\subsection{Region definition}
+\subsection{Regions definition}
 
-The analysis regions are categorised as a function of the number of reconstructed jets and $b$-tagged jets at the 70\% $b$-tagging operating point. The signal regions are 5j3b, 5j$\geq$4b, $\geq$6j3b and $\geq$6j$\geq$4b.\\
+The analysis regions are categorised as a function of the number of reconstructed jets and $b$-tagged jets using the 70\% $b$-tagging operating point. A total of four signal regions are used, namely 5j3b, 5j$\geq$4b, $\geq$6j3b and $\geq$6j$\geq$4b. The nomenclature follows $X$j$Y$b, where $X$ denotes the number of jets and $Y$ the number of $b$-tagged jets.\\
 
-Figure~\ref{Hplustb:cheeseplots} illustrates the background composition, which clearly shows the dominance of the \ttbar\ background, especially the \ttb\ component in the $\geq$4b regions. The 3b categories consist of a mixture of the three \ttbar\ components: 52\% of the 5j3b background are \ttl\ events, while the 70\% of the $\geq$6j3b events is split equal by \ttb\ and \ttl\ events.\\
+Figure~\ref{Hplustb:cheeseplots} illustrates the background composition, which shows the large fraction of the \ttbar\ background, especially the \ttb\ component in the $\geq$4b regions. The 3b categories consist of a mixture of the three \ttbar\ components: 52\% of the 5j3b background are \ttl\ events, while 70\% of the $\geq$6j3b events is split equally between \ttb\ and \ttl\ events.\\
 
 \begin{figure}[htbp]
     \RawFloats
@@ -18,7 +18,7 @@ Figure~\ref{Hplustb:cheeseplots} illustrates the background composition, which c
     \end{center}
 \end{figure}
 
-Table~\ref{Hplustb:prefityields} shows the number of expected and selected events in the different regions, including the $\geq$5j2b selection which is used to derive weights to improve the \ttbar\ modelling, as shown in the next section. The number of expected $H^+$ signal events for the 600 GeV mass hypothesis is also shown, which contribution is less than 0.5\% for the $\geq$5j2b and thus considered negligible. Another observation, is that the region with the higher sensitivity in terms of $n_S/\sqrt{n_B}$ is the $\geq$ 6j$\geq$ 4b region.\\  %Table 6 shows the cut flow for each signal sample.
+Table~\ref{Hplustb:prefityields} shows the number of expected and selected events in the different regions, including the $\geq$5j2b selection which is used to derive weights to improve the \ttbar\ modelling, as described in the next section. The number of expected $H^+$ signal events for the 600 GeV mass hypothesis is also shown, whose contribution is less than 0.5\% in the $\geq$5j2b region and thus considered negligible. Another observation is that the region with the higher sensitivity in terms of $n_S/\sqrt{n_B}$ is the $\geq$6j$\geq$4b region.\\  %Table 6 shows the cut flow for each signal sample.
 
 \begin{table}[htb]
     \small
@@ -44,14 +44,14 @@ Table~\ref{Hplustb:prefityields} shows the number of expected and selected event
 \midrule
   Data                      &1830756           & 95852             & 4109          & 98929          & 10552 \\
 \midrule  
-\midrule\ 600 GeV             & 1911 $\pm$ 24   & 520 $\pm$ 40      & 73 $\pm$ 8    & 960 $\pm$ 80   & 279 $\pm$ 25  \\   
+\midrule\ $H^+\to tb$ 600 GeV             & 1911 $\pm$ 24   & 520 $\pm$ 40      & 73 $\pm$ 8    & 960 $\pm$ 80   & 279 $\pm$ 25  \\   
 \bottomrule\bottomrule                               
     \end{tabular}
-    \caption{Number of expected and selected events split according to the analysis regions. The $\geq$ 5j2b region is used to derive weights to improve the agreement between data and background. The quoted uncertainties include both statistical and systematic uncertainties except for the first column ($\geq$ 5j2b) which only includes statistical uncertainties. The predicted number of $H^+$ signal events for the 600 GeV mass hypothesis is also shown, assuming a cross-section times branching fraction of 0.32~pb.}
+    \caption{Number of expected and selected events split according to the analysis regions. The $\geq$ 5j2b region is used to derive weights to improve the agreement between data and background. The quoted uncertainties include both statistical and systematic uncertainties except for the first column ($\geq$ 5j2b), which includes only statistical uncertainties. The predicted number of $H^+$ signal events for the 600 GeV mass hypothesis is also shown, assuming a cross-section times branching fraction of 0.32~pb.}
     \label{Hplustb:prefityields}
 \end{table}
 
-Figure~\ref{Hplustb:acceptance} shows the acceptance times efficiency of the $\geq$5j$\geq$3b inclusive selection per signal mass sample. It can be observed the decrease in acceptance starting from 1000~GeV, due to the loss of jets and characteristic of boosted regimes.
+Figure~\ref{Hplustb:acceptance} shows the acceptance times efficiency of the $\geq$5j$\geq$3b inclusive selection per signal mass sample. It can be observed that the acceptance starts to decrease at the 1000~GeV $H^+$ mass, and this is due to the loss of jets and the characteristics of boosted regimes.
 
 \begin{figure}[htbp]
     \RawFloats
@@ -67,20 +67,26 @@ Figure~\ref{Hplustb:acceptance} shows the acceptance times efficiency of the $\g
 \clearpage
 \subsection{Reweighting technique}
 \label{Hplustb:secRW}
-The main background for the search is \ttjets, and its correct modelling is essential for the correct description of the data. It is observed that the simulation does not properly model high jet multiplicities nor the hardness of additional jet emissions~\cite{ATL-PHYS-PUB-2018-009,10.1007/JHEP01(2021)033}.\\
+The main background for this analysis is \ttjets, and its correct modelling is essential for an appropiate description of the data. It is observed that the simulation does not properly model high jet multiplicity eventss nor the hardness of additional jet emissions~\cite{ATL-PHYS-PUB-2018-009,10.1007/JHEP01(2021)033}.\\
 
-To improve the data/MC agreement of this essential background, data-based corrections are applied to the \ttbar\ samples. Since the mismodelling is assumed to be mainly due to the additional radiation in the parton shower, hence independent on the flavour of the associated jets, the corrections derived in the $\geq$5j2b regions are expected to improve the agreement in the 3b and $\geq$4b regions. The remaining discrepancies can still be covered by the systematic model.\\
+To improve the data to MC agreement, data-based corrections are applied to the \ttbar\ samples. Since the mismodelling is assumed to be mainly due to the additional radiation in the parton shower, hence independent of the flavour of the associated jets, the corrections derived in the $\geq$5j2b regions are expected to improve the agreement in the 3b and $\geq$4b regions. The remaining discrepancies can be covered by the systematics model.\\
 
-The corrections are derived for each jet multiplicity and as a function of \HTall, defined as the scalar \pT\ sum of jets and the lepton, i.e. all the selected objects. The reweighting factors for each jet multiplicity is expressed as:
+The corrections are derived for each jet multiplicity and as a function of \HTall, defined as the scalar \pT\ sum of jets and the lepton, i.e. all the selected objects. The reweighting factors for each jet multiplicity are expressed as:
 
 \begin{equation}
     \label{Hplustb:RWeq}
-    R(\HTall)=\frac{ \text{Data}(\HTall) - \text{MC}^{\text{non-\ttbar}(\HTall)} }{\text{MC}^{\text{\ttbar}(\HTall)}}
+    R(\HTall)=\frac{ \text{Data}(\HTall) - \text{MC}^{\text{non-\ttbar}}(\HTall) }{\text{MC}^{\text{\ttbar}}(\HTall)}
 \end{equation}
 
-and, by construction, assumes that any disagreement between data and MC is from \ttbar. In this context, \ttbar\ includes \ttb, \ttc\ and \ttl\ as well as single top $Wt$ contributions.\\
+and, by construction, assumes that any disagreement between data and MC comes from \ttbar. In this context, \ttbar\ includes the \ttb, \ttc\ and \ttl\ as well as single top $Wt$ contributions.\\
 
-Figure~\ref{Hplustb:RWfactors} includes all the derived corrections, showing higher weights for increased jet multiplicities and, in general, the \HTall corrections have a hyperbolic behaviour: converging $\HTall > 800$~GeV and rapidly increasing towards lower values. Among various functions, the hyperbola plus a sigmoid functional form was found to best fit the \HTall\ weight distributions: $w=a+\frac{b}{(\HTall)^c} - \frac{d}{1+\exp(e-f\cdot\HTall)}$. Systematic uncertainties are included in the analysis extracted from the eigenvalues of the fitted parameters' error matrix.\\
+Figure~\ref{Hplustb:RWfactors} includes all the derived corrections, showing higher weights for large jet multiplicities. In general, the \HTall corrections have a hyperbolic behaviour (most visible 5j2b region) decreasing up to $\HTall > 800--1000$~GeV. Among various functions, the hyperbola plus a sigmoid functional form was found to best fit the \HTall\ weight distributions,
+
+\begin{equation}
+w=a+\frac{b}{(\HTall)^c} - \frac{d}{1+\exp(e-f\cdot\HTall)}
+\end{equation}
+
+The eigenvalues of the fitted parameters' error matrix are used to include systematic uncertainties related to the reweighting into the analysis fit model.\\
 
 \begin{figure}[htb]
     \RawFloats
@@ -96,7 +102,7 @@ Figure~\ref{Hplustb:RWfactors} includes all the derived corrections, showing hig
 \end{center}
 \end{figure}
 
-The agreement between simulation and data in the analysis region improves, as an example, Figure~\ref{Hplustb:RWeffect} shows the improvement in the leading jet \pT\ distribution before and after the reweighting. The remaining disagreement is especially from normalisation effects, which are obtained in the combined likelihood fit. All figures of this analysis are shown after the reweighting corrections are applied, unless stated otherwise.
+After applying these corrections, the agreement between simulation and data in the analysis region improves, as can be seen in Figure~\ref{Hplustb:RWeffect} showing the leading jet \pT\ distributions before and after the reweighting. The shape substantially improves and the remaining disagreement is mainly due to missing normalisations, which are obtained in the combined likelihood fit. All figures of this analysis in Section~\ref{chapter:Htbresults} are shown after the reweighting corrections are applied, unless stated otherwise.
 
 \begin{figure}[htb]
     \RawFloats
@@ -117,24 +123,24 @@ The agreement between simulation and data in the analysis region improves, as an
     {\includegraphics[width = 0.33\textwidth]{HPLUSTB/Reweighting/unrw/plot_6jin4bin_jet_pt.pdf}} 
      \subfloat[$\ge$6j$\ge$4b, reweighted]
     {\includegraphics[width = 0.33\textwidth]{HPLUSTB/Reweighting/rw/plot_6jin4bin_jet_pt.pdf}} \\  
-    \caption{Comparison of the predicted leading jet \pT\ and data before the fit in the four analysis signal regions before (left) and after (right) the reweighting was applied. The uncertainty bands include both the statistical and systematic uncertainties, except for the cross-sections of the \ttb\ and \ttc\ backgrounds.
-    The lower panels display the ratio of the data to the total prediction. 
-    The hatched bands show the uncertainties before the fit to the data,  which are dominated by systematic uncertainties. The $\chi^2/\mathrm{ndf}$ and the $\chi^2$ probability are also shown. Statistical uncertainties on MC predictions and data are uncorrelated across bins, while systematic uncertainties on the predictions are correlated.}
+    \caption{Comparison of the data and predicted leading jet \pT\ distributions before the fit in the four analysis signal regions before (left) and after (right) the reweighting is applied. The uncertainty bands include both statistical and systematic uncertainties, except for the cross-sections of the \ttb\ and \ttc\ backgrounds.
+    The lower panels show the ratio of the data to the total prediction. 
+    The hatched bands show the uncertainties before the fit to the data, which are dominated by systematic uncertainties. The $\chi^2$ per number of degrees of freedom ($\chi^2/\mathrm{ndf}$) and the $\chi^2$ probability are also shown. Statistical uncertainties on MC predictions and data are uncorrelated across bins, while systematic uncertainties on the predictions are correlated.}
     \label{Hplustb:RWeffect}
 \end{center}
 \end{figure}
 \clearpage
 \subsection{Multivariate techniques}
 
-Multivariate techniques are used in this analysis to enhance the separation between signal and background. The kinematics of \ttb\ and signal events are very similar, and these methods can use different distributions as inputs to obtain a powerful discriminating variable.\\
+Multivariate techniques are used in this analysis to enhance the separation between signal and background. The kinematics of \ttb\ and signal events are very similar, and these techniques use different distributions as inputs to obtain a powerful discriminating variable.\\
 
-The main classificator is a parameterised NN trained over all signal and background, as described in Section~\ref{ML:SectionNN}. In the set of input variables, a kinematic discriminant is included to enhance the separation between a given $H^+$ sample and \ttjets.
+The main classifier in this analysis is a parameterised NN trained over all signal and background, as described in Section~\ref{ML:SectionNN}. In the set of input variables, a kinematic discriminant is included to enhance the separation between a given $H^+$ sample and \ttjets.
 
 \subsubsection{$\bm{H^+}$ parameterised NN}
 \label{sec:HplusPNN}
-A set of NNs is trained for each of the signal regions: 5j3b, 5j$\geq$4b, $\geq$6j3b and $\geq$6j$\geq$4b separately. The NN uses high-level variables as input, hence a simple and small architecture is enough to extract all the discrimination power.\\
+The NN uses high-level variables as input, hence a simple and small architecture is enough to extract the discrimination power. The architecture is sequential with two fully connected layers of 64 nodes and a single output node, implemented with the Python deep learning library, Keras~\cite{chollet2015keras}. The activation function used is the commonly employed \textsc{ReLU}, the loss function is the \textit{binary cross-entropy} and the optimiser is the Adam algorithm. Batch normalisation is performed to speed up the learning process. The dropout method is applied during the training at a 10\% rate. To further regularise the training, inputs are transformed to the same scale (same mean and variance) as the training set, event weights are normalised such as each label adds up to the same value and a two-fold cross-validation setup is used. All signal samples are used in the training against all background samples, which are weighted according to their cross-sections.\\
 
-The architecture is sequential with two fully connected layers of 64 nodes and a single output node, implemented with the Python deep learning library, Keras~\cite{chollet2015keras}. The activation function used is the commonly employed \textsc{ReLU}, the loss is the \textit{binary cross-entropy} function and the optimiser is the Adam algorithm. Batch normalisation is performed to speed up the learning process and dropout is applied during training at a 10\% rate. To further regularise the training, inputs are transformed to the same scale (same mean and variance) as the training set, event weights of each label add up to the same value and a two-fold cross-validation setup is used. All signal samples are used in the training against all background samples, which are weighted according to their cross-sections. Table~\ref{Hplustb:inputNNtable} shows the 15 variables used as input for the NN, which includes the $H^+$ mass. A NN using this technique, normally referred to as parameterised NN~\cite{Baldi_2016}, is being provided with an input that distinguishes the different signals and has the output as a function of the $H^+$ value. For signal events the parameter corresponds to the mass of the $H^+$, while for background events a random value of the $H^+$ is assigned to each event, taken from the distribution of signal masses. This makes the NN not to directly use the parameter to perfectly classify the events, while the classification is optimised for each signal.\\
+Table~\ref{Hplustb:inputNNtable} shows the 15 variables used as input for the NN. The set includes several kinematic variables, geometric relations, event topology variables, jet multiplicities, which collectively provide a comprehensive characterisation of the events focusing on differences between $H^+$ signal and \ttbar\ background. In addition, the set includes the kinematic discriminant (a high-level variable described in Section~\ref{Hplustb:SectionHplusDiscriminant}) and the $H^+$ mass. The NN is provided with the true $H^+$ mass, an input that distinguishes the different signals, which is a technique referred to as parameterised NN~\cite{Baldi_2016}. In signal events, the parameter is assigned to the corresponding $H^+$ mass used to generate them mass of the $H^+$, while in background events a random value is assigned to each event, taken from the distribution of signal masses. This makes the NN to not directly use the parameter to perfectly classify the events, while the classification is optimised for each signal. As a result, the output of the NN is a function of the $H^+$ value. A total of four NNs are trained, one for each signal region: 5j3b, 5j$\geq$4b, $\geq$6j3b and $\geq$6j$\geq$4b.\\
 
 \begin{table}[htb]
     \centering
@@ -146,18 +152,14 @@ The architecture is sequential with two fully connected layers of 64 nodes and a
         $m_{H^+}$               & Parameter of the NN. $H^+$ mass hypothesis. \\
         $D$                     &   Kinematic discriminant of the $H^+$ mass hypothesis.   \\
         \HTjets &   Scalar sum of the transverse energy of all jets. \\
-        &  Sensible to events with massive $H^+$  \\
         Centrality         &   Centrality calculated using all jets and leptons.   \\
-        $\pT^0$                 &   Leading jet \pT. Similar to \HTjets. \\
+        $\pT^0$                 &   Leading jet \pT. \\
         $m^{\text{min}\Delta R}_{bb}$     &   Invariant mass of the closest $b$-jet pair. \\
-        &                                     The $bb$ pair aims to partially reconstruct the $H^+$ invariant mass,\\
-        &                                      very different from the \ttbar\ background. \\
-        $\pT^4$  &   \pT of fifth leading jet. Characterises the low energy scale of the event.  \\
+        $\pT^4$  &   \pT of fifth leading jet.  \\
         $H_1^{\mathrm{all}}$    &   Second Fox-Wolfram moment calculated using all jets and leptons.  \\ %https://journals.aps.org/prd/abstract/10.1103/PhysRevD.87.073014
         $\Delta R^{\text{avg}}_{bb}$ &   Average $\Delta R$ between all $b$-jet pairs in the event. \\
         $\text{min}\Delta R_{lep,bb}$  &   $\Delta R$ between the lepton and the pair of $b$-jets with smallest $\Delta R$.   \\
         $m^{\text{min}\Delta R}_{uu}$   &   Invariant mass of the untagged jet-pair with minimum $\Delta R$.\\
-                                        &  Aims to reconstruct the $W$-boson that decays hadronically.   \\
         $m^{\text{max}\pT}_{bb}$ &   Invariant mass of the $b$-jet pair with maximum \pT.  \\
         $m^{\text{max}m}_{bb}$  &   Maximal invariant mass of $b$-jets.   \\
         $m^{\text{max}\pT}_{jjj}$ &   Invariant mass of the jet triplet with maximum \pT.  \\
@@ -168,23 +170,24 @@ The architecture is sequential with two fully connected layers of 64 nodes and a
     \label{Hplustb:inputNNtable}
 \end{table}
 
-The kinematic discriminant, \HTjets, the centrality and the leading jet \pT\ are consistently among the most important variables in the four trained regions. The NN output is obtained evaluating the NN with the $H^+$ mass set at the desired hypothesis. The obtained distributions for signal and background in the analysis regions for the 200 and 800~GeV $H^+$ masses are shown in Figure~\ref{Hplustb:NNshapes}.\\
+The kinematic discriminant, \HTjets, the centrality and the leading jet \pT\ are consistently among the most important variables in the four trained regions. The NN output is obtained evaluating the NN with the $H^+$ mass set at the desired hypothesis. The NN distributions for signal and background in the analysis regions for the 200 and 800~GeV $H^+$ mass hypotheses are shown in Figure~\ref{Hplustb:NNshapes}.\\
 
-The shapes are significantly different between the two mass-points, although the shape of the distributions transforms gradually from one mass to the next. Notice that the shape of the background changes, since the same NN is being evaluated but with a different $H^+$ mass value. The separation of the $H^+$ signal from the background is most difficult for low $H^+$ masses as the two processes have very similar kinematics and topology.
+The shapes are significantly different between the two mass-points, although the shape of the distributions transforms gradually from one mass to the next for two close-by masses. Notice that the shape of the background changes, since the same NN is evaluated but with a different $H^+$ mass value. The separation of the $H^+$ signal from the background is most difficult for low $H^+$ masses as the two processes have very similar kinematics and topology.
 
 \begin{figure}[htb]
     \RawFloats
     \centering
-    \subfloat[5j3b]{\includegraphics[width = 0.5\textwidth]{HPLUSTB/NNshapes/INC_5j3b_200.pdf}} 
-    \subfloat[5j$\ge$4b]{\includegraphics[width = 0.5\textwidth]{HPLUSTB/NNshapes/INC_5jge4b_200.pdf}} \\
-    \subfloat[$\ge$6j3b]{\includegraphics[width = 0.5\textwidth]{HPLUSTB/NNshapes/INC_ge6j3b_200.pdf}}
-    \subfloat[$\ge$6j$\ge$4b]{\includegraphics[width = 0.5\textwidth]{HPLUSTB/NNshapes/INC_ge6jge4b_200.pdf}} \\
-    \subfloat[5j3b]{\includegraphics[width = 0.5\textwidth]{HPLUSTB/NNshapes/INC_5j3b_800.pdf}} 
-    \subfloat[5j$\ge$4b]{\includegraphics[width = 0.5\textwidth]{HPLUSTB/NNshapes/INC_5jge4b_800.pdf}} \\
-    \subfloat[$\ge$6j3b]{\includegraphics[width = 0.5\textwidth]{HPLUSTB/NNshapes/INC_ge6j3b_800.pdf}}
-    \subfloat[$\ge$6j$\ge$4b]{\includegraphics[width = 0.5\textwidth]{HPLUSTB/NNshapes/INC_ge6jge4b_800.pdf}} \\
-    \caption{Expected distributions of the NN output for $H^+$ masses of 200~GeV (a-d)
-    and 800~GeV (d-g) for SM backgrounds and $H^+$ signal in the four trained regions.
+    \subfloat[5j3b, $H^+$ 200 GeV]{\includegraphics[width = 0.5\textwidth]{HPLUSTB/NNshapes/INC_5j3b_200.pdf}}
+    \subfloat[5j3b, $H^+$ 800 GeV]{\includegraphics[width = 0.5\textwidth]{HPLUSTB/NNshapes/INC_5j3b_800.pdf}}\\
+    \subfloat[5j$\ge$4b, $H^+$ 200 GeV]{\includegraphics[width = 0.5\textwidth]{HPLUSTB/NNshapes/INC_5jge4b_200.pdf}}
+    \subfloat[5j$\ge$4b, $H^+$ 800 GeV]{\includegraphics[width = 0.5\textwidth]{HPLUSTB/NNshapes/INC_5jge4b_800.pdf}} \\
+    \subfloat[$\ge$6j3b, $H^+$ 200 GeV]{\includegraphics[width = 0.5\textwidth]{HPLUSTB/NNshapes/INC_ge6j3b_200.pdf}}
+    \subfloat[$\ge$6j3b, $H^+$ 800 GeV]{\includegraphics[width = 0.5\textwidth]{HPLUSTB/NNshapes/INC_ge6j3b_800.pdf}} \\
+    \subfloat[$\ge$6j$\ge$4b, $H^+$ 200 GeV]{\includegraphics[width = 0.5\textwidth]{HPLUSTB/NNshapes/INC_ge6jge4b_200.pdf}} 
+    \subfloat[$\ge$6j$\ge$4b, $H^+$ 800 GeV]{\includegraphics[width = 0.5\textwidth]{HPLUSTB/NNshapes/INC_ge6jge4b_800.pdf}} \\
+
+    \caption{Expected distributions of the NN output for $H^+$ masses of 200~GeV (left)
+    and 800~GeV (right) for SM backgrounds and $H^+$ signal in the four signal regions.
     All distributions are normalised to unity.
     }
     \label{Hplustb:NNshapes}
@@ -193,28 +196,29 @@ The shapes are significantly different between the two mass-points, although the
 \subsubsection{Kinematic discriminant}
 \label{Hplustb:SectionHplusDiscriminant}
 
-The discriminant is a variable that reflects the compatibility of an event to be signal or \ttbar\ background. This discriminant value is obtained by evaluating the probability density function~(pdf) of a given event under both the signal and background hypotheses. It can be defined in general as,
+The discriminant is a variable that accounts for the compatibility of an event to be signal or \ttbar\ background. This discriminant value is obtained by evaluating the probability density function~(pdf) of a given event under both the signal and background hypotheses. It can be defined in general as,
 \begin{equation}
-    D(\textbf{x})=\frac{P^{\text{sig}}(\textbf{x})}{P^{\text{sig}}(\textbf{x})+P^{\text{bkg}}(\textbf{x})}
+    D(\textbf{x})=\frac{P^{\text{sig}}(\textbf{x})}{P^{\text{sig}}(\textbf{x})+P^{\text{bkg}}(\textbf{x})},
     \label{eq3:discriminant}
 \end{equation}
 
 where $P^{\text{sig}}(\textbf{x})$ and $P^{\text{bkg}}(\textbf{x})$ are the normalised pdf of the corresponding hypothesis, used below more generally as $P^{\text{hyp}}(\textbf{x})$. The value $D$ is computed for every signal mass and approaches to 1 if an event is identified as signal and to 0 if an event is identified as background.\\
 
-The pdfs are based on kinematic information, from templates built from distributions using the four-momentum of the different objects of the given event. The jets are first matched to the final state partons identified at generator level. A quark is matched to a jet if $\Delta R\leq 0.3$ and then, two categories are defined: when the full set of partons is successfully matched, the event is referred to as \textit{All Parton Matched}~(APM), while the event is called \textit{Missing Jet}~(MJ) if any of the partons fail to be matched. The MJ category consists mainly of events that are missing the matching of a quark produced by the $W$-boson, which are typically low in \pT\ and the associated jet is not reconstructed. Event kinematics are built using up to six jets even if the total number of reconstructed jets in events is sometimes larger than six. %talk about otherb? 
-Concerning neutrinos, they are reconstructed solving the quadratic equation: $m_W^2 = (p_\ell + p_\nu)^2$, which assumes that all \MET\ is produced by the $W\to\ell\nu$ decay. In general, two solutions are obtained and the solution with lower $p_{z,\nu}$ is taken. It is often the case that the equation does not return a real solution, and the \MET\ is lowered until a single solution is possible.\\
+The pdfs are based on kinematic information, from templates built from distributions using the four-momentum of the different objects of a given event. The jets are first matched to the final state partons identified at generator level. A quark is matched to a jet if $\Delta R$(jet,parton)$\leq 0.3$ and then, two categories are defined: when the full set of partons is successfully matched, the event is referred to as \textit{All Partons Matched}~(APM), while the event is called \textit{Missing Jet}~(MJ) if any of the partons fail to be matched. The MJ category consists mainly of events that are missing the matching of a quark produced by the $W$-boson, which are typically low in \pT\ and the associated jet is not reconstructed. Kinematic variables are built using up to six jets even if the total number of reconstructed jets in the events is sometimes larger than six. %talk about otherb? 
+Concerning neutrinos, they are reconstructed solving the quadratic equation: $m_W^2 = (p_\ell + p_\nu)^2$, which assumes that all \MET\ is produced by the $W\to\ell\nu$ decay. In general, two solutions are obtained and the solution with lower $p_{z,\nu}$ is taken. It is often the case that the equation does not return a real solution, and the \MET\ is lowered until a solution is possible.\\
 
-Given that jets are used to reconstruct kinematics and the information of parton-jet truth associations is not available in real events, averaging the pdfs over all possible parton-jet combinations is needed to evaluate the discriminant. By construction, the individual pdf corresponding to the permutation of the correct set of jet-parton combination will have the biggest contribution in the discriminant. To reduce execution time, only up to the leading eight jets are used to build kinematics. A flavour weight is assigned for each jet using the PCBT score in order to lower the contribution of the combination in the discriminant when a light jet is wrongly used as a $b$-parton in the kinematic reconstruction or vice versa, thus reducing the impact on the discriminant of the incorrect combinations. The pdf of each hypothesis, signal and background, can be expressed as:
+The discriminant is constructed by averaging the pdfs over all possible parton-jet combinations. By design, the individual pdf corresponding to the correct permutation of jet-parton combinations contributes the most to the discriminant. This approach allows for the evaluation of the discriminant in real data events, as the true parton-jet associations are not required for the calculation, only the jets. To reduce execution time, only up to the leading eight jets are used to compute kinematic variables. A flavour weight is assigned for each jet using the PCBT score in order to lower the contribution of the combination when a light jet is wrongly used as a $b$-parton or vice versa, thus reducing the impact on the discriminant of the incorrect combinations. The pdf of each hypothesis, signal and background, can be expressed as:
 \begin{equation}
     P^{\text{hyp}}(\textbf{x})=\frac{\sum_{i=0}^N P^{\text{hyp}}_{b\text{tag}}(\textbf{x}_i)P^{\text{hyp}}_{\text{kin}}(\textbf{x}_i)}{\sum_{i=0}^N P^{\text{hyp}}_{b\text{tag}}(\textbf{x}_i)},
     \label{eq3:PDF}
 \end{equation}
-where $N$ is the total number of jet-parton combinations and $P^{\text{hyp}}_{\text{kin}}(\textbf{x})$ and $P^{\text{hyp}}_{\text{btag}}(\textbf{x}_i)$ are the kinematic pdf and the flavour weight for the given hypothesis, respectively. The kinematic variables and the $b$-tagging used to build the expressions for $P^{\text{hyp}}_{\text{kin}}$ and $P^{\text{hyp}}_{b\text{tag}}$ is described in detail below. The tagging weights can be expressed (for a single permutation) as,
+where $N$ is the total number of jet-parton combinations and $P^{\text{hyp}}_{\text{kin}}(\textbf{x})$ and $P^{\text{hyp}}_{\text{btag}}(\textbf{x}_i)$ are the kinematic pdf and the flavour weight for a given hypothesis, respectively. The kinematic variables and the $b$-tagging used to build the expressions for $P^{\text{hyp}}_{\text{kin}}$ and $P^{\text{hyp}}_{b\text{tag}}$ is described in detail below. The tagging weights can be expressed (for a single permutation) as
 
 \begin{equation}
     P^{\text{hyp}}_{b\text{tag}}=P_b(j1)P_l(j2)P_l(j3)P_b(j4)P_b(j5)\begin{cases}1&5\text{jet}\\P_l(j6)P_l(j7)P_l(j8)& \geq6\text{jet},3b\\P_b(j6)P_l(j7)P_l(j8)&\geq6\text{jet},\geq4b\end{cases}
 \end{equation}
 
+$P_b$ and $P_l$ are probabilities extracted from truth-matched events for a given jet matched to the corresponding hadron to be tagged either as a $b$-jet or not, respectively. The jets are numbered from 1 to 8 and  a particular combination of the  and the cases of $\geq$6j, t
 As the $H^+$ can decay either leptonically or hadronically, the kinematics involving the $H^+$ are a weighted combination of the two, according to the ratio of events. Concerning neutrinos the same principle is applied only in the case of two neutrino solutions. To address the APM and MJ categories, $P^{\text{hyp}}_{\text{APM}}$ and $P^{\text{hyp}}_{\text{MJ}}$ are calculated individually following the previous equation. Similarly, the final pdf in the discriminant is a weighted combination of the two, where the weight is the ratio between APM and MJ events.\\
 
 
