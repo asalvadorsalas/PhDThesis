@@ -240,13 +240,13 @@ The fundamental idea behind hypothesis testing is to compare the agreement of th
 
 where $\sigma$ is arbitrary and $\sigma_{ref}$ is a reference value, typically a benchmark value from a theory or an expected sensitivity, like 1~pb. Hence, $H_\mu$ can be evaluated with a continuous spectrum of signal strengths and will approach the \acrshort{SMlabel} hypothesis ($H_0$) when $\mu\to0$.\\
 
-Given a binned data distribution with $n_i$ events for a bin $i$, the expected value of $n_i$ can be expressed as,
+Given a binned data distribution with $n_i$ events for a bin $i$, the expected value of $n_i$ can be expressed as
 
 \begin{equation}
-    E[n_i(\mu,\mathbf{b},\boldsymbol{\theta})] = \mu\cdot s_i(\boldsymbol{\theta}) + \sum_{k_{\alpha}\in\mathbf{k}}k_\alpha\cdot b_{\alpha,i}(\boldsymbol{\theta})
+    E[n_i(\mu,\mathbf{b},\boldsymbol{\theta})] = \mu\cdot s_i(\boldsymbol{\theta}) + \sum_{k_{\alpha}\in\mathbf{k}}k_\alpha\cdot b_{\alpha,i}(\boldsymbol{\theta}),
 \end{equation}
 
-with $s_i$ the predicted signal events and $b_{\alpha,i}$ the predicted background events of the process $\alpha$. The normalisation factor $k_\alpha$ affects the background process $\alpha$, analogous to $\mu$. Typically, $k_\alpha$ is introduced only for the most relevant backgrounds. The rest of the processes are normalised to their predicted cross-sections and the corresponding $k_\alpha$ is fixed to one. The nuisance parameters $\boldsymbol{\theta}$ are additional degrees of freedom which correspond to the systematic uncertainties acting both on the shape and normalisation of all processes. Their central value is defined to be zero and the deviation with respect to the original value is referred to as pull, where a deviation of $\pm$1 corresponds to a variation of one standard deviation.\\
+with $s_i$ being the predicted signal events and $b_{\alpha,i}$ the predicted background events of the process $\alpha$. The normalisation factor $k_\alpha$ affects the background process $\alpha$, analogous to $\mu$. Typically, $k_\alpha$ is introduced only for the most relevant backgrounds. The rest of the processes are normalised to their predicted cross-sections and the corresponding $k_\alpha$ is fixed to one. The nuisance parameters $\boldsymbol{\theta}$ are additional degrees of freedom which correspond to the systematic uncertainties acting both on the shape and normalisation of all processes. Their central value is defined to be zero and the deviation with respect to the original value is referred to as pull, where a deviation of $\pm$1 corresponds to a variation of one standard deviation.\\
 
 The fit procedure allows the reduction of the impact of systematic uncertainties, especially by taking advantage of the highly populated background-dominated bins included in the fit. This requires a good understanding of the background and the systematic effects. To verify the improved background prediction, fits under the background-only hypothesis are performed, and differences between the data and the post-fit background prediction are checked using selections and physical variables other than the ones used in the fit.\\
 
@@ -257,15 +257,13 @@ The binned likelihood function is given as
 
 which corresponds to a product of Poisson probabilities and the penalty terms of all nuisance parameters for all $N$ bins. The form $P(\theta_j)$ are generally Gaussian distributions for each systematic uncertainty. Poisson distributions are used for the statistical uncertainty of each bin, and are introduced in the likelihood to penalise large deviations.\\
 
-The optimal $\mu$, $\mathbf{k}$ and $\boldsymbol{\theta}$ are obtained from the fit to data that maximises the agreement between data and the prediction.
-
-The optimal test statistic to perform the fit is the likelihood ratio, %https://link.springer.com/chapter/10.1007/978-1-4612-0919-5_5
+The optimal $\mu$, $\mathbf{k}$ and $\boldsymbol{\theta}$ are obtained from the fit to data that maximises the agreement between data and the prediction. The optimal test statistic to perform the fit is the likelihood ratio %https://link.springer.com/chapter/10.1007/978-1-4612-0919-5_5
 
 \begin{equation}
-    \lambda_\mu = \frac{\mathscr{L}(\mu, \hat{\hat{\mathbf{k}}},\hat{\hat{\boldsymbol{\theta}}})}{\mathscr{L}(\hat{\mu}, \hat{\mathbf{k}},\hat{\boldsymbol{\theta}})}
+    \lambda_\mu = \frac{\mathscr{L}(\mu, \hat{\hat{\mathbf{k}}},\hat{\hat{\boldsymbol{\theta}}})}{\mathscr{L}(\hat{\mu}, \hat{\mathbf{k}},\hat{\boldsymbol{\theta}})},
 \end{equation}
 
-with the single-hat parameters being those maximising the likelihood while $\hat{\hat{\mathbf{k}}},\hat{\hat{\boldsymbol{\theta}}}$ the parameters that maximise the likelihood for a given $\mu$. As the likelihoods are products of several terms smaller than one, a more stable test statistic is the negative log-likelihood,
+with the single-hat parameters being those maximising the likelihood while $\hat{\hat{\mathbf{k}}},\hat{\hat{\boldsymbol{\theta}}}$ the parameters that maximise the likelihood for a given $\mu$. As the likelihoods are products of several terms smaller than one, a more stable test statistic is the negative log-likelihood
 
 \begin{equation}
     q_\mu = -2\ln\lambda_\mu.
@@ -281,11 +279,11 @@ The level of agreement between data and predictions for a given signal strength 
 
 where $f(q_\mu|H_\mu)$ is the probability density function of $q_\mu$ under the assumption of $H_\mu$. The significance $Z=\Phi^{-1}(1-p_\mu)$ (being $\Phi$ the cumulative Gaussian distribution) is often preferred to quantify the level of disagreement in terms of the number of standard deviations. Typically, an alternative hypothesis is rejected at 1.64$\sigma$ ($p_\mu=0.05$) and the background-only at 5$\sigma$ ($p_0=2.87\cdot10^{-7}$).\\
 
-Typically, searches are dedicated to very small signals that are difficult to separate from the background. Rejecting the null hypothesis at a fixed probability may result in excluding signals with low statistics not really searched for in the analysis~\cite{JUNK1999435}. The CL$_{s}$ method addresses this issue by defining,
+Typically, searches are dedicated to very small signals that are difficult to separate from the background. Rejecting the null hypothesis at a fixed probability may result in excluding signals with low statistics not really searched for in the analysis~\cite{JUNK1999435}. The CL$_{s}$ method addresses this issue by defining
 
 \begin{equation}
     \text{CL}_{s}=\frac{p_\mu}{1-p_0},
 \end{equation}
 
-where $p_0$ is the p-value for the null hypothesis, and $p_\mu$ is the p-value for the signal hypothesis. The ratio normalises the p-value to the confidence level of the background-only hypothesis such that the CL incorporates the information of both hypotheses and by construction is less prone to false discoveries or exclusions. When the measurement is not compatible with the null hypothesis, the denominator is larger and CL$_{s}$ decreases. Therefore, the exclusion limits obtained using the CL$_s$ are conservative and a more cautious interpretation of disagreements with data.
+where $p_0$ is the p-value for the null hypothesis, and $p_\mu$ is the p-value for the signal hypothesis. The ratio normalises the p-value to the confidence level of the background-only hypothesis such that the confidence level incorporates the information of both hypotheses and by construction is less prone to false discoveries or exclusions. The limits obtained using the CL$_s$ are conservative as when the measurement is not compatible with the null hypothesis, the denominator is larger and CL$_{s}$ decreases.
 
