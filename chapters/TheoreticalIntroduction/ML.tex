@@ -19,7 +19,7 @@ Regarding particle reconstruction and identification, examples of \acrshort{MLla
 
 \acrshort{MLlabel} algorithms are not designed for a specific task, they consist in general models with hundreds of free parameters that are tuned using data. The process of optimising the internal parameters to correclty solve a specific problem is known as training the model. Depending on the available data, model and its application, several steps are needed to adequately perform and evaluate the training.\\
 
-Generally, two types of \acrshort{MLlabel} algorithms can be distinguished: Supervised learning and Unsupervised learning models. The main difference is that the first requires fully labelled training data, namely that each instance in the data is associated with a known output or target value (like the true mass of a particle). The provided labels allows the model to map the input features and output labels, to generalise the relationship to unseen data. On the other hand, unsupervised learning models do not rely on labelled data and instead are used to uncover hidden patterns or structures within the data itself (like detection of anomalies). In the context of this thesis, supervised approaches are used based on Neural Networks (NNs) and Boosted Decision Trees (BDTs).\\
+Generally, two types of \acrshort{MLlabel} algorithms can be distinguished: Supervised learning and Unsupervised learning models. The main difference is that the first requires fully labelled training data, namely that each instance in the data is associated with a known output or target value (like the true mass of a particle). The provided labels allow the model to map the input features and output labels, to generalise the relationship to unseen data. On the other hand, unsupervised learning models do not rely on labelled data and instead are used to uncover hidden patterns or structures within the data itself (like detection of anomalies). In the context of this thesis, supervised approaches are used based on Neural Networks (NNs) and Boosted Decision Trees (BDTs).\\
 
 The relationship between a machine learning model, its parameters, and the input data can be formally expressed using statistical notation.The statistical model of a general \acrshort{MLlabel} algorithm is denoted as $\text{P}_\text{model}(\mathbf{x_i}; \boldsymbol{\theta})$ and is parameterised with a set of parameters $\boldsymbol{\theta}$ while $\mathbf{x_i}=(x_i^1,x_i^2,...,x_i^M)$ is the input feature set of a single input data point $i$ of the $\mathbf{X}=(\mathbf{x_1},\mathbf{x_2},...,\mathbf{x_N})$ dataset consisting of $N$ data points. $\text{P}_\text{data}$ is the true distribution that generates the data but is unknown. In the case of supervised learning, every data point has a label that categorises the event, $\mathbf{y}=(y_1,y_2,...,y_N)$.
 
@@ -29,7 +29,7 @@ The model performance is usually the decisive measure of a \acrshort{MLlabel} me
 
 \subsection{Loss function}
 
-The loss function $E$ or cost function is optimised during the model training and represents the deviation of a model from the desired behaviour. To be suitable for minimisation, the function has to be differentiable. The choice of the loss function depends on the problem and requires optimisation. For supervised learning, the loss function depends on the true and predicted label velues of the data so the worse the prediction is, the higher the loss function.\\
+The loss function $E$ or cost function is optimised during the model training and represents the deviation of a model from the desired behaviour. To be suitable for minimisation, the function has to be differentiable. The choice of the loss function depends on the problem and requires optimisation. For supervised learning, the loss function depends on the true and predicted label values of the data so the worse the prediction is, the higher the loss function.\\
 
 It is standard to express the loss of the full dataset $\mathbf{X}$ as the average of loss of the single data points $\mathbf{x_i}$,
 
@@ -105,7 +105,7 @@ This simple example has nine free parameters $\boldsymbol{\theta}$ which are opt
 
 The main NN structure used in this thesis are feed-forward NN, but there are a vast number of different architectures available developed for very different applications~\cite{livingreview}. Several software packages are available and accessible to the public,  mainly in Python, with popular examples as Pytorch~\cite{NEURIPS2019_9015}, Tensorflow~\cite{tensorflow2015-whitepaper} and Keras~\cite{chollet2015keras}. The main package used in this thesis is the latter, whose models are deployed in \acrshort{ATLASlabel} using the C++ based package lwtnn~\cite{lwtnn}.\\
 
-The training of a NN is the process consisting on the optimisation of the free parameters $\boldsymbol{\theta}$ through a process called gradient descent, which iteratively adjusts the parameters by minimising the loss function. Apart from the free parameters, there are other that are manually set called hyperparameters, and include for example the number of layers and nodes in the NN.\\
+The training of a NN is the process consisting on the optimisation of the free parameters $\boldsymbol{\theta}$ through a process called gradient descent, which iteratively adjusts the parameters by minimising the loss function. Apart from the free parameters, there are others that are manually set called hyperparameters, and include for example the number of layers and nodes in the NN.\\
 
 Batch training is the typical procedure, where the minimisation of the loss function is done in steps with the training data divided into equally sized data segments. At every step, the loss function is calculated using a segment of data and the internal parameters are updated. A full iteration over the entire dataset is referred to as an epoch. This batch training method makes the minimisation of the loss function faster. If the training would use the full dataset in one step it would end up profiling the very specifics of the training dataset, hence loosing generalisation when evaluating other data not used in the training, this is called overtraining. It could also lead to stop the minimisation process in local minima thus not reaching the true performance.\\
 
@@ -129,7 +129,7 @@ For the gradient descend method, it is necessary to compute the gradient of the 
     \frac{\partial E}{\partial w_{ij}} = \sum_k \frac{\partial E}{\partial y_k} \frac{\partial y_k}{\partial w_{ij}},
 \end{equation}
 
-with $y_k$ the output values of the neural network. The backpropagation algorithm calculates these partial derivates in an efficient manner through the reuse intermediate results and the consideration of parameter dependencies. 
+with $y_k$ the output values of the neural network. The backpropagation algorithm calculates these partial derivates efficiently through the reuse intermediate results and the consideration of parameter dependencies. 
 
 \subsubsection{Activation Functions}
 
@@ -238,7 +238,7 @@ The fundamental idea behind hypothesis testing is to compare the agreement of th
     \mu = \frac{\sigma}{\sigma_{ref}}
 \end{equation}
 
-where $\sigma$ is arbitrary and $\sigma_{ref}$ is a reference value, typically a benchmark value from a theory or an expected sensitivity, like 1~pb. Hence, $H_\mu$ can be evaluated with a continous spectrum of signal strengths and will approach the \acrshort{SMlabel} hypothesis ($H_0$) when $\mu\to0$.\\
+where $\sigma$ is arbitrary and $\sigma_{ref}$ is a reference value, typically a benchmark value from a theory or an expected sensitivity, like 1~pb. Hence, $H_\mu$ can be evaluated with a continuous spectrum of signal strengths and will approach the \acrshort{SMlabel} hypothesis ($H_0$) when $\mu\to0$.\\
 
 Given a binned data distribution with $n_i$ events for a bin $i$, the expected value of $n_i$ can be expressed as,
 
