@@ -314,6 +314,7 @@
 %----------------------------------------------------------------------------------------
 
 % In biblatex, when citing with the style authoryear or using \textcite, only the year is linked to the reference in the bibliography. Despite the arguments of one of the mantainers of the biblatex package (https://github.com/plk/biblatex/issues/428), some users think that in the author* style the author name should be a link as well. The `linkeverything' option provides an easy way to activate this behaviour.
+\DeclareFieldFormat[misc]{title}{'#1'}
 
 \ifkaobiblio@linkeverything
 	\xpatchbibmacro{cite}
