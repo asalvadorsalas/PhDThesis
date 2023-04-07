@@ -10,7 +10,7 @@ and the Higgs boson at the Large Hadron Colliders (LHC) in 2012~\cite{ATLASHiggs
 Despite its success, there are known phenomena not accounted for by the model
 and questions which clearly point to the need of a new theory.\\
 
-This chapter starts with an overview of the \acrshort{SMlabel}, building it with its mathematical formalism, and presenting a summary of the particle content and their interactions. Then, it continues with a summary of the current success of the theory,including its shortcomings and alternative models. The focus is given to models that include charged Higgs bosons or top FCNC interactions involving a scalar.\\
+This chapter starts with an overview of the \acrshort{SMlabel}, building it with its mathematical formalism, and presenting a summary of the particle content and their interactions. Then, it continues with a summary of the current success of the theory, including its shortcomings and alternative models. The focus is given to models that include charged Higgs bosons or top FCNC interactions involving a scalar.\\
 
 Throughout this dissertation, natural units are used: the speed of light and the reduced Planck constant are set to unity ($c=\hbar=1$),
 electric charges are expressed in units of the electron electric charge ($-e$) and masses are expressed in terms of energy (eV). Throughout this chapter's theoretical developments, the Einstein summation convention is used by default.
@@ -166,7 +166,7 @@ A general global transformation $\theta$ which acts upon the field $\psi$ is des
     \psi\rightarrow e^{ig\theta^aT^a}\psi,
 \end{equation}
 
-with $g$ being the coupling constant and $T^a$ being the generators of the Lie group associated to the transformation (like $SU(n)$ or $U(n)$), with $a$ ranging from 1 to $n^2-1$, for $n>1$, and corresponding to the number of the Lie algebra..
+with $g$ being the coupling constant and $T^a$ being the generators of the Lie group associated to the transformation (like $SU(n)$ or $U(n)$), with $a$ ranging from 1 to $n^2-1$, for $n>1$, and corresponding to the number of the Lie algebra.
 The generators can be characterised by their commutation relation, 
 
 \begin{equation}
@@ -194,7 +194,7 @@ Q=\int \mathrm{d}^3x j^0 = \int \mathrm{d}^3x\psi^{\dag}\psi. %= \int \frac{\mat
 %\end{equation}
 %with $a,b$ the Fock's space anihilation operators to the vacuum of two different particles. 
 
-With some algebra and by introducing solutions in momentum space, $\psi$ can be interpreted as a fermion anihilation and an anti-fermion creation (the other way around with $\psi^\dag$) in the Fock space and then, the product becomes the difference of the number of fermion and anti-fermion leading to the conservation of the fermion number.\\
+With some algebra and by introducing solutions in momentum space, $\psi$ can be interpreted as a fermion annihilation and an anti-fermion creation (the other way around with $\psi^\dag$) in the Fock space and then, the product becomes the difference of the number of fermion and anti-fermion leading to the conservation of the fermion number.\\
 
 Promoting the global symmetry to a local symmetry is done by introducing locality in the $\theta$ transformation,
 $\theta \rightarrow\theta(x)$, which introduces new $\partial_\mu\theta$ terms in the Lagrangian.
@@ -213,7 +213,7 @@ The next step is to replace the standard derivative in the Lagrangian by the cov
     D_\mu\equiv\partial_\mu - igT^aA_\mu^a.
 \end{equation}
 
-The final ingredient is to complete the Lagrangian with the the kinematic Lagrangian for the massless vector fields,
+The final ingredient is to complete the Lagrangian with the kinematic Lagrangian for the massless vector fields,
 the Maxwell Lagrangian from Equation~\ref{Theory_eq:Proca} with a slightly different field strength tensor,
 
 \begin{equation}
@@ -329,7 +329,7 @@ The idea is that for long distances, the strong coupling becomes larger, so when
 
 \subsubsection{Running coupling}
 
-To understand the fact that the couplings can vary with the energy, the topics of \acrshort{QFT} renormalisation and regularisation have to be introduced. The quantity known as the matrix amplitude has to be computed for the prediction of physical quantities of a given process. Observables are proportional to the square sum of the amplitude of every possible Feynman diagram that yields the same initial and final particles of the process. However, the computation of diagrams with loops leads to the integration of all possible four-momentum of the virtual particles involved, which are divergent. Nevertheless, these divergences can be isolated with regularisation techniques, which render them finite by introducing a parameter $\Lambda$ such that for a given value of the parameter the divergence is recovered. This allows the computation of any quantity in terms of the \textit{bare} quantities that appear in the Lagrangian, such as masses or couplings, while incorporating the regularization parameter. The other key point is the renormalisation which arise from the idea that the physical quantities measured in experiments (masses or couplings) are different from the bare quantities (masses or couplings that appear in the lagrangian). Therefore, one has the freedom to apply renormalisation conditions, which cause the expressions to depend only on the physical quantities if the theory is renormalisable, and remove the divergent sources.\\
+To understand the fact that the couplings can vary with the energy, the topics of \acrshort{QFT} renormalisation and regularisation have to be introduced. The quantity known as the matrix amplitude has to be computed for the prediction of physical quantities of a given process. Observables are proportional to the square sum of the amplitude of every possible Feynman diagram that yields the same initial and final particles of the process. However, the computation of diagrams with loops leads to the integration of all possible four-momentum of the virtual particles involved, which are divergent. Nevertheless, these divergences can be isolated with regularisation techniques, which render them finite by introducing a parameter $\Lambda$ such that for a given value of the parameter the divergence is recovered. This allows the computation of any quantity in terms of the \textit{bare} quantities that appear in the Lagrangian, such as masses or couplings, while incorporating the regularisation parameter. The other key point is the renormalisation which arise from the idea that the physical quantities measured in experiments (masses or couplings) are different from the bare quantities (masses or couplings that appear in the Lagrangian). Therefore, one has the freedom to apply renormalisation conditions, which cause the expressions to depend only on the physical quantities if the theory is renormalisable, and remove the divergent sources.\\
 
 As an example, to compute the gluon two-point function, an infinite sum of loop contributions is needed,
 \begin{align}
@@ -353,7 +353,7 @@ Focusing on the one loop contribution, the result is obtained at first order fro
     \end{align}
 
 
-which are the loop involving gluons, quarks and a third one with a new propagator, the ghost. This last propagator is a regularisation artifact to compensate unphysical degrees of freedom\footnote{There are other methods to avoid the unphysical degrees of freedom, like choosing a physical gauge in the axial direction.}. Focusing on the gluon loop contribution,
+which are the loop involving gluons, quarks and a third one with a new propagator, the ghost. This last propagator is a regularisation artefact to compensate unphysical degrees of freedom\footnote{There are other methods to avoid the unphysical degrees of freedom, like choosing a physical gauge in the axial direction.}. Focusing on the gluon loop contribution,
 
 \begin{equation}
 \includegraphics[width=0.25\textwidth]{SM/gluonLoopD.pdf}
@@ -390,7 +390,7 @@ The final strong coupling constant is commonly given by
     \alpha_s(Q^2) = \frac{12\pi}{(11n_c - 2 n_f)\log \frac{Q^2}{\Lambda^2_\text{QCD}}},
 \end{equation}
 
-which depends on the energy scale $Q$ at which is evaluated and $\Lambda_\text{QCD}$ being the infrared cutoff scale that sets the validity of the perturbative regime of \acrshort{QCD}. As $n_c=3$, for $n_f$<16 the coupling constant decreases with the energy scale, which is the key feature of \acrshort{QCD} that causes asymptotic freedom and confinement.
+which depends on the energy scale $Q$ at which is evaluated and $\Lambda_\text{QCD}$ being the infrared cut-off scale that sets the validity of the perturbative regime of \acrshort{QCD}. As $n_c=3$, for $n_f$<16 the coupling constant decreases with the energy scale, which is the key feature of \acrshort{QCD} that causes asymptotic freedom and confinement.
 
 \subsection{Electroweak theory}
 
@@ -443,7 +443,7 @@ Regarding the \acrshort{EW} Lagrangian, four gauge fields need to be introduced 
     \end{split}
 \end{equation}
 
-with $\epsilon^{ijk}$ being the Levi-Civita symbol, an antisymmetric tensor defined as $\epsilon^{ijk}\epsilon_{imn}=\delta^j_m\delta^k_n-\delta^j_n\delta^m_k$ with $i,j,k,l,m,n\in[1,2,3]$. Also, the $W_{\mu\nu}^i$ and $B_{\mu\nu}$ field tensors are defined to introduce the additional kinetic terms to the Lagrangian. The former contains a quadratic piece, due to the non-abelian nature of $SU(2)_L$, hence the full Lagrangian contains cubic and quartic self-interactions, as for the gluons in QCD. In contrast, the coupling constant $g$ increases rapidly with the energy scale. As previously metioned, mass terms for the gauge boson would break the gauge invariance. In this case, terms for the fermion masses would also break the symmetry as they would mix left- and right-handed fields, which transform differently under $SU(2)_L$.\\
+with $\epsilon^{ijk}$ being the Levi-Civita symbol, an antisymmetric tensor defined as $\epsilon^{ijk}\epsilon_{imn}=\delta^j_m\delta^k_n-\delta^j_n\delta^m_k$ with $i,j,k,l,m,n\in[1,2,3]$. Also, the $W_{\mu\nu}^i$ and $B_{\mu\nu}$ field tensors are defined to introduce the additional kinetic terms to the Lagrangian. The former contains a quadratic piece, due to the non-abelian nature of $SU(2)_L$, hence the full Lagrangian contains cubic and quartic self-interactions, as for the gluons in QCD. In contrast, the coupling constant $g$ increases rapidly with the energy scale. As previously mentioned, mass terms for the gauge boson would break the gauge invariance. In this case, terms for the fermion masses would also break the symmetry as they would mix left- and right-handed fields, which transform differently under $SU(2)_L$.\\
 
 When adding all the interactions described, the SM Lagrangian for all the fermions before \acrshort{EWSB} becomes
 
@@ -617,7 +617,7 @@ The field is rewritten in the unitary gauge, which automatically removes the ext
     \end{pmatrix},
 \end{equation}
 
-where $H(x)$ is centered around the vacuum state. With this change the Higgs potential becomes
+where $H(x)$ is centred around the vacuum state. With this change the Higgs potential becomes
 
 \begin{equation}
     V(\Phi) =\frac{1}{4}\lambda v^2 H^2 + \frac{1}{4} \lambda v H^3 + \frac{1}{16} \lambda H^4,
@@ -704,7 +704,7 @@ As mentioned previously, only $q_{\alpha L}^i$ and $l^i_L$ fields are $SU(2)_L$ 
     q_{\alpha L}^i=\begin{pmatrix} u^i_{\alpha L} \\ d^i_{\alpha L} \end{pmatrix},\ l_L^i = \begin{pmatrix} \nu^i_L \\ \ell^i_L \end{pmatrix}
 \end{equation}
 
-where the $i$ refers to the generation and $\alpha$ to the colour. It has already been pointed out that is not possible to construct a well defined $mf^\dag f$ term that transforms under the SM group, necessary for gauge invariance. The solution is provided by introducing Yukawa interactions between the fermion fields and the Higgs field $\Phi$, also a doublet under $SU(2)$,
+where the $i$ refers to the generation and $\alpha$ to the colour. It has already been pointed out that is not possible to construct a well-defined $mf^\dag f$ term that transforms under the SM group, necessary for gauge invariance. The solution is provided by introducing Yukawa interactions between the fermion fields and the Higgs field $\Phi$, also a doublet under $SU(2)$,
 
 \begin{equation}
 \begin{split}
@@ -714,9 +714,9 @@ where the $i$ refers to the generation and $\alpha$ to the colour. It has alread
 \end{split}
 \end{equation}
 
-where y, y' and y'' are the Yukawa matrices, $3\times3$ matrices with one dimension for each generation. Also, $\tilde{\Phi}\equiv i\sigma_2\Phi^*$. Note that there is no second term for the leptons, as the SM does not contemplate the right handed neutrino, $\nu_R$. Also, this Lagrangian breaks explicitly the chiral symmetry but yields a singlet representation, safe for gauge invariance.\\
+where y, y' and y'' are the Yukawa matrices, $3\times3$ matrices with one dimension for each generation. Also, $\tilde{\Phi}\equiv i\sigma_2\Phi^*$. Note that there is no second term for the leptons, as the SM does not contemplate the right-handed neutrino, $\nu_R$. Also, this Lagrangian breaks explicitly the chiral symmetry but yields a singlet representation, safe for gauge invariance.\\
 
-Next, writing the field $\Phi$ in terms of the unitary gauge as in the EWSB, $\phi^0(x)=v+H(x)$, the lagriangian becomes,
+Next, writing the field $\Phi$ in terms of the unitary gauge as in the EWSB, $\phi^0(x)=v+H(x)$, the Lagrangian becomes,
 
 \begin{equation}
 \begin{split}
@@ -836,7 +836,7 @@ Decades of experiments have performed measurements of parameters that define the
 
 One typical observable in particle physics is the cross-section $\sigma$, the expected interaction rate between two particles in terms of the effective surface area typically measured in \textit{pb} (picobarn, 1pb = 10$^{-40}$ m$^2$). The cross-section of a process depends on the interacting forces involved, as well as the energy and momentum of the interacting particles, and can be calculated from the S-matrix (scattering matrix) using relativistic mechanics. Feynman diagrams are a tool to translate a visual description of a process to a mathematical expression, the matrix amplitude, which is proportional to the probability of the specific process.\\
 
-The decay width, $\Gamma$, can be computed in a similar fashion to obtain another common observable, the Branching Ratio (BR). The BR of an unstable particle is the probability for it to decay into specific particles among all possible states. It is computed by dividing the $\Gamma$ of the specific process with respect to the sum of all the possible processes. Both $\sigma$ and $\Gamma$ are calculated from perturbation approximations, as the actual process is not the product of just one Feynman diagram, but of all the possible interactions that lead to the same final state including loops, interferences and radiative corrections, refereed to as high-order corrections. However, each interaction is proportional to the probability making the amplitude of higher order diagrams become less important. Typically, \textit{leading-order} (LO) calculations of observables use only the leading order terms from the perturbation expansion, while when calculated including higher order corrections it is referred to next-to-leading-order (NLO) or next-to-NLO (NNLO) calculations.\\
+The decay width, $\Gamma$, can be computed similarly to obtain another common observable, the Branching Ratio (BR). The BR of an unstable particle is the probability for it to decay into specific particles among all possible states. It is computed by dividing the $\Gamma$ of the specific process with respect to the sum of all the possible processes. Both $\sigma$ and $\Gamma$ are calculated from perturbation approximations, as the actual process is not the product of just one Feynman diagram, but of all the possible interactions that lead to the same final state including loops, interferences and radiative corrections, refereed to as high-order corrections. However, each interaction is proportional to the probability making the amplitude of higher order diagrams become less important. Typically, \textit{leading-order} (LO) calculations of observables use only the leading order terms from the perturbation expansion, while when calculated including higher order corrections it is referred to next-to-leading-order (NLO) or next-to-NLO (NNLO) calculations.\\
 
 Figure~\ref{figSM:xsecSM} shows a summary of a wide range of cross-section measurements by the \acrshort{ATLASlabel} Collaboration compared to the theoretical predictions, showing excellent agreement between data and theory. On the other side, the Higgs boson has been scrutinised since its discovery to characterise all its properties. Figure~\ref{figSM:xsecBRH} shows a summary of Higgs boson production cross-sections and branching ratios by the \acrshort{ATLASlabel} Collaboration, including the coupling strengths to other \acrshort{SMlabel} particles. It shows that the coupling is proportional to the mass of the interacting particle, as expected from the Higgs mechanism. As the Higgs couples with any particle that acquires mass through its field, it is an excellent candidate to study any other particle still to be discovered.\\
 
@@ -950,21 +950,21 @@ Another open question concerns the anomalous magnetic dipole moment of the muon.
 
 %Other measurements that are in tension with the \acrshort{SMlabel} predictions are regarding the lepton universality, which is the prediction that charged leptons have identical electroweak interaction strenghts. However, the LHCb collaboration found in 2021~\cite{lhcbleptonviolation} a discrepancy between electrons and muons in decays involving the $b-$quark. An older puzzle is the measurement of the anomalous magnetic dipole momentum of the muon, which was found also in tension with the prediction. This quantity refers to the high-order corrections that appear from \acrshort{QCD}, and the muon g-2 experiment found a greater deviation~\cite{PhysRevLett.126.141801} in 2021.
 
-The~\acrshort{SMlabel} also fails to describe the other fundamental force in nature: gravity. While general relativity has provided a good description of gravity in macroscopic systems, there is no renomalisable quantum field theory for gravity, and the~\acrshort{SMlabel} does not account for it. Theoretical frameworks like string theory have been proposed as alternatives, but these are difficult to test experimentally. The~\acrshort{SMlabel} is understood as an effective theory of a more complete unified theory and is only valid at low energies. In the most extreme scenario, the~\acrshort{SMlabel} is expected to break around the Planck scale ($M_P=\sqrt{\bar{h}/(8\pi G_N)}\sim 2.4\ 10^{18}$~GeV), where gravitational effects are expected to become as important as the other forces in the \acrshort{SMlabel}.\\
+The~\acrshort{SMlabel} also fails to describe the other fundamental force in nature: gravity. While general relativity has provided a good description of gravity in macroscopic systems, there is no renormalisable quantum field theory for gravity, and the~\acrshort{SMlabel} does not account for it. Theoretical frameworks like string theory have been proposed as alternatives, but these are difficult to test experimentally. The~\acrshort{SMlabel} is understood as an effective theory of a more complete unified theory and is only valid at low energies. In the most extreme scenario, the~\acrshort{SMlabel} is expected to break around the Planck scale ($M_P=\sqrt{\bar{h}/(8\pi G_N)}\sim 2.4\ 10^{18}$~GeV), where gravitational effects are expected to become as important as the other forces in the \acrshort{SMlabel}.\\
 
 Furthermore, the \acrshort{SMlabel} only describes what is known as baryonic matter, which accounts for about 5\% of the energy density of the universe. Cosmological observations suggest the existence of large amounts of \textit{dark matter} (DM) and \textit{dark energy}, phenomena not accounted for by the \acrshort{SMlabel}. The existence of DM was postulated as extra non-luminous matter needed to explain the clustering of galaxies~\cite{Zwicky2009}. Rotation curves of galaxies not matching the gravitational pull of observed stars~\cite{1981AJ.....86.1825B} and gravitational lensing effects observed in some galaxy collisions~\cite{Umetsu_2016} also provide evidence for large concentrations of invisible mass. More recently, the WMAP and Planck collaborations have studied anisotropies in the cosmic microwave background (CMB)~\cite{Bennett_2013,Planckcollab} and postulated the existence of cold DM. Meanwhile, observations suggest that the universe is expanding at an accelerated rate, compatible with the existence of dark energy, understood to be the product of an intrinsic space-time energy density or cosmological constant that causes the expansion. Observation of the red-shift of light from supernovae, used as standard candles, indicates that cosmological objects are moving away at an increasingly faster rate as their distance from us increases~\cite{1929PNAS...15..168H}. Studies of the CMB provide additional measurements of the accelerated expansion~\cite{Planckcollab}. Overall, baryonic matter accounts for only 4.9\% of the total energy density of the universe, dark matter for 26.8\% and dark energy for 68.3\%~\cite{Planckcollab}.\\
 
 The universe appears to be composed entirely of matter. However, to explain the observed imbalance in the abundance of matter and anti-matter, referred to as matter/anti-matter asymmetry, the \acrshort{SMlabel} only provides one source of CP violation in the quark weak interactions, which is not sufficient. Additional sources, such as the complex phase in the PMNS matrix have been proposed. However, it is clear that more phenomena are needed to account for the current net balance of matter. Possible baryon number-violating effects at high energy scales may have played a role in generating this imbalance.\\
 
-Besides the natural phenomena uncovered by the \acrshort{SMlabel}, there are also naturalness problems, which are aesthetic concerns regarding the precise values of some of the \acrshort{SMlabel} parameters. These values seem "unnatural" if there is no underlying mechanism to explain them. The general consensus is that a theory is more natural if it requires fewer fine-tunings. Although these issues are completely subjective, they could be a hint for the existence of a new underlying mechanism that complements the \acrshort{SMlabel}.\\
+Besides the natural phenomena uncovered by the \acrshort{SMlabel}, there are also naturalness problems, which are aesthetic concerns regarding the precise values of some of the \acrshort{SMlabel} parameters. These values seem "unnatural" if there is no underlying mechanism to explain them. The consensus is that a theory is more natural if it requires fewer fine-tunings. Although these issues are completely subjective, they could be a hint for the existence of a new underlying mechanism that complements the \acrshort{SMlabel}.\\
 
-The first problem, commonly known as the hierarchy problem, arises because the cutoff energy of the \acrshort{SMlabel} ($\Lambda_{\text{SM}}$) is usually set to the Planck scale, $\sim10^{18}$~GeV, whereas the \acrshort{EW} scale ($v\sim246$~GeV) is much smaller. This problem can be understood as the lack of a clear reason why the \acrshort{EWSB} occurs at a scale orders of magnitude smaller than the Plank scale. High-order corrections from the \acrshort{SMlabel} suggest that the leading radiation corrections for fermion masses are of the order of $\log\Lambda_{\text{SM}}$ and thus sensitive to the scale, but the fine-tuning is considered small. On the other hand, the physical Higgs mass including radiation corrections, is given by,
+The first problem, commonly known as the hierarchy problem, arises because the cut-off energy of the \acrshort{SMlabel} ($\Lambda_{\text{SM}}$) is usually set to the Planck scale, $\sim10^{18}$~GeV, whereas the \acrshort{EW} scale ($v\sim246$~GeV) is much smaller. This problem can be understood as the lack of a clear reason why the \acrshort{EWSB} occurs at a scale orders of magnitude smaller than the Plank scale. High-order corrections from the \acrshort{SMlabel} suggest that the leading radiation corrections for fermion masses are of the order of $\log\Lambda_{\text{SM}}$ and thus sensitive to the scale, but the fine-tuning is considered small. On the other hand, the physical Higgs mass including radiation corrections, is given by,
 
 \begin{equation}
     m^2_H = m_0^2 + \frac{3}{8\pi^2v^2}\Lambda_{\text{SM}}^2 [ m_0^2 + 2m_W^2 + M_Z^2 - 4m_t^2] + \mathcal{O}(\ln\frac{\Lambda_{\text{SM}}}{m_0})
 \end{equation}
 
-with $m_0$ the bare Higgs mass. The nature of the hierarchy problem is evident as the correction is more sensitive to the cutoff scale and requires substantial tuning to counter the $\Lambda_{\text{SM}}$ term and achieve such a low measured physical mass. It can also be observed that the most important correction is given by the top quark, and it is often questioned whether the reason for the large mass of this quark could provide a solution. Although the Higgs mass and the \acrshort{EW} scale are difficult to justify, it can be argued that the appearance of the $\Lambda_{\text{SM}}$ is related to the chosen regularisation scheme, and cutoffs play no physical role.\\
+with $m_0$ the bare Higgs mass. The nature of the hierarchy problem is evident as the correction is more sensitive to the cut-off scale and requires substantial tuning to counter the $\Lambda_{\text{SM}}$ term and achieve such a low measured physical mass. It can also be observed that the most important correction is given by the top quark, and it is often questioned whether the reason for the large mass of this quark could provide a solution. Although the Higgs mass and the \acrshort{EW} scale are difficult to justify, it can be argued that the appearance of the $\Lambda_{\text{SM}}$ is related to the chosen regularisation scheme, and cut-offs play no physical role.\\
 
 Another related problem is the fermion mass hierarchy; the fact that the masses of the SM particles range from $\sim$1~MeV to $\sim$173~GeV is not understood. Similarly, there is no clear reason for the existence of the three mass families of quarks and leptons with different mixing patterns, with FCNC interactions being heavily suppressed. This problem is known as the flavour problem and might also be related to renormalisation, as fermion masses also have correction terms with the logarithm of the cutoff scale.\\
 
