@@ -162,6 +162,7 @@ To protect the model's robustness, regularisation techniques are employed during
 In this thesis, the dropout and early stopping methos are applied, while no big changes were seen when using other methods like the L2 regularisation method. The batch normalisation method is not applied, although an equivalent approach is applied to the input layer where the different input variables are scaled to have a mean value of 0 and a variance of 1. This avoids large differences in weights due to the difference of units between the input variables. One consideration is that distributions like \pT\ are not bounded like $\eta$ and outliers at the tail of the distributions can introduce instabilities to the model.
 
 \subsubsection{Neural network parameterisation}
+\label{chapterML:PNN}
 
 The analyses presented in this thesis use a NN technique referred to as parameterisation, usually applied to NN with signal or background events generated with different parameters. The parameterised NN~\cite{Baldi_2016} appears as a structure that simplifies training setups as it can replace various classifiers trained at individual values of a parameter. It is trained using the complete statistics reproduced with various values of the parameter, thus the training dataset is larger.\\
 

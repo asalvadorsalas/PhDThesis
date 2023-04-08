@@ -80,13 +80,13 @@ The corrections are derived for each jet multiplicity and as a function of \HTal
 
 and, by construction, assumes that any disagreement between data and MC comes from \ttbar. In this context, \ttbar\ includes the \ttb, \ttc\ and \ttl\ as well as single top $Wt$ contributions.\\
 
-Figure~\ref{Hplustb:RWfactors} includes all the derived corrections, showing higher weights for large jet multiplicities. In general, the \HTall corrections have a hyperbolic behaviour (most visible 5j2b region) decreasing up to $\HTall > 800--1000$~GeV. Among various functions, the hyperbola plus a sigmoid functional form was found to best fit the \HTall\ weight distributions,
+Figure~\ref{Hplustb:RWfactors} includes all the derived corrections, showing higher weights for large jet multiplicities. In general, the \HTall corrections have a hyperbolic behaviour (most visible in the 5j2b region) decreasing up to $\HTall > 800$ or 1000~GeV. Among various functions, the hyperbola plus a sigmoid functional form was found to best fit the weight distributions,
 
 \begin{equation}
-w=a+\frac{b}{(\HTall)^c} - \frac{d}{1+\exp(e-f\cdot\HTall)}
+w=a+\frac{b}{(\HTall)^c} - \frac{d}{1+\exp(e-f\cdot\HTall)}.
 \end{equation}
 
-The eigenvalues of the fitted parameters' error matrix are used to include systematic uncertainties related to the reweighting into the analysis fit model.\\
+The eigenvalues of the fitted parameters' error matrix are used in the analysis fit model to include systematic uncertainties associated to the reweighting.\\
 
 \begin{figure}[htb]
     \RawFloats
@@ -102,7 +102,7 @@ The eigenvalues of the fitted parameters' error matrix are used to include syste
 \end{center}
 \end{figure}
 
-After applying these corrections, the agreement between simulation and data in the analysis region improves, as can be seen in Figure~\ref{Hplustb:RWeffect} showing the leading jet \pT\ distributions before and after the reweighting. The shape substantially improves and the remaining disagreement is mainly due to missing normalisations, which are obtained in the combined likelihood fit. All figures of this analysis in Section~\ref{chapter:Htbresults} are shown after the reweighting corrections are applied, unless stated otherwise.
+After applying these corrections, the agreement between simulation and data in the analysis regions improves, as can be seen in Figure~\ref{Hplustb:RWeffect}, which shows the leading jet \pT\ distributions before and after the reweighting. The shape of the distributions substantially improves and the remaining disagreement is mainly due to missing normalisations, which are obtained in the combined likelihood fit. All figures of this analysis in Section~\ref{chapter:Htbresults} are shown after the reweighting corrections are applied, unless stated otherwise.
 
 \begin{figure}[htb]
     \RawFloats
@@ -138,9 +138,9 @@ The main classifier in this analysis is a parameterised NN trained over all sign
 
 \subsubsection{$\bm{H^+}$ parameterised NN}
 \label{sec:HplusPNN}
-The NN uses high-level variables as input, hence a simple and small architecture is enough to extract the discrimination power. The architecture is sequential with two fully connected layers of 64 nodes and a single output node, implemented with the Python deep learning library, Keras~\cite{chollet2015keras}. The activation function used is the commonly employed \textsc{ReLU}, the loss function is the \textit{binary cross-entropy} and the optimiser is the Adam algorithm. Batch normalisation is performed to speed up the learning process. The dropout method is applied during the training at a 10\% rate. To further regularise the training, inputs are transformed to the same scale (same mean and variance) as the training set, event weights are normalised such as each label adds up to the same value and a two-fold cross-validation setup is used. All signal samples are used in the training against all background samples, which are weighted according to their cross-sections.\\
+The NN uses high-level variables as input, hence a simple and small architecture is enough to extract the discrimination power between signal and background. The architecture is sequential with two fully connected layers of 64 nodes and a single output node, implemented with the Python deep learning library, Keras~\cite{chollet2015keras}. The activation function used is the commonly employed \textsc{ReLU}, the loss function is the \textit{binary cross-entropy} and the optimiser is the Adam algorithm. Batch normalisation is performed to speed up the learning process. The dropout method is applied during the training at a 10\% rate. To further regularise the training, inputs are transformed to the same scale (same mean and variance) as the training set and a two-fold cross-validation setup is used. All signal samples are used in the training against all background samples, which are weighted according to their cross-sections.\\
 
-Table~\ref{Hplustb:inputNNtable} shows the 15 variables used as input for the NN. The set includes several kinematic variables, geometric relations, event topology variables, jet multiplicities, which collectively provide a comprehensive characterisation of the events focusing on differences between $H^+$ signal and \ttbar\ background. In addition, the set includes the kinematic discriminant (a high-level variable described in Section~\ref{Hplustb:SectionHplusDiscriminant}) and the $H^+$ mass. The NN is provided with the true $H^+$ mass, an input that distinguishes the different signals, which is a technique referred to as parameterised NN~\cite{Baldi_2016}. In signal events, the parameter is assigned to the corresponding $H^+$ mass used to generate them mass of the $H^+$, while in background events a random value is assigned to each event, taken from the distribution of signal masses. This makes the NN to not directly use the parameter to perfectly classify the events, while the classification is optimised for each signal. As a result, the output of the NN is a function of the $H^+$ value. A total of four NNs are trained, one for each signal region: 5j3b, 5j$\geq$4b, $\geq$6j3b and $\geq$6j$\geq$4b.\\
+Table~\ref{Hplustb:inputNNtable} shows the 15 variables used as input for the NN. The set includes several kinematic variables, geometric relations, event topology variables and jet multiplicities, which collectively provide a comprehensive characterisation of the events focusing on differences between the $H^+$ signal and the \ttbar\ background. In addition, the set includes a kinematic discriminant (a high-level variable described in Section~\ref{Hplustb:SectionHplusDiscriminant}) and the $H^+$ mass. The NN is provided with the true $H^+$ mass, an input that distinguishes the different signals, which is a technique referred to as parameterised NN~\cite{Baldi_2016} and explained in Section~\ref{chapterML:PNN}. In signal events, the parameter is assigned to the corresponding $H^+$ mass used to generate them, while in background events a random value is assigned to each event, taken from the distribution of signal masses. This makes the NN to not directly use the parameter to perfectly classify the events, while the classification is optimised for each signal. As a result, the output of the NN is a function of the $H^+$ value. A total of four NNs are trained, one for each signal region: 5j3b, 5j$\geq$4b, $\geq$6j3b and $\geq$6j$\geq$4b.\\
 
 \begin{table}[htb]
     \centering
@@ -155,8 +155,8 @@ Table~\ref{Hplustb:inputNNtable} shows the 15 variables used as input for the NN
         Centrality         &   Centrality calculated using all jets and leptons.   \\
         $\pT^0$                 &   Leading jet \pT. \\
         $m^{\text{min}\Delta R}_{bb}$     &   Invariant mass of the closest $b$-jet pair. \\
-        $\pT^4$  &   \pT of fifth leading jet.  \\
-        $H_1^{\mathrm{all}}$    &   Second Fox-Wolfram moment calculated using all jets and leptons.  \\ %https://journals.aps.org/prd/abstract/10.1103/PhysRevD.87.073014
+        $\pT^4$  &   \pT of the fifth leading jet in \pT.  \\
+        $H_1^{\mathrm{all}}$    &   Second Fox-Wolfram moment~\cite{foxwolframmoment} calculated using all jets and leptons.  \\ %https://journals.aps.org/prd/abstract/10.1103/PhysRevD.87.073014
         $\Delta R^{\text{avg}}_{bb}$ &   Average $\Delta R$ between all $b$-jet pairs in the event. \\
         $\text{min}\Delta R_{lep,bb}$  &   $\Delta R$ between the lepton and the pair of $b$-jets with smallest $\Delta R$.   \\
         $m^{\text{min}\Delta R}_{uu}$   &   Invariant mass of the untagged jet-pair with minimum $\Delta R$.\\
@@ -170,9 +170,7 @@ Table~\ref{Hplustb:inputNNtable} shows the 15 variables used as input for the NN
     \label{Hplustb:inputNNtable}
 \end{table}
 
-The kinematic discriminant, \HTjets, the centrality and the leading jet \pT\ are consistently among the most important variables in the four trained regions. The NN output is obtained evaluating the NN with the $H^+$ mass set at the desired hypothesis. The NN distributions for signal and background in the analysis regions for the 200 and 800~GeV $H^+$ mass hypotheses are shown in Figure~\ref{Hplustb:NNshapes}.\\
-
-The shapes are significantly different between the two mass-points, although the shape of the distributions transforms gradually from one mass to the next for two close-by masses. Notice that the shape of the background changes, since the same NN is evaluated but with a different $H^+$ mass value. The separation of the $H^+$ signal from the background is most difficult for low $H^+$ masses as the two processes have very similar kinematics and topology.
+The kinematic discriminant, the \HTjets, the centrality and the leading jet \pT\ are consistently among the most important variables in the four trained regions. The NN output is obtained by evaluating the NN with the $H^+$ mass value set at the desired hypothesis. The NN distributions for signal and background in the analysis regions for the 200 and 800~GeV $H^+$ mass hypotheses are shown in Figure~\ref{Hplustb:NNshapes}. The shapes are significantly different between the two mass-points, although the shape of the distributions transforms gradually from one mass to the next for two close-by masses. Let us notice that the shape of the background changes, since the same NN is evaluated but with a different $H^+$ mass value. The separation of the $H^+$ signal from the background is most difficult for low $H^+$ masses as the two processes have very similar kinematics and topology.
 
 \begin{figure}[htb]
     \RawFloats
@@ -196,7 +194,7 @@ The shapes are significantly different between the two mass-points, although the
 \subsubsection{Kinematic discriminant}
 \label{Hplustb:SectionHplusDiscriminant}
 
-The discriminant is a variable that accounts for the compatibility of an event to be signal or \ttbar\ background. This discriminant value is obtained by evaluating the probability density function~(pdf) of a given event under both the signal and background hypotheses. It can be defined in general as,
+The discriminant is a variable that accounts for the compatibility of an event to be signal or \ttbar\ background. This discriminant value is obtained by evaluating the probability density function~(pdf) of a given event under both the signal and background hypotheses. It can be defined in general as
 \begin{equation}
     D(\textbf{x})=\frac{P^{\text{sig}}(\textbf{x})}{P^{\text{sig}}(\textbf{x})+P^{\text{bkg}}(\textbf{x})},
     \label{eq3:discriminant}
@@ -205,9 +203,9 @@ The discriminant is a variable that accounts for the compatibility of an event t
 where $P^{\text{sig}}(\textbf{x})$ and $P^{\text{bkg}}(\textbf{x})$ are the normalised pdf of the corresponding hypothesis, used below more generally as $P^{\text{hyp}}(\textbf{x})$. The value $D$ is computed for every signal mass and approaches to 1 if an event is identified as signal and to 0 if an event is identified as background.\\
 
 The pdfs are based on kinematic information, from templates built from distributions using the four-momentum of the different objects of a given event. The jets are first matched to the final state partons identified at generator level. A quark is matched to a jet if $\Delta R$(jet,parton)$\leq 0.3$ and then, two categories are defined: when the full set of partons is successfully matched, the event is referred to as \textit{All Partons Matched}~(APM), while the event is called \textit{Missing Jet}~(MJ) if any of the partons fail to be matched. The MJ category consists mainly of events that are missing the matching of a quark produced by the $W$-boson, which are typically low in \pT\ and the associated jet is not reconstructed. Kinematic variables are built using up to six jets even if the total number of reconstructed jets in the events is sometimes larger than six. %talk about otherb? 
-Concerning neutrinos, they are reconstructed solving the quadratic equation: $m_W^2 = (p_\ell + p_\nu)^2$, which assumes that all \MET\ is produced by the $W\to\ell\nu$ decay. In general, two solutions are obtained and the solution with lower $p_{z,\nu}$ is taken. It is often the case that the equation does not return a real solution, and the \MET\ is lowered until a solution is possible.\\
+Concerning neutrinos, they are reconstructed solving the quadratic equation: $m_W^2 = (p_\ell + p_\nu)^2$, which assumes that all \MET\ is produced in the $W\to\ell\nu$ decay. In general, two solutions are obtained and the solution with the lowest $p_{z,\nu}$ is taken. It is often the case that the equation does not return a real solution, and the \MET\ is lowered until a solution is possible.\\
 
-The discriminant is constructed by averaging the pdfs over all possible parton-jet combinations. By design, the individual pdf corresponding to the correct permutation of jet-parton combinations contributes the most to the discriminant. This approach allows for the evaluation of the discriminant in real data events, as the true parton-jet associations are not required for the calculation, only the jets. To reduce execution time, only up to the leading eight jets are used to compute kinematic variables. A flavour weight is assigned for each jet using the PCBT score in order to lower the contribution of the combination when a light jet is wrongly used as a $b$-parton or vice versa, thus reducing the impact on the discriminant of the incorrect combinations. The pdf of each hypothesis, signal and background, can be expressed as:
+The discriminant is constructed by averaging the pdfs over all possible parton-jet combinations. By design, the individual pdf corresponding to the correct jet-parton combination contributes the most to the discriminant. This approach allows for the evaluation of the discriminant in real data events, as the true parton-jet associations are not required for the calculation. To reduce execution time, only up to the eight leading jets in \pT\ are used to compute kinematic variables. A flavour weight is assigned to each jet using the PCBT score in order to lower the contribution of the combination when a light jet is wrongly used as a $b$-parton or vice versa, thus reducing the impact of the incorrect combinations to the discriminant. The pdf of each hypothesis, signal and background, can be expressed as:
 \begin{equation}
     P^{\text{hyp}}(\textbf{x})=\frac{\sum_{i=0}^N P^{\text{hyp}}_{b\text{tag}}(\textbf{x}_i)P^{\text{hyp}}_{\text{kin}}(\textbf{x}_i)}{\sum_{i=0}^N P^{\text{hyp}}_{b\text{tag}}(\textbf{x}_i)},
     \label{eq3:PDF}
@@ -218,55 +216,54 @@ where $N$ is the total number of jet-parton combinations and $P^{\text{hyp}}_{\t
     P^{\text{hyp}}_{b\text{tag}}=P_b(j1)P_l(j2)P_l(j3)P_b(j4)P_b(j5)\begin{cases}1&5\text{j}\\P_l(j6)P_l(j7)P_l(j8)& \geq6\text{j},3b\\P_b(j6)P_l(j7)P_l(j8)&\geq6\text{j},\geq4b\end{cases}
 \end{equation}
 
-$P_b$ and $P_l$ are probabilities extracted from truth-matched events for a given jet matched to the corresponding hadron to be tagged either as a $b$-jet or not, respectively. Each event's jets are labelled from 1 to 8 for a single permutation. When an event contains more than 8 jets, all possible permutations involving 8 jets are taken into account. However, for events with more than 11 jets, only the first 11 jets in \pT\ are considered. This ensures a manageable number of permutations while still capturing the most relevant kinematic information from the jets in the event.\\
+$P_b$ and $P_l$ are probabilities extracted from truth-matched events for a given jet matched to the corresponding hadron to be tagged as a $b$-jet or not, respectively. Each jet in the event is labelled from 1 to 8 for a single permutation. When an event contains more than 8 jets, all possible permutations involving 8 jets are taken into account. However, for events with more than 11 jets, only the first 8 jets in \pT\ are considered. This ensures a manageable number of permutations while still capturing the most relevant kinematic information from the jets in the event.\\
 
-As the $H^+$ can decay either leptonically or hadronically, the kinematics involving the $H^+$ are a weighted combination of the two, according to the ratio of events. Concerning neutrinos the same principle is applied only in the case of two neutrino solutions. To address the APM and MJ categories, $P^{\text{hyp}}_{\text{APM}}$ and $P^{\text{hyp}}_{\text{MJ}}$ are calculated individually following the previous definition (Equation~\ref{eq3:PDF}). Similarly, the final pdf in the discriminant is a weighted combination of the two, where the weight is the ratio between APM and MJ events.\\
+As the $H^+$ can decay either leptonically or hadronically, the kinematics involving the $H^+$ are a weighted combination of the two, according to the ratio of events in the two categories defined as $\omega_{lep}$ and $\omega_{had}$. Concerning neutrinos the same principle is applied only in the case of two neutrino solutions. To address the APM and MJ categories, $P^{\text{hyp}}_{\text{APM}}$ and $P^{\text{hyp}}_{\text{MJ}}$ are calculated individually following the previous definition (Equation~\ref{eq3:PDF}). Similarly, the final pdf in the discriminant is a weighted combination of the two, where the weight is the ratio between APM and MJ events.\\
 
 
 \textit{Signal probability}
 
-The signal kinematic probability $P^{\text{sig}}_{\text{kin}}$ is the product of the normalised kinematic probabilities extracted from the templates describing the phase space of the partonic final state. Templates are built for each signal mass sample by reconstructing the invariant masses from every truth-matched event for the signal, and subdivided by region and the categories already defined.\\
+The signal kinematic probability $P^{\text{sig}}_{\text{kin}}$ is the product of the normalised kinematic probabilities extracted from the templates describing the phase space of the partonic final state. Templates are built for each signal mass sample by reconstructing the invariant masses for every truth-matched event for the signal, and are subdivided by region and by the categories already defined.\\
 
-The template masses considered are the mass of the $H^+$, the mass of the hadronic $W$ ($M_{q\Bar{q}}$) and the masses of the leptonic and hadronic top-quarks ($m_{b_{lep}\ell\nu}$ and $m_{b_{had}q\Bar{q}}$). To minimise correlations between quantities, differences of masses are used:
-\begin{equation}
-    \begin{cases} \chi_{t_{had}}=m_{b_{had}q\Bar{q}}-m_{q\Bar{q}} \\ 
-    \chi_{H^+_{had}}=m_{b_hb_{had}q\Bar{q}}-m_{b_{had}q\Bar{q}} \\
-    \chi_{H^+_{lep}}=m_{b_hb_{lep}\ell\nu}-m_{b_{lep}\ell\nu}\\
-    \chi_{t_{had}b_4}=m_{t_{had}b_4}-m_{t_{had}}=m_{b_{had}q\bar{q}b_4}-m_{b_{had}q\bar{q}}\\
-    \chi_{t_{lep}b_4}=m_{t_{lep}b_4}-m_{t_{lep}}=m_{b_{lep}\ell\nu b_4}-m_{b_{lep}\ell\nu}\\
-    \end{cases} 
-\end{equation}
+The template masses considered are the mass of the $H^+$, the mass of the hadronic $W$ ($M_{q\Bar{q}}$) and the masses of the leptonic and hadronic top-quarks ($m_{b_{lep}\ell\nu}$ and $m_{b_{had}q\Bar{q}}$). To minimise correlations between quantities, differences of invariant masses are used:
 
-where $b_h$ denotes the $b$-quark from the $H^+\to tb$ decay and $b_{had/lep}$ the one from the top quark with the hadronically/leptonically decaying $W$-boson, $t_{had/lep}$. $\chi_{t_{lep/had}b_4}$ refers to the recoil system of the $H^+$, from the $t$- and $b$-quarks generated in association with the boson.
-Introducing the two possible $H^+$ decays, the probability reads:
+\begin{align}
+    \begin{split} 
+    \chi_{t_{had}}&=m_{b_{had}q\Bar{q}}-m_{q\Bar{q}} \\ 
+    \chi_{H^+_{had}}&=m_{b_hb_{had}q\Bar{q}}-m_{b_{had}q\Bar{q}} \\
+    \chi_{H^+_{lep}}&=m_{b_hb_{lep}\ell\nu}-m_{b_{lep}\ell\nu}\\
+    \chi_{t_{had}b_4}&=m_{t_{had}b_4}-m_{t_{had}}=m_{b_{had}q\bar{q}b_4}-m_{b_{had}q\bar{q}}\\
+    \chi_{t_{lep}b_4}&=m_{t_{lep}b_4}-m_{t_{lep}}=m_{b_{lep}\ell\nu b_4}-m_{b_{lep}\ell\nu}\\
+    \end{split} 
+\end{align}
+
+where $b_h$ denotes the $b$-quark from the $H^+\to tb$ decay, $b_{had/lep}$ the one from the top quark $t_{had/lep}$ with the hadronically/leptonically decaying $W$-boson and $\chi_{t_{lep/had}b_4}$ refers to the recoil system of the $H^+$, from the $t$- and $b$-quarks generated in association with the boson. By introducing the two possible $H^+$ decays, the probability reads:
 
 \begin{align}
     \begin{split}
         P^{\text{sig}}(\chi_{H^+})P^{\text{sig}}(\chi_{tb})=&\omega_{had}P^{\text{sig}}(\chi_{H^+_{had}})P^{\text{sig}}(\chi_{t_{lep}b_4})+\\
-        &\omega_{lep}P^{\text{sig}}(\chi_{H^+_{lep}})P^{\text{sig}}(\chi_{t_{had}b_4}),
+        &\omega_{lep}P^{\text{sig}}(\chi_{H^+_{lep}})P^{\text{sig}}(\chi_{t_{had}b_4}).
     \end{split}
 \end{align}
 
-The full kinematic signal probability for the different cases of jet multiplicities results,
+The full kinematic signal probability for the different cases of jet multiplicities results
 \begin{align}
-    P_{\text{kin}}^{\text{sig}}&=P^{\text{sig}}(m_{W_h})P^{\text{sig}}(\chi_{t_{had}})P^{\text{sig}}(m_{t_{lep}})P^{\text{sig}}(\chi_{H^+})\begin{cases}1 & 5\text{j} \\ P^{\text{sig}}(\chi_{tj})&\geq6\text{j},3b\\P^{\text{sig}}(\chi_{tb})& \geq6\text{j},\geq4b\end{cases}\\
-     P_{\text{kin}}^{\text{bkg}}&=P^{\text{bkg}}(m_{W_h})P^{\text{bkg}}(\chi_{t_{had}})P^{\text{bkg}}(m_{t_{lep}})\begin{cases}P^{\text{bkg}}(\chi_{H^+}) & 5\text{j} \\ P^{\text{bkg}}(m_{jj})P^{\text{bkg}}(\chi_{t\bar{t}})&\geq6\text{j},3b\\P^{\text{bkg}}(m_{bb})P^{\text{bkg}}(\chi_{t\bar{t}})& \geq6\text{j},\geq4b\end{cases}
+    P_{\text{kin}}^{\text{sig}}&=P^{\text{sig}}(m_{W_h})P^{\text{sig}}(\chi_{t_{had}})P^{\text{sig}}(m_{t_{lep}})P^{\text{sig}}(\chi_{H^+})\begin{cases}1 & 5\text{j} \\ P^{\text{sig}}(\chi_{tj})&\geq6\text{j},3b\\P^{\text{sig}}(\chi_{tb})& \geq6\text{j},\geq4b\end{cases}.
 \end{align}
 
-It can be seen that the $H^+$ is used only in events with $\geq$ 6j regions as it cannot be built for 5j events. The light jet is assumed instead in $\geq$6j3b events.
-In the case of an event with two neutrino solutions, the leptonic quantities should be averaged with the analogous $\omega_{1\nu}/\omega_{2\nu}$.\\
+It can be seen that the $H^+$ is used only in events with $\geq$6j regions as it cannot be built for 5j events. A light jet is assumed in $\geq$6j3b events. In the case of an event with two neutrino solutions, the leptonic quantities are computed using the two neutrinos and the probability is averaged with the fractions of $\omega_{1\nu}/\omega_{2\nu}$. These, analogous to $\omega_{had}/\omega_{lep}$, are the fraction of trut-matched events with two neutrino solutions that have the first or the second neutrino matched to the true neutrino.\\
 
 
 \textit{Background probability}
 
 The background kinematic pdf $P_{\text{kin}}^{\text{bkg}}$ follows a similar formula to the signal kinematic pdf. Almost all quantities can be reconstructed: the mass of the hadronic $W$ ($m_{q\bar{q}}$) and the mass of the leptonic and hadronic top-quark ($m_{b_{lep}\ell\nu}$ and $m_{b_{had}q\Bar{q}}$), for a total of three masses. Instead of the $H^+$ boson mass and its recoil system, the $m_{b\bar{b}}$ and the $\chi_{\ttbar}=m_{\ttbar}-m_{t_{had}}-m_{t_{lep}}$ systems are used.\\
 
-In the 5j regions the $m_{b\bar{b}}$ system cannot be reconstructed, hence the fourth kinematic variable is replaced with a pseudo-$H^+$ reconstructed with a light jet. Concerning the $\geq$6j3b region, two light-jets are used instead $m_{j_hj_4}$ as the soft $b$-quark is typically tagged as a light jet and outputs a better performance than mixing jet flavours. Following the description, the background kinematic pdf is expressed as:
+In the 5j regions the $m_{b\bar{b}}$ system cannot be reconstructed, hence a pseudo-$H^+$ mass reconstructed with a light jet is used instead. Concerning the $\geq$6j3b region, two light-jets are used to build the $m_{j_hj_4}$, as the soft $b$-quark is typically tagged as a light jet and outputs a better performance than mixing jet flavours. Following this description, the background kinematic pdf is expressed as,
 \begin{align}
-    P_{\text{kin}}^{\text{bkg}}&=P^{\text{bkg}}(m_{W_h})P^{\text{bkg}}(\chi_{t_{had}})P^{\text{bkg}}(m_{t_{lep}})\begin{cases}P^{\text{bkg}}(\chi_{H^+}) & 5\text{j} \\ P^{\text{bkg}}(m_{jj})&\geq6\text{j},3b\\P^{\text{bkg}}(m_{bb})& \geq6\text{j},\geq4b\end{cases}
+    P_{\text{kin}}^{\text{bkg}}&=P^{\text{bkg}}(m_{W_h})P^{\text{bkg}}(\chi_{t_{had}})P^{\text{bkg}}(m_{t_{lep}})\begin{cases}P^{\text{bkg}}(\chi_{H^+}) & 5\text{j} \\ P^{\text{bkg}}(m_{jj})P^{\text{bkg}}(\chi_{t\bar{t}})&\geq6\text{j},3b\\P^{\text{bkg}}(m_{bb})P^{\text{bkg}}(\chi_{t\bar{t}})& \geq6\text{j},\geq4b\end{cases}.
 \end{align}
 
-The discriminant distributions for signal and background in the analysis regions for the 200 and 800~GeV $H^+$ masses are shown in Figure~\ref{Hplustb:Discriminantshapes}. Similarly to the NN output, the shapes transform gradually from one mass to the next and the separation is most difficult for low $H^+$ masses.
+The discriminant distributions for signal and background in the analysis regions for the 200 and 800~GeV $H^+$ masses are shown in Figure~\ref{Hplustb:Discriminantshapes}. Similar to the NN output, the shapes transform gradually from one mass to the next and the separation is most difficult for low $H^+$ masses.
 
 \begin{figure}[htb]
     \RawFloats
