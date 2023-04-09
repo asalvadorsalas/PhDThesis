@@ -71,7 +71,7 @@ Various definitions of jets are used in \acrshort{ATLASlabel}. In this thesis, E
 
 The so-called EMTopo jets are the primary jet definition used in physics analyses in \acrshort{ATLASlabel} before the end of Run~2. The reconstruction is performed at the EM energy scale only using topo-clusters~\cite{PhysRevD.96.072002} with the anti-k$_t$ algorithm implemented in the \textit{FASTJET} software package~\cite{Cacciari2012}. The jets used in this thesis are reconstructed with the radius parameter $R = 0.4$ with requirements in $\pT > 25$~GeV and $\abs{\eta} < 2.5$. The EMTopo jets are calibrated in several steps, summarised in Figure~\ref{figEVNTRECO:EMTOPO} and described below.\\
 
-After the jet reconstruction, the jet direction is modified such that the jet originates from the primary vertex. Then, energy corrections based on pile-up are applied subtracting the average energy due to in-time pile-up and other residual corrections that depend on the number of \acrshort{PVlabel}s; and bunch crossings. After, absolute calibrations are applied to the \acrlong{JESlabel}~(\acrshort{JESlabel}) and $\eta$ derived from dedicated dijet \acrshort{MClabel} events. Then, a global sequential calibration is applied to improve the \pT\ resolution and the associated uncertainties from the jet fluctuations that can arise from various initial factors, like the flavour or energy of the original parton. The final step is the in-situ calibration, which is only applied to data and is extracted from jets \pT and $\eta$ comparisons of data to known well-modelled \acrshort{MClabel} that include central jets in dijet events, $\gamma/Z+jets$ or multijet events.\\
+After the jet reconstruction, the jet direction is modified such that the jet originates from the primary vertex. Then, energy corrections based on pile-up are applied subtracting the average energy due to in-time pile-up and other residual corrections that depend on the number of \acrshort{PVlabel}s and bunch crossings. After, absolute calibrations are applied to the \acrlong{JESlabel}~(\acrshort{JESlabel}) and $\eta$ derived from dedicated dijet \acrshort{MClabel} events. Then, a global sequential calibration is applied to improve the \pT\ resolution and the associated uncertainties from the jet fluctuations that can arise from various initial factors, like the flavour or energy of the original parton. The final step is the in-situ calibration, which is only applied to data and is extracted from jets \pT and $\eta$ comparisons of data to known well-modelled \acrshort{MClabel} that include central jets in dijet events, $\gamma/Z+jets$ or multijet events.\\
 
 \begin{figure}[htbp]
     \RawFloats
@@ -126,7 +126,7 @@ The $b$-jet efficiency as a function of the jet \pT\ and the $c$- and light-jets
         \quad
         \subfloat[]{\includegraphics[width=0.47\textwidth]{EVENTRECO/ltagrej.pdf}}
         \caption{
-        Identification efficiency for $b$-jets as a function of \pT\ (a), and rejection rate for $c$-jets (b) and light-jets (c) as a function of the $b$-tagging efficiency for the MV2c10 and DL1 taggers in a simulated \ttbar sample~\cite{taggingeff}.
+        Identification efficiency for $b$-jets as a function of \pT\ (a), and rejection rate for $c$-jets (b) and light-jets (c) as a function of the $b$-tagging efficiency for the MV2c10 and DL1r taggers in a simulated \ttbar sample~\cite{taggingeff}.
     }
     \label{figEVNTRECO:taggingeff}
     \end{center}

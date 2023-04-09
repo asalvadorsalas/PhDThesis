@@ -37,16 +37,16 @@ It is standard to express the loss of the full dataset $\mathbf{X}$ as the avera
     E(\mathbf{X},\boldsymbol{\theta})=\frac{1}{N}\sum_{i=1}^NE(y_i,\text{P}_\text{model}(\mathbf{X},\boldsymbol{\theta}))
 \end{equation}
 
-For regression problems the typical expression for a loss function is the mean square error~\cite{EncyclopediaofML}, 
+with $\hat{y}_i$ being the predicted value from the model. For regression problems the typical expression for a loss function is the mean square error~\cite{EncyclopediaofML}, 
 
 \begin{equation}
     E_{MSE}(\mathbf{X},\boldsymbol{\theta}) = \frac{1}{N}\sum_{i=1}^N (y_i-\hat{y_i})^2,
 \end{equation}
 
-which is an average of the deviation from the true labels, with $\hat{y}_i$ is the predicted value. For binary classification, the so-called \textit{binary cross-entropy}~\cite{binarycross} is frequently used, 
+which is an average of the deviation from the true labels. For binary classification, the so-called \textit{binary cross-entropy}~\cite{binarycross} is frequently used, 
 
 \begin{equation}
-    E_{BCE}(\mathbf{X},\boldsymbol{\theta}) = -\frac{1}{N}\sum_{i=1}^N y_i\cdot\log(\text{P}_\text{model}(\mathbf{X},\boldsymbol{\theta}))+(1-y_i)\cdot\log(1-\text{P}_\text{model}(\mathbf{X},\mathbf{\theta})),
+    E_{BCE}(\mathbf{X},\boldsymbol{\theta}) = -\frac{1}{N}\sum_{i=1}^N y_i\cdot\log(hat{y_i})+(1-y_i)\cdot\log(1-hat{y_i}),
 \end{equation}
 
 which is the negative log-likelihood of a Bernouilly distribution. A modified version is used in multi-classification problems. 
@@ -98,7 +98,7 @@ with the inputs of a given data-point $\mathbf{x}$; the parameter set $\boldsymb
     w_{21}^{(1)} & w_{22}^{(1)}\end{bmatrix} \begin{bmatrix}
         x_{11}\\
         x_{21}
-    \end{bmatrix} \right) \right)
+    \end{bmatrix} \right) \right).
 \end{equation}
 
 This simple example has nine free parameters $\boldsymbol{\theta}$ which are optimised during the training; more complex networks easily reach several ten-thousands of free parameters. Due to the non-linearity introduced by $f_i$, a NN can approximate any arbitrary function by giving the network enough freedom (amount of hidden layers and nodes). When a NN consists of multiple hidden layers, it is referred to as a deep learning~\cite{Goodfellow-et-al-2016} algorithm.\\
@@ -119,7 +119,7 @@ After a first random initialisation of the free parameters $\boldsymbol{\theta}$
     \theta' = \theta - l \nabla_\theta E(\theta;\mathbf{X}),
 \end{equation}
 
-where $l$ is the learning rate, also a hyperparameter, that tunes the rate of the update of the weights, and $\nabla_\theta E$ the gradient of the loss function with respect to a given free parameter. A large value of $l$ may prevent an optimal convergence of the loss function as the value might change the weights significantly between steps and may cause the minimisation process to behave erratically before reaching the minimum. On the other hand, an excessively low learning rate can slow the optimisation and cause the minimisation to stuck in a local minimum. Techniques that vary the learning rate or the batch size at every step can mitigate these extremes and gradually shift to a more precise minimisation of the loss function~\cite{LRBatchSize}. In this thesis, the Adam optimiser~\cite{Kingma2015AdamAM} which estimates of the first and second moment of the gradient, is used.
+where $l$ is the learning rate, also a hyperparameter, that tunes the rate of the update of the weights, and $\nabla_\theta E$ the gradient of the loss function with respect to a given free parameter. A large value of $l$ may prevent an optimal convergence of the loss function as the value might change the weights significantly between steps and may cause the minimisation process to behave erratically before reaching the minimum. On the other hand, an excessively low learning rate can slow the optimisation and cause the minimisation to stuck in a local minimum. Techniques that vary the learning rate or the batch size at every step can mitigate these extremes and gradually shift to a more precise minimisation of the loss function~\cite{LRBatchSize}. In this thesis, the Adam optimiser~\cite{Kingma2015AdamAM}, which estimates the first and second moment of the gradient, is used.
 
 \subsubsection{Backpropagation}
 
@@ -217,7 +217,7 @@ AdaBoost is a specific case where the weights of the events that are misclassifi
 
 BDTs are implemented in \acrshort{ATLASlabel} software using ROOT~\cite{BRUN199781} via the TMVA~\cite{TMVA} package or more widely in python via scikit-learn~\cite{scikit-learn} or xgboost~\cite{Chen_2016}.
 
-\subsection{Input data for training}
+\subsection{The choice of the training dataset}
 
 The selection of the dataset and its size depends on the problem that the \acrshort{MLlabel} is intending to solve. The datasets used in \acrshort{MLlabel} methods to discriminate between signal and background processes typically consist of simulated events. The choice of dataset and the number of inputs mostly depend on the problem's complexity and the desired performance, as more intricate scenarios require advanced algorithms with higher number of input variables and large datasets.\\
 
@@ -225,7 +225,7 @@ The input variables used in the \acrshort{MLlabel} trainings of this thesis can 
 
 It is important to ensure an unbiased training process. For this purpose, the full dataset is split at least in two orthogonal samples, normally called training and validation datasets. The training dataset is used for the actual algorithm training, while the validation dataset is used to evaluate and monitor the final \acrshort{MLlabel} model. While a loss function is used to find the best set of parameters during the training, the performance on the validation set is evaluated in terms of sensitivity, selection efficiency, stability, and is used to fine-tune the model such as the choice of input variables or hyperparameters. Ideally, a third independent dataset (not used for training or for the choice of hyperparameters), referred to as testing set, is used to evaluate the final model. Some \acrshort{MLlabel} trainings performed in this thesis have not used a a testing set but no significant bias has been introduced, as the difference in performance between the validation and testing set is below statistical effects. In order to evaluate the full dataset, cross-validation (also named $k$-folding~\cite{EncyclopediaofML}) setups are used, where $k$ trainings are performed with the train/validation/test sets labelled accordingly, and every set is evaluated appropriately.\\
 
-In this thesis as well as in typical \acrshort{ATLASlabel} analyses, every simulated event has an associated unique number not correlated with any physical variable. Hence, it is ideal to split the full dataset into the different sets using this number, like splitting the dataset into two with odd or even numbers. Another detail is that every simulated event has an event weight such that the sum for all events corresponds to the cross-section times luminosity and appropriately reproduces the expected kinematic distributions. In some cases the \acrshort{MClabel} weight is negative, which is almost exclusive to high energy physics datasets and, although the user-level \acrshort{MLlabel} tools accept event weights as input, their absolute value has to be used, as negative values are not properly defined in a \acrshort{MLlabel} training.
+In this thesis as well as in typical \acrshort{ATLASlabel} analyses, every simulated event has an associated unique number not correlated with any physical variable. Hence, it is ideal to split the full dataset into the different sets using this number, like splitting the dataset into two with odd or even numbers. Another detail is that every simulated event has an event weight such that the sum for all events corresponds to the cross-section times luminosity and appropriately reproduces the expected kinematic distributions. In some cases the \acrshort{MClabel} weight is negative, which is almost exclusive to high energy physics datasets. Although the user-level \acrshort{MLlabel} tools accept event weights as input, their absolute value has to be used, as negative values are not properly defined in a \acrshort{MLlabel} training.
 
 \section{Profile likelihood fit}
 \label{sec:profilelikelihoodfit}
@@ -286,5 +286,5 @@ Typically, searches are dedicated to very small signals that are difficult to se
     \text{CL}_{s}=\frac{p_\mu}{1-p_0},
 \end{equation}
 
-where $p_0$ is the p-value for the null hypothesis, and $p_\mu$ is the p-value for the signal hypothesis. The ratio normalises the p-value to the confidence level of the background-only hypothesis such that the confidence level incorporates the information of both hypotheses and by construction is less prone to false discoveries or exclusions. The limits obtained using the CL$_s$ are conservative as when the measurement is not compatible with the null hypothesis, the denominator is larger and CL$_{s}$ decreases.
+where $p_0$ is the p-value for the null hypothesis, and $p_\mu$ is the p-value for the signal hypothesis. The ratio normalises the p-value to the confidence level of the background-only hypothesis such that the confidence level incorporates the information of both hypotheses and by construction is less prone to false discoveries or exclusions. The limits obtained using the CL$_s$ method are conservative as when the measurement is not compatible with the null hypothesis, the denominator is larger and CL$_{s}$ decreases.
 
