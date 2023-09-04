@@ -5,7 +5,7 @@ The \acrfull{SMlabel} of particle physics~\cite{PhysRevLett.19.1264,GLASHOW19615
 that so far best describes subatomic particles and their interactions.
 It is a \acrlongpl{QFT} (\acrshort{QFT}) and since its initial development in the 1960s,
 the model has been overwhelmingly successful, guiding many experimental achievements
-including the discovery of the top quark~\cite{topsearch1995,PhysRevLett.74.2626} in 1995
+including the discovery of the top quark at the Tevatron in 1995~\cite{topsearch1995,PhysRevLett.74.2626}
 and the Higgs boson at the Large Hadron Collider (LHC) in 2012~\cite{ATLASHiggs2012,CMShiggs2012}.
 Despite its success, there are known phenomena not accounted for by the model
 and questions which clearly point to the need of a new theory.\\
@@ -45,24 +45,25 @@ Fermions can be divided further into two categories: quarks and leptons, based o
 Both types manifest in \acrshort{EW} interactions, having a weak isospin $T_3=\pm1/2$ while only the quarks experience the strong interaction. Quarks have a fractional electric charge $\abs{Q}=2/3$ or $1/3$, and the \textit{colour} charge. The last one is the charge associated to the strong interaction and its value is denoted as \textit{red}, \textit{green} and \textit{blue}. Table~\ref{tabSM:fermionscontent} presents a summary of the fundamental fermions.\\
 
 \begin{table}[htbp]
+    %\renewcommand{\arraystretch}{1.5} % Default value: 1
     \begin{tabular}{ccccc}
     \toprule\toprule
     Generation & Name & Symbol & Mass & Charge \\ \midrule
     \multicolumn{5}{c}{Quarks}                          \\ \midrule
-    \multirow{2}{*}{1\ts{st}}       & Up       &  $u$      &  $2.15^{+0.49}_{-0.26}$~MeV    &  $+2/3$ \\
-                                    & Down     &  $d$      &  $4.67^{+0.48}_{-0.17}$~MeV    &  $-1/3$ \\
-    \multirow{2}{*}{2\ts{nd}}       & Charm    &  $c$      &  $1.27\pm 0.02$~GeV            &  $+2/3$ \\
-                                    & Strange  &  $s$      &  $93.4^{+8.6}_{-3.4}$~MeV      &  $-1/3$ \\
-    \multirow{2}{*}{3\ts{rd}}       & Top      &  $t$      &  $172.69\pm 0.30$~GeV          &  $+2/3$ \\
+    \multirow{2}{*}{1\ts{st}}       & Up       &  $u$      &  $2.15^{+0.49}_{-0.26}$~MeV    &  $+2/3$ \\ \addlinespace
+                                    & Down     &  $d$      &  $4.67^{+0.48}_{-0.17}$~MeV    &  $-1/3$ \\ \addlinespace
+    \multirow{2}{*}{2\ts{nd}}       & Charm    &  $c$      &  $1.27\pm 0.02$~GeV            &  $+2/3$ \\ \addlinespace
+                                    & Strange  &  $s$      &  $93.4^{+8.6}_{-3.4}$~MeV      &  $-1/3$ \\ \addlinespace
+    \multirow{2}{*}{3\ts{rd}}       & Top      &  $t$      &  $172.69\pm 0.30$~GeV          &  $+2/3$ \\ \addlinespace
                                     & Bottom   &  $b$      &  $4.18^{+0.03}_{-0.02}$~GeV    &  $-1/3$ \\
     \midrule
     \multicolumn{5}{c}{Leptons}                          \\ \midrule
-    \multirow{2}{*}{1\ts{st}}       & Electron             &  $e^-$        &  $0.511$~MeV            &  $-1$ \\
-                                    & Electron neutrino    &  $\nu_e$    &  $<1.1$~eV 90\% CL      &  $0$  \\
-    \multirow{2}{*}{2\ts{nd}}       & Muon                 &  $\mu^-$      &  $0.106$~GeV            &  $-1$ \\
-                                    & Muon neutrino        &  $\nu_\mu$  &  $<0.19$~MeV 90\% CL    &  $0$  \\
-    \multirow{2}{*}{3\ts{rd}}       & Tau                  &  $\tau^-$     &  $1776.86\pm 0.12$~MeV  &  $-1$ \\
-                                    & Tau neutrino         &  $\nu_\tau$ &  $<18.2$~MeV 95\% CL    &  $0$  \\
+    \multirow{2}{*}{1\ts{st}}       & Electron             &  $e^-$        &  $0.511$~MeV            &  $-1$ \\ \addlinespace
+                                    & Electron neutrino    &  $\nu_e$    &  $<1.1$~eV [90\% CL]      &  $0$  \\ \addlinespace
+    \multirow{2}{*}{2\ts{nd}}       & Muon                 &  $\mu^-$      &  $0.106$~GeV            &  $-1$ \\ \addlinespace
+                                    & Muon neutrino        &  $\nu_\mu$  &  $<0.19$~MeV [90\% CL]    &  $0$  \\ \addlinespace
+    \multirow{2}{*}{3\ts{rd}}       & Tau                  &  $\tau^-$     &  $1776.86\pm 0.12$~MeV  &  $-1$ \\ \addlinespace
+                                    & Tau neutrino         &  $\nu_\tau$ &  $<18.2$~MeV [95\% CL]    &  $0$  \\
 
     \bottomrule\bottomrule
     \end{tabular}
@@ -70,13 +71,13 @@ Both types manifest in \acrshort{EW} interactions, having a weak isospin $T_3=\p
     \label{tabSM:fermionscontent}
     \end{table}
 
-There are a total of six quark types, named \textit{flavours}, and are split into three generations.
-The first generation consists in the \textit{up} and the \textit{down} quark, the former with $Q=+2/3$ and $T_3=+1/2$,
-while the latter $Q=-1/3$, $T_3=-1/2$ and a different mass.
+There are a total of six quark types, named \textit{flavours}, that are split into three generations.
+The first generation consists of the \textit{up} and the \textit{down} quark, the former with $Q=+2/3$ and $T_3=+1/2$,
+while the latter has $Q=-1/3$, $T_3=-1/2$ and a different mass.
 The next two generations are copies of the first one with increasing mass, with a pair of \textit{up}-type and \textit{down}-type quarks.
-The second generation consists in \textit{charm} and \textit{strange} quarks, and the third one in \textit{top} and \textit{bottom} quarks.
+The second generation consists of \textit{charm} and \textit{strange} quarks, and the third one of \textit{top} and \textit{bottom} quarks.
 In addition, all the six quark flavours have anti-matter states with the same mass, but opposite quantum numbers. As an example,
-an anti-\textit{up}-type quark has $Q=-2/3$, $T_3=-1/2$ and carries anti-\textit{red} colour.\\
+a red anti-\textit{up}-type quark has $Q=-2/3$, $T_3=-1/2$ and carries anti-\textit{red} colour.\\
 
 Leptons are also similarly divided into six different types and in three separate generations named \textit{electron} ($e$), \textit{muon} ($\mu$) and \textit{tau} ($\tau$), also with increasing mass.
 Each generation contains a lepton with $Q=-1$ and $T_3=+1/2$ named after its generation,
@@ -98,7 +99,12 @@ where $\gamma^\mu$ are Dirac matrices and $\partial_\mu$ is the four-momentum de
 
 \subsubsection{Bosons}
 
-Particles with integer spin are referred to as bosons. When the bosonic sector with spin 1 gauge fields are force carriers that naturally follow from imposing the requirement of local gauge invariance on Equation~\ref{Theory_eq:diraceq} under symmetry groups, in this case detailed in Equation~\ref{Theory_eq:SMgroup}. In Section~\ref{subsec:SMinteractions} the nature and origins of the gauge bosons are detailed. Table~\ref{tabSM:bosonscontent} presents a summary of the bosons of the \acrshort{SMlabel}.\\
+Particles with integer spin are referred to as bosons. In the bosonic sector, the spin 1 gauge fields are force carriers that naturally follow from imposing the requirement of local gauge invariance on Equation~\ref{Theory_eq:diraceq} under symmetry groups, in this case detailed in Equation~\ref{Theory_eq:SMgroup}. In Section~\ref{subsec:SMinteractions} the nature and origins of the gauge bosons are detailed.\\
+
+In summary, the photon ($\gamma$) is the carrier of the electromagnetic force, being a massless and electrically neutral particle.
+The weak force carriers are the $W^+$, $W^-$ and $Z$ bosons, all massive with the $Z$ boson being electrically neutral and the $W^\pm$ with either $Q=\pm1$. Gluons ($g$) are the strong force carriers which are massless and with no electric charge. There are eight different gluons representing each possible colour exchange.\\
+
+The \acrshort{SMlabel} also includes a neutral spin-0 particle, or \textit{scalar}, the Higgs boson. The Higgs field is responsible for all SM particles acquiring mass through the Higgs mechanism, as described in Section~\ref{subsec:SSB}. Table~\ref{tabSM:bosonscontent} presents a summary of the bosons of the \acrshort{SMlabel}.\\
 
 \begin{table}[htbp]
     \begin{tabular}{ccccc}
@@ -115,10 +121,6 @@ Particles with integer spin are referred to as bosons. When the bosonic sector w
     \label{tabSM:bosonscontent}
     \end{table}
 
-In summary, the photon ($\gamma$) is the carrier of the electromagnetic force, being a massless and electrically neutral particle.
-The weak force carriers are the $W^+$, $W^-$ and $Z$ bosons, all massive with the $Z$ boson being electrically neutral and the $W^\pm$ with either $Q=\pm1$. Gluons ($g$) are the strong force carriers which are massless and with no electric charge. There are eight different gluons representing each possible colour exchange.\\
-
-The \acrshort{SMlabel} also includes a neutral spin-0 particle, or \textit{scalar}, the Higgs boson. The Higgs field is responsible for all SM particles acquiring mass through the Higgs mechanism, as described in Section~\ref{subsec:SSB}.
 The kinematics of a generic scalar $\phi$ with mass $m$, is described by the Klein-Gordon Lagrangian,
 
 \begin{equation}
@@ -126,7 +128,7 @@ The kinematics of a generic scalar $\phi$ with mass $m$, is described by the Kle
     \mathcal{L}=\frac{1}{2}\partial^\mu\phi\partial_\mu\phi - m^2\phi^2.
 \end{equation}
 
-Charged scalars can be described instead through a complex field $\phi$ (with its complex conjugate $\phi^*$) and the expression of the Lagrangian is slightly modified,
+In beyond the \acrshort{SMlabel} (BSM) theories, charged scalars can be described instead through a complex field $\phi$ (with its complex conjugate $\phi^*$) and the expression of the Lagrangian is slightly modified,
 
 \begin{equation}
     \label{Theory_eq:KGeqcharged}
@@ -350,7 +352,7 @@ Focusing on the one loop contribution, the result is obtained at first order fro
     \end{align}
 
 
-which are the loop involving gluons, quarks and a third one with a new propagator, the ghost. This last propagator is a regularisation artefact to compensate unphysical degrees of freedom\footnote{There are other methods to avoid the unphysical degrees of freedom, like choosing a physical gauge in the axial direction.}. Focusing on the gluon loop contribution,
+which are the loop involving gluons, quarks and a third one with a new propagator, the ghost. This last propagator is a regularisation artefact to compensate for unphysical degrees of freedom\footnote{There are other methods to avoid the unphysical degrees of freedom, like choosing a physical gauge in the axial direction.}. Focusing on the gluon loop contribution,
 
 \begin{equation}
 \includegraphics[width=0.25\textwidth]{SM/gluonLoopD.pdf}
@@ -795,7 +797,7 @@ The existence of charged flavour changing currents is allowed at tree level but 
     \end{center}
 \end{figure}
 
-The high-order contributions are suppressed further by the Glashow, Iliopoulos and Maiani (GIM) mechanism~\cite{PhysRevD.2.1285}. In order to illustrate this mechanism, the example penguin diagram is discussed in the following. The diagram depicts a FCNC interaction in the loop, like $\bar{b}\to\bar{c}W^+$ and then $\bar{c}W^+\to\bar{s}$ that will be proportional to $V_{cs}^*V_{cb}$. Adding up the other two possible diagrams with $u$ and $t$ in the loop, we get
+The higher-order contributions are suppressed further by the Glashow, Iliopoulos and Maiani (GIM) mechanism~\cite{PhysRevD.2.1285}. In order to illustrate this mechanism, the example penguin diagram is discussed in the following. The diagram depicts a FCNC interaction in the loop, like $\bar{b}\to\bar{c}W^+$ and then $\bar{c}W^+\to\bar{s}$ that will be proportional to $V_{cs}^*V_{cb}$. Adding up the other two possible diagrams with $u$ and $t$ in the loop, we get
 
 \begin{equation}
     V_{us}^*V_{ub}+V_{cs}^*V_{cb}+V_{ts}^*V_{tb},
@@ -823,7 +825,7 @@ Expression~\ref{Theory_eq:examplefeymanVs} is exactly one of the constraints and
 
 \section{Standard Model measurements and top physics}
 
-Since the formulation of the \acrshort{SMlabel}, most experimental observations and measurements have been described successfully by the model. Throughout the years, predicted particles have been found and multiple precision measurements have tested its validity. However, there are theoretical and experimental issues that are not solved, leading to the conclusion that the \acrshort{SMlabel} is an effective theory and there is a more complete theory that can explain the whole range of observations.\\
+Since the formulation of the \acrshort{SMlabel}, most experimental observations and measurements have been described successfully by the model. Throughout the years, predicted particles have been found and multiple precision measurements have tested its validity. However, there are theoretical and experimental issues that are not solved, leading to the conclusion that the \acrshort{SMlabel} is an effective theory and that there is a more complete theory that can explain the whole range of observations.\\
 
 In this section, a summary of the measurements of the \acrshort{SMlabel} is presented, focusing on processes involving the top quark and FCNC interactions. Then, some of the main open questions of the \acrshort{SMlabel} are briefly reviewed.
 
@@ -831,7 +833,7 @@ In this section, a summary of the measurements of the \acrshort{SMlabel} is pres
 
 Decades of experiments have performed measurements of parameters that define the \acrshort{SMlabel}. The \acrshort{SMlabel} can be defined with nineteen parameters, which have been described in this chapter: nine fermion masses (six for quarks, three for leptons), the three gauge couplings ($g_S$, $g$ and $g'$), the Higgs vacuum expectation value ($v$), the Higgs mass, four parameters of the CKM matrix (three angles and a complex phase) and the \acrshort{QCD} CP-violating phase. There is no underlying relation between these parameters, only being set from experimental observations. With these parameters measured, theoretical predictions of observables can be tested with experimental data in order to explore new physics.\\
 
-One typical observable in particle physics is the cross-section $\sigma$, the expected interaction rate between two particles in terms of the effective surface area typically measured in \textit{pb} (picobarn, 1pb = 10$^{-40}$ m$^2$). The cross-section of a process depends on the interacting forces involved, as well as the energy and momentum of the interacting particles, and can be calculated from the S-matrix (scattering matrix) using relativistic mechanics. Feynman diagrams are a tool to translate a visual description of a process to a mathematical expression, the matrix amplitude, which is proportional to the probability of the specific process.\\
+One typical observable in particle physics is the cross-section $\sigma$, the expected interaction rate between two particles in terms of the effective surface area typically measured in \textit{pb} (picobarn, 1~pb = 10$^{-40}$ m$^2$). The cross-section of a process depends on the interacting forces involved, as well as the energy and momentum of the interacting particles, and can be calculated from the S-matrix (scattering matrix) using relativistic mechanics. Feynman diagrams are a tool to translate a visual description of a process to a mathematical expression, the matrix amplitude, which is proportional to the probability of the specific process.\\
 
 The decay width, $\Gamma$, can be computed similarly to obtain another common observable, the Branching Ratio (BR). The BR of an unstable particle is the probability for it to decay into specific particles among all possible states. It is computed by dividing the $\Gamma$ of the specific process with respect to the sum of all the possible processes. Both $\sigma$ and $\Gamma$ are calculated from perturbation approximations, as the actual process is not the product of just one Feynman diagram, but of all the possible interactions that lead to the same final state including loops, interferences and radiative corrections, refereed to as high-order corrections. However, each interaction is proportional to the probability making the amplitude of higher order diagrams become less important. Typically, \textit{leading-order} (LO) calculations of observables use only the leading order terms from the perturbation expansion, while when calculated including higher order corrections it is referred to next-to-leading-order (NLO) or next-to-NLO (NNLO) calculations.\\
 
@@ -863,7 +865,7 @@ Figure~\ref{figSM:xsecSM} shows a summary of a wide range of cross-section measu
 \clearpage
 \subsection{Top quark physics}
 
-The top quark is the most massive known elementary particle, discovered in 1995 at Fermilab~\cite{topsearch1995,PhysRevLett.74.2626}. This characteristic makes the top quark the only one particle that decays before hadronisation and hence, properties like the spin are directly transferred to the decay products. The main top quark decay is $t\to Wb$ with a branching ratio close to 1, determined by the $V_{tb}=0.97401 \pm 0.00011$ (element of the CKM matrix~\cite{pdg}) being very close to 1. Due to its high mass, the top quark strongly couples with the Higgs boson as the Yukawa coupling (Equation~\ref{Theory_eq:yukawacouplings}) $y_t=\sqrt{2}m_t/v\simeq 1$.\\
+The top quark is the most massive known elementary particle, discovered in 1995 at Fermilab~\cite{topsearch1995,PhysRevLett.74.2626}. This characteristic makes the top quark the only particle that decays before hadronisation and hence, properties like the spin are directly transferred to the decay products. The main top quark decay is $t\to Wb$ with a branching ratio close to 1, determined by the $V_{tb}=0.97401 \pm 0.00011$ (element of the CKM matrix~\cite{pdg}) being very close to 1. Due to its high mass, the top quark strongly couples with the Higgs boson as the Yukawa coupling (Equation~\ref{Theory_eq:yukawacouplings}) $y_t=\sqrt{2}m_t/v\simeq 1$.\\
 
 Altogether, the top quark plays a key role in the study of the \acrshort{SMlabel}. The precise measurements of its properties put the theory to test and any deviation would point to new physics. It is also an excellent candidate for searches involving either much more massive particles that might decay to the top quark, or decay into other lighter exotic particles. Even if these new particles are too heavy to be produced at the \acrshort{LHClabel}, they can still be detected indirectly through their effects on the properties of the top quark. This makes the top quark an important tool for searching for new physics beyond the \acrshort{SMlabel}. The top quark can be produced either in top quark pairs, namely \ttbar\ production, or together with other particles, called single-top production.\\ % The \ttbar\ production mainly involves the strong interaction and the main Feynman diagrams are shown in Figure\todo{qq->ttbar, gg->ttbar, crossed, s-channel}\\%~\ref{figSM:feynmanttbar}. 
 
@@ -911,7 +913,7 @@ A FCNC process stands for an interaction with a change in the fermion (quark or 
 the emission or absorption of a neutral boson. As seen in Section~\ref{Theory_SMsubsec:FCNC}, such processes are not allowed at tree-level in the SM and the one-loop contributions are heavily suppressed by the GIM mechanism.\\
 
 %The FCNC interactions involving the top quark are of particular interest, and the possible diagrams are depicted in Figure\todo{depict tgamam uc, tZ uc, tglu uc, tH uc}.
-As the branching ratio of the top quark is mainly $t\to Wb$, together with the heavily suppressed FCNC contributions, the predicted branching ratio for the top FCNC decays in the \acrshort{SMlabel} is below $10^{-14}$. This very small value is far away from the achievable sensitivity at the \acrshort{LHClabel}, and makes the precise measurement of FCNC interactions an excellent test of the \acrshort{SMlabel}.\\
+The top quark decays mainly to $t\to Wb$ and FCNC contributions are heavily suppressed with the predicted branching ratio of top FCNC decays being below $10^{-14}$ in the \acrshort{SMlabel}. This very small value is far away from the achievable sensitivity at the \acrshort{LHClabel}, and makes the precise measurement of FCNC interactions an excellent test of the \acrshort{SMlabel}.\\
 
 Table~\ref{tabSM:FCNCmeasurements} shows the \acrshort{SMlabel} predictions for all the FCNC top quark decays, together with the experimental results from the \acrshort{SMlabel} and CMS collaborations.
 

@@ -3,11 +3,11 @@
 
 Proton collisions are complex processes and their understanding is essential to interpret the experimental data from the \acrshort{LHClabel}. Normally, physics analyses rely on the ability to accurately simulate the various processes of proton-proton collisions and the interactions with the detector in order to perform comparisons with the recorded data and quantify the level of agreement with the \acrshort{SMlabel}. The simulation is usually performed with \acrlong{MClabel}~(\acrshort{MClabel}) generators, which are stochastic tools that incorporate both theoretical predictions and empirical results to describe the statistical processes.\\
 
-The simulation of proton-proton interactions is summarised in this chapter, with an overview of each of the steps, starting from the theoretical foundations, computational methods, \acrshort{MClabel} generators and finalizing with the simulation of the~\acrshort{ATLASlabel} detector.
+The simulation of proton-proton interactions is summarised in this chapter, with an overview of each of the steps, starting from the theoretical foundations, computational methods, \acrshort{MClabel} generators and finally with the simulation of the~\acrshort{ATLASlabel} detector.
 
 \section{Event simulation}
 
-The typical proton-proton collision at the LHC is depicted in Figure~\ref{figEVNTSIM:MCsim}. The inelastic scattering is the main interesting process, where the energy of the system is large enough and a constituent of each proton (parton) interacts, generating new particles. The interaction that involves any of the other partons, normally at lower energies, is referred to as underlying event.\\
+A typical proton-proton collision at the LHC is depicted in Figure~\ref{figEVNTSIM:MCsim}. The inelastic scattering is the main interesting process, where the energy of the system is large enough and a constituent of each proton (parton) interacts, generating new particles. The interaction that involves any of the other partons, normally at lower energies, is referred to as underlying event.\\
 
 A key phenomenon is the parton shower, a process where, due to the strong interaction, particles lose energy due to the radiation of gluons, which further generate quark-antiquark pairs, which in turn radiate gluons again in a chain reaction. These generated particles lose energy progressively down to the point where \acrshort{QCD} leaves the perturbative regime ($\sim$1~GeV) and the hadronisation occurs, when quarks and gluons form hadrons, colourless bound states.\\
 
@@ -18,7 +18,7 @@ To complete the simulation of the collision, the pile-up is included, which adds
     \begin{center}
     \includegraphics[width=1.0\textwidth]{EVENTSIM/MCsim.JPG}
     \caption{
-        Illustration of a proton-proton collision as simulated by a Monte-Carlo event generator. The hard interaction (red blob in the center) is followed by the decay of two top-quarks and a Higgs boson (small red blobs). Additional QCD radiation is produced (red) before the final-state partons hadronise (light green) following hadron decays (dark green). Also, a secondary interaction (purple) and photon radiation (yellow) are represented. No pile-up effects are illustrated~\cite{Gleisberg_2009}. 
+        Illustration of a proton-proton collision as simulated by a Monte-Carlo event generator. The hard interaction (red blob in the center) is produced from the initial-state partons from the protons (blue), followed by the decay of two top-quarks and a Higgs boson (small red blobs). Additional QCD radiation is produced both before (red) and after (dark green) the final-state partons hadronise. The light green blobs correspond to the hadronisation process of the produced particles and the cyan blobs correspond to the hadronistation of the partons from the proton that did not interact. Also, a secondary interaction (purple) and photon radiation (yellow) are represented. No pile-up effects are illustrated~\cite{Gleisberg_2009}.
     }
     \label{figEVNTSIM:MCsim}
     \end{center}
