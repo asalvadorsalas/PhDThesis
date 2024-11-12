@@ -46,7 +46,7 @@ with $\hat{y}_i$ being the predicted value from the model. For regression proble
 which is an average of the deviation from the true labels. For binary classification, the so-called \textit{binary cross-entropy}~\cite{binarycross} is frequently used, 
 
 \begin{equation}
-    E_{BCE}(\mathbf{X},\boldsymbol{\theta}) = -\frac{1}{N}\sum_{i=1}^N y_i\cdot\log(hat{y_i})+(1-y_i)\cdot\log(1-hat{y_i}),
+    E_{BCE}(\mathbf{X},\boldsymbol{\theta}) = -\frac{1}{N}\sum_{i=1}^N y_i\cdot\log(\hat{y_i})+(1-y_i)\cdot\log(1-\hat{y_i}),
 \end{equation}
 
 which is the negative log-likelihood of a Bernouilly distribution. A modified version is used in multi-classification problems. 
